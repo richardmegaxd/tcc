@@ -36,34 +36,6 @@
                 <input type="password" id="user-password" required name="senha" placeholder=" Senha"/>
             </div>
 
-            <div class="input-r">     
-                Sexo:
-                <label>
-                <input type="radio" required name="sexo" value="masculino">
-                Masculino
-                </label>
-  
-                <label>
-                <input type="radio" required name="sexo" value="feminino">
-                Feminino
-                </label>
-
-            </div>
-
-            <div class="input-r">
-                <label for="idade">Quantos anos você tem?</label>
-                <select id="idade" required name="idade" class="seidade">
-                <option value="" disabled selected>Escolha</option>
-                <script>
-                for (let i = 18; i <= 100; i++) {
-                document.write('<option value="' + i + '">' + i + '</option>');
-                }
-                </script>
-                </select>
-            </div>
-
-
-
             <input type="submit" value="Entrar">
 
             <div class="text-tag">
