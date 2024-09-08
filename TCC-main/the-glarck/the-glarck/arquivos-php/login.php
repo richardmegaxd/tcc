@@ -59,7 +59,7 @@
             </div>
 
             <div class="card-footer">
-                <span> Não tem uma conta?</span><a href="#">Inscreva-se</a>
+                <span> Não tem uma conta?</span><a href="./cadastro.php">Inscreva-se</a>
             </div>
         </form>
     </div>
