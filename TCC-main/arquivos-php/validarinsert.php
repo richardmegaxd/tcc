@@ -33,13 +33,15 @@
         $operacao = "INSERT INTO tb_usuario (ds_email, ds_senha, nm_user) VALUES ('$endereco','$senha','$nome')";
 
         mysqli_query($conexao, $operacao);
-        "Conta cadastrada com Sucesso";
+        echo ("<h1>Conta cadastrada com Sucesso</h1>");
     }
     if (mysqli_connect_errno()) // verifica se ocorreu um erro na conexão com o banco de dados
         {
         echo "A conexão MYSQL apresentou erro: " . mysqli_connect_error(); // descreve o erro que ocorreu
         }
     ?>
+
+    <input onclick="document.location='../index.html'" type="submit" value="Voltar"></input>
     </div>
 
 </body>
