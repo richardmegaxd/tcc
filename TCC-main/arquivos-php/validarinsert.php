@@ -41,7 +41,7 @@
         }
     ?>
 
-    <input onclick="document.location='../login.php'" type="submit" value="Voltar"></input>
+    <input onclick="document.location='../arquivos-php/login.php'" type="submit" value="Voltar"></input>
     </div>
 
 </body>
