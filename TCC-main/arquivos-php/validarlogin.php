@@ -19,7 +19,7 @@ if (isset($_POST["login"]) && isset($_POST["senha"])) {
     $senhaUsuario = mysqli_real_escape_string($conexao, $senhaUsuario);
 
     $seleciona_usuario = "SELECT * FROM tb_usuario WHERE ds_email = '$loginUsuario' AND ds_senha = '$senhaUsuario'"; // efetua a seleção no banco de dados e atribui a uma variável
-    
+
     $procura = mysqli_query($conexao, $seleciona_usuario); // Realiza uma consulta no banco de dados
 
     $checar_usuario = mysqli_num_rows($procura); // verifica quantas linhas correspondente a busca feita no banco de dados
@@ -33,7 +33,7 @@ if (isset($_POST["login"]) && isset($_POST["senha"])) {
         $_SESSION['logado'] = true;
         $_SESSION['usuario'] = $loginUsuario;
         $_SESSION['id_usuario'] = $idUsuario;
-        
+
         header("Location: home.php");
     } else {
         $erro = "Login ou senha incorretos. Por favor, tente novamente.";
@@ -45,4 +45,3 @@ if (isset($_POST["login"]) && isset($_POST["senha"])) {
 }
 
 mysqli_close($conexao);
-?>

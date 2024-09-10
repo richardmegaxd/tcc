@@ -1,17 +1,8 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
 
 :root {
-
-  /**
-   * colors
-   */
+ /*-----------------------------------*\
+  #CORES DO PROJETO
+\*-----------------------------------*/
 
   --rich-black-fogra-29_95: hsla(222, 18%, 11%, 0.95);
   --raisin-black-1: hsl(0, 0%, 16%);
@@ -38,9 +29,9 @@
   --white: hsl(0, 0%, 100%);
   --jet: hsl(236, 13%, 23%);
 
-  /**
-   * typography
-   */
+/*-----------------------------------*\
+  # TAMANHO DE FONTES
+\*-----------------------------------*/
 
   --ff-oxanium: 'Oxanium', cursive;
   --ff-poppins: 'Poppins', sans-serif;
@@ -356,10 +347,6 @@ body {
   line-height: 1.8;
 }
 
-
-
-
-
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
@@ -490,11 +477,6 @@ body {
   margin-left: 20px;
 }
 
-
-
-
-
-
 /*-----------------------------------*\
   #SEARCH BOX
 \*-----------------------------------*/
@@ -562,10 +544,6 @@ body {
   z-index: -1;
 }
 
-
-
-
-
 /*-----------------------------------*\
   #HOME
 \*-----------------------------------*/
@@ -604,34 +582,26 @@ body {
   margin-block-end: 45px;
 }
 
-
-
-
-
-
-
-
-
-.btn-baixar{
-max-width: 80%;
-display: flex;
-align-items: center;
-justify-content: center;
-font-family: "Times New Times, serif";
-font-size: 15px;
-text-transform: uppercase;
-Letter-spacing: 1.30;
-font-weight: 700;
-color: #141118;
-background: linear-gradient(90deg, rgb(181, 129, 230) 0%, rgb(146, 79, 209) 100%);
-border:none;
-border-radius:50px;
-box-shadow: 12px 12px 24px rgba(157, 79, 209, 0.64);
-transition: all .3s ease-in-out 0s;
-cursor: pointer;
-position: relative;
-margin: auto;
-padding: 10px;
+.btn-baixar {
+  max-width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Times New Times, serif";
+  font-size: 15px;
+  text-transform: uppercase;
+  Letter-spacing: 1.30;
+  font-weight: 700;
+  color: #141118;
+  background: linear-gradient(90deg, rgb(181, 129, 230) 0%, rgb(146, 79, 209) 100%);
+  border: none;
+  border-radius: 50px;
+  box-shadow: 12px 12px 24px rgba(157, 79, 209, 0.64);
+  transition: all .3s ease-in-out 0s;
+  cursor: pointer;
+  position: relative;
+  margin: auto;
+  padding: 10px;
 }
 
 button .btn-baixar::before {
@@ -688,9 +658,6 @@ button:focus::after {
     opacity: 0;
   }
 }
-
-
-
 
 .btn-baixar:hover {
   transform: scale(1.1);
@@ -761,17 +728,6 @@ button:focus::after {
   color: var(--roxo);
 }
 
-.lancamentos-card .card-price {
-  color: var(--silver);
-  font-size: var(--fs-10);
-  font-weight: var(--fw-600);
-}
-
-.lancamentos-card .card-price .span {
-  margin-inline-start: 5px;
-}
-
-
 
 /*-----------------------------------*\
   #MANGÁS EM MOVIMENTO
@@ -801,7 +757,7 @@ button:focus::after {
 
 .slider {
   width: 100%;
-  height: 230px;
+  height: 210px;
   overflow: hidden;
 }
 
@@ -860,11 +816,10 @@ button:focus::after {
   }
 }
 
-
-
 /*-----------------------------------*\
-  #PUBLIQUE SUAS OBRAS
+ #PUBLIQUE SUAS OBRAS                  
 \*-----------------------------------*/
+
 .autores .container {
   margin-top: 2%;
   transform-style: preserve-3d;
@@ -897,13 +852,11 @@ button:focus::after {
 
 }
 
-
 .autores .has-scrollbar {
   overflow-y: hidden;
   word-wrap: break-word;
   height: 100%;
 }
-
 
 .icon {
   margin-bottom: 20px;
@@ -928,7 +881,6 @@ button:focus::after {
   position: absolute;
   bottom: 0;
   text-align: justify;
-
 }
 
 .content-autores h3 {
@@ -952,11 +904,10 @@ button:focus::after {
   color: var(--eerie-black-2);
 }
 
-
-
 /*-----------------------------------*\
-  #PLANOS MENSAIS
+  #PLANOS MENSAIS                      |
 \*-----------------------------------*/
+
 .planos .container {
   margin-top: 50px;
 }
@@ -1001,7 +952,6 @@ button:focus::after {
 .planos-card {
   box-shadow: var(--shadow-4);
   height: 100%;
-
 }
 
 .planos-card .card-content {
@@ -1016,7 +966,6 @@ button:focus::after {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 
 .planos-card .card-title {
   transition: var(--transition);
@@ -1053,9 +1002,6 @@ button:focus::after {
   color: var(--xiketic);
   border-color: var(--roxo);
 }
-
-
-
 
 /*-----------------------------------*\
   #MEMBROS
@@ -1193,8 +1139,6 @@ button:focus::after {
   transition: var(--transition);
 }
 
-
-
 /*-----------------------------------*\
   #DUVIDA
 \*-----------------------------------*/
@@ -1271,10 +1215,6 @@ button:focus::after {
 .duvida-btn:is(:hover, :focus)::before {
   background-color: var(--white);
 }
-
-
-
-
 
 /*-----------------------------------*\
   #FOOTER
@@ -1371,6 +1311,11 @@ button:focus::after {
   border-radius: 2px;
 }
 
+.footer .social-link:hover {
+  transform: scale(1.1);
+  background-color: var(--light-gray-2);
+}
+
 .footer-duvida {
   position: relative;
 }
@@ -1416,10 +1361,6 @@ button:focus::after {
   color: var(--roxo);
 }
 
-
-
-
-
 /*-----------------------------------*\
   #BACK TO TOP
 \*-----------------------------------*/
@@ -1442,8 +1383,30 @@ button:focus::after {
   transform: translateY(-10px);
 }
 
+/*-----------------------------------*\
+  #SCROLL
+\*-----------------------------------*/
 
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--roxo2);
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--roxo2);
+}
 
 /*-----------------------------------*\
   #MEDIA QUERIES
@@ -1478,7 +1441,6 @@ button:focus::after {
     --fs-2: 7rem;
   }
 
-
   /**
    * HEADER
    */
@@ -1486,8 +1448,6 @@ button:focus::after {
   .header-actions {
     gap: 40px;
   }
-
-
 
   /**
    * SEARCH BOX
@@ -1515,8 +1475,6 @@ button:focus::after {
     min-width: 50%;
   }
 
-
-
   /**
    * MEMBROS
    */
@@ -1526,8 +1484,6 @@ button:focus::after {
     grid-template-columns: 75%;
     justify-content: center;
   }
-
-
 
   /**
    * FOOTER
@@ -1543,9 +1499,6 @@ button:focus::after {
   }
 
 }
-
-
-
 
 @media (min-width: 768px) {
 
@@ -1572,8 +1525,6 @@ button:focus::after {
     margin-inline: auto;
   }
 
-
-
   /**
    * Mangás em Movimento
    */
@@ -1581,7 +1532,6 @@ button:focus::after {
   .manga-item {
     min-width: calc(25% - 15px);
   }
-
 
   /**
    * MEMBROS
@@ -1592,8 +1542,6 @@ button:focus::after {
   .membros-list {
     grid-template-columns: 1fr 1fr;
   }
-
-
 
   /**
    * DUVIDAS
@@ -1620,8 +1568,6 @@ button:focus::after {
     margin-inline: auto;
   }
 
-
-
   /**
    * FOOTER
    */
@@ -1646,8 +1592,6 @@ button:focus::after {
     gap: 20px;
   }
 
-
-
   /**
    * BACK TO TOP
    */
@@ -1659,10 +1603,6 @@ button:focus::after {
 
 
 }
-
-
-
-
 
 
 @media (min-width: 1078px) {
@@ -1797,7 +1737,6 @@ button:focus::after {
   }
 
 
-
   /**
    * HOME
    */
@@ -1834,7 +1773,6 @@ button:focus::after {
   }
 
 
-
   /**
    * LANÇAMENTOS
    */
@@ -1860,7 +1798,6 @@ button:focus::after {
     text-align: center;
   }
 
-
   /**
    * MEMBROS
    */
@@ -1870,8 +1807,6 @@ button:focus::after {
     gap: 30px;
   }
 
-
-
   /**
    * DUVIDA
    */
@@ -1879,7 +1814,6 @@ button:focus::after {
   .duvida-form {
     max-width: 650px;
   }
-
 
   /**
    * FOOTER
@@ -1891,8 +1825,6 @@ button:focus::after {
   }
 
 }
-
-
 
 /**
  * responsive for larger than 1200px screen
@@ -1917,8 +1849,6 @@ button:focus::after {
     min-width: calc(25% - 22.5px);
   }
 
-
-
   /**
    * HEADER
    */
@@ -1932,8 +1862,6 @@ button:focus::after {
     padding-inline: 25px;
   }
 
-
-
   /**
    * HOME
    */
@@ -1942,8 +1870,6 @@ button:focus::after {
     grid-template-columns: 1fr 1fr;
   }
 
-
-
   /**
    * MANGÁ EM MOVIMENTO
    */
@@ -1951,7 +1877,6 @@ button:focus::after {
   .manga-item {
     min-width: calc(16.66% - 16.66px);
   }
-
 
   /**
    * PUBLIQUE SUAS OBRAS
@@ -1965,7 +1890,6 @@ button:focus::after {
     min-width: 25%;
   }
 
-
   /**
    * Planos Mensais
    */
@@ -1973,8 +1897,6 @@ button:focus::after {
   .planos .has-scrollbar {
     padding-block-end: 15px;
   }
-
-
 
   /**
    * DUVIDAS
@@ -1995,8 +1917,6 @@ button:focus::after {
     margin-inline: 0;
   }
 
-
-
   /**
    * FOOTER
    */
@@ -2005,28 +1925,4 @@ button:focus::after {
     grid-template-columns: 1fr 0.7fr 0.7fr 1fr;
   }
 
-}
-
-
-/* SCROLL*/
-
-/* width */
-::-webkit-scrollbar {
-  width: 20px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: blueviolet;
-
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: blueviolet;
 }

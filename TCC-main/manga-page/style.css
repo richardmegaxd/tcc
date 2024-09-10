@@ -73,7 +73,7 @@ body {
 }
 
 .chapter {
-    border: 2px solid #ddd; 
+    border: 2px solid #ddd;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -88,8 +88,8 @@ body {
     transform: scale(1.05);
     cursor: pointer;
     box-shadow:
-  5px 5px rgb(183, 0, 255),
-  -0.4em 0.4em rgb(183, 0, 255);
+        5px 5px rgb(183, 0, 255),
+        -0.4em 0.4em rgb(183, 0, 255);
     transition: 0.3s;
     background-color: rgb(203, 199, 206);
     color: #272129;
@@ -117,58 +117,59 @@ body {
 
 
 .star-rating {
-display: inline-block;
-font-size: 2em;
+    display: inline-block;
+    font-size: 2em;
 }
 
 .star-rating i {
-color: #ddd;
+    color: #ddd;
 }
 
 .star-rating i.active {
-color: #ffc107; /* Amarelo */
+    color: #ffc107;
+    /* Amarelo */
 }
 
 .star-rating:hover {
-cursor: pointer;
+    cursor: pointer;
 }
 
 
-  
-  .comments {
+
+.comments {
     margin-bottom: 2rem;
     margin-top: 5%;
     display: flex;
     justify-content: center;
-  }
-  
-  .comments ul {
+}
+
+.comments ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .comments li {
+}
+
+.comments li {
     border-bottom: 1px solid #ddd;
     padding: 1rem 0;
-  }
-  
-  #comment-form {
+}
+
+#comment-form {
     display: flex;
     flex-direction: column;
     width: 45vw;
-  }
-  
-  #comment-form textarea {
+}
+
+#comment-form textarea {
     margin-top: 1%;
     margin-bottom: 1rem;
     padding: 1rem;
     border-radius: 4px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    
-  }
-  
-  #comment-form button {
+
+}
+
+#comment-form button {
     padding: 0.8rem 1.5rem;
     border-radius: 4px;
     background-color: #4f4253;
@@ -179,19 +180,19 @@ cursor: pointer;
     width: 10rem;
     position: relative;
     margin: auto;
-	border-radius: 4px;
-	text-align: center;
-	text-transform: uppercase;
-	transition: all 0.3s ease-in;
+    border-radius: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in;
     font-size: 15px;
-  }
+}
 
-  #comment-form button:hover {
-      background-color: rgb(131, 2, 182);
-      transform: scale(1.1);
-  }
+#comment-form button:hover {
+    background-color: rgb(131, 2, 182);
+    transform: scale(1.1);
+}
 
-@media(max-width:1200px){
+@media(max-width:1200px) {
     .chapters {
         width: 70vw;
     }
@@ -200,13 +201,13 @@ cursor: pointer;
         margin-top: 5%;
     }
 
-    #comment-form{
+    #comment-form {
         width: 80vw;
-      }
+    }
 
 }
 
-@media(max-width:650px){
+@media(max-width:650px) {
     .container {
         flex-direction: column;
     }
@@ -225,7 +226,5 @@ cursor: pointer;
         margin-top: 8%;
     }
 
-    
+
 }
-
-
