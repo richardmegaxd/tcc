@@ -6,19 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro The Glarck</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/styleCadastro.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="../assets/css/styleLogin.css">
 </head>
 
 <body>
-    <div class="login-container">
-        <img src="../assets/images/log5.png" width="50%" height="auto" loading="lazy" alt="" class="card-icon">
-        <?php
-        if (isset($_GET['erro'])) {
-            echo "<p class='erro' style='color: red; font: size 20px; '>" . htmlspecialchars($_GET['erro']) . "</p>";
-        }
-        ?>
-        <?php
+    <div class="star">
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <header>
+        <div class="logo">
+            <img src="../assets/images/log5.png" width="50%" height="auto" loading="lazy" alt="Logotipo The Glarck" class="card-icon">
+        </div>
+        <h1>Conta criada com sucesso!</h1>
+    </header>
+
+    <?php
+    if (isset($_GET['erro'])) {
+        echo "<p class='erro' style='color: red; margin-top:20px;'>" . htmlspecialchars($_GET['erro']) . "</p>";
+    }
+    ?>
+    <?php
     session_start();
     if (isset($_POST['login'])){
 
@@ -33,7 +41,7 @@
         $operacao = "INSERT INTO tb_usuario (ds_email, ds_senha, nm_user) VALUES ('$endereco','$senha','$nome')";
 
         mysqli_query($conexao, $operacao);
-        echo ("<h2>Conta cadastrada com Sucesso</h2>");
+        
     }
     if (mysqli_connect_errno()) // verifica se ocorreu um erro na conexão com o banco de dados
         {
@@ -41,12 +49,15 @@
         }
     ?>
 
-    <input onclick="document.location='../arquivos-php/login.php'" type="submit" value="Voltar"></input>
-    </div>
+    <form id="formc" action="login.php" method="post">
+
+ 
+        <button type="submit" onclick="document.location='../arquivos-php/login.php'">Voltar</button>
+
+   
+    </form>
+
 
 </body>
 
 </html>
-
-
-

@@ -157,7 +157,7 @@ input:invalid:not(:placeholder-shown) {
   border-color: red;
 }
 
-input:invalid:not(:placeholder-shown) + .text-senha {
+ :invalid:not(:placeholder-shown) + .text-senha {
   color: #a20e0e;
 }
 

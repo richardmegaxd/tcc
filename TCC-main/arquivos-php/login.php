@@ -19,7 +19,7 @@
             <img src="../assets/images/log5.png" width="50%" height="auto" loading="lazy" alt="Logotipo The Glarck" class="card-icon">
         </div>
         <h1>Olá, bem-vindo de volta!</h1>
-        <p>Primeira vez aqui? <span class="text-white">Cadastre-se gratuitamente</span></p>
+        <p>Primeira vez aqui? <span class="text-white" onclick="document.location='../arquivos-php/cadastro.php'" >Cadastre-se gratuitamente</span></p>
     </header>
 
     <?php
