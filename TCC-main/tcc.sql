@@ -15,13 +15,7 @@ insert into tb_usuario(
     ds_senha
 )
 values
-('andre.silva@gmail.com', '12345');
+('andre.silva@gmail.com', '123456');
 
-insert into tb_usuario(
-    ds_email,
-    ds_senha
-)
-values
-('marcelo.augusto@gmail.com', '6789');
 
 select tb_usuario.ds_email, tb_usuario.ds_senha from tb_usuario;
