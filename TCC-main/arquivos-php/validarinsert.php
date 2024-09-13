@@ -6,13 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro The Glarck</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/styleLogin.css">
+    <link rel="stylesheet" href="../assets/css/styleLogin3.css">
 </head>
 
 <body>
-    <div class="star">
-        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-    </div>
+
 
     <header>
         <div class="logo">
@@ -26,37 +24,55 @@
         echo "<p class='erro' style='color: red; margin-top:20px;'>" . htmlspecialchars($_GET['erro']) . "</p>";
     }
     ?>
+
     <?php
     session_start();
-    if (isset($_POST['login'])){
 
+    // Função para verificar se o e-mail já está cadastrado
+    function isEmailExists($email, $conexao) {
+        $query = "SELECT COUNT(*) FROM tb_usuario WHERE ds_email = ?";
+        $stmt = mysqli_prepare($conexao, $query);
+        mysqli_stmt_bind_param($stmt, "s", $email);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_bind_result($stmt, $count);
+        mysqli_stmt_fetch($stmt);
+        mysqli_stmt_close($stmt);
+        return $count > 0;
+    }
+
+    if (isset($_POST['login'])) {
         $nome = $_POST['nome'];
         $senha = $_POST['senha'];
         $endereco = $_POST['login'];
 
-        $conexao = mysqli_connect("localhost","root","","bd_glark");
+        $conexao = mysqli_connect("localhost", "root", "root", "bd_glark", "3307");
 
-        
-
-        $operacao = "INSERT INTO tb_usuario (ds_email, ds_senha, nm_user) VALUES ('$endereco','$senha','$nome')";
-
-        mysqli_query($conexao, $operacao);
-        
-    }
-    if (mysqli_connect_errno()) // verifica se ocorreu um erro na conexão com o banco de dados
-        {
-        echo "A conexão MYSQL apresentou erro: " . mysqli_connect_error(); // descreve o erro que ocorreu
+        if (!$conexao) {
+            echo "A conexão MYSQL apresentou erro: " . mysqli_connect_error();
+            exit();
         }
+
+        // Verificar se o e-mail já está cadastrado
+        if (isEmailExists($endereco, $conexao)) {
+            mysqli_close($conexao);
+            header("Location: cadastro.php?erro=Este e-mail já está cadastrado");
+            exit();
+        }
+
+        // Inserir o novo usuário
+        $operacao = "INSERT INTO tb_usuario (ds_email, ds_senha, nm_user) VALUES (?, ?, ?)";
+        $stmt = mysqli_prepare($conexao, $operacao);
+        mysqli_stmt_bind_param($stmt, "sss", $endereco, $senha, $nome);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+        mysqli_close($conexao);
+
+        // Redirecionar após o cadastro bem-sucedido
+ 
+    }
     ?>
 
-    <form id="formc" action="login.php" method="post">
-
- 
-        <button type="submit" onclick="document.location='../arquivos-php/login.php'">Voltar</button>
-
-   
-    </form>
-
+    <a href="login.php" class="voltar">Retornar</a>
 
 </body>
 
