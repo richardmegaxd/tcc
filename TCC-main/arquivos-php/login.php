@@ -6,20 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login The Glarck</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/styleLogin.css">
+    <link rel="stylesheet" href="../assets/css/styleLogin3.css">
 </head>
 
 <body>
-    <div class="star">
-        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-    </div>
+    <a href="../index.html"><ion-icon name="return-up-back-sharp"></ion-icon></a>
 
     <header>
         <div class="logo">
             <img src="../assets/images/log5.png" width="50%" height="auto" loading="lazy" alt="Logotipo The Glarck" class="card-icon">
         </div>
         <h1>Olá, bem-vindo de volta!</h1>
-        <p>Primeira vez aqui? <span class="text-white" onclick="document.location='../arquivos-php/cadastro.php'" >Cadastre-se gratuitamente</span></p>
+        <p>Primeira vez aqui? <span class="text-white" onclick="document.location='../arquivos-php/cadastro.php'">Cadastre-se gratuitamente</span></p>
     </header>
 
     <?php
@@ -52,6 +50,9 @@
             <a href="#">Política de Privacidade</a>.
         </p>
     </form>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
