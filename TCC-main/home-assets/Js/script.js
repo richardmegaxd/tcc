@@ -11,8 +11,6 @@ $(document).ready(function () {
 
 
 
-
-
 window.onload = function () {
     const sidebar = document.querySelector(".sidebar");
     const closeBtn = document.querySelector("#btn");
