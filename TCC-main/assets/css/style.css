@@ -946,7 +946,7 @@ body {
 
 .planos-card .card-btn:is(:hover, :focus) {
   background-color: var(--roxo);
-  color: var(--xiketic);
+  color: var(--cultured-2);
   border-color: var(--roxo);
 }
 
@@ -1140,6 +1140,7 @@ body {
   gap: 5px;
   padding-inline: 20px;
   transition: var(--transition);
+  color: rgb(255, 255, 255);
 }
 
 .duvida-btn::after {
@@ -1278,7 +1279,7 @@ body {
   height: 100%;
   width: 53px;
   background-color: var(--roxo);
-  color: var(--xiketic);
+  color: var(--white);
   display: grid;
   place-content: center;
 }
