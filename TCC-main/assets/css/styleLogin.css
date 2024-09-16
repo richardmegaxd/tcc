@@ -89,7 +89,7 @@ form button {
   all: unset;
   padding: 10px;
   border-radius: 15px;
-  background-color: #f0e8e8;
+  background-color: #f8f8f8;
   box-shadow: 0 10px 30px #0005;
   border: 1px solid #71717188;
   transition: background-image 0.5s, opacity 0.5s, border 0.5s;
