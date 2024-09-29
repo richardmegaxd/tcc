@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitura de Gibi</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: var(--bg-color, #f8f9fa);
+            color: var(--text-color, #000);
+            font-family: Arial, sans-serif;
+        }
+        #viewer {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        img {
+            max-width: 100%;
+            height: 70%;
+            object-fit: contain;
+            display: none;
+            position: relative;
+            margin: auto;
+        }
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .theme-toggle {
+            cursor: pointer;
+            font-size: 24px;
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+        .theme-toggle:hover {
+            color: #ff8c00;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #6200ea;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #3700b3;
+        }
+        .button:disabled {
+            background-color: #c0c0c0;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="viewer" class="container">
+        <div class="d-flex justify-content-center">
+            <button class="btn btn-primary toggle-mode" onclick="toggleMode()">Mudar para Modo de Rolagem</button>
+        </div>
+
+        <!-- Ícone para alternar entre claro e escuro -->
+        <div class="theme-toggle" id="themeToggle" onclick="toggleTheme()">
+            <i class="fas fa-sun" id="themeIcon"></i>
+        </div>
+
+        <div id="image-container" class="mt-4">
+            <!-- As imagens serão carregadas dinamicamente aqui -->
+        </div>
+
+        <div class="controls mt-3" id="arrow-navigation">
+            <button class="btn btn-secondary" id="prevButton" onclick="prevPage()">Página Anterior</button>
+            <button class="btn btn-secondary" id="nextButton" onclick="nextPage()">Próxima Página</button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script para carregar dinamicamente as páginas e alternar entre modos -->
+    <script>
+        let currentPage = 1;
+        let totalPages = 0;
+        let imagePaths = [];
+        let scrollMode = false; // Modo padrão de navegação por setas
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Carregar as páginas do servidor
+            fetch('list_pages.php')
+                .then(response => response.json())
+                .then(data => {
+                    imagePaths = data;
+                    totalPages = imagePaths.length;
+                    createImageElements();
+                    displayPage(currentPage);
+                    updateButtons();
+                });
+
+            // Carregar o tema salvo no localStorage
+            loadSavedTheme();
+        });
+
+        function createImageElements() {
+            const imageContainer = document.getElementById('image-container');
+            imageContainer.innerHTML = '';
+
+            imagePaths.forEach((imagePath, index) => {
+                const img = document.createElement('img');
+                img.src = imagePath;
+                img.id = `page${index + 1}`;
+                img.alt = `Página ${index + 1}`;
+                img.style.display = 'none';
+                imageContainer.appendChild(img);
+            });
+        }
+
+        function toggleMode() {
+            scrollMode = !scrollMode;
+            const toggleButton = document.querySelector('.toggle-mode');
+            const arrowNav = document.getElementById('arrow-navigation');
+
+            if (scrollMode) {
+                // Modo de rolagem ativado
+                toggleButton.textContent = "Mudar para Modo de Navegação por Setas";
+                document.querySelectorAll("img").forEach(img => img.style.display = "block");
+                arrowNav.style.display = "none";
+            } else {
+                // Modo de setas ativado
+                toggleButton.textContent = "Mudar para Modo de Rolagem";
+                document.querySelectorAll("img").forEach(img => img.style.display = "none");
+                arrowNav.style.display = "flex";
+                displayPage(currentPage); // Exibe apenas a página atual
+            }
+        }
+
+        function displayPage(pageNumber) {
+            // Oculta todas as imagens
+            document.querySelectorAll("img").forEach(img => img.style.display = "none");
+            // Exibe a página atual
+            document.getElementById(`page${pageNumber}`).style.display = "block";
+        }
+
+        function nextPage() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                displayPage(currentPage);
+                updateButtons();
+            }
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                displayPage(currentPage);
+                updateButtons();
+            }
+        }
+
+        function updateButtons() {
+            document.getElementById('prevButton').disabled = (currentPage === 1);
+            document.getElementById('nextButton').disabled = (currentPage === totalPages);
+        }
+
+        // Função para alternar entre tema claro e escuro
+        function toggleTheme() {
+            const themeIcon = document.getElementById('themeIcon');
+            const currentTheme = document.body.style.getPropertyValue('--bg-color');
+
+            if (currentTheme === '#121212') {
+                // Alterar para tema claro
+                document.body.style.setProperty('--bg-color', '#f8f9fa');
+                document.body.style.setProperty('--text-color', '#000000');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                // Alterar para tema escuro
+                document.body.style.setProperty('--bg-color', '#121212');
+                document.body.style.setProperty('--text-color', '#ffffff');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+
+            // Salvar a preferência do tema no localStorage
+            localStorage.setItem('theme', currentTheme === '#121212' ? 'light' : 'dark');
+        }
+
+        function loadSavedTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            const themeIcon = document.getElementById('themeIcon');
+
+            if (savedTheme === 'dark') {
+                document.body.style.setProperty('--bg-color', '#121212');
+                document.body.style.setProperty('--text-color', '#ffffff');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            } else {
+                document.body.style.setProperty('--bg-color', '#f8f9fa');
+                document.body.style.setProperty('--text-color', '#000000');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            }
+        }
+    </script>
+</body>
+</html>
