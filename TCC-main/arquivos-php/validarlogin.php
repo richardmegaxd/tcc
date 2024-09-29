@@ -3,7 +3,7 @@ session_start();
 
 $_SESSION['logado'] = false; // variável global de sessão logado
 
-$conexao = mysqli_connect("localhost", "root", "", "bd_glark");
+$conexao = mysqli_connect("localhost", "root", "", "bd_glark", "3306");
 
 if (mysqli_connect_errno()) // verifica se ocorreu um erro na conexão com o banco de dados
 {
