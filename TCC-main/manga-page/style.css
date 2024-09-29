@@ -10,15 +10,19 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: none;
+}
 
 
-.container {
+#section-obra .container {
     display: flex;
     justify-content: center;
     padding: 20px;
 }
 
-.manga-info {
+#section-obra .manga-info {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
@@ -27,34 +31,34 @@ body {
 
 
 
-.manga-info .info-item {
+#section-obra .manga-info .info-item {
     display: flex;
     justify-content: space-between;
     padding: 0px;
 }
 
 
-.manga-info .info-item:not(:last-child) {
+#section-obra .manga-info .info-item:not(:last-child) {
     margin-bottom: 10px;
 }
 
-.manga-info .info-label {
+#section-obra .manga-info .info-label {
     font-weight: bold;
 }
 
-.manga-info .info-value {
+#section-obra .manga-info .info-value {
     font-weight: normal;
     margin-left: 20px;
 }
 
-.manga-cover {
+#section-obra .manga-cover {
     width: 200px;
     height: auto;
     border-radius: 5px;
 }
 
 
-.titulo-cap {
+#section-obra .titulo-cap {
     display: flex;
     align-items: center;
     margin-bottom: 1%;
@@ -63,7 +67,7 @@ body {
 }
 
 
-.chapters {
+#section-obra .chapters {
     position: relative;
     margin: auto;
     display: flex;
@@ -72,7 +76,7 @@ body {
     width: 50vw;
 }
 
-.chapter {
+#section-obra .chapter {
     border: 2px solid #ddd;
     display: flex;
     justify-content: space-between;
@@ -82,9 +86,11 @@ body {
     border-bottom: 1px solid #343a40;
     border-radius: 20px;
     margin-top: 2%;
+    color: #ddd;
+    font-weight: 500;
 }
 
-.chapter:hover {
+#section-obra .chapter:hover {
     transform: scale(1.05);
     cursor: pointer;
     box-shadow:
@@ -95,20 +101,20 @@ body {
     color: #272129;
 }
 
-.chapter img {
+#section-obra .chapter img {
     width: 60px;
 }
 
-.chapter-number {
+#section-obra .chapter-number {
     font-weight: bold;
 }
 
-.chapter-time {
+#section-obra .chapter-time {
     font-size: 12px;
     color: #888;
 }
 
-.chapter-cover {
+#section-obra .chapter-cover {
     width: 100px;
     height: auto;
     border-radius: 5px;
@@ -116,50 +122,50 @@ body {
 }
 
 
-.star-rating {
+#section-obra .star-rating {
     display: inline-block;
     font-size: 2em;
 }
 
-.star-rating i {
+#section-obra .star-rating i {
     color: #ddd;
 }
 
-.star-rating i.active {
+#section-obra .star-rating i.active {
     color: #ffc107;
     /* Amarelo */
 }
 
-.star-rating:hover {
+#section-obra .star-rating:hover {
     cursor: pointer;
 }
 
 
 
-.comments {
+#section-obra .comments {
     margin-bottom: 2rem;
     margin-top: 5%;
     display: flex;
     justify-content: center;
 }
 
-.comments ul {
+#section-obra .comments ul {
     list-style: none;
     padding: 0;
 }
 
-.comments li {
+#section-obra .comments a {
     border-bottom: 1px solid #ddd;
     padding: 1rem 0;
 }
 
-#comment-form {
+#section-obra #comment-form {
     display: flex;
     flex-direction: column;
     width: 45vw;
 }
 
-#comment-form textarea {
+#section-obra #comment-form textarea {
     margin-top: 1%;
     margin-bottom: 1rem;
     padding: 1rem;
@@ -169,7 +175,7 @@ body {
 
 }
 
-#comment-form button {
+#section-obra #comment-form button {
     padding: 0.8rem 1.5rem;
     border-radius: 4px;
     background-color: #4f4253;
@@ -187,42 +193,42 @@ body {
     font-size: 15px;
 }
 
-#comment-form button:hover {
+#section-obra #comment-form button:hover {
     background-color: rgb(131, 2, 182);
     transform: scale(1.1);
 }
 
 @media(max-width:1200px) {
-    .chapters {
+    #section-obra .chapters {
         width: 70vw;
     }
 
-    .chapter {
+    #section-obra .chapter {
         margin-top: 5%;
     }
 
-    #comment-form {
+    #section-obra #comment-form {
         width: 80vw;
     }
 
 }
 
 @media(max-width:650px) {
-    .container {
+    #section-obra .container {
         flex-direction: column;
     }
 
-    .container img {
+    #section-obra .container img {
         position: relative;
         margin: auto;
     }
 
-    .manga-info {
+    #section-obra .manga-info {
         position: relative;
         margin: auto;
     }
 
-    .chapter {
+    #section-obra .chapter {
         margin-top: 8%;
     }
 
