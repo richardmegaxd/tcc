@@ -16,7 +16,7 @@
         header("Location: login.php");
         exit;
     } else {
-        $conexao = mysqli_connect("localhost", "root", "root", "bd_glark", "3307");
+        $conexao = mysqli_connect("localhost", "root", "", "bd_glark", "3306");
 
         if (mysqli_connect_errno()) {
             echo "Falha na conexão com o MySQL: " . mysqli_connect_error();
