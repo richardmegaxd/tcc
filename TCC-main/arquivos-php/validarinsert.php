@@ -45,7 +45,7 @@
         $senha = $_POST['senha'];
         $endereco = $_POST['login'];
 
-        $conexao = mysqli_connect("localhost", "root", "root", "bd_glark", "3307");
+        $conexao = mysqli_connect("localhost", "root", "", "bd_glark", "3306");
 
         if (!$conexao) {
             echo "A conexão MYSQL apresentou erro: " . mysqli_connect_error();
