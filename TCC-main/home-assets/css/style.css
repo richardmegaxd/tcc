@@ -56,7 +56,7 @@ a {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(33, 0, 65);
+  background: var(--color-default);
 }
 
 /* Handle on hover */
@@ -611,7 +611,7 @@ section {
 #section-obra .container {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
   padding: 20px;
   color: #ddd;
 }
@@ -652,6 +652,8 @@ section {
   width: 200px;
   height: auto;
   border-radius: 5px;
+  border-top: 3px solid #292929;
+  box-shadow: 0 0 20px 6px #3a363f;
 }
 
 
@@ -692,8 +694,8 @@ section {
   transform: scale(1.05);
   cursor: pointer;
   box-shadow:
-    5px 5px rgb(183, 0, 255),
-    -0.4em 0.4em rgb(183, 0, 255);
+    5px 5px var(--color-default),
+    -0.4em 0.4em var(--color-default);
   transition: 0.3s;
   background-color: rgb(203, 199, 206);
   color: #272129;
@@ -726,7 +728,7 @@ section {
 }
 
 #section-obra .star-rating i {
-  color: #ddd;
+  color: #747474;
 }
 
 #section-obra .star-rating i.active {
@@ -769,12 +771,10 @@ section {
   margin-bottom: 1rem;
   padding: 1rem;
   border-radius: 4px;
-  border: 1px solid #ddd;
+  border-bottom: 5px solid #7709d1;
   border-radius: 10px;
- background-color: #0f001d;
- opacity: 0.8;
+ background-color: var(--color-default);
  color: var(--color-light);
-
 }
 
 #section-obra #comment-form button {
@@ -782,7 +782,6 @@ section {
   border-radius: 4px;
   background-color: #4f4253;
   color: #fff;
-  border: none;
   cursor: pointer;
   border-radius: 10px;
   width: 10rem;
