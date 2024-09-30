@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Diretório de upload
-    $uploadDir = 'capitulo1/'; // Direciona para o diretório capitulo1
+    $uploadDir = '../capitulo1/'; // Direciona para o diretório capitulo1
     
     // Verifica se o diretório existe, caso contrário, cria
     if (!is_dir($uploadDir)) {
