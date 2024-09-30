@@ -86,11 +86,12 @@ stars.forEach((star, index) => {
 
 
 
-
+// SCRIPT PÁGINA DE LEITURA
 let currentPage = 1;
 let totalPages = 0;
 let imagePaths = [];
 let scrollMode = false; // Modo padrão de navegação por setas
+let backgroundImageEnabled = true; // Controla a exibição da imagem de fundo
 
 document.addEventListener("DOMContentLoaded", function () {
     // Carregar as páginas do servidor
@@ -100,67 +101,86 @@ document.addEventListener("DOMContentLoaded", function () {
             // Filtrar imagens da pasta 'capitulo1'
             imagePaths = data.filter(path => path.includes('capitulo1'));
             totalPages = imagePaths.length;
-            createImageElements();
-            displayPage(currentPage);
-            updateButtons();
+            createImageElements();  // Cria os elementos de imagem no contêiner
+            restoreModeAndTheme();  // Restaura o modo de leitura e o tema
         });
 
-    // Carregar o tema salvo no localStorage
-    loadSavedTheme();
+    // Carregar o tema salvo no localStorage ou usar o tema escuro por padrão
+    const savedTheme = getCurrentTheme(); // Verifica o tema salvo (escuro por padrão)
+    applyTheme(savedTheme); // Aplica o tema salvo
 });
 
 function createImageElements() {
     const imageContainer = document.getElementById('image-container');
-    imageContainer.innerHTML = '';
+    imageContainer.innerHTML = ''; // Limpa o contêiner de imagens antes de adicionar novas
 
     imagePaths.forEach((imagePath, index) => {
         const img = document.createElement('img');
         img.src = imagePath;
         img.id = `page${index + 1}`;
         img.alt = `Página ${index + 1}`;
-        img.style.display = 'none'; // Escondendo todas as imagens inicialmente
+        img.style.display = 'none'; // Esconde as imagens inicialmente
         imageContainer.appendChild(img);
     });
 }
 
+// Função para restaurar o modo de leitura e o tema
+function restoreModeAndTheme() {
+    // Carregar o modo de leitura salvo no localStorage ou usar modo de setas por padrão
+    const savedMode = getReadingMode(); // Verifica o modo de leitura salvo
+    scrollMode = savedMode === 'scroll'; // Define o modo de leitura salvo
+
+    // Aplicar o modo de leitura corretamente
+    applyReadingMode();
+}
+
 function toggleMode() {
     scrollMode = !scrollMode;
+    const newMode = scrollMode ? 'scroll' : 'click';
+    localStorage.setItem('readingMode', newMode); // Salva o modo de leitura no localStorage
+    applyReadingMode(); // Aplica o novo modo de leitura
+}
+
+// Função para aplicar o modo de leitura e controlar o botão
+function applyReadingMode() {
     const toggleButton = document.querySelector('.toggle-mode');
     const arrowNav = document.getElementById('arrow-navigation');
+    const backToTopBtn = document.getElementById('backToTopBtn');
 
     if (scrollMode) {
-        // Modo de rolagem ativado
-        // toggleButton.textContent = "Mudar para Modo de Navegação por Setas";
-        // Exibir todas as imagens da pasta 'capitulo1'
         document.querySelectorAll("img").forEach(img => {
             if (img.src.includes('capitulo1')) {
-                img.style.display = "block"; // Exibe imagens da pasta 'capitulo1'
+                img.style.display = "block"; // Exibe todas as imagens da pasta 'capitulo1'
             }
         });
-        arrowNav.style.display = "none";
+        arrowNav.style.display = "none"; // Oculta a navegação por setas
+        // toggleButton.textContent = "Mudar para Modo de Navegação por Setas"; // Texto do botão
+
+        // Habilitar o botão "Voltar ao Topo"
+        window.addEventListener('scroll', toggleBackToTopButton);
+
     } else {
-        // Modo de setas ativado
-        // toggleButton.textContent = "Mudar para Modo de Rolagem";
-        // Ocultar todas as imagens que têm o id começando com 'page' e estão na pasta 'capitulo1'
         document.querySelectorAll("img").forEach(img => {
             if (img.src.includes('capitulo1') && img.id.startsWith('page')) {
-                img.style.display = "none"; // Oculta imagens da pasta 'capitulo1'
+                img.style.display = "none"; // Oculta todas as imagens da pasta 'capitulo1'
             }
         });
-        displayPage(currentPage); // Exibe apenas a página atual
-        arrowNav.style.display = "flex";
+        displayPage(currentPage); // Exibe a página atual
+        arrowNav.style.display = "flex"; // Exibe a navegação por setas
+        // toggleButton.textContent = "Mudar para Modo de Leitura por Rolagem"; // Texto do botão
+
+        // Desabilitar o botão "Voltar ao Topo" no modo de setas
+        backToTopBtn.style.display = "none"; // Certifique-se de que ele esteja escondido
+        window.removeEventListener('scroll', toggleBackToTopButton); // Remove o evento de scroll
     }
 }
 
 function displayPage(pageNumber) {
-    // Oculta todas as imagens que têm o id começando com 'page' e estão na pasta 'capitulo1'
     document.querySelectorAll("img").forEach(img => {
         if (img.src.includes('capitulo1') && img.id.startsWith('page')) {
-            img.style.display = "none"; // Oculta imagens da pasta 'capitulo1'
+            img.style.display = "none"; // Oculta todas as imagens
         }
     });
-
-    // Exibe a página atual
     const currentImg = document.getElementById(`page${pageNumber}`);
     if (currentImg) {
         currentImg.style.display = "block"; // Exibe a página atual
@@ -188,26 +208,16 @@ function updateButtons() {
     document.getElementById('nextButton').disabled = (currentPage === totalPages);
 }
 
-
-
-
-
-
-
-
-let backgroundImageEnabled = true; // Controla a exibição da imagem de fundo
-
 // Função para verificar o tema atual no localStorage ou definir o tema escuro como padrão
 function getCurrentTheme() {
-    // Se não houver tema salvo no localStorage, retorna 'dark' como padrão
     return localStorage.getItem('theme') || 'dark';
 }
 
+// Função para aplicar o tema com base na seleção
 function applyTheme(theme) {
     const themeIcon = document.querySelector('#themeIconContainer i'); // O ícone dentro do contêiner
 
     if (theme === 'light') {
-
         // Alterar cor dos ícones e fontes para preto
         document.querySelectorAll('.icon').forEach(icon => icon.style.color = '#000000');
         document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, label').forEach(el => el.style.color = '#000000');
@@ -221,7 +231,6 @@ function applyTheme(theme) {
         themeIcon.classList.remove('bx-sun');
         themeIcon.classList.add('bx-moon');
     } else {
-
         // Reverter cor dos ícones e fontes para branco
         document.querySelectorAll('.icon').forEach(icon => icon.style.color = '#ffffff');
         document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, label').forEach(el => el.style.color = '#ffffff');
@@ -245,8 +254,57 @@ function toggleTheme() {
     localStorage.setItem('theme', newTheme); // Salva a preferência do tema no localStorage
 }
 
-// Aplica o tema salvo ou o tema escuro por padrão ao carregar a página
-window.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = getCurrentTheme(); // Verifica se há tema salvo no localStorage
-    applyTheme(savedTheme); // Aplica o tema (escuro por padrão se não houver tema salvo)
-});
+function getReadingMode() {
+    return localStorage.getItem('readingMode') || 'click';
+}
+
+
+
+// Função para rolar ao topo da página
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Função que mostra ou esconde o botão ao rolar a página
+function toggleBackToTopButton() {
+    const backToTopBtn = document.getElementById('backToTopBtn');
+
+    if (scrollMode && window.pageYOffset > 200) {
+        // Mostra o botão se o usuário rolou mais de 200px e estiver no modo de rolagem
+        backToTopBtn.style.display = "block";
+    } else {
+        // Esconde o botão se o modo de rolagem não está ativo ou o scroll é menor que 200px
+        backToTopBtn.style.display = "none";
+    }
+}
+//FIM SCRIPT PÁGINA DE LEITURA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
