@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
-    <link rel="stylesheet" href="../home-assets/css/style.css">
+    <link rel="stylesheet" href="../home-assets/css/style2.css">
     <link rel="stylesheet" href="../home-assets/css/lightslider.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
 
 </head>
 
@@ -86,7 +85,7 @@
             </li>
             <li>
                 <a href="#" class="theme-toggle" id="themeIconContainer" onclick="toggleTheme()">
-                    <i class='bx bx-sun'></i> 
+                    <i class='bx bx-sun'></i>
                     <span class="link_name">Alterar Tema</span>
                 </a>
                 <span class="tooltip">Alterar Tema</span>
@@ -433,9 +432,11 @@
 
     <!-- # LEITURA DO MANGÁ -->
     <main id="section-leitura-manga" class="home-section content-section">
+           
         <a data-target="section-obra"><i class='bx bxs-left-arrow-circle'></i></a>
+
         <div class="btn-troca">
-            <button class="toggle-mode" onclick="toggleMode()">Trocar Modo de Leitura</button>
+            <button class="toggle-mode" onclick="toggleMode()"><i class='bx bxs-binoculars'></i></button>
         </div>
 
         <div id="viewer" class="container">
@@ -449,171 +450,13 @@
                 <button class="btn-page" id="nextButton" onclick="nextPage()">Próxima Página</button>
             </div>
         </div>
+
+          <!-- #BACK TO TOP -->
+          <button id="backToTopBtn" onclick="scrollToTop()"><i class='bx bxs-up-arrow-square'></i></button>   
+        
     </main>
     <!-- # FIM LEITURA DO MANGÁ -->
 
-
-
-
-
-
-
-
-
-
-
-
-    <footer class="footer" id="footer">
-
-    <div class="footer-top">
-      <div class="container">
-
-        <div class="footer-manga">
-
-          <a href="#" class="logo">The GLARK</a>
-
-          <p class="footer-text">
-            Dê vida às suas histórias favoritas de forma legal e segura.
-          </p>
-
-          <ul class="contact-list">
-
-            <li class="contact-item">
-              <div class="contact-icon">
-                <ion-icon name="location"></ion-icon>
-              </div>
-
-              <address class="item-text">
-                Endereço : São Vicente - SP
-              </address>
-            </li>
-
-            <li class="contact-item">
-              <div class="contact-icon">
-                <ion-icon name="headset"></ion-icon>
-              </div>
-
-              <a href="tel:+241245654235" class="item-text">Telefone : +55 (13)94565-4235</a>
-            </li>
-
-            <li class="contact-item">
-              <div class="contact-icon">
-                <ion-icon name="mail-open"></ion-icon>
-              </div>
-
-              <a href="mailto:info@exemple.com" class="item-text">Email : theglark@gmail.com </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Navegação</p>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Obras Populares</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Lançamentos</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Notícias</a>
-          </li>
-
-
-        </ul>
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">PRECISA DE AJUDA?</p>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Termos e Condições</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Política de Privacidade</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Política de reembolso</a>
-          </li>
-
-        </ul>
-
-        <div class="footer-wrapper">
-
-          <div class="social-wrapper">
-
-            <p class="footer-list-title">SIGA-NOS</p>
-
-            <ul class="social-list">
-
-              <li>
-                <a href="#" class="social-link" style="background-color: #3b5998">
-                  <ion-icon name="logo-facebook"></ion-icon>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="social-link"
-                  style="background-image: radial-gradient(circle at -20.71% 50%, #afde72 0, #bbd966 5.56%, #c6d259 11.11%, #cfc94e 16.67%, #d8c042 22.22%, #dfb537 27.78%, #e6a92e 33.33%, #eb9c26 38.89%, #f08c21 44.44%, #f37b1f 50%, #f56822 55.56%, #f85329 61.11%, #f93c32 66.67%, #fa193d 72.22%, #f90049 77.78%, #f80057 83.33%, #f40066 88.89%, #ef0076 94.44%, #e70087 100%);">
-                  <ion-icon name="logo-instagram"></ion-icon>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="social-link" style="background-color: #1565c0">
-                  <ion-icon name="logo-linkedin"></ion-icon>
-                </a>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <div class="footer-duvida">
-
-            <p class="footer-list-title">Quer saber quando o próximo capítulo vai ser lançado?</p>
-
-            <form action="" class="footer-duvida">
-              <input type="email" name="email_address" aria-label="email" placeholder="Digite seu e-mail" required
-                class="email-field">
-
-              <button type="submit" class="footer-btn" aria-label="submit">
-                <ion-icon name="rocket"></ion-icon>
-              </button>
-            </form>
-
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-
-
-    <!-- 
-    - #BACK TO TOP
-  -->
-
-    <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
-      <ion-icon name="caret-up"></ion-icon>
-    </a>
-
-
-
-
-
-    
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="../home-assets/Js/JQuery3.3.1.js"></script>
     <script src="../home-assets/Js/lightslider.js"></script>
