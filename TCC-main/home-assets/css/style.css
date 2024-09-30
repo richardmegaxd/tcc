@@ -1,3 +1,99 @@
+:root {
+  /*-----------------------------------*\
+   #CORES DO PROJETO
+ \*-----------------------------------*/
+ 
+   --rich-black-fogra-29_95: hsla(222, 18%, 11%, 0.95);
+   --raisin-black-1: hsl(0, 0%, 16%);
+   --raisin-black-2: hsl(236, 17%, 17%);
+   --raisin-black-3: hsl(280, 11%, 11%);
+   --raisin-black-4: hsl(280, 8%, 15%);
+   --english-violet: hsl(274, 21%, 23%);
+   --eerie-black-1: hsl(277, 25%, 10%);
+   --eerie-black-2: hsl(280, 7%, 8%);
+   --roman-silver: hsl(220, 6%, 59%);
+   --quick-silver: hsl(0, 1%, 65%);
+   --light-gray-1: hsl(0, 0%, 80%);
+   --light-gray-2: hsl(0, 2%, 82%);
+   --roxo2: hsla(271, 99%, 46%, 0.75);
+   --xiketic_90: hsla(280, 37%, 8%, 0.9);
+   --cultured-2: hsl(0, 0%, 97%);
+   --roxo: hsl(268, 100%, 56%);
+   --platinum: hsl(0, 0%, 89%);
+   --dim-gray: hsl(0, 0%, 42%);
+   --white_15: hsla(0, 0%, 100%, 0.15);
+   --white_10: hsla(0, 0%, 100%, 0.1);
+   --xiketic: hsl(277, 25%, 10%);
+   --silver: hsl(0, 0%, 78%);
+   --white: hsl(0, 0%, 100%);
+   --jet: hsl(236, 13%, 23%);
+ 
+ /*-----------------------------------*\
+   # TAMANHO DE FONTES
+ \*-----------------------------------*/
+ 
+   --ff-oxanium: 'Oxanium', cursive;
+   --ff-poppins: 'Poppins', sans-serif;
+ 
+   --fs-1: 7rem;
+   --fs-2: 4.5rem;
+   --fs-3: 3.6rem;
+   --fs-4: 2.4rem;
+   --fs-5: 2.2rem;
+   --fs-6: 2rem;
+   --fs-7: 1.6rem;
+   --fs-8: 1.5rem;
+   --fs-9: 1.4rem;
+   --fs-10: 1.3rem;
+   --fs-11: 1.2rem;
+ 
+   --fw-500: 500;
+   --fw-600: 600;
+   --fw-700: 700;
+   --fw-800: 800;
+ 
+   /**
+    * spacing
+    */
+ 
+   --section-padding: 120px;
+ 
+   /**
+    * gradient
+    */
+ 
+   --gradient: radial-gradient(circle, hsl(250, 7%, 17%), hsl(250, 11%, 11%));
+ 
+   /**
+    * box shadow
+    */
+ 
+   --shadow-1: 0px 2px 8px 0px hsla(0, 0%, 0%, 0.2),
+     inset 0px 2px 8px 0px hsla(0, 0%, 0%, 0.4);
+   --shadow-2: 0px 5px 10px 1px hsla(0, 0%, 0%, 0.4);
+   --shadow-3: 0px 5px 10px 1px hsla(219, 98%, 17%, 0.2);
+   --shadow-4: 0px 5px 10px 1px hsla(0, 0%, 0%, 0.15);
+ 
+   /**
+    * transition
+    */
+ 
+   --transition: 0.25s ease;
+   --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+ 
+ }
+ 
+ 
+
+
+
+
+
+ 
+
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -952,3 +1048,206 @@ section {
 /*-----------------------------------*\
  # FIM INTERAÇÃO DA TELAS
 \*-----------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------*\
+  #FOOTER
+\*-----------------------------------*/
+
+.footer {
+  color: var(--roman-silver);
+}
+
+.footer-top {
+  padding-block-end: var(--section-padding);
+}
+
+.footer-top .container {
+  display: grid;
+  gap: 50px;
+}
+
+.footer .logo {
+  margin-block-end: 35px;
+}
+
+.footer-text,
+.footer .contact-item {
+  font-size: var(--fs-8);
+  font-weight: var(--fw-500);
+  line-height: 1.8;
+}
+
+.footer-text {
+  margin-block-end: 15px;
+}
+
+.contact-item:not(:last-child) {
+  margin-block-end: 10px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.contact-icon {
+  margin-block-start: 3px;
+  font-size: 17px;
+}
+
+.footer-list-title {
+  position: relative;
+  color: var(--silver);
+  font-family: var(--ff-oxanium);
+  text-transform: uppercase;
+  font-weight: var(--fw-800);
+  padding-block-end: 20px;
+  margin-block-end: 35px;
+}
+
+.footer-list-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  background-color: var(--roxo);
+}
+
+.footer-link {
+  font-size: var(--fs-9);
+  max-width: max-content;
+  transition: var(--transition);
+  padding-block: 8px;
+  font-weight: var(--fw-500);
+}
+
+.footer-link:is(:hover, :focus) {
+  color: var(--roxo);
+  transform: translateX(5px);
+}
+
+.footer .social-wrapper {
+  margin-block-end: 50px;
+}
+
+.footer .social-list {
+  display: flex;
+  gap: 10px;
+}
+
+.footer .social-link {
+  color: var(--white);
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.footer .social-link:hover {
+  transform: scale(1.1);
+  background-color: var(--light-gray-2);
+}
+
+.footer-duvida {
+  position: relative;
+}
+
+.footer-duvida .email-field {
+  background-color: var(--raisin-black-4);
+  padding: 12px 20px;
+  padding-inline-end: 60px;
+  font-size: var(--fs-9);
+  color: var(--white);
+}
+
+.footer-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 53px;
+  background-color: var(--roxo);
+  color: var(--white);
+  display: grid;
+  place-content: center;
+}
+
+.footer-bottom-img {
+  display: none;
+}
+
+.footer-bottom {
+  background-color: var(--eerie-black-2);
+  padding-block: 20px;
+  text-align: center;
+}
+
+.copyright {
+  font-size: var(--fs-9);
+  font-weight: var(--fw-500);
+  line-height: 1.8;
+}
+
+.copyright-link {
+  display: inline-block;
+  color: var(--roxo);
+}
+
+/*-----------------------------------*\
+  #BACK TO TOP
+\*-----------------------------------*/
+
+.back-top-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
+  background-color: var(--roxo);
+  padding: 12px;
+  z-index: 4;
+  transition: var(--transition);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.back-top-btn.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-10px);
+}
