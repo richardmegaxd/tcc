@@ -848,48 +848,13 @@ section {
   overflow: hidden;
 }
 
-/*-----------------------------------*\
- # INTERAÇÃO FAS TELAS
-\*-----------------------------------*/
-.content-section {
-  display: none;
-}
 
-.content-section.active {
-  display: block;
-}
+
+
 
 /*-----------------------------------*\
- # FIM INTERAÇÃO DA TELAS
+ # LEITURA DO MANGÁ
 \*-----------------------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #section-leitura-manga #viewer {
   max-width: 800px;
   margin: 50px auto;
@@ -911,27 +876,80 @@ section {
   justify-content: space-between;
   margin-top: 20px;
 }
-#section-leitura-manga .theme-toggle {
-  cursor: pointer;
-  font-size: 24px;
-  margin: 10px 0;
+
+#section-leitura-manga  .btn-troca {
   display: flex;
   justify-content: center;
+  margin-top: 3%;
 }
-#section-leitura-manga .theme-toggle:hover {
-  color: #ff8c00;
-}
-#section-leitura-manga .button {
-  padding: 10px 20px;
-  background-color: #6200ea;
-  color: white;
+
+#section-leitura-manga  .toggle-mode {
+  background-color: var(--color-default);
   border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #fff;
   cursor: pointer;
 }
-#section-leitura-manga .button:hover {
-  background-color: #3700b3;
+
+#section-leitura-manga  .toggle-mode:hover{
+  background-color: #7700ff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
 }
-#section-leitura-manga .button:disabled {
+
+#section-leitura-manga .btn-page{
+  padding: 10px;
+  background-color: var(--color-default);
+  color: #ffffff;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#section-leitura-manga .button:hover {
+  background-color: #4804e6;
+}
+#section-leitura-manga .btn-page:disabled {
   background-color: #c0c0c0;
   cursor: not-allowed;
+  color: #0f001d;
 }
+
+#section-leitura-manga .bxs-left-arrow-circle {
+  position: absolute;
+  margin-top: 1%;
+  margin-left: 3%;
+  font-size: 3rem;
+  color: var(--color-default);
+  cursor: pointer;
+}
+
+#section-leitura-manga .bxs-left-arrow-circle:hover {
+  transform: scale(1.1);
+}
+/*-----------------------------------*\
+ # FIM LEITURA DO MANGÁ
+\*-----------------------------------*/
+
+
+
+
+
+
+/*-----------------------------------*\
+ # INTERAÇÃO FAS TELAS
+\*-----------------------------------*/
+.content-section {
+  display: none;
+}
+
+.content-section.active {
+  display: block;
+}
+
+/*-----------------------------------*\
+ # FIM INTERAÇÃO DA TELAS
+\*-----------------------------------*/
