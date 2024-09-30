@@ -97,8 +97,8 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch('list_pages.php')
         .then(response => response.json())
         .then(data => {
-            // Filtrar imagens da pasta '../capitulo1'
-            imagePaths = data.filter(path => path.includes('../capitulo1'));
+            // Filtrar imagens da pasta 'capitulo1'
+            imagePaths = data.filter(path => path.includes('capitulo1'));
             totalPages = imagePaths.length;
             createImageElements();
             displayPage(currentPage);
@@ -131,20 +131,20 @@ function toggleMode() {
     if (scrollMode) {
         // Modo de rolagem ativado
         toggleButton.textContent = "Mudar para Modo de Navegação por Setas";
-        // Exibir todas as imagens da pasta '../capitulo1'
+        // Exibir todas as imagens da pasta 'capitulo1'
         document.querySelectorAll("img").forEach(img => {
-            if (img.src.includes('../capitulo1')) {
-                img.style.display = "block"; // Exibe imagens da pasta '../capitulo1'
+            if (img.src.includes('capitulo1')) {
+                img.style.display = "block"; // Exibe imagens da pasta 'capitulo1'
             }
         });
         arrowNav.style.display = "none";
     } else {
         // Modo de setas ativado
         toggleButton.textContent = "Mudar para Modo de Rolagem";
-        // Ocultar todas as imagens que têm o id começando com 'page' e estão na pasta '../capitulo1'
+        // Ocultar todas as imagens que têm o id começando com 'page' e estão na pasta 'capitulo1'
         document.querySelectorAll("img").forEach(img => {
-            if (img.src.includes('../capitulo1') && img.id.startsWith('page')) {
-                img.style.display = "none"; // Oculta imagens da pasta '../capitulo1'
+            if (img.src.includes('capitulo1') && img.id.startsWith('page')) {
+                img.style.display = "none"; // Oculta imagens da pasta 'capitulo1'
             }
         });
         displayPage(currentPage); // Exibe apenas a página atual
@@ -153,10 +153,10 @@ function toggleMode() {
 }
 
 function displayPage(pageNumber) {
-    // Oculta todas as imagens que têm o id começando com 'page' e estão na pasta '../capitulo1'
+    // Oculta todas as imagens que têm o id começando com 'page' e estão na pasta 'capitulo1'
     document.querySelectorAll("img").forEach(img => {
-        if (img.src.includes('../capitulo1') && img.id.startsWith('page')) {
-            img.style.display = "none"; // Oculta imagens da pasta '../capitulo1'
+        if (img.src.includes('capitulo1') && img.id.startsWith('page')) {
+            img.style.display = "none"; // Oculta imagens da pasta 'capitulo1'
         }
     });
 
@@ -207,13 +207,10 @@ function applyTheme(theme) {
     const themeIcon = document.querySelector('#themeIconContainer i'); // O ícone dentro do contêiner
 
     if (theme === 'light') {
-        // Aplicar tema claro
-        document.body.style.setProperty('--bg-color', '#f8f9fa');
-        document.body.style.setProperty('--text-color', '#000000');
 
         // Alterar cor dos ícones e fontes para preto
         document.querySelectorAll('.icon').forEach(icon => icon.style.color = '#000000');
-        document.querySelectorAll('p, h1, h2, h3, h4, h5, h6').forEach(el => el.style.color = '#000000');
+        document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, label').forEach(el => el.style.color = '#000000');
 
         // Verifica se a imagem de fundo deve ser removida
         if (backgroundImageEnabled) {
@@ -224,13 +221,10 @@ function applyTheme(theme) {
         themeIcon.classList.remove('bx-sun');
         themeIcon.classList.add('bx-moon');
     } else {
-        // Aplicar tema escuro
-        document.body.style.setProperty('--bg-color', '#121212');
-        document.body.style.setProperty('--text-color', '#ffffff');
 
         // Reverter cor dos ícones e fontes para branco
         document.querySelectorAll('.icon').forEach(icon => icon.style.color = '#ffffff');
-        document.querySelectorAll('p, h1, h2, h3, h4, h5, h6').forEach(el => el.style.color = '#ffffff');
+        document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, label').forEach(el => el.style.color = '#ffffff');
 
         // Restaura a imagem de fundo se estiver habilitada
         if (backgroundImageEnabled) {
