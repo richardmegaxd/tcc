@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
-    <link rel="stylesheet" href="../home-assets/css/style2.css">
+    <link rel="stylesheet" href="../home-assets/css/style.css">
     <link rel="stylesheet" href="../home-assets/css/lightslider.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -352,24 +352,24 @@
                 <h2>Fukigen</h2>
 
                 <div class="info-item">
-                    <span class="info-label">Gêneros:</span>
-                    <span class="info-value">Ação, Aventura, Romance</span>
+                    <p class="info-label">Gêneros:</p>
+                    <p class="info-value">Ação, Aventura, Romance</p>
                 </div>
                 <div class="info-item">
-                    <span class="info-label">Tipo:</span>
-                    <span class="info-value">Preto e Branco</span>
+                    <p class="info-label">Tipo:</p>
+                    <p class="info-value">Preto e Branco</p>
                 </div>
                 <div class="info-item">
-                    <span class="info-label">Ano:</span>
-                    <span class="info-value">2024</span>
+                    <p class="info-label">Ano:</p>
+                    <p class="info-value">2024</p>
                 </div>
                 <div class="info-item">
-                    <span class="info-label">Status:</span>
-                    <span class="info-value">Ativo</span>
+                    <p class="info-label">Status:</p>
+                    <p class="info-value">Ativo</p>
                 </div>
                 <div class="info-item">
-                    <span class="info-label">Lançamento:</span>
-                    <span class="info-value">08 de Outubro de 2015</span>
+                    <p class="info-label">Lançamento:</p>
+                    <p class="info-value">08 de Outubro de 2015</p>
                 </div>
 
                 <div class="star-rating">
