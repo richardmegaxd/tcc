@@ -3,6 +3,10 @@
     "development"
   ],
   "hints": {
+<<<<<<< HEAD
+=======
+    "no-inline-styles": "off",
+>>>>>>> 0baccb2f7c5b44878c0b9c93c4d3575fb7ddc08a
     "axe/name-role-value": [
       "default",
       {
