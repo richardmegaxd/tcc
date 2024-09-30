@@ -433,19 +433,20 @@
 
     <!-- # LEITURA DO MANGÁ -->
     <main id="section-leitura-manga" class="home-section content-section">
-        <div id="viewer" class="container">
-            <div class="d-flex justify-content-center">
-                <button class="btn btn-primary toggle-mode" onclick="toggleMode()">Mudar para Modo de Rolagem</button>
-            </div>
+        <a data-target="section-obra"><i class='bx bxs-left-arrow-circle'></i></a>
+        <div class="btn-troca">
+            <button class="toggle-mode" onclick="toggleMode()">Trocar Modo de Leitura</button>
+        </div>
 
+        <div id="viewer" class="container">
 
             <div id="image-container" class="mt-4">
                 <!-- As imagens serão carregadas dinamicamente aqui -->
             </div>
 
-            <div class="controls mt-3" id="arrow-navigation">
-                <button class="btn btn-secondary" id="prevButton" onclick="prevPage()">Página Anterior</button>
-                <button class="btn btn-secondary" id="nextButton" onclick="nextPage()">Próxima Página</button>
+            <div class="controls" id="arrow-navigation">
+                <button class="btn-page" id="prevButton" onclick="prevPage()">Página Anterior</button>
+                <button class="btn-page" id="nextButton" onclick="nextPage()">Próxima Página</button>
             </div>
         </div>
     </main>
