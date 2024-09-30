@@ -130,7 +130,7 @@ function toggleMode() {
 
     if (scrollMode) {
         // Modo de rolagem ativado
-        toggleButton.textContent = "Mudar para Modo de Navegação por Setas";
+        // toggleButton.textContent = "Mudar para Modo de Navegação por Setas";
         // Exibir todas as imagens da pasta 'capitulo1'
         document.querySelectorAll("img").forEach(img => {
             if (img.src.includes('capitulo1')) {
@@ -140,7 +140,7 @@ function toggleMode() {
         arrowNav.style.display = "none";
     } else {
         // Modo de setas ativado
-        toggleButton.textContent = "Mudar para Modo de Rolagem";
+        // toggleButton.textContent = "Mudar para Modo de Rolagem";
         // Ocultar todas as imagens que têm o id começando com 'page' e estão na pasta 'capitulo1'
         document.querySelectorAll("img").forEach(img => {
             if (img.src.includes('capitulo1') && img.id.startsWith('page')) {
