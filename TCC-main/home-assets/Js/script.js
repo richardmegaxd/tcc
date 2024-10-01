@@ -228,7 +228,7 @@ function applyTheme(theme) {
     if (theme === 'light') {
         // Alterar cor dos ícones e fontes para preto
         document.querySelectorAll('.icon').forEach(icon => icon.style.color = '#000000');
-        document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, label').forEach(el => el.style.color = '#000000');
+        document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, label, div').forEach(el => el.style.color = '#000000');
 
         // Verifica se a imagem de fundo deve ser removida
         if (backgroundImageEnabled) {
@@ -241,7 +241,7 @@ function applyTheme(theme) {
     } else {
         // Reverter cor dos ícones e fontes para branco
         document.querySelectorAll('.icon').forEach(icon => icon.style.color = '#ffffff');
-        document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, label').forEach(el => el.style.color = '#ffffff');
+        document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, label, div').forEach(el => el.style.color = '#ffffff');
 
         // Restaura a imagem de fundo se estiver habilitada
         if (backgroundImageEnabled) {
