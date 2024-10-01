@@ -385,6 +385,7 @@ section {
   margin-left: 2%;
 }
 
+
 /*-----------------------------------*\
  # FIM MENU LATERAL
 \*-----------------------------------*/
@@ -988,3 +989,50 @@ section {
 /*-----------------------------------*\
  # FIM INTERAÇÃO DA TELAS
 \*-----------------------------------*/
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+  .sidebar {
+      width: 70px; /* Largura padrão para mobile */
+      background-color: transparent;
+  }
+
+   .bx-menu i{
+    font-size: 1px;
+  }
+
+  .sidebar.open {
+      width: 250px; /* Largura do menu quando aberto */
+  }
+
+  .sidebar.open .nav-list {
+      display: block; /* Mostra os itens do menu quando aberto */
+  }
+
+  .sidebar .nav-list {
+      display: none; /* Esconde os itens do menu por padrão */
+  }
+
+  .home-section {
+      left: 40px; /* Ajusta a posição do conteúdo */
+      width: calc(100% - 78px); /* Ajusta a largura */
+  }
+
+  .sidebar.open ~ .home-section {
+      left: 250px; /* Ajusta a posição do conteúdo quando o menu está aberto */
+      width: calc(100% - 250px); /* Ajusta a largura quando aberto */
+  }
+
+ 
+}
+
+
+
