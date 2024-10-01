@@ -1031,7 +1031,10 @@ section {
       width: calc(100% - 250px); /* Ajusta a largura quando aberto */
   }
 
- 
+  #btn {
+    color: #7600dc;
+  }
+
 }
 
 
