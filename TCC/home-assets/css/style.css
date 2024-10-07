@@ -1,0 +1,985 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+  --color-default: rgb(67, 21, 96);
+  --color-second: rgb(121, 2, 196);
+  --color-white: #fff;
+  --color-light: #e0e0e0;
+  --cultured-2: hsl(0, 0%, 97%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--cultured-2);
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/*-----------------------------------*\
+ # ESTILO SCROLL
+\*-----------------------------------*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-default);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(26, 0, 51);
+}
+
+/*-----------------------------------*\
+ # FIM ESTILO SCROLL
+\*-----------------------------------*/
+
+
+
+/*-----------------------------------*\
+ # MENU LATERAL
+\*-----------------------------------*/
+
+.logo img {
+  height: 85px;
+  display: flex;
+  justify-content: center;
+}
+
+.logout img {
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+.logout:hover {
+  transform: scale(1.1);
+}
+
+ion-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.sidebar {
+  position: fixed;
+  min-height: 100vh;
+  width: 78px;
+  padding: 6px 14px;
+  z-index: 99;
+  background-color: var(--color-default);
+  transition: all .5s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar.open {
+  width: 250px;
+}
+
+.sidebar .logo_details {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.sidebar .logo_details .icon {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.sidebar .logo_details .logo_name {
+  color: var(--color-white);
+  font-size: 22px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all .5s ease;
+}
+
+.sidebar.open .logo_details .icon,
+.sidebar.open .logo_details .logo_name {
+  opacity: 1;
+}
+
+.sidebar .logo_details #btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+.sidebar.open .logo_details #btn {
+  text-align: right;
+}
+
+.sidebar i {
+  color: var(--color-white);
+  height: 60px;
+  line-height: 60px;
+  min-width: 50px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.sidebar .nav-list {
+  margin-top: 20px;
+  height: 100%;
+}
+
+.sidebar li {
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+
+.sidebar li .tooltip {
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background-color: var(--color-white);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 14px;
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar li:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sidebar.open li .tooltip {
+  display: none;
+}
+
+.sidebar input {
+  font-size: 15px;
+  color: var(--color-white);
+  font-weight: 400;
+  outline: none;
+  height: 35px;
+  width: 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-second);
+  transition: all .5s ease;
+}
+
+.sidebar input::placeholder {
+  color: var(--color-light)
+}
+
+.sidebar.open input {
+  width: 100%;
+  padding: 0 20px 0 50px;
+}
+
+.sidebar .bx-search {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  background-color: var(--color-second);
+  color: var(--color-white);
+}
+
+.sidebar li a {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  text-decoration: none;
+  background-color: var(--color-default);
+  position: relative;
+  transition: all .5s ease;
+  z-index: 12;
+}
+
+.sidebar li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  background-color: var(--color-white);
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: left;
+  z-index: -2;
+}
+
+.sidebar li a:hover::after {
+  transform: scaleX(1);
+  color: var(--color-default)
+}
+
+.sidebar li a .link_name {
+  color: var(--color-white);
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.sidebar li a:hover .link_name,
+.sidebar li a:hover i {
+  transition: all 0.5s ease;
+  color: var(--color-default)
+}
+
+.sidebar.open li a .link_name {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sidebar li i {
+  height: 35px;
+  line-height: 35px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.sidebar li.profile {
+  position: fixed;
+  height: 60px;
+  width: 78px;
+  left: 0;
+  bottom: -8px;
+  padding: 10px 14px;
+  overflow: hidden;
+  transition: all .5s ease;
+}
+
+.sidebar.open li.profile {
+  width: 250px;
+}
+
+.sidebar .profile .profile_details {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.sidebar li img {
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.sidebar li.profile .name,
+.sidebar li.profile .designation {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color-white);
+  white-space: nowrap;
+}
+
+.sidebar li.profile .designation {
+  font-size: 12px;
+}
+
+.sidebar .profile #log_out {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.sidebar .profile #log_out i {
+  position: relative;
+  margin: auto;
+}
+
+.sidebar.open .profile #log_out {
+  width: 50px;
+  background: none;
+}
+
+.home-section {
+  display: block;
+  position: relative;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all .5s ease;
+  z-index: 2;
+  background-color: transparent;
+}
+
+.home-section .text {
+  display: inline-block;
+  color: var(--color-default);
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px;
+}
+
+
+.sidebar.open~.home-section {
+  left: 250px;
+  width: calc(100% - 250px);
+}
+
+section {
+  margin-top: 3%;
+  margin-left: 2%;
+}
+
+/*-----------------------------------*\
+ # FIM MENU LATERAL
+\*-----------------------------------*/
+
+
+
+/*-----------------------------------*\
+ # TELA INÍCIAL
+\*-----------------------------------*/
+
+
+.para-voce-box {
+  width: 430px;
+  height: 350px;
+  margin: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 10px 6px #0f001d;
+  border-radius: 10px;
+}
+
+.para-voce-box img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.para-voce-heading {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  color: #dfdfdf;
+  margin: 30px 30px 10px 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  box-shadow: 0 0 20px 6px #2a2424;
+  opacity: 0.8;
+  width: 155px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.para-voce-heading i {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.cs-hidden {
+  display: flex;
+  overflow: visible !important;
+}
+
+
+
+.continue-lendo-heading {
+  margin: 30px 30px 10px 30px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #dfdfdf;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  box-shadow: 0 0 20px 6px #2a2424;
+  opacity: 0.8;
+  width: 200px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.continue-lendo-heading i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.continue-lendo-box {
+  display: flex;
+  align-items: center;
+  box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+  margin: 20px 10px;
+  border-radius: 10px;
+  overflow:hidden;
+  width:200px;
+  height: 250px;
+  background-color: #0f001d;
+}
+
+
+.continue-lendo-b-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.lancamentos-heading h2 {
+  margin: 30px 30px 10px 30px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #dfdfdf;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  box-shadow: 0 0 20px 6px #2a2424;
+  opacity: 0.8;
+  width: 190px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1%;
+}
+
+.lancamentos-box {
+  min-width: 15dvw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  border-top: 3px solid #292929;
+  box-shadow: 0 0 20px 6px #3a363f;
+  overflow: hidden;
+}
+
+.lancamentos-img {
+  position: relative;
+}
+
+.lancamentos-img img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+}
+
+.lancamentos-box:hover {
+  transform: translateY(-10px);
+  transition: all ease 0.2s;
+}
+
+#lancamentos-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.quality {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #270053;
+  color: #ffffff;
+  padding: 5px 20px;
+  font-weight: 500;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+
+
+@media(max-width:570px) {
+  .para-voce-heading, .continue-lendo-heading, .lancamentos-heading h2 {
+    margin: auto;
+    position: relative;
+  }
+  .para-voce-box {
+    width: 200px;
+  }
+
+}
+
+@media(max-width:440px) {
+
+  .lancamentos-box a,
+  .lancamentos-box {
+    width: 100%;
+  }
+
+  .lancamentos-box {
+    flex-direction: column;
+  }
+
+  .logo img {
+    height: 55px;
+  }
+}
+
+/*-----------------------------------*\
+ # FIM DA TELA INÍCIAL
+\*-----------------------------------*/
+
+
+/*-----------------------------------*\
+ # PERFIL DO MANGÁ
+\*-----------------------------------*/
+#section-obra .container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  color: #ddd;
+}
+
+#section-obra .manga-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  max-width: 450px;
+  margin-top: 10px;
+}
+
+#section-obra .manga-info h2 {
+  margin-bottom: 10px;
+}
+
+#section-obra .manga-info .info-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+#section-obra .manga-info .info-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+#section-obra .manga-info .info-label {
+  font-weight: bold;
+}
+
+#section-obra .manga-info .info-value {
+  font-weight: normal;
+  margin-left: 20px;
+
+}
+
+#section-obra .manga-cover {
+  width: 200px;
+  height: auto;
+  border-radius: 5px;
+  border-top: 3px solid #292929;
+  box-shadow: 0 0 20px 6px #3a363f;
+}
+
+
+#section-obra .titulo-cap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1%;
+  gap: 1%;
+  font-family: "Poppins", sans-serif;
+  color: #ddd;
+}
+
+
+#section-obra .chapters {
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  width: 50vw;
+}
+
+#section-obra .chapter {
+  border: 2px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #272129;
+  border-bottom: 1px solid #343a40;
+  border-radius: 20px;
+  margin-top: 2%;
+  color: #ddd;
+  font-weight: 500;
+}
+
+#section-obra .chapter:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow:
+    5px 5px var(--color-default),
+    -0.4em 0.4em var(--color-default);
+  transition: 0.3s;
+  background-color: rgb(203, 199, 206);
+  color: #272129;
+}
+
+#section-obra .chapter img {
+  width: 60px;
+}
+
+#section-obra .chapter-number {
+  font-weight: bold;
+}
+
+#section-obra .chapter-time {
+  font-size: 12px;
+  color: #888;
+}
+
+#section-obra .chapter-cover {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+
+#section-obra .star-rating {
+  display: inline-block;
+  font-size: 2em;
+}
+
+#section-obra .star-rating i {
+  color: #747474;
+}
+
+#section-obra .star-rating i.active {
+  color: #ffc107;
+  /* Amarelo */
+}
+
+#section-obra .star-rating:hover {
+  cursor: pointer;
+}
+
+
+
+#section-obra .comments {
+  margin-bottom: 2rem;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  color: #ddd;
+}
+
+#section-obra .comments ul {
+  list-style: none;
+  padding: 0;
+}
+
+#section-obra .comments a {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+
+#section-obra #comment-form {
+  display: flex;
+  flex-direction: column;
+  width: 45vw;
+}
+
+#section-obra #comment-form textarea {
+  margin-top: 1%;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #190036;
+  opacity: 0.8;
+  color: var(--color-light);
+}
+
+#section-obra #comment-form button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  background-color: #4f4253;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 10rem;
+  position: relative;
+  margin: auto;
+  border-radius: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+  font-size: 15px;
+}
+
+#section-obra #comment-form button:hover {
+  background-color: rgb(131, 2, 182);
+  transform: scale(1.1);
+}
+
+@media(max-width:1200px) {
+  #section-obra .chapters {
+    width: 70vw;
+  }
+
+  #section-obra .chapter {
+    margin-top: 5%;
+  }
+
+  #section-obra #comment-form {
+    width: 70vw;
+  }
+
+}
+
+@media(max-width:650px) {
+  #section-obra .container {
+    flex-direction: column;
+  }
+
+  #section-obra .container img {
+    position: relative;
+    margin: auto;
+  }
+
+  #section-obra .manga-info {
+    position: relative;
+    margin: auto;
+  }
+
+  #section-obra .chapter {
+    margin-top: 8%;
+  }
+}
+
+/*-----------------------------------*\
+  # FIM PERFIL DO MANGÁ
+\*-----------------------------------*/
+
+
+
+/*-----------------------------------*\
+ # LEITURA DO MANGÁ
+\*-----------------------------------*/
+#section-leitura-manga #viewer {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: transparent;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+#section-leitura-manga img {
+  max-width: 100%;
+  height: 70%;
+  object-fit: contain;
+  display: none;
+  position: relative;
+  margin: auto;
+}
+
+#section-leitura-manga .controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+#section-leitura-manga .btn-troca {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+
+}
+
+#section-leitura-manga .toggle-mode {
+  background-color: var(--color-default);
+  border-radius: 20%;
+  color: var(--color-white);
+  cursor: pointer;
+  padding: 10px;
+}
+
+#section-leitura-manga .toggle-mode:hover {
+  background-color: #7700ff;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+}
+
+#section-leitura-manga .btn-page {
+  padding: 10px;
+  background-color: var(--color-default);
+  color: #ffffff;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 30dvw;
+  margin: 0 10px;
+}
+
+
+#section-leitura-manga .button:hover {
+  background-color: #4804e6;
+}
+
+#section-leitura-manga .btn-page:disabled {
+  background-color: #c0c0c0;
+  cursor: not-allowed;
+  color: #0f001d;
+}
+
+#section-leitura-manga .bxs-binoculars {
+  font-size: 25px;
+  box-shadow: 0 0 20px 6px #8000ff;
+  background: none;
+  width: 10%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+}
+
+#section-leitura-manga .bxs-left-arrow-circle {
+  position: absolute;
+  margin-top: 1%;
+  margin-left: 3%;
+  font-size: 3rem;
+  color: var(--color-default);
+  cursor: pointer;
+}
+
+#section-leitura-manga .bxs-left-arrow-circle:hover {
+  transform: scale(1.1);
+}
+
+
+#section-leitura-manga #backToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  background: none;
+  color: var(--color-default);
+  border: none;
+  padding: 10px 15px;
+  font-size: 45px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+  opacity: 0.8;
+}
+
+#section-leitura-manga #backToTopBtn:hover {
+  opacity: 1;
+  /* Ao passar o mouse, ele fica totalmente visível */
+}
+
+@media (max-width: 550px) {
+  #section-leitura-manga .bxs-left-arrow-circle {
+    margin-top: 2%;
+    width: 20px;
+  }
+  
+}
+
+@media (max-width: 450px) {
+  
+  #section-leitura-manga .btn-page {
+   font-size: 7px;
+   padding: 10px;
+  }
+}
+
+
+/*-----------------------------------*\
+ # FIM LEITURA DO MANGÁ
+\*-----------------------------------*/
+
+
+.manutenção {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: auto;
+  margin-top: 15%;
+  overflow: hidden;
+}
+
+
+
+/*-----------------------------------*\
+ # INTERAÇÃO FAS TELAS
+\*-----------------------------------*/
+.content-section {
+  display: none;
+}
+
+.content-section.active {
+  display: block;
+}
+
+/*-----------------------------------*\
+ # FIM INTERAÇÃO DA TELAS
+\*-----------------------------------*/
