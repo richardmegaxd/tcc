@@ -19,6 +19,122 @@
         header("Location: login.php");
         exit;
     }
+// URL base da API
+$base_url = "https://api.mangadex.org";
+
+// Função para buscar um mangá sem necessidade de autenticação
+function buscar_manga($title) {
+    global $base_url;
+
+    if (empty(trim($title))) {
+        echo "Por favor, forneça um título para buscar.";
+        return;
+    }
+
+    $url = $base_url . "/manga?title=" . urlencode($title);
+
+    echo "<p>URL da requisição: " . htmlspecialchars($url) . "</p>"; // Exibir a URL para depuração
+
+    // Inicializa o cURL
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPGET, true);
+    
+    // Adiciona um cabeçalho User-Agent
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+    ]);
+
+    // Desabilita a verificação de certificado SSL (apenas para testar, não recomendado em produção)
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+    // Executa a requisição
+    $response = curl_exec($ch);
+    $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+    // Verifica se houve erro na requisição
+    if (curl_errno($ch)) {
+        echo "Erro na requisição: " . curl_error($ch);
+        curl_close($ch);
+        return;
+    }
+
+    // Fecha o cURL
+    curl_close($ch);
+
+    // Verifica o código de resposta HTTP
+    if ($http_code != 200) {
+        echo "Falha ao buscar mangá. Código HTTP: " . $http_code;
+        return;
+    }
+
+    // Decodifica a resposta JSON
+    $mangas = json_decode($response, true)['data'];
+
+    if (empty($mangas)) {
+        echo "Nenhum mangá encontrado.";
+        return;
+    }
+
+// Para cada mangá encontrado, buscar a imagem da capa
+foreach ($mangas as $manga) {
+    $titulo = isset($manga['attributes']['title']['en']) ? $manga['attributes']['title']['en'] : "Título indisponível";
+    $id = $manga['id'];
+    
+    // Encontrar a capa do mangá
+    $cover_id = '';
+    foreach ($manga['relationships'] as $relationship) {
+        if ($relationship['type'] == 'cover_art') {
+            $cover_id = $relationship['id'];
+            break;
+        }
+    }
+
+    // Se encontrarmos um ID de capa, buscar a informação da capa
+    $cover_url = '';
+    if (!empty($cover_id)) {
+        $cover_api_url = $base_url . "/cover/" . $cover_id;
+
+        // Executa uma requisição para buscar a URL da capa
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $cover_api_url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPGET, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+            'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        ]);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        $cover_response = curl_exec($ch);
+        curl_close($ch);
+
+        if ($cover_response !== false) {
+            $cover_data = json_decode($cover_response, true)['data'];
+            if (isset($cover_data['attributes']['fileName'])) {
+                $file_name = $cover_data['attributes']['fileName'];
+                $cover_url = "https://uploads.mangadex.org/covers/$id/$file_name";
+            }
+        }
+    }
+
+    // Exibir informações do mangá
+    echo "<div style='margin-bottom: 20px;'>";
+    echo "<h3>" . htmlspecialchars($titulo) . "</h3>";
+    if (!empty($cover_url)) {
+        echo "<img src='" . htmlspecialchars($cover_url) . "' alt='Capa do Mangá' style='max-width: 200px;'><br>";
+    } else {
+        echo "<p>Capa não disponível.</p>";
+    }
+    echo "<p>ID: " . htmlspecialchars($id) . "</p>";
+    echo "</div>";
+}
+}
+
+// Função principal
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pesquisar'])) {
+    $title = $_POST['pesquisar'];
+    buscar_manga($title);
+}
     ?>
 
     <!-- # MENU LATERAL -->
@@ -30,9 +146,11 @@
         </div>
         <ul class="nav-list">
             <li>
-                <i class="bx bx-search"></i>
-                <input type="text">
-                <span class="tooltip">Pesquisa</span>
+            <form method="POST">
+                    <i class="bx bx-search"></i>
+                    <input type="text" name="pesquisar" placeholder="Pesquisa">
+                </form>
+            <span class="tooltip" name="pesquisar">Pesquisa</span>
             </li>
             <li>
                 <a href="#" data-target="section-inicio">
