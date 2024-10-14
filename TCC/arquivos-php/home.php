@@ -160,7 +160,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pesquisar'])) {
                 <span class="tooltip">Início</span>
             </li>
             <li>
-                <a href="#" data-target="section-perfil">
+                <a href="./perfil.php">
                     <i class="bx bx-user"></i>
                     <span class="link_name">Perfil</span>
                 </a>
@@ -419,11 +419,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pesquisar'])) {
     </main>
     <!-- # FIM INÍCIO  -->
 
-    <!-- # PEERFIL USUÁRIO  -->
-    <main id="section-perfil" class="home-section content-section">
-        <img src="https://www.protecaomaxima.com.br/imgs/em_desenvolvimento.jpg" alt="" class="manutenção">
-    </main>
-    <!-- # FIM PEERFIL USUÁRIO  -->
 
     <!-- # FAVORITOS -->
     <main id="section-favoritos" class="home-section content-section">
