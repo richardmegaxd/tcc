@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../home-assets/css/style.css">
+    <link rel="stylesheet" href="../home-assets/css/lightslider.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -26,7 +29,7 @@
         $id_usuario = $_SESSION["id_usuario"];
         $id_usuario = mysqli_real_escape_string($conexao, $id_usuario);
 
-        $query = "SELECT * FROM tb_usuario WHERE id_usuario = '$id_usuario'";
+        $query = "SELECT * FROM tb_usuario WHERE cd_usuario = '$id_usuario'";
         $result = mysqli_query($conexao, $query);
 
         if ($result && mysqli_num_rows($result) > 0) {
