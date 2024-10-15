@@ -22,6 +22,7 @@ body {
   padding: 0px;
   font-family: 'Poppins', sans-serif;
   background-color: var(--cultured-2);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   overflow-x: hidden;
 }
 
@@ -731,6 +732,14 @@ section {
   cursor: pointer;
 }
 
+.star-rating i {
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.star-rating i.active {
+  color: gold;
+  transform: scale(1.2); 
+}
 
 
 #section-obra .comments {
@@ -991,6 +1000,38 @@ section {
   display: block;
 }
 
+.content-section {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+.content-section.active {
+  opacity: 1;
+}
 /*-----------------------------------*\
  # FIM INTERAÇÃO DA TELAS
 \*-----------------------------------*/
+
+
+
+
+
+
+
+
+
+
+.toggle-menu {
+  position: fixed; /* Fixa o botão em um local na tela */
+  top: 20px; /* Distância do topo */
+  right: 20px; /* Distância da direita */
+  padding: 10px 15px;
+  background-color: #007bff; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  border: none; /* Remove bordas */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Muda o cursor para pointer */
+}
+
+.toggle-menu:hover {
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
