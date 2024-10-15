@@ -31,8 +31,13 @@
 
     $resultado = mysqli_fetch_array($busca);
 
-    echo "Nome: " . $resultado[1] . "<br> Idade: " . $resultado[3] . "<br> Endereço: " . $resultado[4];
     ?>
+
+    <div class="usuario-info">
+        <p>Nome: <?php echo $resultado[1]; ?></p> <!-- Exibindo o nome -->
+        <p>Idade: <?php echo $resultado[3]; ?></p> <!-- Exibindo a idade -->
+        <p>Endereço: <?php echo $resultado[4]; ?></p> <!-- Exibindo o endereço -->
+    </div>
 
     <!-- # MENU LATERAL -->
     <div class="sidebar">
