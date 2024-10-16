@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../home-assets/css/style.css">
     <link rel="stylesheet" href="../home-assets/css/lightslider.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
 </head>
 
@@ -156,7 +158,7 @@
                 <span class="tooltip" name="pesquisar">Pesquisa</span>
             </li>
             <li>
-                <a href="#" data-target="section-inicio">
+                <a href="./home.php">
                     <i class="bx bx-grid-alt"></i>
                     <span class="link_name">Início</span>
                 </a>
@@ -170,7 +172,7 @@
                 <span class="tooltip">Perfil</span>
             </li>
             <li>
-                <a href="#" data-target="section-favoritos">
+                <a href="#" >
                     <i class='bx bxs-star'></i>
                     <span class="link_name">Favoritos</span>
                 </a>
@@ -226,190 +228,81 @@
     </div>
     <!-- # FIM MENU LATERAL -->
 
-    <!-- # INÍCIO -->
-    <main id="section-inicio" class="home-section content-section active">
-
-        <section id="main">
-
-
-            <h1 class="para-voce-heading"><i class='bx bxs-castle'></i> Destaques </h1>
-
-            <ul id="autoWidth" class="cs-hidden">
-                <li class="item-a">
-                    <div class="para-voce-box">
-                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420" />
-                    </div>
-                </li>
-
-                <li class="item-b">
-                    <div class="para-voce-box">
-                        <img src="https://spawnbrasil.com.br/wp-content/uploads/2020/02/spawn-112-capa-editora-abril-por-guia-dos-quadrinhos.jpg" />
-                    </div>
-                </li>
-
-                <li class="item-c">
-                    <div class="para-voce-box">
-                        <img src="https://f.i.uol.com.br/fotografia/2021/10/05/1633460103615c9f879caa1_1633460103_3x2_md.jpg" />
-                    </div>
-                </li>
-
-                <li class="item-d">
-                    <div class="para-voce-box">
-                        <img src="https://img.olx.com.br/images/19/199402202691144.jpg" />
-                    </div>
-                </li>
-
-                <li class="item-e">
-                    <div class="para-voce-box">
-                        <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/anime-manga-style-album-cover-1.0-design-template-0fc6d256e9ff17603475dfb129b132f0_screen.jpg?ts=1664026643" />
-                    </div>
-                </li>
-            </ul>
-
-        </section>
-
-        <section id="continue-lendo">
-            <h2 class="continue-lendo-heading"><i class='bx bxs-book-alt'></i> CONTINUE LENDO</h2>
-            <ul id="autoWidth2" class="cs-hidden">
-                <li class="item-a">
-                    <div class="continue-lendo-box">
-                        <picture class="continue-lendo-b-img">
-                            <img src="https://static.hq-now.com/hqs/hqs/uploads/picture/image/897179/Oedipe_TheWitch_000a.jpg">
-                        </picture>
-
-                    </div>
-                </li>
-
-                <li class="item-b">
-                    <div class="continue-lendo-box">
-                        <picture class="continue-lendo-b-img">
-                            <a href="../manga-page/index.html" data-target="section-obra">
-                                <img src="https://www.nautiljon.com/images/manga/00/03/fukigen_na_mononokean_5230.webp">
-                            </a>
-                        </picture>
-
-                    </div>
-                </li>
-
-                <li class="item-c">
-                    <div class="continue-lendo-box">
-                        <picture class="continue-lendo-b-img">
-                            <img src="https://hyperioncomics.com.br/wp-content/uploads/2022/10/0-300x459.jpg">
-                        </picture>
-
-                    </div>
-                </li>
-
-                <li class="item-d">
-                    <div class="continue-lendo-box">
-                        <picture class="continue-lendo-b-img">
-                            <img src="https://imgv2-1-f.scribdassets.com/img/word_document/605138375/original/99852f7170/1719936830?v=1">
-                        </picture>
-
-                    </div>
-                </li>
-
-                <li class="item-e">
-                    <div class="continue-lendo-box">
-                        <picture class="continue-lendo-b-img">
-                            <img src="https://i.pinimg.com/474x/08/a7/18/08a7185ecfd01971106503f9d4be3961.jpg">
-                        </picture>
-
-                    </div>
-                </li>
-
-                <li class="item-f">
-                    <div class="continue-lendo-box">
-                        <picture class="continue-lendo-b-img">
-                            <img src="https://cdn.kobo.com/book-images/9b82874e-df48-4981-a011-e4c3156ba65c/353/569/90/False/submechanophobia-an-afk-book-five-nights-at-freddy-s-tales-from-the-pizzaplex-4.jpg">
-                        </picture>
-
-                    </div>
-                </li>
-
-                <li class="item-g">
-                    <div class="continue-lendo-box">
-                        <picture class="continue-lendo-b-img">
-                            <img src="https://m.media-amazon.com/images/I/91i217MtWbL._AC_UF1000,1000_QL80_.jpg">
-                        </picture>
-
-                    </div>
-                </li>
-
-                <li class="item-h">
-                    <div class="continue-lendo-box">
-                        <picture class="continue-lendo-b-img">
-                            <img src="https://devir.com.br/diadoquadrinhogratis/assets/img/capas/conrad-digital2023_1.jpg">
-                        </picture>
-                    </div>
-                </li>
-
-
-            </ul>
-        </section>
+    
 
         <section>
+            <div class="juntar">
 
             <div class="lancamentos-heading">
-                <h2><i class='bx bxl-sketch'></i> LANÇAMENTOS</h2>
+                <h2>Obras Favoritadas 
+                </h2>
+            </div>
+            
+
+            <div class="lancamentos-heading">
+                <h2>Organizar <i class="material-icons">swap_vert</i>
+                    
+                </h2>
             </div>
 
+            </div>
+            
 
 
             <div id="lancamentos-list">
 
                 <div class="lancamentos-box">
                     <div class="lancamentos-img">
-                        <div class="quality">NOVO</div>
+                        
                         <img src="https://zinebrasil.wordpress.com/wp-content/uploads/2015/04/capa-capitao-brasil1.jpg?w=584">
                     </div>
                 </div>
 
                 <div class="lancamentos-box">
                     <div class="lancamentos-img">
-                        <div class="quality">NOVO</div>
+                        
                         <img src="https://devir.com.br/diadoquadrinhogratis/assets/img/capas/conrad-digital2023_3.jpg">
                     </div>
                 </div>
 
                 <div class="lancamentos-box">
                     <div class="lancamentos-img">
-                        <div class="quality">NOVO</div>
+                        
                         <img src="https://devir.com.br/diadoquadrinhogratis/assets/img/capas/devir-digital2023_5.jpg">
                     </div>
                 </div>
 
                 <div class="lancamentos-box">
                     <div class="lancamentos-img">
-                        <div class="quality">NOVO</div>
+                        
                         <img src="https://www.jbchost.com.br/editorajbc/wp-content/uploads/2023/11/9horas-master-edition-capa.jpg">
                     </div>
                 </div>
 
                 <div class="lancamentos-box">
                     <div class="lancamentos-img">
-                        <div class="quality">NOVO</div>
+                        
                         <img src="https://editoradraco.com/wp-content/uploads/2023/03/Retratosbrutos-CC-capa-500x718.jpg">
                     </div>
                 </div>
 
                 <div class="lancamentos-box">
                     <div class="lancamentos-img">
-                        <div class="quality">NOVO</div>
+                        
                         <img src="https://i.pinimg.com/236x/ce/44/04/ce44046067f7d3121f4d81fed5f9b146.jpg">
                     </div>
                 </div>
 
                 <div class="lancamentos-box">
                     <div class="lancamentos-img">
-                        <div class="quality">NOVO</div>
+                        
                         <img src="https://acdn.mitiendanube.com/stores/141/982/products/contosorixas1-0b0a04e13e6fbb2bb915661866635852-480-0.jpg">
                     </div>
                 </div>
 
                 <div class="lancamentos-box">
                     <div class="lancamentos-img">
-                        <div class="quality">NOVO</div>
+                        
                         <img src="https://www.newpop.com.br/wp-content/uploads/2020/03/NewPOP_Grimms01.jpg">
                     </div>
                 </div>
