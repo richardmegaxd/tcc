@@ -163,7 +163,7 @@
                 <span class="tooltip">Início</span>
             </li>
             <li>
-                <a href="./perfil.php">
+            <a href="#" data-target="section-perfil">
                     <i class="bx bx-user"></i>
                     <span class="link_name">Perfil</span>
                 </a>
@@ -421,6 +421,34 @@
     </main>
     <!-- # FIM INÍCIO  -->
 
+    <!-- # PERFIL -->
+    <main id="section-perfil" class="home-section content-section">
+    <?php
+    if (!isset($_SESSION["logado"]) || $_SESSION["logado"] != true) {
+        header("Location: login.php");
+        exit;
+    }
+
+    $user = $_SESSION['usuario'];
+    $conexao = mysqli_connect("localhost", "root", "", "bd_glark");
+
+    if(mysqli_connect_errno()){
+        echo "Erro no Banco de Dados!" . mysqli_connect_errno();
+    }
+
+    $seleciona_info = "SELECT * FROM tb_usuario WHERE ds_email='$user'"; //efetua a seleção no banco de dados e atribui a uma variável
+
+    $busca = mysqli_query( $conexao, $seleciona_info);
+
+    $resultado = mysqli_fetch_array($busca);
+
+    ?>
+    <div class="usuario-info">
+        <p>Nome: <?php echo $resultado[1]; ?></p> <!-- Exibindo o nome -->
+        <p>Idade: <?php echo $resultado[3]; ?></p> <!-- Exibindo a idade -->
+        <p>Endereço: <?php echo $resultado[4]; ?></p> <!-- Exibindo o endereço -->
+    </div>
+    </main>
 
     <!-- # FAVORITOS -->
     <main id="section-favoritos" class="home-section content-section">
@@ -511,7 +539,7 @@
                 </div>
 
             </a>
-            <a class="chapter" data-target="section-leitura-manga">
+            <a href="./leitura.php" class="chapter" data-target="section-leitura-manga">
                 <img src="https://i.ebayimg.com/images/g/lVUAAOSwfZxguF6M/s-l1200.jpg"
                     alt="Capa do Capítulo" class="chapter-cover">
                 <div>
