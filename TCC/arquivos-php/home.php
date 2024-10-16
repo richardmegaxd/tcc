@@ -458,7 +458,7 @@
 
     <!-- # PERFIL DO MANGÁ -->
     <main id="section-obra" class="home-section content-section">
-
+        <a data-target="section-inicio"><i class='bx bxs-left-arrow-circle'></i></a>
         <div class="container">
             <img src="https://www.nautiljon.com/images/manga/00/03/fukigen_na_mononokean_5230.webp" alt="Capa do Mangá"
                 class="manga-cover">
@@ -544,10 +544,9 @@
     </main>
     <!-- # FIM PERFIL MANGÁ -->
 
-
     <!-- # LEITURA DO MANGÁ -->
     <main id="section-leitura-manga" class=" content-section">
-    <button id="toggleMenu" class="toggle-menu">Tnu</button>
+        <button id="toggleMenu" class="toggle-menu">Tnu</button>
 
         <a data-target="section-obra"><i class='bx bxs-left-arrow-circle'></i></a>
 
@@ -572,6 +571,9 @@
 
     </main>
     <!-- # FIM LEITURA DO MANGÁ -->
+
+
+   
 
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="../home-assets/Js/JQuery3.3.1.js"></script>
