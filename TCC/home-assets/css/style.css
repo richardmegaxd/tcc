@@ -68,18 +68,6 @@ a {
 /*-----------------------------------*\
  # FIM ESTILO SCROLL
 \*-----------------------------------*/
-.usuario-info {
-  margin: 20px;
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.usuario-info p {
-  font-size: 16px;
-  color: #333;
-}
 
 
 /*-----------------------------------*\
@@ -1020,6 +1008,20 @@ section {
 }
 
 
+/*-----------------------------------*\
+ # PERFIL USUÁRIO
+\*-----------------------------------*/
+#section-perfil .usuario-info {
+  margin: 20px;
+  padding: 10px;
+  background-color: #000000;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/*-----------------------------------*\
+ # FIM PERFIL USUÁRIO
+\*-----------------------------------*/
 
 /*-----------------------------------*\
  # INTERAÇÃO FAS TELAS
