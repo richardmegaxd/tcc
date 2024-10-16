@@ -170,7 +170,7 @@
                 <span class="tooltip">Perfil</span>
             </li>
             <li>
-                <a href="#" data-target="section-favoritos">
+                <a href="./arquivos-php/fav.php" data-target="section-favoritos">
                     <i class='bx bxs-star'></i>
                     <span class="link_name">Favoritos</span>
                 </a>
