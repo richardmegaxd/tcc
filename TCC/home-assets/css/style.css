@@ -804,6 +804,15 @@ section {
   transform: scale(1.1);
 }
 
+#section-obra .bxs-left-arrow-circle {
+  position: absolute;
+  margin-top: 1%;
+  margin-left: 3%;
+  font-size: 3rem;
+  color: var(--color-default);
+  cursor: pointer;
+}
+
 @media(max-width:1200px) {
   #section-obra .chapters {
     width: 70vw;
@@ -849,9 +858,9 @@ section {
  # LEITURA DO MANGÁ
 \*-----------------------------------*/
 #section-leitura-manga #viewer {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  padding: 10px;
   background-color: transparent;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -869,14 +878,14 @@ section {
 #section-leitura-manga .controls {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 1%;
 }
 
 #section-leitura-manga .btn-troca {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 3%;
+  margin-top: 2%;
 
 }
 
@@ -902,7 +911,7 @@ section {
   border-radius: 20px;
   cursor: pointer;
   width: 30dvw;
-  margin: 0 10px;
+  margin: 15px;
 }
 
 
@@ -927,12 +936,16 @@ section {
 }
 
 #section-leitura-manga .bxs-left-arrow-circle {
-  position: absolute;
-  margin-top: 1%;
-  margin-left: 3%;
-  font-size: 3rem;
+  position: fixed; /* Fixa o botão em um local na tela */
+  top: 0;
+  left: 20px; /* Distância da direita */
+  padding: 10px 15px;
+  border: none; /* Remove bordas */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Muda o cursor para pointer */
+  background-color: transparent;
   color: var(--color-default);
-  cursor: pointer;
+  font-size: 40px;
 }
 
 #section-leitura-manga .bxs-left-arrow-circle:hover {
@@ -958,7 +971,23 @@ section {
 
 #section-leitura-manga #backToTopBtn:hover {
   opacity: 1;
-  /* Ao passar o mouse, ele fica totalmente visível */
+  
+}
+
+.toggle-menu {
+  position: fixed; /* Fixa o botão em um local na tela */
+  top: 20px; /* Distância do topo */
+  right: 20px; /* Distância da direita */
+  padding: 10px 15px;
+  background-color: #007bff; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  border: none; /* Remove bordas */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Muda o cursor para pointer */
+}
+
+.toggle-menu:hover {
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
 }
 
 @media (max-width: 550px) {
@@ -966,6 +995,8 @@ section {
     margin-top: 2%;
     width: 20px;
   }
+
+  
   
 }
 
@@ -1026,18 +1057,3 @@ section {
 
 
 
-.toggle-menu {
-  position: fixed; /* Fixa o botão em um local na tela */
-  top: 20px; /* Distância do topo */
-  right: 20px; /* Distância da direita */
-  padding: 10px 15px;
-  background-color: #007bff; /* Cor de fundo */
-  color: white; /* Cor do texto */
-  border: none; /* Remove bordas */
-  border-radius: 5px; /* Bordas arredondadas */
-  cursor: pointer; /* Muda o cursor para pointer */
-}
-
-.toggle-menu:hover {
-  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
-}
