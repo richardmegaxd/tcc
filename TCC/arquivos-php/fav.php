@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
-    <link rel="stylesheet" href="../home-assets/css/style.css">
-    <link rel="stylesheet" href="../home-assets/css/lightslider.css">
+    <link rel="stylesheet" href="../fav-assets/css/style.css">
+    <link rel="stylesheet" href="../fav-assets/css/lightslider.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -233,17 +233,29 @@
         <section>
             <div class="juntar">
 
-            <div class="lancamentos-heading">
-                <h2>Obras Favoritadas 
-                </h2>
-            </div>
+                <div class="lancamentos-heading">
+                    <h2>
+                        Obras Favoritadas 
+                    </h2>
+                </div>
             
 
-            <div class="lancamentos-heading">
-                <h2>Organizar <i class="material-icons">swap_vert</i>
-                    
-                </h2>
-            </div>
+                <div class="lancamentos-heading">
+                    <h2>
+                        Organizar
+                        <div class="dropdown">
+                            <div class="juntaricones">
+                                <i class='bx bxs-up-arrow-alt'></i> <i class='bx bxs-down-arrow-alt'></i>
+                            </div>
+                        <ul class="dropdown-menu" id="menu-opcoes">
+                        <li onclick="ordenar('az')">A - Z</li>
+                        <li onclick="ordenar('za')">Z - A</li>
+                        <li onclick="ordenar('ultimo')">Último Adicionado</li>
+                        <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
+                        </ul>
+                    </div>
+                    </h2>
+                </div>
 
             </div>
             
@@ -467,9 +479,9 @@
     <!-- # FIM LEITURA DO MANGÁ -->
 
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <script src="../home-assets/Js/JQuery3.3.1.js"></script>
-    <script src="../home-assets/Js/lightslider.js"></script>
-    <script src="../home-assets/Js/script2.js"></script>
+    <script src="../fav-assets/Js/JQuery3.3.1.js"></script>
+    <script src="../fav-assets/Js/lightslider.js"></script>
+    <script src="../fav-assets/Js/script2.js"></script>
 </body>
 
 </html>
