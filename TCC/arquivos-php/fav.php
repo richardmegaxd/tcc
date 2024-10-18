@@ -243,18 +243,23 @@
                 <div class="lancamentos-heading">
                     <h2>
                         Organizar
+                        
                         <div class="dropdown">
+
                             <div class="juntaricones">
                                 <i class='bx bxs-up-arrow-alt'></i> <i class='bx bxs-down-arrow-alt'></i>
+                                
                             </div>
-                        <ul class="dropdown-menu" id="menu-opcoes">
-                        <li onclick="ordenar('az')">A - Z</li>
-                        <li onclick="ordenar('za')">Z - A</li>
-                        <li onclick="ordenar('ultimo')">Último Adicionado</li>
-                        <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
-                        </ul>
-                    </div>
-                    </h2>
+                                
+                                <ul class="dropdown-menu" id="menu-opcoes">
+                                <li onclick="ordenar('az')">A - Z</li>
+                                <li onclick="ordenar('za')">Z - A</li>
+                                <li onclick="ordenar('ultimo')">Último Adicionado</li>
+                                <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
+                                </ul>
+                                </h2>
+                        </div>
+                    
                 </div>
 
             </div>

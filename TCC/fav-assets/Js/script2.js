@@ -1,3 +1,26 @@
+//dropdown
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+// FIM dropdown
+
+
+
 // CARROSSEL
 $(document).ready(function () {
     $('#autoWidth,#autoWidth2').lightSlider({
@@ -221,7 +244,6 @@ function applyTheme(theme) {
         // Alterar cor dos ícones e fontes para preto
         document.querySelectorAll('.icon').forEach(icon => icon.style.color = '#000000');
         document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, label').forEach(el => el.style.color = '#000000');
-        document.querySelectorAll('')(icon => icon.style.color = '#000000');
 
         // Verifica se a imagem de fundo deve ser removida
         if (backgroundImageEnabled) {
@@ -320,34 +342,3 @@ function toggleSidebar() {
 
 // Adiciona o evento de clique ao botão
 toggleMenuButton.addEventListener("click", toggleSidebar);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
