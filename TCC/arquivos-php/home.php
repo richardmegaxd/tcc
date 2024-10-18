@@ -574,9 +574,8 @@
 
     <!-- # LEITURA DO MANGÁ -->
     <main id="section-leitura-manga" class=" content-section">
-        <button id="toggleMenu" class="toggle-menu">Tnu</button>
+        <button id="toggleMenu" class="toggle-menu">Ocultar/Mostar Menu</button>
 
-        <a data-target="section-obra"><i class='bx bxs-left-arrow-circle'></i></a>
 
         <div class="btn-troca">
             <button class="toggle-mode" onclick="toggleMode()"><i class='bx bxs-binoculars'></i></button>
