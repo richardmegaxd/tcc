@@ -962,7 +962,7 @@ section {
   top: 20px; /* Distância do topo */
   right: 20px; /* Distância da direita */
   padding: 10px 15px;
-  background-color: #007bff; /* Cor de fundo */
+  background-color: var(--color-default); /* Cor de fundo */
   color: white; /* Cor do texto */
   border: none; /* Remove bordas */
   border-radius: 5px; /* Bordas arredondadas */
@@ -970,7 +970,7 @@ section {
 }
 
 .toggle-menu:hover {
-  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+  background-color: #7700ff; /* Cor de fundo ao passar o mouse */
 }
 
 @media (max-width: 550px) {
