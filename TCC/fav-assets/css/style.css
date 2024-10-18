@@ -503,23 +503,15 @@ section {
   justify-content: space-between
 }
 
-/* Estilo do ícone e do dropdown */
-
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-  padding-top: 10px;
-}
-
-.material-icons {
+.dropdown-button{
+  margin: 30px 90px 0px 0px;
+  background-color: transparent;
+  border: transparent;
   cursor: pointer;
-  font-size: 36px;
-  color: white;
+  background-color: #0056b3;
 }
 
-/* Oculta o menu por padrão */
-.dropdown-menu {
+.dropdown-content {
   display: none;
   position: absolute;
   background-color: black;
@@ -529,37 +521,53 @@ section {
   z-index: 1;
   border-radius: 7px;
   
-  top: 50px;
-  right: 0;
-  left: -110px;
+  top: 110px;
+  
 }
 
-.dropdown-menu li {
+.dropdown-content li {
   padding: 10px;
   cursor: pointer;
 }
 
-.dropdown-menu li:hover {
+.dropdown-content li:hover {
   background-color: #f0f0f0;
+}
+
+.show {
+  display: block;
 }
 
 .juntaricones {
   display: flex;
   justify-content: center;
-  padding-bottom: 7px;
-  padding-left: 7px;
+
 }
 
 
 .bxs-up-arrow-alt{
   position: absolute;
-  width: 40px;
+
 }
 
 .bxs-down-arrow-alt{
   padding-top: 7px;
+  width: 10px;
 }
 
+.lancamentos-heading2 h2 {
+  
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #dfdfdf;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  width: 120px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+}
 
 
 .lancamentos-heading h2 {
@@ -577,6 +585,7 @@ section {
   align-items: center;
   gap: 1%;
 }
+
 
 .lancamentos-box {
   min-width: 15dvw;

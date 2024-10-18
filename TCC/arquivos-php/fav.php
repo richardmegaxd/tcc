@@ -240,28 +240,46 @@
                 </div>
             
 
-                <div class="lancamentos-heading">
-                    <h2>
-                        Organizar
-                        
-                        <div class="dropdown">
+                <button class="dropdown-button" onclick="toggleDropdown()">
+                <div class="lancamentos-heading2">
 
-                            <div class="juntaricones">
-                                <i class='bx bxs-up-arrow-alt'></i> <i class='bx bxs-down-arrow-alt'></i>
-                                
-                            </div>
-                                
-                                <ul class="dropdown-menu" id="menu-opcoes">
+                    
+                    <h2 >
+                        Organizar 
+                        <div class="juntaricones"><i class='bx bxs-up-arrow-alt'></i> <i class='bx bxs-down-arrow-alt'></i></div>
+                        
+                        <ul class="dropdown-content" id="dropdown">
                                 <li onclick="ordenar('az')">A - Z</li>
                                 <li onclick="ordenar('za')">Z - A</li>
                                 <li onclick="ordenar('ultimo')">Último Adicionado</li>
                                 <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
                                 </ul>
-                                </h2>
-                        </div>
+                                </button>
+                    </h2>
                     
                 </div>
+                
 
+                <script>
+    // Função para alternar a visibilidade do dropdown
+    function toggleDropdown() {
+      document.getElementById("dropdown").classList.toggle("show");
+    }
+
+    // Fecha o dropdown se o usuário clicar fora dele
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropdown-button')) {
+        let dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+          let openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+                
             </div>
             
 
