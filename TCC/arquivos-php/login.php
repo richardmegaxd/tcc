@@ -39,10 +39,7 @@
         <div class="or">ou</div>
 
         <div class="media-options">
-            <a href="#" class=" field google">
-                <img width="30" height="30" src="https://img.icons8.com/color/48/google-logo.png" alt="google-logo" class="google-icon" />
-                <span>Conecte-se com Google</span>
-            </a>
+        <div id="buttonDiv"></div>
         </div>
         <p class="termos">
             Você reconhece que leu e concorda com nossos
@@ -53,6 +50,43 @@
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.js"></script>
+
+    <script>
+      function handleCredentialResponse(response) { // response = dado vem criptografado
+        const data = jwt_decode(response.credential) //jwt_decode para descriptografar
+        console.log(data)
+      }
+
+      window.onload = function () {
+     google.accounts.id.initialize({
+        client_id: "1028970424611-5g112tt1l0bqbgoe8a57clrkb7f0ks5l.apps.googleusercontent.com",
+        callback: handleCredentialResponse, // A callback precisa estar dentro da inicialização
+        use_fedcm_for_prompt: "true" // Esta configuração pode estar aqui também
+    });
+
+    google.accounts.id.renderButton(
+        document.getElementById("buttonDiv"),
+        { 
+            theme: "outline", 
+            size: "large", 
+            type: "standard",
+            shape: "pill",
+            text: "signin_with",
+            logo_alignment: "left"
+        }  // customização dos atributos
+    );
+
+    // O prompt não precisa de função de callback
+    google.accounts.id.prompt((notification) => {
+        if (notification.isNotDisplayed() || notification.isSkippedMoment()) {
+            console.log("One-tap sign-in não foi exibido.");
+        }
+    });
+};
+
+    </script>
 </body>
 
 </html>
