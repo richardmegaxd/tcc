@@ -60,7 +60,7 @@
         }
 
         // Inserir o novo usuário
-        $operacao = "INSERT INTO tb_usuario (ds_email, ds_senha, nm_user) VALUES (?, ?, ?)";
+        $operacao = "INSERT INTO tb_usuario (ds_email, ds_senha, nm_usuario) VALUES (?, ?, ?)";
         $stmt = mysqli_prepare($conexao, $operacao);
         mysqli_stmt_bind_param($stmt, "sss", $endereco, $senha, $nome);
         mysqli_stmt_execute($stmt);
