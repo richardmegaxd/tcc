@@ -430,6 +430,7 @@
     }
 
     $user = $_SESSION['usuario'];
+    
     $conexao = mysqli_connect("localhost", "root", "", "bd_glark");
 
     if(mysqli_connect_errno()){
