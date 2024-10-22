@@ -22,6 +22,7 @@
         $nome = $_POST['nome'];
         $email = $_POST['email'];
         $apelido = $_POST['apelido'];
+        $senha =$_POST['senha'];
 
         $conexao = mysqli_connect("localhost", "root", "", "bd_glark", "3306");
 
@@ -33,14 +34,18 @@
         $nome = mysqli_real_escape_string($conexao, $nome);
         $apelido = mysqli_real_escape_string($conexao, $apelido);
         $email = mysqli_real_escape_string($conexao, $email);
+        $senha = mysqli_real_escape_string($conexao, $senha);
 
         $query = "UPDATE tb_usuario SET 
               nm_user = '$nome',  
               ds_email = '$email', 
-              nm_apelido = '$apelido'  
+              nm_apelido = '$apelido', 
+              ds_senha = '$senha' 
               WHERE ds_email = '$loginUsuario'";
 
         if (mysqli_query($conexao, $query)) {
+            $_SESSION['nome'] = $nome;      
+            $_SESSION['apelido'] = $apelido;
             $_SESSION['message'] = "Perfil atualizado com sucesso!";
             header("Location: home.php");
             exit;
@@ -54,7 +59,6 @@
         exit;
     }
     ?>
-
 </body>
 
 </html>
