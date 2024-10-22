@@ -59,12 +59,13 @@
       function handleCredentialResponse(response) { // response = dado vem criptografado
         const data = jwt_decode(response.credential); //jwt_decode decodifica os dados e armazena em data
         const email = data.email; 
+        const photoUrl = data.picture;
             fetch('valida_google_login.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
-                body: `email=${encodeURIComponent(email)}`
+                body: `email=${encodeURIComponent(email)}&photo_url=${encodeURIComponent(photoUrl)}`
             })
             .then(response => response.json())
             .then(result => {
