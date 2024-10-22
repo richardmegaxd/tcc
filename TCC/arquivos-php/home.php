@@ -19,6 +19,7 @@
         header("Location: login.php");
         exit;
     }
+
     // URL base da API
     $base_url = "https://api.mangadex.org";
 
@@ -214,11 +215,7 @@
 
             <li class="profile">
                 <div class="profile_details">
-                    <img src="../assets/images/EU.jpg" alt="profile image">
-                    <div class="profile_content">
-                        <div class="name">Marcelo Azevedo</div>
-                        <div class="designation">O Mior</div>
-                    </div>
+                    <?php echo "$nome" ?>
                 </div>
                 <a href="./logout.php" id="log_out"><i class="bx bx-log-out"></i></a>
             </li>
@@ -445,10 +442,11 @@
 
     ?>
     <div class="usuario-info">
-        <p>Nome: <?php echo $resultado[1]; ?></p> <!-- Exibindo o nome -->
-        <p>Idade: <?php echo $resultado[3]; ?></p> <!-- Exibindo a idade -->
-        <p>Endereço: <?php echo $resultado[4]; ?></p> <!-- Exibindo o endereço -->
+        <p>Email: <?php echo $resultado[1]; ?></p> <!-- Exibindo o nome -->
+        <p>Nome: <?php echo $resultado[3]; ?></p> <!-- Exibindo a idade -->
+        <p>Apelido: <?php echo $resultado[4]; ?></p> <!-- Exibindo o endereço -->
     </div>
+    <a href="edit.php" class="a1">Editar Usuário</a>
     </main>
 
     <!-- # FAVORITOS -->
