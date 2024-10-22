@@ -170,11 +170,11 @@
                 <span class="tooltip">Perfil</span>
             </li>
             <li>
-                <a href="./fav.php">
+                <a href="#" data-target="section-biblioteca">
                     <i class='bx bxs-star'></i>
-                    <span class="link_name">Favoritos</span>
+                    <span class="link_name">Biblioteca</span>
                 </a>
-                <span class="tooltip">Favoritos</span>
+                <span class="tooltip">Biblioteca</span>
             </li>
             <li>
                 <a href="#" data-target="section-publicacao-obras">
@@ -451,11 +451,101 @@
     </div>
     </main>
 
-    <!-- # FAVORITOS -->
-    <main id="section-favoritos" class="home-section content-section">
-        <img src="https://www.protecaomaxima.com.br/imgs/em_desenvolvimento.jpg" alt="" class="manutenção">
+    <!-- # BIBLIOTECA -->
+    <main id="section-biblioteca" class="home-section content-section"> 
+    <section>
+    <?php 
+    $qtObras = 8;
+    ?>
+<div class="lancamentos-heading">
+    <h2><?php echo "$qtObras" ?> Obras favoritadas</h2>
+</div>
+
+<button class="dropdown-button" onclick="toggleDropdown()">
+                <div class="lancamentos-heading2">
+
+                    
+                    <h2 >
+                        Organizar 
+                        <div class="juntaricones"><i class='bx bxs-up-arrow-alt'></i> <i class='bx bxs-down-arrow-alt'></i></div>
+                        
+                        <ul class="dropdown-content" id="dropdown">
+                                <li onclick="ordenar('az')">A - Z</li>
+                                <li onclick="ordenar('za')">Z - A</li>
+                                <li onclick="ordenar('ultimo')">Último Adicionado</li>
+                                <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
+                                </ul>
+                                </button>
+                    </h2>
+                    
+                </div>
+                
+
+                <script>
+    // Função para alternar a visibilidade do dropdown
+    function toggleDropdown() {
+      document.getElementById("dropdown").classList.toggle("show");
+    }
+  </script>
+                
+            </div>
+
+
+<div id="lancamentos-list">
+
+    <div class="lancamentos-box">
+        <div class="lancamentos-img">
+            <img src="https://zinebrasil.wordpress.com/wp-content/uploads/2015/04/capa-capitao-brasil1.jpg?w=584">
+        </div>
+    </div>
+
+    <div class="lancamentos-box">
+        <div class="lancamentos-img">
+            <img src="https://devir.com.br/diadoquadrinhogratis/assets/img/capas/conrad-digital2023_3.jpg">
+        </div>
+    </div>
+
+    <div class="lancamentos-box">
+        <div class="lancamentos-img">
+            <img src="https://devir.com.br/diadoquadrinhogratis/assets/img/capas/devir-digital2023_5.jpg">
+        </div>
+    </div>
+
+    <div class="lancamentos-box">
+        <div class="lancamentos-img">
+            <img src="https://www.jbchost.com.br/editorajbc/wp-content/uploads/2023/11/9horas-master-edition-capa.jpg">
+        </div>
+    </div>
+
+    <div class="lancamentos-box">
+        <div class="lancamentos-img">
+            <img src="https://editoradraco.com/wp-content/uploads/2023/03/Retratosbrutos-CC-capa-500x718.jpg">
+        </div>
+    </div>
+
+    <div class="lancamentos-box">
+        <div class="lancamentos-img">
+            <img src="https://i.pinimg.com/236x/ce/44/04/ce44046067f7d3121f4d81fed5f9b146.jpg">
+        </div>
+    </div>
+
+    <div class="lancamentos-box">
+        <div class="lancamentos-img">
+            <img src="https://acdn.mitiendanube.com/stores/141/982/products/contosorixas1-0b0a04e13e6fbb2bb915661866635852-480-0.jpg">
+        </div>
+    </div>
+
+    <div class="lancamentos-box">
+        <div class="lancamentos-img">
+            <img src="https://www.newpop.com.br/wp-content/uploads/2020/03/NewPOP_Grimms01.jpg">
+        </div>
+    </div>
+
+</div>
+
+</section>
     </main>
-    <!-- # FIM FAVORITOS -->
+    <!-- # FIM BIBLIOTECA -->
 
     <!-- # PUBLICAÇÃO DE OBRAS -->
     <main id="section-publicacao-obras" class="home-section content-section">
