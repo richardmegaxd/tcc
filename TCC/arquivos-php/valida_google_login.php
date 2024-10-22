@@ -1,40 +1,41 @@
 <?php
 session_start();
+
 $conexao = mysqli_connect("localhost", "root", "", "bd_glark", "3306");
 
 if (mysqli_connect_errno()) {
-    echo json_encode(['success' => false, 'message' => 'Erro de conexão: ' . mysqli_connect_error()]);
+    echo json_encode(['success' => false, 'message' => "A conexão MYSQL apresentou erro: " . mysqli_connect_error()]);
     exit;
 }
 
-if (isset($_POST['email'])) {
-    $email = mysqli_real_escape_string($conexao, $_POST['email']);
+// Captura o email e a URL da foto da requisição
+$email = $_POST['email'];
+$photoUrl = $_POST['photo_url']; 
 
-    // Verifica se o usuário já existe
-    $query = "SELECT * FROM tb_usuario WHERE ds_email = '$email'";
-    $result = mysqli_query($conexao, $query);
+// Verifica se o usuário já existe
+$seleciona_usuario = "SELECT * FROM tb_usuario WHERE ds_email = '$email'";
+$procura = mysqli_query($conexao, $seleciona_usuario);
+$checar_usuario = mysqli_num_rows($procura);
 
-    if (mysqli_num_rows($result) > 0) {
-        // Usuário já existe, logar o usuário
-        $usuario = mysqli_fetch_assoc($result);
-        $_SESSION['logado'] = true;
-        $_SESSION['usuario'] = $usuario['ds_email'];
-        echo json_encode(['success' => true]);
-    } else {
-        // Usuário não existe, criar novo
-        $insert_query = "INSERT INTO tb_usuario (ds_email) VALUES ('$email')";
-        if (mysqli_query($conexao, $insert_query)) {
-            $_SESSION['logado'] = true;
-            $_SESSION['usuario'] = $email;
-            $_SESSION['id_usuario'] = mysqli_insert_id($conexao);
-            echo json_encode(['success' => true]);
-        } else {
-            echo json_encode(['success' => false, 'message' => 'Erro ao salvar usuário: ' . mysqli_error($conexao)]);
-        }
-    }
+if ($checar_usuario > 0) {
+    // O usuário já existe, apenas atualize a foto
+    $queryUpdate = "UPDATE tb_usuario SET ds_foto_perfil = '$photoUrl' WHERE ds_email = '$email'";
+    mysqli_query($conexao, $queryUpdate);
 } else {
-    echo json_encode(['success' => false, 'message' => 'E-mail não fornecido.']);
+    // O usuário não existe, insira um novo registro
+    $queryInsert = "INSERT INTO tb_usuario (ds_email, ds_foto_perfil) VALUES ('$email', '$photoUrl')";
+    mysqli_query($conexao, $queryInsert);
+
+    $_SESSION['image'] = $photoUrl;
+    
 }
+
+// Define a sessão para o usuário logado
+$_SESSION['logado'] = true;
+$_SESSION['usuario'] = $email;
+
+// Retorna sucesso
+echo json_encode(['success' => true]);
 
 mysqli_close($conexao);
 ?>
