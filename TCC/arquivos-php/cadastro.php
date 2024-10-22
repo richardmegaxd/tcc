@@ -45,10 +45,7 @@
         <div class="or">ou</div>
 
         <div class="media-options">
-            <a href="#" class=" field google">
-                <img width="30" height="30" src="https://img.icons8.com/color/48/google-logo.png" alt="google-logo" class="google-icon" />
-                <span>Conecte-se com Google</span>
-            </a>
+        <div id="buttonDiv"></div>
         </div>
         <p class="termos">
             Você reconhece que leu e concorda com nossos
@@ -59,6 +56,8 @@
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3/build/jwt-decode.min.js"></script>
 
     <script>
         const password = document.getElementById('user-password');
@@ -125,6 +124,52 @@
             }
         });
     </script>
+    <script>
+
+function handleCredentialResponse(response) { // response = dado vem criptografado
+  const data = jwt_decode(response.credential); //jwt_decode decodifica os dados e armazena em data
+  const email = data.email; 
+      fetch('valida_google_login.php', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: `email=${encodeURIComponent(email)}`
+      })
+      .then(response => response.json())
+      .then(result => {
+          if (result.success) {
+              window.location.href = "home.php"; // Redirecionar para a página inicial
+          } else {
+              console.error("Erro ao salvar o e-mail:", result.message);
+          }
+      })
+  }
+
+window.onload = function () {
+  
+google.accounts.id.initialize({
+  client_id: "1028970424611-5g112tt1l0bqbgoe8a57clrkb7f0ks5l.apps.googleusercontent.com",
+  callback: handleCredentialResponse, // A callback precisa estar dentro da inicialização
+  use_fedcm_for_prompt: "false" // Desativando FedCM
+});
+
+google.accounts.id.renderButton(
+  document.getElementById("buttonDiv"),
+  { 
+      theme: "outline", 
+      size: "large", 
+      type: "standard",
+      shape: "pill",
+      text: "signin_with",
+      logo_alignment: "left"
+  }  // customização dos atributos
+);
+
+
+};
+
+</script>
 </body>
 
 </html>
