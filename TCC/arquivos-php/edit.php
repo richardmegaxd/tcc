@@ -1,17 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+    <html lang="pt-BR">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../home-assets/css/style.css">
-    <link rel="stylesheet" href="../home-assets/css/lightslider.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-
-<body>
-
+    <head>
+        <meta charset="UTF-8">
+        <title>Editar Perfil</title>
+        <link rel="stylesheet" href="../assets/css/styleLogin.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>  
+    
     <?php
     session_start();
 
@@ -26,10 +22,10 @@
             exit;
         }
 
-        $id_usuario = $_SESSION["id_usuario"];
-        $id_usuario = mysqli_real_escape_string($conexao, $id_usuario);
+        $loginUsuario = $_SESSION['usuario'];
+        $loginUsuario = mysqli_real_escape_string($conexao, $loginUsuario);
 
-        $query = "SELECT * FROM tb_usuario WHERE cd_usuario = '$id_usuario'";
+        $query = "SELECT * FROM tb_usuario WHERE ds_email = '$loginUsuario'";
         $result = mysqli_query($conexao, $query);
 
         if ($result && mysqli_num_rows($result) > 0) {
@@ -43,33 +39,23 @@
     }
     ?>
 
-    <!DOCTYPE html>
-    <html lang="pt-BR">
-
-    <head>
-        <meta charset="UTF-8">
-        <title>Editar Perfil</title>
-        <link rel="stylesheet" href="style-php-html/styleEditarConta.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    </head>
-
     <body>
 
         <div class="login-container">
             <h1>Editar Perfil</h1>
             <form action="validaEdit.php" method="POST">
                 <div class="input-container">
-                    <input type="text" id="nome" name="nome" value="<?php echo htmlspecialchars($user['nm_usuario']); ?>" required><br>
+                    <input type="text" id="nome" name="nome" value="<?php echo htmlspecialchars($user['nm_user']); ?>"><br>
                     <label for="nome">Nome:</label>
                 </div>
 
                 <div class="input-container">
-                    <input type="number" id="idade" name="idade" value="<?php echo htmlspecialchars($user['dt_usuario']); ?>" required><br>
-                    <label for="idade">Idade:</label>
+                    <input type="text" id="apelido" name="apelido" value="<?php echo htmlspecialchars($user['nm_apelido']); ?>" ><br>
+                    <label for="idade">Apelido:</label>
                 </div>
 
                 <div class="input-container">
-                    <input type="text" id="endereco" name="endereco" value="<?php echo htmlspecialchars($user['end_usuario']); ?>" required><br>
+                    <input type="text" id="email" name="email" value="<?php echo htmlspecialchars($user['ds_email']); ?>" ><br>
                     <label for="email">email:</label>
                 </div>
 
