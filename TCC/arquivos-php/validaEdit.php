@@ -18,12 +18,10 @@
     }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $id_usuario = $_SESSION["id_usuario"];
+        $loginUsuario = $_SESSION['usuario'];
         $nome = $_POST['nome'];
-        $idade = $_POST['idade'];
         $email = $_POST['email'];
-        $telefone = $_POST['telefone'];
-        $senha = $_POST['senha'];
+        $apelido = $_POST['apelido'];
 
         $conexao = mysqli_connect("localhost", "root", "", "bd_glark", "3306");
 
@@ -32,20 +30,15 @@
             exit;
         }
 
-        $id_usuario = mysqli_real_escape_string($conexao, $id_usuario);
         $nome = mysqli_real_escape_string($conexao, $nome);
-        $idade = mysqli_real_escape_string($conexao, $idade);
+        $apelido = mysqli_real_escape_string($conexao, $apelido);
         $email = mysqli_real_escape_string($conexao, $email);
-        $telefone = mysqli_real_escape_string($conexao, $telefone);
-        $senha = mysqli_real_escape_string($conexao, $senha);
 
         $query = "UPDATE tb_usuario SET 
-              nm_usuario = '$nome', 
-              dt_usuario = '$idade', 
-              email_usuario = '$email', 
-              tel_usuario = '$telefone', 
-              senha_usuario = '$senha' 
-              WHERE id_usuario = '$id_usuario'";
+              nm_user = '$nome',  
+              ds_email = '$email', 
+              nm_apelido = '$apelido'  
+              WHERE ds_email = '$loginUsuario'";
 
         if (mysqli_query($conexao, $query)) {
             $_SESSION['message'] = "Perfil atualizado com sucesso!";
