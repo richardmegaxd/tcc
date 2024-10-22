@@ -459,7 +459,116 @@
 
     <!-- # PUBLICAÇÃO DE OBRAS -->
     <main id="section-publicacao-obras" class="home-section content-section">
-        <img src="https://www.protecaomaxima.com.br/imgs/em_desenvolvimento.jpg" alt="" class="manutenção">
+    <div class="containerM"><!-- PEGA TUDO -->
+        <div class="containerM2"><!-- PEGA TUDO 2 -->
+            <div class="tela1">
+                <div class="tela11"><!-- INICIO DA PRIMEIRA PARTE -->
+                    <div class="hey">
+                        <h3>Hey autor</h3>
+                    </div>
+                    <div class="quer">
+                        <h1>Quer publicar na Capytoon?</h1>
+                    </div>
+                    <div class="Mtexto">
+                        <p>Na CapyToon, acreditamos que cada história merece ser contada e compartilhada. <br>Se você tem uma obra que gostaria de ver publicada, estamos aqui para ajudar!</p>
+                    </div>
+                    <div class="Mroxo">
+                        <h2>Faça parte do nosso catálogo!</h2>
+                    </div>
+                </div>
+                <div class="imgQ1">
+                    <img src="TCC/home-assets/images/sofrimento.png" alt="">
+                </div>
+            </div><!-- FINAL DA PRIMEIRA PARTE -->
+            <div class="tela2"><!-- INICIO DA SEGUNDA PARTE -->
+                <div class="benef">
+                    <h2>Beneficios</h2>
+                </div>
+                <div class="tela22">
+                    <div class="qB1"><!-- QUADRADO BENEFICIOS 1 -->
+                        <div class="imgB1">
+                            <img src="TCC/home-assets/images/19.png" alt="">
+                        </div>
+                        <div class="qB11"><!-- QUADRADO BENEFICIOS 1.1 -->
+                            <h3>Justa Monetização</h3>
+                            <p>texto aqui</p>
+                        </div>
+                    </div>
+                    <div class="qB2"><!-- QUADRADO BENEFICIOS 2 -->
+                        <div class="imgB2">
+                            <img src="TCC/home-assets/images/20.png" alt="">
+                        </div>
+                        <div class="qB22"><!-- QUADRADO BENEFICIOS 2.2 -->
+                            <h3>Direitos Autorais</h3>
+                            <p>texto aqui</p>
+                        </div>
+                    </div>
+                    <div class="qB3"><!-- QUADRADO BENEFICIOS 3 -->
+                        <div class="imgB3">
+                            <img src="TCC/home-assets/images/21.png" alt="">
+                        </div>
+                        <div class="qB33"><!-- QUADRADO BENEFICIOS 3.3 -->
+                            <h3>Exposição e Alcance</h3>
+                            <p>texto aqui</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- FINAL DA SEGUNDA PARTE -->
+            <div class="tela3"><!-- INICIO DA TERCEIRA PARTE -->
+                <div class="requisitos">
+                    <h2>Requisitos</h2>
+                </div>
+                <div class="qR1"><!-- QUADRADO REQUISITOS 1 -->
+                    <div class="imgR1">
+                        <img src="" alt="">
+                    </div>
+                    <div class="qR11"><!-- QUADRADO REQUISITOS 1.1 -->
+                        <h3>Conteudo Autoral</h3>
+                        <p>texto aqui</p>
+                    </div>
+                </div>
+                <div class="qR2"><!-- QUADRADO REQUISITOS 2 -->
+                    <div class="imgR2">
+                        <img src="" alt="">
+                    </div>
+                    <div class="qR22"><!-- QUADRADO REQUISITOS 2.2 -->
+                        <h3>Conteudo Inapropriado</h3>
+                        <p>texto aqui</p>
+                    </div>
+                </div>
+                <div class="qR3"><!-- QUADRADO REQUISITOS 3 -->
+                    <div class="imgR3">
+                        <img src="" alt="">
+                    </div>
+                    <div class="qR33"><!-- QUADRADO REQUISITOS 3.3 -->
+                        <h3>Frequencia de Postagem</h3>
+                        <p>texto aqui</p>
+                    </div>
+                </div>
+                <div class="qR4"><!-- QUADRADO REQUISITOS 4 -->
+                    <div class="imgR4">
+                        <img src="" alt="">
+                    </div>
+                    <div class="qR44"><!-- QUADRADO REQUISITOS 4.4 -->
+                        <h3>Titulo aqui</h3>
+                        <p>texto aqui</p>
+                    </div>
+                </div>
+            </div><!-- FINAL DA TERCEIRA PARTE -->
+            <div class="tela4"><!-- INICIO DA QUARTA PARTE -->
+                <div class="imgCap">
+                    <img src="" alt="">
+                </div>
+                <div class="qC1"><!-- QUADRADO COMO PUBLICAR -->
+                    <h2>Como publicar?</h2>
+                    <p>texto aqui</p>
+                </div>
+                <div class="btnAces"><!-- BOTAO ACESSAR FORM DE MANDAR OBRA -->
+                    <p>Acessar formulário</p>
+                </div>
+            </div><!-- FINAL DA QUARTA PARTE -->
+        </div>
+    </div>
     </main>
     <!-- # FIM DA PUBLICAÇÃO DE OBRAS -->
 
@@ -482,7 +591,7 @@
     </main>
     <!-- # FIM CONFIGURAÇÕES -->
 
-
+l
 
 
     <!-- # PERFIL DO MANGÁ -->

@@ -415,7 +415,6 @@ section {
   overflow: hidden;
 }
 
-
 .para-voce-heading {
   font-weight: 500;
   text-transform: uppercase;
@@ -443,8 +442,6 @@ section {
   display: flex;
   overflow: visible !important;
 }
-
-
 
 .continue-lendo-heading {
   margin: 30px 30px 10px 30px;
@@ -1024,7 +1021,7 @@ section {
 \*-----------------------------------*/
 
 /*-----------------------------------*\
- # INTERAÇÃO FAS TELAS
+ # INTERAÇÃO DAS TELAS
 \*-----------------------------------*/
 .content-section {
   display: none;
@@ -1045,8 +1042,55 @@ section {
  # FIM INTERAÇÃO DA TELAS
 \*-----------------------------------*/
 
-
-
+/*-----------------------------------*\
+ # MANDE SUA OBRA
+\*-----------------------------------*/
+.tela11{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 110px;
+  margin-top: 55px;
+}
+.hey{
+  font-size: 20px;
+  color: #d838f2;
+}
+.Mroxo{
+  font-size: 12px;
+  padding: 7px;
+  background-color: #7706c1;
+  border-radius: 4px;
+  margin: 20px 0px 20px 0px;
+}
+.quer{
+  font-size: 35px;
+  margin: 20px 0px 20px 0px;
+}
+.Mtexto{
+  font-size: 20px;
+  margin: 20px 0px 20px 0px;
+}
+.tela2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tela22{
+  display: flex;
+  justify-content: center;
+}
+.benef{
+  font-size: 20px;
+}
+.qB11{
+  padding: 30px 20px 30px 25px;
+  background-color: #7902c4;
+}
+/*-----------------------------------*\
+ # FIM MANDE SUA OBRA
+\*-----------------------------------*/
 
 
 
