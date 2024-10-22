@@ -215,7 +215,14 @@
 
             <li class="profile">
                 <div class="profile_details">
-                    <?php echo "$nome" ?>
+                 <?php            
+                  $nome = isset($_SESSION['nome']) ? htmlspecialchars($_SESSION['nome']) : '';
+                  $apelido = isset($_SESSION['apelido']) ? htmlspecialchars($_SESSION['apelido']) : '';
+                  ?>
+                  <img src="<?php echo $resultado['ds_foto_perfil']; ?>" alt="Foto de Perfil" width="50px"/>
+                  <?php
+                  echo "<p> $nome <br> $apelido</p>"
+                 ?>
                 </div>
                 <a href="./logout.php" id="log_out"><i class="bx bx-log-out"></i></a>
             </li>
@@ -440,14 +447,19 @@
 
     $resultado = mysqli_fetch_array($busca);
 
+    $_SESSION['nome'] = $resultado['nm_user'];       
+    $_SESSION['apelido'] = $resultado['nm_apelido'];
+
     ?>
     <div class="usuario-info">
+    <img src="<?php echo $resultado['ds_foto_perfil']; ?>" alt="Foto de Perfil" />
         <p>Email: <?php echo $resultado[1]; ?></p> <!-- Exibindo o nome -->
         <p>Nome: <?php echo $resultado[3]; ?></p> <!-- Exibindo a idade -->
         <p>Apelido: <?php echo $resultado[4]; ?></p> <!-- Exibindo o endereço -->
     </div>
     <a href="edit.php" class="a1">Editar Usuário</a>
     </main>
+    <!-- # FIM PERFIL -->
 
     <!-- # BIBLIOTECA -->
     <main id="section-biblioteca" class="home-section content-section"> 
