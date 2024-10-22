@@ -341,7 +341,9 @@ ion-icon {
   padding: 10px 14px;
   overflow: hidden;
   transition: all .5s ease;
+  color: white;
 }
+
 
 .sidebar.open li.profile {
   width: 250px;
