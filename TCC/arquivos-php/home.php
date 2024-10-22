@@ -171,11 +171,11 @@
                 <span class="tooltip">Perfil</span>
             </li>
             <li>
-                <a href="./fav.php">
+                <a href="#" data-target="section-biblioteca">
                     <i class='bx bxs-star'></i>
-                    <span class="link_name">Favoritos</span>
+                    <span class="link_name">Biblioteca</span>
                 </a>
-                <span class="tooltip">Favoritos</span>
+                <span class="tooltip">Biblioteca</span>
             </li>
             <li>
                 <a href="#" data-target="section-publicacao-obras">
@@ -449,15 +449,214 @@
     <a href="edit.php" class="a1">Editar Usuário</a>
     </main>
 
-    <!-- # FAVORITOS -->
-    <main id="section-favoritos" class="home-section content-section">
-        <img src="https://www.protecaomaxima.com.br/imgs/em_desenvolvimento.jpg" alt="" class="manutenção">
+    <!-- # BIBLIOTECA -->
+    <main id="section-biblioteca" class="home-section content-section"> 
+    <section>
+    <?php 
+    $qtObras = 8;
+    ?>
+<div class="lancamentos-heading">
+    <h2><?php echo "$qtObras" ?> Obras favoritadas</h2>
+</div>
+
+<button class="dropdown-button" onclick="toggleDropdown()">
+                <div class="lancamentos-heading2">
+
+                    
+                    <h2 >
+                        Organizar 
+                        <div class="juntaricones"><i class='bx bxs-up-arrow-alt'></i> <i class='bx bxs-down-arrow-alt'></i></div>
+                        
+                        <ul class="dropdown-content" id="dropdown">
+                                <li onclick="ordenar('az')">A - Z</li>
+                                <li onclick="ordenar('za')">Z - A</li>
+                                <li onclick="ordenar('ultimo')">Último Adicionado</li>
+                                <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
+                                </ul>
+                                </button>
+                    </h2>
+                    
+                </div>
+                
+
+                <script>
+    // Função para alternar a visibilidade do dropdown
+    function toggleDropdown() {
+      document.getElementById("dropdown").classList.toggle("show");
+    }
+  </script>
+                
+            </div>
+
+
+<div id="lancamentos-list">
+
+    <div class="lancamentos-box">
+        <div class="lancamentos-img">
+            <img src="https://zinebrasil.wordpress.com/wp-content/uploads/2015/04/capa-capitao-brasil1.jpg?w=584">
+        </div>
+    </div>
+
+    <div class="lancamentos-box">
+        <div class="lancamentos-img">
+            <img src="https://devir.com.br/diadoquadrinhogratis/assets/img/capas/conrad-digital2023_3.jpg">
+        </div>
+    </div>
+
+    <div class="lancamentos-box">
+        <div class="lancamentos-img">
+            <img src="https://devir.com.br/diadoquadrinhogratis/assets/img/capas/devir-digital2023_5.jpg">
+        </div>
+    </div>
+
+    <div class="lancamentos-box">
+        <div class="lancamentos-img">
+            <img src="https://www.jbchost.com.br/editorajbc/wp-content/uploads/2023/11/9horas-master-edition-capa.jpg">
+        </div>
+    </div>
+
+    <div class="lancamentos-box">
+        <div class="lancamentos-img">
+            <img src="https://editoradraco.com/wp-content/uploads/2023/03/Retratosbrutos-CC-capa-500x718.jpg">
+        </div>
+    </div>
+
+    <div class="lancamentos-box">
+        <div class="lancamentos-img">
+            <img src="https://i.pinimg.com/236x/ce/44/04/ce44046067f7d3121f4d81fed5f9b146.jpg">
+        </div>
+    </div>
+
+    <div class="lancamentos-box">
+        <div class="lancamentos-img">
+            <img src="https://acdn.mitiendanube.com/stores/141/982/products/contosorixas1-0b0a04e13e6fbb2bb915661866635852-480-0.jpg">
+        </div>
+    </div>
+
+    <div class="lancamentos-box">
+        <div class="lancamentos-img">
+            <img src="https://www.newpop.com.br/wp-content/uploads/2020/03/NewPOP_Grimms01.jpg">
+        </div>
+    </div>
+
+</div>
+
+</section>
     </main>
-    <!-- # FIM FAVORITOS -->
+    <!-- # FIM BIBLIOTECA -->
 
     <!-- # PUBLICAÇÃO DE OBRAS -->
     <main id="section-publicacao-obras" class="home-section content-section">
-        <img src="https://www.protecaomaxima.com.br/imgs/em_desenvolvimento.jpg" alt="" class="manutenção">
+    <div class="containerM"><!-- PEGA TUDO -->
+        <div class="containerM2"><!-- PEGA TUDO 2 -->
+            <div class="tela1">
+                <div class="tela11"><!-- INICIO DA PRIMEIRA PARTE -->
+                    <div class="hey">
+                        <h3>Hey autor</h3>
+                    </div>
+                    <div class="quer">
+                        <h1>Quer publicar na Capytoon?</h1>
+                    </div>
+                    <div class="Mtexto">
+                        <p>Na CapyToon, acreditamos que cada história merece ser contada e compartilhada. <br>Se você tem uma obra que gostaria de ver publicada, estamos aqui para ajudar!</p>
+                    </div>
+                    <div class="Mroxo">
+                        <h2>Faça parte do nosso catálogo!</h2>
+                    </div>
+                </div>
+                <div class="imgQ1">
+                    <img src="TCC/home-assets/images/sofrimento.png" alt="">
+                </div>
+            </div><!-- FINAL DA PRIMEIRA PARTE -->
+            <div class="tela2"><!-- INICIO DA SEGUNDA PARTE -->
+                <div class="benef">
+                    <h2>Beneficios</h2>
+                </div>
+                <div class="tela22">
+                    <div class="qB1"><!-- QUADRADO BENEFICIOS 1 -->
+                        <div class="imgB1">
+                            <img src="TCC/home-assets/images/19.png" alt="">
+                        </div>
+                        <div class="qB11"><!-- QUADRADO BENEFICIOS 1.1 -->
+                            <h3>Justa Monetização</h3>
+                            <p>texto aqui</p>
+                        </div>
+                    </div>
+                    <div class="qB2"><!-- QUADRADO BENEFICIOS 2 -->
+                        <div class="imgB2">
+                            <img src="TCC/home-assets/images/20.png" alt="">
+                        </div>
+                        <div class="qB22"><!-- QUADRADO BENEFICIOS 2.2 -->
+                            <h3>Direitos Autorais</h3>
+                            <p>texto aqui</p>
+                        </div>
+                    </div>
+                    <div class="qB3"><!-- QUADRADO BENEFICIOS 3 -->
+                        <div class="imgB3">
+                            <img src="TCC/home-assets/images/21.png" alt="">
+                        </div>
+                        <div class="qB33"><!-- QUADRADO BENEFICIOS 3.3 -->
+                            <h3>Exposição e Alcance</h3>
+                            <p>texto aqui</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- FINAL DA SEGUNDA PARTE -->
+            <div class="tela3"><!-- INICIO DA TERCEIRA PARTE -->
+                <div class="requisitos">
+                    <h2>Requisitos</h2>
+                </div>
+                <div class="qR1"><!-- QUADRADO REQUISITOS 1 -->
+                    <div class="imgR1">
+                        <img src="" alt="">
+                    </div>
+                    <div class="qR11"><!-- QUADRADO REQUISITOS 1.1 -->
+                        <h3>Conteudo Autoral</h3>
+                        <p>texto aqui</p>
+                    </div>
+                </div>
+                <div class="qR2"><!-- QUADRADO REQUISITOS 2 -->
+                    <div class="imgR2">
+                        <img src="" alt="">
+                    </div>
+                    <div class="qR22"><!-- QUADRADO REQUISITOS 2.2 -->
+                        <h3>Conteudo Inapropriado</h3>
+                        <p>texto aqui</p>
+                    </div>
+                </div>
+                <div class="qR3"><!-- QUADRADO REQUISITOS 3 -->
+                    <div class="imgR3">
+                        <img src="" alt="">
+                    </div>
+                    <div class="qR33"><!-- QUADRADO REQUISITOS 3.3 -->
+                        <h3>Frequencia de Postagem</h3>
+                        <p>texto aqui</p>
+                    </div>
+                </div>
+                <div class="qR4"><!-- QUADRADO REQUISITOS 4 -->
+                    <div class="imgR4">
+                        <img src="" alt="">
+                    </div>
+                    <div class="qR44"><!-- QUADRADO REQUISITOS 4.4 -->
+                        <h3>Titulo aqui</h3>
+                        <p>texto aqui</p>
+                    </div>
+                </div>
+            </div><!-- FINAL DA TERCEIRA PARTE -->
+            <div class="tela4"><!-- INICIO DA QUARTA PARTE -->
+                <div class="imgCap">
+                    <img src="" alt="">
+                </div>
+                <div class="qC1"><!-- QUADRADO COMO PUBLICAR -->
+                    <h2>Como publicar?</h2>
+                    <p>texto aqui</p>
+                </div>
+                <div class="btnAces"><!-- BOTAO ACESSAR FORM DE MANDAR OBRA -->
+                    <p>Acessar formulário</p>
+                </div>
+            </div><!-- FINAL DA QUARTA PARTE -->
+        </div>
+    </div>
     </main>
     <!-- # FIM DA PUBLICAÇÃO DE OBRAS -->
 
@@ -480,7 +679,7 @@
     </main>
     <!-- # FIM CONFIGURAÇÕES -->
 
-
+l
 
 
     <!-- # PERFIL DO MANGÁ -->
