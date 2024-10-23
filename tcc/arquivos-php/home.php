@@ -170,11 +170,11 @@
     </header>
 
     <!--=============== SIDEBAR ===============-->
-    <div class="sidebar" id="sidebar">
+    <div class="sidebar text-color" id="sidebar">
         <nav class="sidebar__container">
             <div class="sidebar__logo">
                 <img src="../assets/images/log5.png" alt="" class="sidebar__logo-img">
-                <span class="sidebar__logo-text">THE GLARCK</span>
+                <span class="sidebar__logo-text text-color">THE GLARK</span>
             </div>
 
             <div class="sidebar__content">
@@ -893,27 +893,27 @@
             <img src="https://www.nautiljon.com/images/manga/00/03/fukigen_na_mononokean_5230.webp" alt="Capa do Mangá"
                 class="manga-cover">
             <div class="manga-info">
-                <h2>Fukigen</h2>
+                <h2 class="text-color">Fukigen</h2>
 
                 <div class="info-item">
-                    <p class="info-label">Gêneros:</p>
-                    <p class="info-value">Ação, Aventura, Romance</p>
+                    <p class="info-label text-color">Gêneros:</p>
+                    <p class="info-value text-color">Ação, Aventura, Romance</p>
                 </div>
                 <div class="info-item">
-                    <p class="info-label">Tipo:</p>
-                    <p class="info-value">Preto e Branco</p>
+                    <p class="info-label text-color">Tipo:</p>
+                    <p class="info-value text-color">Preto e Branco</p>
                 </div>
                 <div class="info-item">
-                    <p class="info-label">Ano:</p>
-                    <p class="info-value">2024</p>
+                    <p class="info-label text-color">Ano:</p>
+                    <p class="info-value text-color">2024</p>
                 </div>
                 <div class="info-item">
-                    <p class="info-label">Status:</p>
-                    <p class="info-value">Ativo</p>
+                    <p class="info-label text-color">Status:</p>
+                    <p class="info-value text-color">Ativo</p>
                 </div>
                 <div class="info-item">
-                    <p class="info-label">Lançamento:</p>
-                    <p class="info-value">08 de Outubro de 2015</p>
+                    <p class="info-label text-color">Lançamento:</p>
+                    <p class="info-value text-color">08 de Outubro de 2015</p>
                 </div>
 
                 <div class="star-rating">
@@ -931,7 +931,7 @@
             <div class="titulo-cap">
                 <img width="60" height="60" src="https://img.icons8.com/color/48/comics-magazine.png"
                     alt="comics-magazine" />
-                <h2>CAPÍTULOS</h2>
+                <h2 class="text-color">CAPÍTULOS</h2>
 
             </div>
             <a class="chapter" data-target="section-leitura-manga">
@@ -967,7 +967,7 @@
                 <!-- Exibe os comentários aqui -->
             </ul>
             <form id="comment-form">
-                <label for="comment">Deixe seu comentário:</label>
+                <label for="comment" class="text-color">Deixe seu comentário:</label>
                 <textarea id="comment" name="comment" rows="4" placeholder="Digite seu comentário"></textarea>
                 <button type="submit">Enviar</button>
             </form>
