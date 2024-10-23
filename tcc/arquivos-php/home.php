@@ -187,8 +187,8 @@
 
                     <a href="#" class="sidebar__link" data-target="section-biblioteca">
                         <i class='bx bxs-star text-color'></i>
-                        <span class="sidebar__link-name text-color">biblioteca</span>
-                        <span class="sidebar__link-floating text-color">biblioteca</span>
+                        <span class="sidebar__link-name text-color">Biblioteca</span>
+                        <span class="sidebar__link-floating text-color">Biblioteca</span>
                     </a>
 
                     <a href="#" class="sidebar__link" data-target="section-publicacao-obras">

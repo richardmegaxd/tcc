@@ -41,8 +41,9 @@
         <div class="or">ou</div>
 
         <div class="media-options">
-        <div id="buttonDiv"></div>
+            <div id="buttonDiv"></div>
         </div>
+
         <p class="termos">
             Você reconhece que leu e concorda com nossos
             <a href="#">Termos de Serviço</a> e nossa
