@@ -486,18 +486,18 @@
 
                     <h2>
                         Organizar
-                            
-                            <i class='bx bxs-up-arrow-alt'></i> 
-                            <i class='bx bxs-down-arrow-alt'></i>  
-                            
+
+                        <i class='bx bxs-up-arrow-alt'></i>
+                        <i class='bx bxs-down-arrow-alt'></i>
+
                         <ul class="dropdown-content" id="dropdown">
                             <li onclick="ordenar('az')">A - Z</li>
                             <li onclick="ordenar('za')">Z - A</li>
                             <li onclick="ordenar('ultimo')">Último Adicionado</li>
                             <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
                         </ul>
-                    </h2>   
-                     
+                    </h2>
+
                 </button>
 
             </div>
@@ -599,12 +599,12 @@
                     </div>
                     <div class="tela22">
                         <div class="qB1"><!-- QUADRADO BENEFICIOS 1 -->
-                            <div class="imgB1">
-                                <img src="TCC/home-assets/images/19.png" alt="">
-                            </div>
                             <div class="qB11"><!-- QUADRADO BENEFICIOS 1.1 -->
-                                <h3>Justa Monetização</h3>
-                                <p>texto aqui</p>
+                                <div class="divImgB1">
+                                    <img class="imgB1" src="../home-assets/images/19.png" alt="">
+                                    <h3 class="justa">Justa Monetização</h3>
+                                    <p class="justa2">texto aqui texto aqui texto aqui<br>texto aqui texto aqui texto aqui</p>
+                                </div>
                             </div>
                         </div>
                         <div class="qB2"><!-- QUADRADO BENEFICIOS 2 -->
@@ -646,7 +646,8 @@
                         </div>
                         <div class="qR22"><!-- QUADRADO REQUISITOS 2.2 -->
                             <h3>Conteudo Inapropriado</h3>
-                            <p>texto aqui</p>
+                            <p>texto aqui texto aqui texto aqui texto aqui<br>texto aqui texto aqui texto aqui texto
+                                aqui</p>
                         </div>
                     </div>
                     <div class="qR3"><!-- QUADRADO REQUISITOS 3 -->
