@@ -477,6 +477,7 @@
             <!-- Se não fez login com o Google, a opção de editar perfil é ativada -->
             <a href="edit.php" class="a1">Editar Usuário</a>
         <?php endif; ?> 
+        <a href="delete.php" class="a1">Excluir Usuário</a>
     </main>
     <!-- # FIM PERFIL -->
 
