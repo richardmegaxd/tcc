@@ -239,13 +239,6 @@
             </div>
 
             <div class="sidebar__account">
-                <img src="../assets/images/EU.jpg" alt="sidebar image" class="sidebar__perfil">
-
-                <div class="sidebar__names">
-                    <h3 class="sidebar__name text-color">Marcelo Azevedo</h3>
-                    <span class="sidebar__email text-color">O MIOR</span>
-                </div>
-
                 <?php
                 $nome = isset($_SESSION['nome']) ? htmlspecialchars($_SESSION['nome']) : '';
                 $apelido = isset($_SESSION['apelido']) ? htmlspecialchars($_SESSION['apelido']) : '';
