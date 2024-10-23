@@ -461,6 +461,8 @@
         $_SESSION['nome'] = $resultado['nm_user'];
         $_SESSION['apelido'] = $resultado['nm_apelido'];
 
+        $login_google = $resultado['login_google'];
+
         ?>
         <div class="usuario-info">
             <img src="<?php echo $resultado['ds_foto_perfil']; ?>" alt="Foto de Perfil" />
@@ -468,7 +470,13 @@
             <p>Nome: <?php echo $resultado[3]; ?></p> <!-- Exibindo a idade -->
             <p>Apelido: <?php echo $resultado[4]; ?></p> <!-- Exibindo o endereço -->
         </div>
-        <a href="edit.php" class="a1">Editar Usuário</a>
+        <?php if ($login_google == 1): ?>
+            <!-- Se o usuário fez login com o Google, a opção de editar perfil é desativada -->
+            <p>Você fez login com o Google e não pode editar seu perfil.</p>
+        <?php else: ?>
+            <!-- Se não fez login com o Google, a opção de editar perfil é ativada -->
+            <a href="edit.php" class="a1">Editar Usuário</a>
+        <?php endif; ?> 
     </main>
     <!-- # FIM PERFIL -->
 
