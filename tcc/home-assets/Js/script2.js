@@ -205,7 +205,7 @@ function applyTheme(theme) {
     const themeIcon = document.querySelector('#themeIconContainer i'); // O ícone dentro do contêiner
 
     if (theme === 'light') {
-        document.body.style.backgroundImage = 'linear-gradient(to left bottom, #ffffff, #f6f0ff, #f0e1ff, #edd0ff, #eebeff)';
+        document.body.style.backgroundImage = '#fff';
         document.querySelectorAll('.text-color').forEach(el => el.style.color = '#000000'); // Cor do texto
         themeIcon.classList.remove('bx-sun');
         themeIcon.classList.add('bx-moon');
