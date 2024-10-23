@@ -60,12 +60,15 @@
         const data = jwt_decode(response.credential); //jwt_decode decodifica os dados e armazena em data
         const email = data.email; 
         const photoUrl = data.picture;
+        const nome = data.given_name; //given_nema = Nome
+        const sobrenome = data.family_name; // family_name = Sobrenome
+
             fetch('valida_google_login.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
-                body: `email=${encodeURIComponent(email)}&photo_url=${encodeURIComponent(photoUrl)}`
+                body:  `email=${encodeURIComponent(email)}&photo_url=${encodeURIComponent(photoUrl)}&nome=${encodeURIComponent(nome)}&sobrenome=${encodeURIComponent(sobrenome)}`
             })
             .then(response => response.json())
             .then(result => {
