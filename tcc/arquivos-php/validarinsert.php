@@ -43,7 +43,7 @@
     if (isset($_POST['login'])) {
         $nome = $_POST['nome'];
         $senha = $_POST['senha'];
-        $endereco = $_POST['login'];
+        $email = $_POST['usuario'];
 
         $conexao = mysqli_connect("localhost", "root", "", "bd_glark", "3306");
 
@@ -53,7 +53,7 @@
         }
 
         // Verificar se o e-mail já está cadastrado
-        if (isEmailExists($endereco, $conexao)) {
+        if (isEmailExists($email, $conexao)) {
             mysqli_close($conexao);
             header("Location: cadastro.php?erro=Este e-mail já está cadastrado");
             exit();

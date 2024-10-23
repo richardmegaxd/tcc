@@ -10,9 +10,12 @@
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap"
+        rel="stylesheet">
     <!-- OWL CAROUSEL -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" />
     <!-- BOX ICONS -->
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -47,7 +50,7 @@
         $url = $base_url . "/manga?title=" . urlencode($title);
 
         echo "<p>URL da requisição: " . htmlspecialchars($url) . "</p>"; // Exibir a URL para depuração
-
+    
         // Inicializa o cURL
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -212,7 +215,8 @@
 
                 <div class="sidebar__list">
 
-                    <a href="#" class="sidebar__link theme-toggle" id="themeIconContainer" onclick="toggleTheme()" aria-label="Alternar tema" aria-pressed="false">
+                    <a href="#" class="sidebar__link theme-toggle" id="themeIconContainer" onclick="toggleTheme()"
+                        aria-label="Alternar tema" aria-pressed="false">
                         <i class='bx bx-sun text-color'></i>
                         <span class="sidebar__link-name text-color">Alterar Tema</span>
                         <span class="sidebar__link-floating text-color">Alterar Tema</span>
@@ -239,13 +243,6 @@
             </div>
 
             <div class="sidebar__account">
-                <img src="../assets/images/EU.jpg" alt="sidebar image" class="sidebar__perfil">
-
-                <div class="sidebar__names">
-                    <h3 class="sidebar__name text-color">Marcelo Azevedo</h3>
-                    <span class="sidebar__email text-color">O MIOR</span>
-                </div>
-
                 <?php
                 $nome = isset($_SESSION['nome']) ? htmlspecialchars($_SESSION['nome']) : '';
                 $apelido = isset($_SESSION['apelido']) ? htmlspecialchars($_SESSION['apelido']) : '';
@@ -253,7 +250,7 @@
                 <img src="<?php echo $resultado['ds_foto_perfil']; ?>" alt="Foto de Perfil" width="50px" />
                 <?php
                 echo "<p> $nome <br> $apelido</p>"
-                ?>
+                    ?>
 
                 <a data-target="section-perfil">
                     <i class='bx bxs-chevron-right-circle' data-target="section-perfil"></i>
@@ -274,7 +271,8 @@
                 <div class="movies-slide carousel-nav-center owl-carousel">
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item" data-target="section-obra">
-                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420" alt="#" />
+                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420"
+                            alt="#" />
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Theatre of the dead
@@ -290,7 +288,8 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://spawnbrasil.com.br/wp-content/uploads/2020/02/spawn-112-capa-editora-abril-por-guia-dos-quadrinhos.jpg" alt="#">
+                        <img src="https://spawnbrasil.com.br/wp-content/uploads/2020/02/spawn-112-capa-editora-abril-por-guia-dos-quadrinhos.jpg"
+                            alt="#">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Transformer
@@ -306,7 +305,8 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://f.i.uol.com.br/fotografia/2021/10/05/1633460103615c9f879caa1_1633460103_3x2_md.jpg" alt="#">
+                        <img src="https://f.i.uol.com.br/fotografia/2021/10/05/1633460103615c9f879caa1_1633460103_3x2_md.jpg"
+                            alt="#">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Resident Evil
@@ -338,7 +338,8 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://lh4.googleusercontent.com/proxy/E1BCT7J87lag4WhJ2aWJTPrsxNvkUF5tpVhJNSglh3TeSerfFZ-9yHWnmXTCF5hgkeWLJ8e9nEk9HfcBdnwc-TkeUpDFH11hV7AOUdDUIwwxWFYHOyw5Pw9lXIMEZ1fyxWso4i8OWy3m" alt="">
+                        <img src="https://lh4.googleusercontent.com/proxy/E1BCT7J87lag4WhJ2aWJTPrsxNvkUF5tpVhJNSglh3TeSerfFZ-9yHWnmXTCF5hgkeWLJ8e9nEk9HfcBdnwc-TkeUpDFH11hV7AOUdDUIwwxWFYHOyw5Pw9lXIMEZ1fyxWso4i8OWy3m"
+                            alt="">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Hunter Killer
@@ -354,7 +355,8 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/anime-manga-style-album-cover-1.0-design-template-0fc6d256e9ff17603475dfb129b132f0_screen.jpg?ts=1664026643" alt="#">
+                        <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/anime-manga-style-album-cover-1.0-design-template-0fc6d256e9ff17603475dfb129b132f0_screen.jpg?ts=1664026643"
+                            alt="#">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Bloodshot
@@ -384,7 +386,8 @@
 
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://cupulatrovao.com.br/wp-content/uploads/2020/06/Divis%C3%A3o-5-mang%C3%A1.jpg" alt="#">
+                        <img src="https://cupulatrovao.com.br/wp-content/uploads/2020/06/Divis%C3%A3o-5-mang%C3%A1.jpg"
+                            alt="#">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Stranger Things
@@ -400,7 +403,8 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_-IT7E14qX1WECoLooV00Rdir53nicYluhC35KpDVX4FSThGm0zBjscrrVvbw8lCyvoCxpz9_3zYpGqZOWsqIU8x5uPNX33hrlZ6eIFS7UOw5fNCyglt2Q2m0PedWFcbMAmbr1n-mfWfH/s1600/Jaspion.jpg" alt="#">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_-IT7E14qX1WECoLooV00Rdir53nicYluhC35KpDVX4FSThGm0zBjscrrVvbw8lCyvoCxpz9_3zYpGqZOWsqIU8x5uPNX33hrlZ6eIFS7UOw5fNCyglt2Q2m0PedWFcbMAmbr1n-mfWfH/s1600/Jaspion.jpg"
+                            alt="#">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Star Trek
@@ -434,7 +438,8 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://imgv2-1-f.scribdassets.com/img/word_document/605138375/original/99852f7170/1719936830?v=1" alt="">
+                        <img src="https://imgv2-1-f.scribdassets.com/img/word_document/605138375/original/99852f7170/1719936830?v=1"
+                            alt="">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Mandalorian
@@ -468,7 +473,8 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://cdn.kobo.com/book-images/9b82874e-df48-4981-a011-e4c3156ba65c/353/569/90/False/submechanophobia-an-afk-book-five-nights-at-freddy-s-tales-from-the-pizzaplex-4.jpg" alt="">
+                        <img src="https://cdn.kobo.com/book-images/9b82874e-df48-4981-a011-e4c3156ba65c/353/569/90/False/submechanophobia-an-afk-book-five-nights-at-freddy-s-tales-from-the-pizzaplex-4.jpg"
+                            alt="">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Wanda Vision
@@ -515,7 +521,8 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://loja.ligiazanella.com.br/wp-content/uploads/2023/08/calendar-capa-300x432-1.jpg" alt="#">
+                        <img src="https://loja.ligiazanella.com.br/wp-content/uploads/2023/08/calendar-capa-300x432-1.jpg"
+                            alt="#">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Supergirl
@@ -531,7 +538,8 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://devir.com.br/diadoquadrinhogratis/assets/img/capas/conrad-digital2023_1.jpg" alt="">
+                        <img src="https://devir.com.br/diadoquadrinhogratis/assets/img/capas/conrad-digital2023_1.jpg"
+                            alt="">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Croods
@@ -548,7 +556,8 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://zinebrasil.wordpress.com/wp-content/uploads/2015/04/capa-capitao-brasil1.jpg?w=584" alt="">
+                        <img src="https://zinebrasil.wordpress.com/wp-content/uploads/2015/04/capa-capitao-brasil1.jpg?w=584"
+                            alt="">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Dragonball
@@ -565,7 +574,8 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy1hqh9t4ovdhLbxh4cJiHgYgf6O-9cYvsug&s" alt="">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy1hqh9t4ovdhLbxh4cJiHgYgf6O-9cYvsug&s"
+                            alt="">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Over The Moon
@@ -606,8 +616,8 @@
     </main>
     <!-- # FIM INÍCIO  -->
 
-   <!-- # PERFIL -->
-   <main id="section-perfil" class="home-section content-section">
+    <!-- # PERFIL -->
+    <main id="section-perfil" class="home-section content-section">
         <?php
         if (!isset($_SESSION["logado"]) || $_SESSION["logado"] != true) {
             header("Location: login.php");
@@ -646,7 +656,7 @@
         <?php else: ?>
             <!-- Se não fez login com o Google, a opção de editar perfil é ativada -->
             <a href="edit.php" class="a1">Editar Usuário</a>
-        <?php endif; ?> 
+        <?php endif; ?>
         <a href="delete.php" class="a1">Excluir Usuário</a>
     </main>
     <!-- # FIM PERFIL -->
@@ -758,10 +768,10 @@
                             <h3>Hey autor</h3>
                         </div>
                         <div class="quer">
-                            <h1>Quer publicar na Capytoon?</h1>
+                            <h1>Quer publicar no The Glark?</h1>
                         </div>
                         <div class="Mtexto">
-                            <p>Na CapyToon, acreditamos que cada história merece ser contada e compartilhada. <br>Se
+                            <p>Na The Glark, acreditamos que cada história merece ser contada e compartilhada.<br>Se
                                 você tem uma obra que gostaria de ver publicada, estamos aqui para ajudar!</p>
                         </div>
                         <div class="Mroxo">
@@ -778,14 +788,17 @@
                     </div>
                     <div class="tela22">
                         <div class="qB1"><!-- QUADRADO BENEFICIOS 1 -->
-                            <div class="qB11"><!-- QUADRADO BENEFICIOS 1.1 -->
-                                <div class="divImgB1">
-                                    <img class="imgB1" src="../home-assets/images/19.png" alt="">
-                                    <h3 class="justa">Justa Monetização</h3>
-                                    <p class="justa2">texto aqui texto aqui texto aqui<br>texto aqui texto aqui texto aqui</p>
-                                </div>
+                            <div class="divImgB1">
+                                <img class="imgB1" src="../home-assets/images/19.png" alt="">
+                            </div>
+                            <div class="justa">
+                                <h3 class="justa">Justa Monetização</h3>
+                            </div>
+                             <div class="just2">
+                                <p class="justa2">texto aqui texto aqui texto aqui<br>texto aqui texto aqui texto aqui</p>
                             </div>
                         </div>
+                    </div>
                         <div class="qB2"><!-- QUADRADO BENEFICIOS 2 -->
                             <div class="imgB2">
                                 <img src="TCC/home-assets/images/20.png" alt="">
@@ -1003,15 +1016,18 @@
     <!-- # FIM LEITURA DO MANGÁ -->
 
     <!-- SCRIPTS -->
-        <!-- JQUERY -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-        <!-- OWL CAROUSEL -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
-        
-        <!-- APP SCRIPT -->
-        <script src="../home-assets/Js/app.js"></script>
-        <script src="../home-assets/Js/script2.js"></script>
+    <!-- OWL CAROUSEL -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous"></script>
+
+    <!-- APP SCRIPT -->
+    <script src="../home-assets/Js/app.js"></script>
+    <script src="../home-assets/Js/script2.js"></script>
     <!--  FIM SCRIPT -->
 
 
