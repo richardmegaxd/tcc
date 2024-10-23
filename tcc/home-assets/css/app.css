@@ -225,7 +225,9 @@ img {
     backdrop-filter: blur(16px);
     z-index: var(--z-fixed);
     transition: left .4s;
-    color: #ffffff;
+    color: #fff;
+   background-color: transparent;
+  
 }
 
 .sidebar::after {
