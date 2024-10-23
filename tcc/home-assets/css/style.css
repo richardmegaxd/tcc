@@ -774,9 +774,12 @@ a {
 .benef{
   font-size: 20px;
 }
-.qB11{
+.qB1{
   padding: 30px 20px 30px 25px;
   background-color: #7902c4;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
 /*-----------------------------------*\
  # FIM MANDE SUA OBRA
