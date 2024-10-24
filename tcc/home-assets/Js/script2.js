@@ -202,20 +202,23 @@ function getCurrentTheme() {
 
 // Função para aplicar o tema com base na seleção
 function applyTheme(theme) {
-    const themeIcon = document.querySelector('#themeIconContainer i'); // O ícone dentro do contêiner
+    const themeIcon = document.querySelector('#themeIconContainer i');
 
     if (theme === 'light') {
-        document.body.style.backgroundImage = '#fff';
+        document.body.style.backgroundColor = '#fff'; // Cor de fundo sólida
+        document.body.style.backgroundImage = ''; // Remove a imagem de fundo
         document.querySelectorAll('.text-color').forEach(el => el.style.color = '#000000'); // Cor do texto
         themeIcon.classList.remove('bx-sun');
         themeIcon.classList.add('bx-moon');
     } else {
         document.body.style.backgroundImage = 'url("../assets/images/fundo3.jpg")'; // Imagem de fundo escura
+        document.body.style.backgroundColor = ''; // Remove a cor de fundo sólida
         document.querySelectorAll('.text-color').forEach(el => el.style.color = '#fff'); // Cor do texto
         themeIcon.classList.remove('bx-moon');
         themeIcon.classList.add('bx-sun');
     }
 }
+
 
 // Função para alternar tema
 function toggleTheme() {
