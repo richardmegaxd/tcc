@@ -652,12 +652,11 @@
         </div>
         <?php if ($login_google == 1): ?>
             <!-- Se o usuário fez login com o Google, a opção de editar perfil é desativada -->
-            <p>Você fez login com o Google e não pode editar seu perfil.</p>
         <?php else: ?>
             <!-- Se não fez login com o Google, a opção de editar perfil é ativada -->
             <a href="edit.php" class="a1">Editar Usuário</a>
         <?php endif; ?>
-        <a href="delete.php" class="a1">Excluir Usuário</a>
+            <a href="delete.php" class="a1">Excluir Usuário</a>
     </main>
     <!-- # FIM PERFIL -->
 
