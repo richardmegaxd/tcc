@@ -757,8 +757,8 @@
     </main>
     <!-- # FIM BIBLIOTECA -->
 
-    <!-- # PUBLICAÇÃO DE OBRAS -->
-    <main id="section-publicacao-obras" class="home-section content-section">
+<!-- # PUBLICAÇÃO DE OBRAS -->
+<main id="section-publicacao-obras" class="home-section content-section">
         <div class="containerM"><!-- PEGA TUDO -->
             <div class="containerM2"><!-- PEGA TUDO 2 -->
                 <div class="tela1">
@@ -767,10 +767,10 @@
                             <h3>Hey autor</h3>
                         </div>
                         <div class="quer">
-                            <h1>Quer publicar no The Glark?</h1>
+                            <h1>Quer publicar na Capytoon?</h1>
                         </div>
                         <div class="Mtexto">
-                            <p>Na The Glark, acreditamos que cada história merece ser contada e compartilhada.<br>Se
+                            <p>Na CapyToon, acreditamos que cada história merece ser contada e compartilhada. <br>Se
                                 você tem uma obra que gostaria de ver publicada, estamos aqui para ajudar!</p>
                         </div>
                         <div class="Mroxo">
@@ -787,17 +787,14 @@
                     </div>
                     <div class="tela22">
                         <div class="qB1"><!-- QUADRADO BENEFICIOS 1 -->
-                            <div class="divImgB1">
-                                <img class="imgB1" src="../home-assets/images/19.png" alt="">
-                            </div>
-                            <div class="justa">
-                                <h3 class="justa">Justa Monetização</h3>
-                            </div>
-                             <div class="just2">
-                                <p class="justa2">texto aqui texto aqui texto aqui<br>texto aqui texto aqui texto aqui</p>
+                            <div class="qB11"><!-- QUADRADO BENEFICIOS 1.1 -->
+                                <div class="divImgB1">
+                                    <img class="imgB1" src="../home-assets/images/19.png" alt="">
+                                    <h3 class="justa">Justa Monetização</h3>
+                                    <p class="justa2">texto aqui texto aqui texto aqui<br>texto aqui texto aqui texto aqui</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
                         <div class="qB2"><!-- QUADRADO BENEFICIOS 2 -->
                             <div class="imgB2">
                                 <img src="TCC/home-assets/images/20.png" alt="">
