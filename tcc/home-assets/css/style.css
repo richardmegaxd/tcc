@@ -751,20 +751,23 @@ a {
 
 .Mroxo {
   font-size: 12px;
-  padding: 7px;
+  padding: 7px 15px;
   background-color: #7706c1;
   border-radius: 4px;
   margin: 20px 0px 40px 0px;
+  color: white;
 }
 
 .quer {
   font-size: 35px;
   margin: 20px 0px 20px 0px;
+  color: white;
 }
 
 .Mtexto {
   font-size: 20px;
   margin: 20px 0px 20px 0px;
+  color: white;
 }
 
 .tela2 {
