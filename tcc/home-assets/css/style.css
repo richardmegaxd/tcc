@@ -720,11 +720,12 @@ a {
 }
 
 .foto-perfil{
-  width: 13vw;
-  height: 13vw;
+  width: 12vw;
+  height: 12vw;
   border-radius: 5%;
   position: relative;
   top: 60px;
+  margin-left: 30px;
 }
 
 #section-perfil .usuario-back {
@@ -736,6 +737,7 @@ a {
   gap: 7%;
   height: auto;
   width: auto;
+  margin-bottom: 80px;
 }
 
 /*-----------------------------------*\
