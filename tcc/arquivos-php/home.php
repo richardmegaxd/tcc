@@ -623,6 +623,7 @@
             header("Location: login.php");
             exit;
         }
+        
 
         $user = $_SESSION['usuario'];
 
@@ -644,11 +645,28 @@
         $login_google = $resultado['login_google'];
 
         ?>
-        <div class="usuario-info">
-            <img src="<?php echo $resultado['ds_foto_perfil']; ?>" alt="Foto de Perfil" />
-            <p>Email: <?php echo $resultado[1]; ?></p> <!-- Exibindo o nome -->
-            <p>Nome: <?php echo $resultado[3]; ?></p> <!-- Exibindo a idade -->
-            <p>Apelido: <?php echo $resultado[4]; ?></p> <!-- Exibindo o endereço -->
+
+            <!-- Informações do usuario
+            <p>Email: <?php echo $resultado[1]; ?></p>    Exibindo o email 
+            <p>Nome: <?php echo $resultado[3]; ?></p>     Exibindo a nome 
+            <p>Apelido: <?php echo $resultado[4]; ?></p>  Exibindo o apelido 
+            -->
+            
+        <div class="usuario-back text-color">
+            <img class="foto-perfil" src="<?php echo $resultado['ds_foto_perfil']; ?>" alt="Foto de Perfil" />
+            <div class="info-usuario">
+            <h2 class="nome-perfil text-color"><?php echo "$resultado[3]" ?></h2> <!-- Exibindo o nome -->
+
+                <div class="area-seguir">
+                    <div class="seguir">
+                        <h3>02 Seguidos</h3>
+                    </div>
+                    <div class="seguindo">
+                        <h3>02 Seguidores</h>
+                    </div>
+                </div>
+
+            </div>
         </div>
         <?php if ($login_google == 1): ?>
             <!-- Se o usuário fez login com o Google, a opção de editar perfil é desativada -->
@@ -661,20 +679,23 @@
     <!-- # FIM PERFIL -->
 
     <!-- # BIBLIOTECA -->
+     <?php 
+     //"SELECT COUNT(*) FROM tb_favoritos WHERE id_usuario = $resultado[0]"
+     $qt_favoritos = 8;
+     ?>
     <main id="section-biblioteca" class="home-section content-section">
-        <section>
-            <?php
-            $qtObras = 8;
-            ?>
-            <div class="lancamentos-heading2">
+              
+        <!-- LATEST MOVIES SECTION -->
+        <div class="section">
+            <div class="container-gp">
+                <div class="section-header-bli text-color">
 
-                <h2><?php echo "$qtObras" ?> Obras favoritadas</h2>
+                    <?php echo "$qt_favoritos"?> Obras Favoritadas
 
-                <button class="dropdown-button" onclick="toggleDropdown()">
+                    <button class="dropdown-button" onclick="toggleDropdown()">
+                    <h2 class="text-color">
 
-                    <h2>
                         Organizar
-
                         <i class='bx bxs-up-arrow-alt'></i>
                         <i class='bx bxs-down-arrow-alt'></i>
 
@@ -685,10 +706,7 @@
                             <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
                         </ul>
                     </h2>
-
                 </button>
-
-            </div>
 
             <script>
                 // Função para alternar a visibilidade do dropdown
@@ -697,63 +715,115 @@
                 }
             </script>
 
-            <div id="lancamentos-list">
-
-                <div class="lancamentos-box">
-                    <div class="lancamentos-img">
-                        <img
-                            src="https://zinebrasil.wordpress.com/wp-content/uploads/2015/04/capa-capitao-brasil1.jpg?w=584">
-                    </div>
                 </div>
+                <div class="movies-slide carousel-nav-center owl-carousel">
+                    <!-- MOVIE ITEM -->
+                    <a href="#" class="movie-item" data-target="section-obra">
+                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420"
+                            alt="#" />
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Theatre of the dead
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END MOVIE ITEM -->
+                    <!-- MOVIE ITEM -->
+                    <a href="#" class="movie-item">
+                        <img src="https://spawnbrasil.com.br/wp-content/uploads/2020/02/spawn-112-capa-editora-abril-por-guia-dos-quadrinhos.jpg"
+                            alt="#">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Transformer
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END MOVIE ITEM -->
+                    <!-- MOVIE ITEM -->
+                    <a href="#" class="movie-item">
+                        <img src="https://f.i.uol.com.br/fotografia/2021/10/05/1633460103615c9f879caa1_1633460103_3x2_md.jpg"
+                            alt="#">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Resident Evil
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END MOVIE ITEM -->
+                    <!-- MOVIE ITEM -->
+                    <a href="#" class="movie-item">
+                        <img src="https://img.olx.com.br/images/19/199402202691144.jpg" alt="#">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Captain Marvel
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END MOVIE ITEM -->
+                    <!-- MOVIE ITEM -->
+                    <a href="#" class="movie-item">
+                        <img src="https://lh4.googleusercontent.com/proxy/E1BCT7J87lag4WhJ2aWJTPrsxNvkUF5tpVhJNSglh3TeSerfFZ-9yHWnmXTCF5hgkeWLJ8e9nEk9HfcBdnwc-TkeUpDFH11hV7AOUdDUIwwxWFYHOyw5Pw9lXIMEZ1fyxWso4i8OWy3m"
+                            alt="">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Hunter Killer
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END MOVIE ITEM -->
+                    <!-- MOVIE ITEM -->
+                    <a href="#" class="movie-item">
+                        <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/anime-manga-style-album-cover-1.0-design-template-0fc6d256e9ff17603475dfb129b132f0_screen.jpg?ts=1664026643"
+                            alt="#">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Bloodshot
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END MOVIE ITEM -->
 
-                <div class="lancamentos-box">
-                    <div class="lancamentos-img">
-                        <img src="https://devir.com.br/diadoquadrinhogratis/assets/img/capas/conrad-digital2023_3.jpg">
-                    </div>
                 </div>
-
-                <div class="lancamentos-box">
-                    <div class="lancamentos-img">
-                        <img src="https://devir.com.br/diadoquadrinhogratis/assets/img/capas/devir-digital2023_5.jpg">
-                    </div>
-                </div>
-
-                <div class="lancamentos-box">
-                    <div class="lancamentos-img">
-                        <img
-                            src="https://www.jbchost.com.br/editorajbc/wp-content/uploads/2023/11/9horas-master-edition-capa.jpg">
-                    </div>
-                </div>
-
-                <div class="lancamentos-box">
-                    <div class="lancamentos-img">
-                        <img
-                            src="https://editoradraco.com/wp-content/uploads/2023/03/Retratosbrutos-CC-capa-500x718.jpg">
-                    </div>
-                </div>
-
-                <div class="lancamentos-box">
-                    <div class="lancamentos-img">
-                        <img src="https://i.pinimg.com/236x/ce/44/04/ce44046067f7d3121f4d81fed5f9b146.jpg">
-                    </div>
-                </div>
-
-                <div class="lancamentos-box">
-                    <div class="lancamentos-img">
-                        <img
-                            src="https://acdn.mitiendanube.com/stores/141/982/products/contosorixas1-0b0a04e13e6fbb2bb915661866635852-480-0.jpg">
-                    </div>
-                </div>
-
-                <div class="lancamentos-box">
-                    <div class="lancamentos-img">
-                        <img src="https://www.newpop.com.br/wp-content/uploads/2020/03/NewPOP_Grimms01.jpg">
-                    </div>
-                </div>
-
             </div>
+        </div>
+        <!-- END LATEST MOVIES SECTION -->
 
-        </section>
     </main>
     <!-- # FIM BIBLIOTECA -->
 
