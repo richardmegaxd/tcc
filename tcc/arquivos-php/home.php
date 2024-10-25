@@ -767,14 +767,14 @@
                             <h3>Hey autor</h3>
                         </div>
                         <div class="quer">
-                            <h1>Quer publicar na Capytoon?</h1>
+                            <h1 class="text-color">Quer publicar no The Glark?</h1>
                         </div>
                         <div class="Mtexto">
-                            <p>Na CapyToon, acreditamos que cada história merece ser contada e compartilhada. <br>Se
+                            <p class="text-color">Na The Glark, acreditamos que cada história merece ser contada e compartilhada. <br>Se
                                 você tem uma obra que gostaria de ver publicada, estamos aqui para ajudar!</p>
                         </div>
                         <div class="Mroxo">
-                            <h2>Faça parte do nosso catálogo!</h2>
+                            <h2 class="text-color">Faça parte do nosso catálogo!</h2>
                         </div>
                     </div>
                     <div class="imgQ1">
@@ -783,77 +783,79 @@
                 </div><!-- FINAL DA PRIMEIRA PARTE -->
                 <div class="tela2"><!-- INICIO DA SEGUNDA PARTE -->
                     <div class="benef">
-                        <h2>Beneficios</h2>
+                        <h2 class="text-color">Beneficios</h2>
                     </div>
                     <div class="tela22">
                         <div class="qB1"><!-- QUADRADO BENEFICIOS 1 -->
                             <div class="qB11"><!-- QUADRADO BENEFICIOS 1.1 -->
                                 <div class="divImgB1">
                                     <img class="imgB1" src="../home-assets/images/19.png" alt="">
-                                    <h3 class="justa">Justa Monetização</h3>
-                                    <p class="justa2">texto aqui texto aqui texto aqui<br>texto aqui texto aqui texto aqui</p>
+                                    <h3 class="justa text-color">Justa Monetização</h3>
+                                    <p class="justa2 text-color">texto aqui texto aqui texto aqui<br>texto aqui texto aqui texto aqui</p>
                                 </div>
                             </div>
                         </div>
                         <div class="qB2"><!-- QUADRADO BENEFICIOS 2 -->
-                            <div class="imgB2">
-                                <img src="TCC/home-assets/images/20.png" alt="">
-                            </div>
                             <div class="qB22"><!-- QUADRADO BENEFICIOS 2.2 -->
-                                <h3>Direitos Autorais</h3>
-                                <p>texto aqui</p>
+                                <div class="divimgB2">
+                                    <img class="imgB2" src="../home-assets/images/20.png" alt="">
+                                    <h3 class=" direi text-color">Direitos Autorais</h3>
+                                    <p class="direi2 text-color">texto aqui texto aqui texto aqui<br>texto aqui texto aqui texto aqui</p>
+                                </div>
                             </div>
                         </div>
                         <div class="qB3"><!-- QUADRADO BENEFICIOS 3 -->
-                            <div class="imgB3">
-                                <img src="TCC/home-assets/images/21.png" alt="">
-                            </div>
                             <div class="qB33"><!-- QUADRADO BENEFICIOS 3.3 -->
-                                <h3>Exposição e Alcance</h3>
-                                <p>texto aqui</p>
+                                <div class="divImgB3">
+                                        <img class="imgB3" src="../home-assets/images/21.png" alt="">
+                                        <h3 class="expo text-color">Exposição e Alcance</h3>
+                                        <p class="expo2 text-color">texto aqui texto aqui texto aqui<br>texto aqui texto aqui texto aqui</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div><!-- FINAL DA SEGUNDA PARTE -->
                 <div class="tela3"><!-- INICIO DA TERCEIRA PARTE -->
-                    <div class="requisitos">
-                        <h2>Requisitos</h2>
+                    <div class="req">
+                        <h2 class="text-color">Requisitos</h2>
                     </div>
-                    <div class="qR1"><!-- QUADRADO REQUISITOS 1 -->
-                        <div class="imgR1">
-                            <img src="" alt="">
+                    <div class="dividir">
+                        <div class="qR1"><!-- QUADRADO REQUISITOS 1 -->
+                            <!--<div class="qR11"></div> QUADRADO REQUISITOS 1.1 -->
+                            <img class="imgR1" src="../home-assets/images/stopwatch.png" alt="">
+                            <div class="titu1">
+                                <h3 class="text-color">Conteudo Autoral</h3>
+                                <p class="text-color">texto aqui</p>
+                            </div>
                         </div>
-                        <div class="qR11"><!-- QUADRADO REQUISITOS 1.1 -->
-                            <h3>Conteudo Autoral</h3>
-                            <p>texto aqui</p>
-                        </div>
-                    </div>
-                    <div class="qR2"><!-- QUADRADO REQUISITOS 2 -->
-                        <div class="imgR2">
-                            <img src="" alt="">
-                        </div>
-                        <div class="qR22"><!-- QUADRADO REQUISITOS 2.2 -->
-                            <h3>Conteudo Inapropriado</h3>
-                            <p>texto aqui texto aqui texto aqui texto aqui<br>texto aqui texto aqui texto aqui texto
-                                aqui</p>
-                        </div>
-                    </div>
-                    <div class="qR3"><!-- QUADRADO REQUISITOS 3 -->
-                        <div class="imgR3">
-                            <img src="" alt="">
-                        </div>
-                        <div class="qR33"><!-- QUADRADO REQUISITOS 3.3 -->
-                            <h3>Frequencia de Postagem</h3>
-                            <p>texto aqui</p>
+                        <div class="qR2"><!-- QUADRADO REQUISITOS 2 -->
+                            <!--<div class="qR22"> </div>QUADRADO REQUISITOS 2.2 -->
+                            <img class="imgR2" src="../home-assets/images/stopwatch.png" alt="">
+                            <div class="titu2">
+                                <h3 class="text-color">Conteudo Apropriado</h3>
+                                <p class="text-color">texto aqui texto aqui</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="qR4"><!-- QUADRADO REQUISITOS 4 -->
-                        <div class="imgR4">
-                            <img src="" alt="">
+                    <div class="dividir2">
+                        <div class="qR3"><!-- QUADRADO REQUISITOS 3 -->
+                            <div class="qR33"><!-- QUADRADO REQUISITOS 3.3 -->
+                                <div class="divImgR3">
+                                    <img src="" alt="">
+                                    <h3 class="text-color">Frequencia de Postagem</h3>
+                                    <p class="text-color">texto aqui</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="qR44"><!-- QUADRADO REQUISITOS 4.4 -->
-                            <h3>Titulo aqui</h3>
-                            <p>texto aqui</p>
+                        <div class="qR4"><!-- QUADRADO REQUISITOS 4 -->
+                            <div class="qR44"><!-- QUADRADO REQUISITOS 4.4 -->
+                                <div class="divImgR4">
+                                    <img src="" alt="">
+                                    <h3 class="text-color">Titulo aqui</h3>
+                                    <p class="text-color">texto aqui</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div><!-- FINAL DA TERCEIRA PARTE -->
@@ -862,11 +864,11 @@
                         <img src="" alt="">
                     </div>
                     <div class="qC1"><!-- QUADRADO COMO PUBLICAR -->
-                        <h2>Como publicar?</h2>
-                        <p>texto aqui</p>
+                        <h2 class="text-color">Como publicar?</h2>
+                        <p class="text-color">texto aqui</p>
                     </div>
                     <div class="btnAces"><!-- BOTAO ACESSAR FORM DE MANDAR OBRA -->
-                        <p>Acessar formulário</p>
+                        <p class="text-color">Acessar formulário</p>
                     </div>
                 </div><!-- FINAL DA QUARTA PARTE -->
             </div>
