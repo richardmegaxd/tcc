@@ -698,12 +698,44 @@ a {
 /*-----------------------------------*\
  # PERFIL USUÁRIO
 \*-----------------------------------*/
-#section-perfil .usuario-info {
-  margin: 20px;
-  padding: 10px;
-  background-color: #000000;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+
+.area-seguir{
+  width: 350px;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5px;
+  margin-top: 20px;
+  background-color: #214372;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: black;
+  border-width: 1px;
+}
+
+.info-usuario{
+  position: relative;
+  top: 65px;
+}
+
+.foto-perfil{
+  width: 13vw;
+  height: 13vw;
+  border-radius: 5%;
+  position: relative;
+  top: 60px;
+}
+
+#section-perfil .usuario-back {
+  margin-top: 20px;
+  padding-left: 80px;
+  background-color: #1f3659;
+  border-style: none;
+  display: flex;
+  gap: 7%;
+  height: auto;
+  width: auto;
 }
 
 /*-----------------------------------*\
@@ -867,10 +899,18 @@ a {
  # BIBLIOTECA
 \*-----------------------------------*/
 
-.lancamentos-heading2{
+.section-header-bli {
+  margin-bottom: 30px;
+  padding-left: 20px;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-left: 4px solid var(--main-color);
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
+
 
 .bxs-up-arrow-alt{
   position: relative;
@@ -898,11 +938,9 @@ a {
   min-width: 150px;
   border: 1px solid #ddd;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  z-index: 2;
   border-radius: 7px;
-  top: 72px;
-  right: 72px;
-  
+  right: 110px;
 }
 
 .dropdown-content li {
