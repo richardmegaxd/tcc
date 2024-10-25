@@ -96,13 +96,18 @@
             type: "standard",
             shape: "pill",
             text: "signin_with",
-            logo_alignment: "left"
+            logo_alignment: "center",
+            width: "343"
         }  // customização dos atributos
     );
 
 
 };
 
+    </script>
+    <script>
+         const button = document.getElementById('buttonDiv');
+        button.style.marginLeft = '7px';
     </script>
 </body>
 
