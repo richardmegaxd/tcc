@@ -244,10 +244,24 @@
 
             <div class="sidebar__account">
                 <?php
+                $conexao = mysqli_connect("localhost", "root", "", "bd_glark");
+
+                $user = $_SESSION['usuario'];
+
+                if (mysqli_connect_errno()) {
+                    echo "Erro no Banco de Dados!" . mysqli_connect_errno();
+                }
+        
+                $seleciona_info = "SELECT * FROM tb_usuario WHERE ds_email='$user'"; //efetua a seleção no banco de dados e atribui a uma variável
+                
+                $busca = mysqli_query($conexao, $seleciona_info);
+        
+                $resultado = mysqli_fetch_array($busca);
+
                 $nome = isset($_SESSION['nome']) ? htmlspecialchars($_SESSION['nome']) : '';
                 $apelido = isset($_SESSION['apelido']) ? htmlspecialchars($_SESSION['apelido']) : '';
                 ?>
-                <img src="<?php echo $resultado['ds_foto_perfil']; ?>" alt="Foto de Perfil" width="50px" />
+                <img src="<?php echo $resultado['ds_foto_perfil']; ?>" alt="Foto de Perfil" width="50px" style="border-radius: 50%;"/>
                 <?php
                 echo "<p> $nome <br> $apelido</p>"
                     ?>
@@ -645,17 +659,11 @@
         $login_google = $resultado['login_google'];
 
         ?>
-
-            <!-- Informações do usuario
-            <p>Email: <?php echo $resultado[1]; ?></p>    Exibindo o email 
-            <p>Nome: <?php echo $resultado[3]; ?></p>     Exibindo a nome 
-            <p>Apelido: <?php echo $resultado[4]; ?></p>  Exibindo o apelido 
-            -->
-            
         <div class="usuario-back text-color">
             <img class="foto-perfil" src="<?php echo $resultado['ds_foto_perfil']; ?>" alt="Foto de Perfil" />
             <div class="info-usuario">
-            <h2 class="nome-perfil text-color"><?php echo "$resultado[3]" ?></h2> <!-- Exibindo o nome -->
+            <h2 class="nome-perfil text-color"><?php echo "$resultado[3]" ?></h2>
+            <h2 class="nome-perfil text-color"><?php echo "$resultado[4]" ?></h2> <!-- Exibindo o nome -->
 
                 <div class="area-seguir">
                     <div class="seguir">
