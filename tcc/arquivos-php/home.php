@@ -210,7 +210,7 @@
                 </div>
 
                 <h3 class="sidebar__title">
-                    <span>-------------</span>
+                    <span>Utilitários</span>
                 </h3>
 
                 <div class="sidebar__list">
@@ -680,9 +680,9 @@
             <!-- Se o usuário fez login com o Google, a opção de editar perfil é desativada -->
         <?php else: ?>
             <!-- Se não fez login com o Google, a opção de editar perfil é ativada -->
-            <a href="edit.php" class="a1">Editar Usuário</a>
+            <a href="edit.php" class="a1">Editar Perfil</a>
         <?php endif; ?>
-            <a href="delete.php" class="a1">Excluir Usuário</a>
+        <a href="confirmadelete.php" class="a1"> Deletar Perfil</a>
     </main>
     <!-- # FIM PERFIL -->
 
