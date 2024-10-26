@@ -1,27 +1,36 @@
 <?php
-    session_start();
+session_start();
 
-    if(($_SESSION['logado']==true)){
+if (isset($_SESSION['logado']) && $_SESSION['logado'] == true) {
 
-    $idUsuario = $_SESSION['id_usuario'];
+    $cdUsuario = $_SESSION['cd_usuario'];
 
     $conexao = mysqli_connect("localhost", "root", "", "bd_glark");
 
-    $operacao = "DELETE FROM tb_usuario WHERE cd_usuario = '$idUsuario'"; //efetua a seleção no banco de dados e atribui a uma variável
-
-    mysqli_query($conexao, $operacao);
-
-    session_destroy();
-    }else{
-    header ("Location: index.html");
+    if (!$conexao) {
+        die("Erro na conexão com o banco de dados: " . mysqli_connect_error());
     }
-    ?>
-    <header>
-    <h3>Me Ajude a Lembrar</h3>
-    </header>
-    <div class="logout">
-    <h1>Usuário Deletado com Sucesso!</h1>
-    <button onclick ="location.href='index.php'" type="button">Voltar ao menu inicial</a>
-    </div>
-    </div>
-    </div>
+
+    // Altera o status do usuário para 0 (desabilitado) em vez de deletar
+    $operacao = "UPDATE tb_usuario SET conta_ativa = 0 WHERE cd_usuario = '$cdUsuario'";
+
+    if (mysqli_query($conexao, $operacao)) {
+        session_destroy();
+        echo "
+        <header>
+            <h3>The Glark</h3>
+        </header>
+        <div class='logout'>
+            <h1>Perfil excluido com Sucesso!</h1>
+            <button onclick=\"location.href='../index.html'\" type=\"button\">Voltar a tela inicial</button>
+        </div>";
+    } else {
+        echo "Erro ao excluir perfil: " . mysqli_error($conexao);
+    }
+
+    mysqli_close($conexao);
+} else {
+    header("Location: index.html");
+    exit;
+}
+?>
