@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -31,7 +32,7 @@
 
         <input type="text" id="username" required name="nome" placeholder="Nome" />
 
-        <input type="email" id="e-mail" required name="login" placeholder="E-mail" />
+        <input type="email" id="e-mail" required name="usuario" placeholder="E-mail" />
 
 
         <input type="password" id="user-password" required name="senha" placeholder="Senha" minlength="6" />
