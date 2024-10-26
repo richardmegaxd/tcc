@@ -855,101 +855,120 @@
                             <h2 class="text-color">Faça parte do nosso catálogo!</h2>
                         </div>
                     </div>
-                    <div class="imgQ1">
-                        <img src="TCC/home-assets/images/sofrimento.png" alt="">
-                    </div>
                 </div><!-- FINAL DA PRIMEIRA PARTE -->
-                <div class="tela2"><!-- INICIO DA SEGUNDA PARTE -->
-                    <div class="benef">
-                        <h2 class="text-color">Beneficios</h2>
-                    </div>
-                    <div class="tela22">
-                        <div class="qB1"><!-- QUADRADO BENEFICIOS 1 -->
-                            <div class="qB11"><!-- QUADRADO BENEFICIOS 1.1 -->
-                                <div class="divImgB1">
-                                    <img class="imgB1" src="../home-assets/images/19.png" alt="">
-                                    <h3 class="justa text-color">Justa Monetização</h3>
-                                    <p class="justa2 text-color">texto aqui texto aqui texto aqui<br>texto aqui texto aqui texto aqui</p>
+            </div>
+            <form action="">
+                <div class="containerF">
+                    <div class="containerF2">
+                        <div class="mande">
+                            <p>Mande sua obra!</p>
+                            <img class="iconx" src="../home-assets/images/icon-x.png" alt="icon para sair">
+                        </div>
+                        <div class="quadrado1">
+                            <div class="info-user">
+                                <h2>Informações para contato</h2>
+                            </div>
+                            <div class="nm-sm">
+                                <div class="inputnome">
+                                    <label for="nome">Nome</label>
+                                    <input type="text" id="idnm">
+                                </div>
+                                <div class="inputsobre">
+                                    <label for="sobrenome">Sobrenome</label>
+                                    <input type="text" id="idsobre">
                                 </div>
                             </div>
-                        </div>
-                        <div class="qB2"><!-- QUADRADO BENEFICIOS 2 -->
-                            <div class="qB22"><!-- QUADRADO BENEFICIOS 2.2 -->
-                                <div class="divimgB2">
-                                    <img class="imgB2" src="../home-assets/images/20.png" alt="">
-                                    <h3 class=" direi text-color">Direitos Autorais</h3>
-                                    <p class="direi2 text-color">texto aqui texto aqui texto aqui<br>texto aqui texto aqui texto aqui</p>
+                            <div class="em-tel">
+                                <div class="inputemail">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" id="idem">
+                                </div>
+                                <div class="inputtel">
+                                    <label for="telefone">Telefone</label>
+                                    <input type="tel">
                                 </div>
                             </div>
-                        </div>
-                        <div class="qB3"><!-- QUADRADO BENEFICIOS 3 -->
-                            <div class="qB33"><!-- QUADRADO BENEFICIOS 3.3 -->
-                                <div class="divImgB3">
-                                        <img class="imgB3" src="../home-assets/images/21.png" alt="">
-                                        <h3 class="expo text-color">Exposição e Alcance</h3>
-                                        <p class="expo2 text-color">texto aqui texto aqui texto aqui<br>texto aqui texto aqui texto aqui</p>
+                            <div class="ciente">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="idcheck">
+                                    <label for="confirmacao">Estou ciente e concordo com a Politica de Privacidade do sistema The Glark.</label>
+                                </div>
+                            </div>
+                            <div class="quadrado2">
+                                <div class="info-obra">
+                                    <h2>Informações da obra</h2>
+                                </div>
+                                <div class="titulo">
+                                    <label for="titulo">Titulo</label>
+                                    <input type="text" id="idtitu">
+                                </div>
+                                <div class="sinop">
+                                    <label for="sinopse">Sinopse</label>
+                                    <input type="text" id="idsino">
+                                </div>
+                                <div class="stat">
+                                    <label for="status">Status</label>
+                                    <select name="nmstatus" id="idstatus">
+                                        <option value="andamento">Em andamento</option>
+                                        <option value="finalizado">Finalizado</option>
+                                    </select>
+                                </div>
+                                <div class="generos">
+                                    <label for="generos">Gêneros</label>
+                                    <input type="checkbox" name="nmacao" id="idacao">
+                                    <label for="acao">Ação</label>
+                                    <input type="checkbox" name="nmaven" id="idaven">
+                                    <label for="aventura">Aventura</label>
+                                    <input type="checkbox" name="nmcome" id="idcome">
+                                    <label for="comedia">Comédia</label>
+                                    <input type="checkbox" name="nmdram" id="iddram">
+                                    <label for="drama">Drama</label>
+                                    <input type="checkbox" name="nmesco" id="idesco">
+                                    <label for="escolar">Escolar</label>
+                                    <input type="checkbox" name="nmespo" id="idespo">
+                                    <label for="esporte">Esporte</label>
+                                    <input type="checkbox" name="nmfant" id="idfant">
+                                    <label for="fantasia">Fantasia</label>
+                                    <input type="checkbox" name="nmficc" id="idficc">
+                                    <label for="ficacao-cientifica">Ficção Científica</label>
+                                    <input type="checkbox" name="nmhist" id="idhist">
+                                    <label for="historico">Histórico</label>
+                                    <input type="checkbox" name="nmisek" id="idisek">
+                                    <label for="isekai">Isekai</label>
+                                    <input type="checkbox" name="nmlgbt" id="idlgbt">
+                                    <label for="lgbt">LGBT</label>
+                                    <input type="checkbox" name="nmmist" id="idmist">
+                                    <label for="misterio">Mistério</label>
+                                    <input type="checkbox" name="nmroma" id="idroma">
+                                    <label for="romance">Romance</label>
+                                    <input type="checkbox" name="nmslic" id="idslic">
+                                    <label for="slice-of-life">Slice of Life</label>
+                                    <input type="checkbox" name="nmsobr" id="idsobr">
+                                    <label for="sobrenatural">Sobrenatural</label>
+                                    <input type="checkbox" name="nmterr" id="idterr">
+                                    <label for="terror">Terror</label>
+                                </div>
+                                <div class="capas">
+                                    <div class="capa1">
+                                        <button>Selecionar imagem</button>
+                                    </div>
+                                    <div class="capa2">
+                                        <button>Selecionar imagem</button>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- FINAL DA SEGUNDA PARTE -->
-                <div class="tela3"><!-- INICIO DA TERCEIRA PARTE -->
-                    <div class="req">
-                        <h2 class="text-color">Requisitos</h2>
-                    </div>
-                    <div class="dividir">
-                        <div class="qR1"><!-- QUADRADO REQUISITOS 1 -->
-                            <!--<div class="qR11"></div> QUADRADO REQUISITOS 1.1 -->
-                            <img class="imgR1" src="../home-assets/images/stopwatch.png" alt="">
-                            <div class="titu1">
-                                <h3 class="text-color">Conteudo Autoral</h3>
-                                <p class="text-color">texto aqui</p>
-                            </div>
-                        </div>
-                        <div class="qR2"><!-- QUADRADO REQUISITOS 2 -->
-                            <!--<div class="qR22"> </div>QUADRADO REQUISITOS 2.2 -->
-                            <img class="imgR2" src="../home-assets/images/stopwatch.png" alt="">
-                            <div class="titu2">
-                                <h3 class="text-color">Conteudo Apropriado</h3>
-                                <p class="text-color">texto aqui texto aqui</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dividir2">
-                        <div class="qR3"><!-- QUADRADO REQUISITOS 3 -->
-                            <div class="qR33"><!-- QUADRADO REQUISITOS 3.3 -->
-                                <div class="divImgR3">
-                                    <img src="" alt="">
-                                    <h3 class="text-color">Frequencia de Postagem</h3>
-                                    <p class="text-color">texto aqui</p>
+                                <div class="afirmo">
+                                    <input type="checkbox" name="nmafir" id="idafir">
+                                    <label for="afirmacao">Afirmo que a obra em questão é autoral.</label>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="qR4"><!-- QUADRADO REQUISITOS 4 -->
-                            <div class="qR44"><!-- QUADRADO REQUISITOS 4.4 -->
-                                <div class="divImgR4">
-                                    <img src="" alt="">
-                                    <h3 class="text-color">Titulo aqui</h3>
-                                    <p class="text-color">texto aqui</p>
+                                <div class="concordo">
+                                    <input type="checkbox" name="nmconc" id="idconc">
+                                    <label for="concordancia">Concordo em sla oq</label>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div><!-- FINAL DA TERCEIRA PARTE -->
-                <div class="tela4"><!-- INICIO DA QUARTA PARTE -->
-                    <div class="imgCap">
-                        <img src="" alt="">
-                    </div>
-                    <div class="qC1"><!-- QUADRADO COMO PUBLICAR -->
-                        <h2 class="text-color">Como publicar?</h2>
-                        <p class="text-color">texto aqui</p>
-                    </div>
-                    <div class="btnAces"><!-- BOTAO ACESSAR FORM DE MANDAR OBRA -->
-                        <p class="text-color">Acessar formulário</p>
-                    </div>
-                </div><!-- FINAL DA QUARTA PARTE -->
-            </div>
+                </div>
+            </form>
         </div>
     </main>
     <!-- # FIM DA PUBLICAÇÃO DE OBRAS -->
