@@ -590,11 +590,11 @@ body {
   text-transform: uppercase;
   Letter-spacing: 1.30;
   font-weight: 700;
-  color: #ffffff;
+  color: #fcffff;
   background: linear-gradient(90deg, rgb(181, 129, 230) 0%, rgb(146, 79, 209) 100%);
   border: none;
   border-radius: 50px;
-  box-shadow: 12px 12px 24px rgba(157, 79, 209, 0.64);
+  box-shadow: 12px 12px 24px rgba(21, 54, 52, 0.64);
   transition: all .3s ease-in-out 0s;
   cursor: pointer;
   position: relative;
@@ -994,6 +994,7 @@ body {
   margin-bottom: 80px;
   transition: transform 0.3s ease-in-out;
   margin-top: 50px;
+  border-radius: 20 5px;
 }
 
 .membros-card:hover {
@@ -1004,12 +1005,14 @@ body {
   width: 100%;
   height: auto;
   text-align: center;
-  background-image: url("../images/fundo-dev.jpg");
+  background-image: url("https://static.vecteezy.com/ti/fotos-gratis/t2/49552719-uma-sombrio-roxa-minimalista-e-simples-espaco-fundo-foto.jpg");
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center;
   background-size: cover;
   padding: 10px;
 }
+
+
 
 .membros .card-banner img {
   display: block;
@@ -1034,6 +1037,7 @@ body {
   text-transform: uppercase;
   line-height: 1.2;
   margin-block: 10px 0;
+  border-radius: 20px;
   transition: var(--transition);
 }
 
