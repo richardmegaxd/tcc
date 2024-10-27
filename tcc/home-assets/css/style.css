@@ -555,8 +555,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 90%;
   margin-top: 2%;
-
 }
 
 #section-leitura-manga .toggle-mode {
@@ -565,6 +565,7 @@ a {
   color: var(--color-white);
   cursor: pointer;
   padding: 10px;
+ 
 }
 
 #section-leitura-manga .toggle-mode:hover {
@@ -603,19 +604,18 @@ a {
   background: transparent;
   display: flex;
   align-items: center;
+ 
 }
 
 #section-leitura-manga .bxs-left-arrow-circle {
   position: fixed; /* Fixa o botão em um local na tela */
   top: 0;
-  left: 20px; /* Distância da direita */
-  padding: 10px 15px;
   border: none; /* Remove bordas */
   border-radius: 5px; /* Bordas arredondadas */
   cursor: pointer; /* Muda o cursor para pointer */
   background-color: transparent;
   color: var(--color-default);
-  font-size: 40px;
+  font-size: 3rem;
 }
 
 #section-leitura-manga .bxs-left-arrow-circle:hover {
@@ -660,13 +660,37 @@ a {
   background-color: #7700ff; /* Cor de fundo ao passar o mouse */
 }
 
+#section-leitura-manga .bxs-left-arrow-circle {
+  position: relative;
+  margin-bottom: 2%;
+  font-size: 4rem;
+  color: var(--color-default);
+  cursor: pointer;
+}
+
+@media (max-width: 1500px) {
+  #section-leitura-manga .btn-troca {
+    gap: 85%;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  #section-leitura-manga .btn-troca {
+    gap: 80%;
+  }
+}
+
 @media (max-width: 550px) {
   #section-leitura-manga .bxs-left-arrow-circle {
     margin-top: 2%;
     width: 20px;
   }
 
-  
+  #section-leitura-manga .btn-troca {
+    gap: 70%;
+  }
+
   
 }
 
