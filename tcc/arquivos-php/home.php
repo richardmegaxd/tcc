@@ -209,7 +209,7 @@
                 </div>
 
                 <h3 class="sidebar__title">
-                    <span>Utilitários</span>
+                    <span class="text-color">Utilitários</span>
                 </h3>
 
                 <div class="sidebar__list">
