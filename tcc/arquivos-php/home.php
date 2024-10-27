@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
-    <link rel="stylesheet" href="../home-assets/css/style.css">
+    <link rel="stylesheet" href="../home-assets/css/style2.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- GOOGLE FONTS -->
@@ -283,12 +283,12 @@
                 </div>
                 <div class="movies-slide carousel-nav-center owl-carousel">
                     <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item" data-target="section-obra">
-                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420"
+                    <a href="#" class="movie-item" data-target="section-obra1">
+                        <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg"
                             alt="#" />
                         <div class="movie-item-content">
                             <div class="movie-item-title">
-                                Theatre of the dead
+                                O Menino Nemo
                             </div>
                             <div class="movie-infos">
                                 <div class="movie-info">
@@ -351,7 +351,7 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://lh4.googleusercontent.com/proxy/E1BCT7J87lag4WhJ2aWJTPrsxNvkUF5tpVhJNSglh3TeSerfFZ-9yHWnmXTCF5hgkeWLJ8e9nEk9HfcBdnwc-TkeUpDFH11hV7AOUdDUIwwxWFYHOyw5Pw9lXIMEZ1fyxWso4i8OWy3m"
+                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420"
                             alt="">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
@@ -398,17 +398,17 @@
                 <div class="movies-slide carousel-nav-center owl-carousel">
 
                     <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://cupulatrovao.com.br/wp-content/uploads/2020/06/Divis%C3%A3o-5-mang%C3%A1.jpg"
+                    <a href="#" class="movie-item" data-target="section-obra">
+                        <img src="https://acdn.mitiendanube.com/stores/973/807/products/0121-327f3d19f1163edf6f16258954305539-640-0.jpg"
                             alt="#">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
-                                Stranger Things
+                                Fugiken
                             </div>
                             <div class="movie-infos">
                                 <div class="movie-info">
                                     <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
+                                    <span>7.5</span>
                                 </div>
                             </div>
                         </div>
@@ -551,7 +551,7 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://devir.com.br/diadoquadrinhogratis/assets/img/capas/conrad-digital2023_1.jpg"
+                        <img src="https://cupulatrovao.com.br/wp-content/uploads/2020/06/Divis%C3%A3o-5-mang%C3%A1.jpg"
                             alt="">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
@@ -993,14 +993,14 @@
 
     l
 
-    <!-- # PERFIL DO MANGÁ -->
-    <main id="section-obra" class="home-section content-section">
+    <!-- # PERFIL MANGÁ -->
+    <main id="section-obra2" class="home-section content-section">
         <a data-target="section-inicio"><i class='bx bxs-left-arrow-circle'></i></a>
         <div class="container">
-            <img src="https://www.nautiljon.com/images/manga/00/03/fukigen_na_mononokean_5230.webp" alt="Capa do Mangá"
+            <img src="https://acdn.mitiendanube.com/stores/973/807/products/0121-327f3d19f1163edf6f16258954305539-640-0.jpg" alt="Capa do Mangá"
                 class="manga-cover">
             <div class="manga-info">
-                <h2 class="text-color">Fukigen</h2>
+                <h2 class="text-color">Fugiken</h2>
 
                 <div class="info-item">
                     <p class="info-label text-color">Gêneros:</p>
@@ -1008,7 +1008,7 @@
                 </div>
                 <div class="info-item">
                     <p class="info-label text-color">Tipo:</p>
-                    <p class="info-value text-color">Preto e Branco</p>
+                    <p class="info-value text-color">Colorido</p>
                 </div>
                 <div class="info-item">
                     <p class="info-label text-color">Ano:</p>
@@ -1016,7 +1016,7 @@
                 </div>
                 <div class="info-item">
                     <p class="info-label text-color">Status:</p>
-                    <p class="info-value text-color">Ativo</p>
+                    <p class="info-value text-color">Encerrado</p>
                 </div>
                 <div class="info-item">
                     <p class="info-label text-color">Lançamento:</p>
@@ -1080,12 +1080,115 @@
             </form>
         </div>
     </main>
-    <!-- # FIM PERFIL MANGÁ -->
+    <!-- # FIM PERFIl MANGÁ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- # PERFIR GIBI PÚBLICO -->
+   <main id="section-obra1" class="home-section content-section">
+        <a data-target="section-inicio"><i class='bx bxs-left-arrow-circle'></i></a>
+        <div class="container">
+            <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="Capa do Mangá"
+                class="manga-cover">
+            <div class="manga-info">
+                <h2 class="text-color">O Menino Nemo</h2>
+
+                <div class="info-item">
+                    <p class="info-label text-color">Gêneros:</p>
+                    <p class="info-value text-color">Ação, Aventura, Romance</p>
+                </div>
+                <div class="info-item">
+                    <p class="info-label text-color">Tipo:</p>
+                    <p class="info-value text-color">Colorido</p>
+                </div>
+                <div class="info-item">
+                    <p class="info-label text-color">Ano:</p>
+                    <p class="info-value text-color">1995</p>
+                </div>
+                <div class="info-item">
+                    <p class="info-label text-color">Status:</p>
+                    <p class="info-value text-color">Encerrado</p>
+                </div>
+                <div class="info-item">
+                    <p class="info-label text-color">Lançamento:</p>
+                    <p class="info-value text-color">08 de Outubro de 1995</p>
+                </div>
+
+                <div class="star-rating">
+                    <i class="fa fa-star" aria-hidden="true" onclick="rate(1)">★</i>
+                    <i class="fa fa-star" aria-hidden="true" onclick="rate(2)">★</i>
+                    <i class="fa fa-star" aria-hidden="true" onclick="rate(3)">★</i>
+                    <i class="fa fa-star" aria-hidden="true" onclick="rate(4)">★</i>
+                    <i class="fa fa-star" aria-hidden="true" onclick="rate(5)">★</i>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="chapters">
+            <div class="titulo-cap">
+                <img width="60" height="60" src="https://img.icons8.com/color/48/comics-magazine.png"
+                    alt="comics-magazine" />
+                <h2 class="text-color">CAPÍTULOS</h2>
+
+            </div>
+            <a class="chapter" data-target="section-leitura-manga">
+                <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="Capa do Capítulo"
+                    class="chapter-cover">
+                <div>
+                    <span class="chapter-number">Capítulo 01</span>
+                </div>
+
+            </a>
+          
+
+        </div>
+
+        </div>
+
+        <div class="comments">
+            <ul>
+                <!-- Exibe os comentários aqui -->
+            </ul>
+            <form id="comment-form">
+                <label for="comment" class="text-color">Deixe seu comentário:</label>
+                <textarea id="comment" name="comment" rows="4" placeholder="Digite seu comentário"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+    <!-- # FIM PERFIR GIBI PÚBLICO  -->              
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- # LEITURA DO MANGÁ -->
     <main id="section-leitura-manga" class=" content-section">
-
-        
 
         <div class="btn-troca">
             <a data-target="section-obra"><i class='bx bxs-left-arrow-circle'></i></a>
