@@ -160,21 +160,20 @@
             </div>
 
             <div class="container-wrapper">
-                <div class="container-gp">
+
                     <div class="input-wrapper">
-                        <input type="text" placeholder="Pesquisar...">
+                        <input type="text" placeholder="Pesquisar..." class="pesquisa">
                         <i class='bx bx-search'></i>
                     </div>
-                </div>
-
             </div>
 
         </div>
+
     </header>
 
     <!--=============== SIDEBAR ===============-->
-    <div class="sidebar text-color" id="sidebar">
-        <nav class="sidebar__container">
+    <div class="sidebar fundo-color" id="sidebar">
+        <nav class="sidebar__container text-color">
             <div class="sidebar__logo">
                 <img src="../assets/images/log5.png" alt="" class="sidebar__logo-img">
                 <span class="sidebar__logo-text text-color">THE GLARK</span>
@@ -1086,9 +1085,10 @@
     <!-- # LEITURA DO MANGÁ -->
     <main id="section-leitura-manga" class=" content-section">
 
-        <a data-target="section-inicio"><i class='bx bxs-left-arrow-circle'></i></a>
+        
 
         <div class="btn-troca">
+            <a data-target="section-obra"><i class='bx bxs-left-arrow-circle'></i></a>
             <button class="toggle-mode" onclick="toggleMode()"><i class='bx bxs-binoculars'></i></button>
         </div>
 
