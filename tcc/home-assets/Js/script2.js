@@ -208,12 +208,15 @@ function applyTheme(theme) {
         document.body.style.backgroundColor = '#fff'; // Cor de fundo sólida
         document.body.style.backgroundImage = ''; // Remove a imagem de fundo
         document.querySelectorAll('.text-color').forEach(el => el.style.color = '#000000'); // Cor do texto
+        document.querySelectorAll('.fundo-color').forEach(el => el.style.backgroundImage = "none" ); // remove imagem de fundo do sidebar   
+        document.querySelectorAll('.fundo-color').forEach(el => el.style.backgroundColor = "#fff" ); // remove imagem de fundo do sidebar   
         themeIcon.classList.remove('bx-sun');
         themeIcon.classList.add('bx-moon');
     } else {
         document.body.style.backgroundImage = 'url("../assets/images/fundo3.jpg")'; // Imagem de fundo escura
         document.body.style.backgroundColor = ''; // Remove a cor de fundo sólida
         document.querySelectorAll('.text-color').forEach(el => el.style.color = '#fff'); // Cor do texto
+        document.querySelectorAll('.fundo-color').forEach(el => el.style.backgroundImage = 'url("../assets/images/fundo3.jpg")');  // Cor do texto
         themeIcon.classList.remove('bx-moon');
         themeIcon.classList.add('bx-sun');
     }
