@@ -1122,7 +1122,7 @@
 
     <!-- APP SCRIPT -->
     <script src="../home-assets/Js/app.js"></script>
-    <script src="../home-assets/Js/script.js"></script>
+    <script src="../home-assets/Js/script2.js"></script>
     <!--  FIM SCRIPT -->
 
 
