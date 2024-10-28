@@ -43,7 +43,7 @@
         
         <div class="login-container">
             <h1>Editar Perfil</h1>
-            <form id="form" action="validaEdit.php" method="POST">
+            <form id="form" action="validaEdit.php" method="POST" enctype="multipart/form-data">
                 <div class="input-container">
                     <input type="text" id="nome" name="nome" value="<?php echo htmlspecialchars($user['nm_user']); ?>"><br>
                     <label for="nome">Nome:</label>
@@ -55,13 +55,13 @@
                 </div>
 
                 <div class="input-container">
-                    <input type="password" id="new-password" name="senha" minlength="6" value="<?php echo htmlspecialchars($user['ds_senha']); ?>" ><br>
+                    <input type="password" id="new-password" name="senha" minlength="6"><br>
                     <label for="senha">Nova Senha:</label>
                     <p class="text-senha">A senha deve conter no mínimo 6 caracteres</p>
                 </div>
 
                 <div class="input-container">
-                    <input type="password" id="confirm-new-password" minlength="6" value="<?php echo htmlspecialchars($user['ds_senha']); ?>" ><br>
+                    <input type="password" id="confirm-new-password" minlength="6"  ><br>
                     <label for="senha">Confirme a Senha:</label>
                     <p id="pass-error" class="error-message" style="display:none;">As senhas não coincidem</p>
                 </div>
@@ -71,7 +71,10 @@
                     <label for="email">Email:</label>
                 </div>
 
-
+                <div class="input-container">
+                    <input type="file" name="foto_perfil" id="foto_perfil" accept="image/*"><br>
+                    <label for="foto_perfil">Escolha uma foto de perfil:</label>
+                </div>
 
                 <input type="submit" value="Atualizar">
 
