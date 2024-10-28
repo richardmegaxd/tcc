@@ -16,14 +16,19 @@ if (isset($_SESSION['logado']) && $_SESSION['logado'] == true) {
 
     if (mysqli_query($conexao, $operacao)) {
         session_destroy();
-        echo "
+        echo '
         <header>
-            <h3>The Glark</h3>
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <link rel="stylesheet" href="../assets/css/styleLogin.css">
+            <div id="section-delete" class="logo">
+            <img src="../assets/images/log5.png" width="50%" height="auto" loading="lazy" alt="Logotipo The Glarck" class="card-icon">
+            <h1>The Glark</h1><br>
+     </div> 
         </header>
-        <div class='logout'>
-            <h1>Perfil excluido com Sucesso!</h1>
-            <button onclick=\"location.href='../index.html'\" type=\"button\">Voltar a tela inicial</button>
-        </div>";
+        <div class="logout">
+            <h2>Perfil excluído com Sucesso!</h2><br><br>
+            <a href="../index.html" class="button-link">Voltar à tela inicial</a>
+        </div>';
     } else {
         echo "Erro ao excluir perfil: " . mysqli_error($conexao);
     }
@@ -34,3 +39,4 @@ if (isset($_SESSION['logado']) && $_SESSION['logado'] == true) {
     exit;
 }
 ?>
+
