@@ -161,10 +161,10 @@
 
             <div class="container-wrapper">
 
-                    <div class="input-wrapper">
-                        <input type="text" placeholder="Pesquisar..." class="pesquisa">
-                        <i class='bx bx-search'></i>
-                    </div>
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Pesquisar..." class="pesquisa">
+                    <i class='bx bx-search'></i>
+                </div>
             </div>
 
         </div>
@@ -250,17 +250,18 @@
                 if (mysqli_connect_errno()) {
                     echo "Erro no Banco de Dados!" . mysqli_connect_errno();
                 }
-        
+
                 $seleciona_info = "SELECT * FROM tb_usuario WHERE ds_email='$user'"; //efetua a seleção no banco de dados e atribui a uma variável
                 
                 $busca = mysqli_query($conexao, $seleciona_info);
-        
+
                 $resultado = mysqli_fetch_array($busca);
 
                 $nome = isset($_SESSION['nome']) ? htmlspecialchars($_SESSION['nome']) : '';
                 $apelido = isset($_SESSION['apelido']) ? htmlspecialchars($_SESSION['apelido']) : '';
                 ?>
-                <img src="<?php echo $resultado['ds_foto_perfil']; ?>" alt="Foto de Perfil" width="50px" style="border-radius: 50%;"/>
+                <img src="<?php echo $resultado['ds_foto_perfil']; ?>" alt="Foto de Perfil" width="50px"
+                    style="border-radius: 50%;" />
                 <?php
                 echo "<p> $nome <br> $apelido</p>"
                     ?>
@@ -284,8 +285,7 @@
                 <div class="movies-slide carousel-nav-center owl-carousel">
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item" data-target="section-obra1">
-                        <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg"
-                            alt="#" />
+                        <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="#" />
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 O Menino Nemo
@@ -351,8 +351,7 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420"
-                            alt="">
+                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420" alt="">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Hunter Killer
@@ -636,7 +635,7 @@
             header("Location: login.php");
             exit;
         }
-        
+
 
         $user = $_SESSION['usuario'];
 
@@ -661,8 +660,8 @@
         <div class="usuario-back text-color">
             <img class="foto-perfil" src="<?php echo $resultado['ds_foto_perfil']; ?>" alt="Foto de Perfil" />
             <div class="info-usuario">
-            <h2 class="nome-perfil text-color"><?php echo "$resultado[3]" ?></h2>
-            <h2 class="nome-perfil text-color"><?php echo "$resultado[4]" ?></h2> <!-- Exibindo o nome -->
+                <h2 class="nome-perfil text-color"><?php echo "$resultado[3]" ?></h2>
+                <h2 class="nome-perfil text-color"><?php echo "$resultado[4]" ?></h2> <!-- Exibindo o nome -->
 
                 <div class="area-seguir">
                     <div class="seguir">
@@ -686,41 +685,41 @@
     <!-- # FIM PERFIL -->
 
     <!-- # BIBLIOTECA -->
-     <?php 
-     //"SELECT COUNT(*) FROM tb_favoritos WHERE id_usuario = $resultado[0]"
-     $qt_favoritos = 8;
-     ?>
+    <?php
+    //"SELECT COUNT(*) FROM tb_favoritos WHERE id_usuario = $resultado[0]"
+    $qt_favoritos = 8;
+    ?>
     <main id="section-biblioteca" class="home-section content-section">
-              
+
         <!-- LATEST MOVIES SECTION -->
         <div class="section">
             <div class="container-gp">
                 <div class="section-header-bli text-color">
 
-                    <?php echo "$qt_favoritos"?> Obras Favoritadas
+                    <?php echo "$qt_favoritos" ?> Obras Favoritadas
 
                     <button class="dropdown-button" onclick="toggleDropdown()">
-                    <h2 class="text-color">
+                        <h2 class="text-color">
 
-                        Organizar
-                        <i class='bx bxs-up-arrow-alt'></i>
-                        <i class='bx bxs-down-arrow-alt'></i>
+                            Organizar
+                            <i class='bx bxs-up-arrow-alt'></i>
+                            <i class='bx bxs-down-arrow-alt'></i>
 
-                        <ul class="dropdown-content" id="dropdown">
-                            <li onclick="ordenar('az')">A - Z</li>
-                            <li onclick="ordenar('za')">Z - A</li>
-                            <li onclick="ordenar('ultimo')">Último Adicionado</li>
-                            <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
-                        </ul>
-                    </h2>
-                </button>
+                            <ul class="dropdown-content" id="dropdown">
+                                <li onclick="ordenar('az')">A - Z</li>
+                                <li onclick="ordenar('za')">Z - A</li>
+                                <li onclick="ordenar('ultimo')">Último Adicionado</li>
+                                <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
+                            </ul>
+                        </h2>
+                    </button>
 
-            <script>
-                // Função para alternar a visibilidade do dropdown
-                function toggleDropdown() {
-                    document.getElementById("dropdown").classList.toggle("show");
-                }
-            </script>
+                    <script>
+                        // Função para alternar a visibilidade do dropdown
+                        function toggleDropdown() {
+                            document.getElementById("dropdown").classList.toggle("show");
+                        }
+                    </script>
 
                 </div>
                 <div class="movies-slide carousel-nav-center owl-carousel">
@@ -834,8 +833,8 @@
     </main>
     <!-- # FIM BIBLIOTECA -->
 
-<!-- # PUBLICAÇÃO DE OBRAS -->
-<main id="section-publicacao-obras" class="home-section content-section">
+    <!-- # PUBLICAÇÃO DE OBRAS -->
+    <main id="section-publicacao-obras" class="home-section content-section">
         <div class="containerM"><!-- PEGA TUDO -->
             <div class="containerM2"><!-- PEGA TUDO 2 -->
                 <div class="tela1">
@@ -847,8 +846,10 @@
                             <h1 class="text-color">Quer publicar no The Glark?</h1>
                         </div>
                         <div class="Mtexto">
-                            <p class="text-color">Na The Glark, acreditamos que cada história merece ser contada e compartilhada. <br>Se
-                                você tem uma obra que gostaria de ver publicada, estamos aqui para ajudar!</p>
+                            <p class="text-color">Preencha nosso formulário de submissão e envie sua obra. Nossa equipe
+                                irá<br>
+                                revisar seu trabalho com atenção e fornecer feedback em até 7 dias úteis.<br>Estamos
+                                ansiosos para conhecer suas histórias e ilustrações!</p>
                         </div>
                         <div class="Mroxo">
                             <h2 class="text-color">Faça parte do nosso catálogo!</h2>
@@ -856,114 +857,99 @@
                     </div>
                 </div><!-- FINAL DA PRIMEIRA PARTE -->
             </div>
-            <form action="">
+            <form action=""><!-- INICIO DO FORMULARIO -->
                 <div class="containerF">
                     <div class="containerF2">
-                        <div class="mande">
-                            <p>Mande sua obra!</p>
-                            <img class="iconx" src="../home-assets/images/icon-x.png" alt="icon para sair">
+                        <h1 class="text-color">Mande sua obra!</h1>
+                        <!-- Quadrado para informações de contato -->
+                        <div class="info-box">
+                            <h2 class="text-color">Informações para contato</h2>
+                            <div class="input-group">
+                                <input type="text" placeholder="Nome">
+                                <input type="text" placeholder="Sobrenome">
+                            </div>
+                            <div class="input-group">
+                                <input type="email" placeholder="Email">
+                                <input type="tel" placeholder="Telefone">
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="politica">
+                                <label for="politica" class="text-color">Estou ciente e concordo com a Politica de
+                                    Privacidade da plataforma The Glark.</label>
+                            </div>
                         </div>
-                        <div class="quadrado1">
-                            <div class="info-user">
-                                <h2>Informações para contato</h2>
-                            </div>
-                            <div class="nm-sm">
-                                <div class="inputnome">
-                                    <label for="nome">Nome</label>
-                                    <input type="text" id="idnm">
-                                </div>
-                                <div class="inputsobre">
-                                    <label for="sobrenome">Sobrenome</label>
-                                    <input type="text" id="idsobre">
-                                </div>
-                            </div>
-                            <div class="em-tel">
-                                <div class="inputemail">
-                                    <label for="email">E-mail</label>
-                                    <input type="email" id="idem">
-                                </div>
-                                <div class="inputtel">
-                                    <label for="telefone">Telefone</label>
-                                    <input type="tel">
-                                </div>
-                            </div>
-                            <div class="ciente">
-                                <div class="checkbox">
-                                    <input type="checkbox" id="idcheck">
-                                    <label for="confirmacao">Estou ciente e concordo com a Politica de Privacidade do sistema The Glark.</label>
-                                </div>
-                            </div>
-                            <div class="quadrado2">
-                                <div class="info-obra">
-                                    <h2>Informações da obra</h2>
-                                </div>
-                                <div class="titulo">
-                                    <label for="titulo">Titulo</label>
-                                    <input type="text" id="idtitu">
-                                </div>
-                                <div class="sinop">
-                                    <label for="sinopse">Sinopse</label>
-                                    <input type="text" id="idsino">
-                                </div>
-                                <div class="stat">
-                                    <label for="status">Status</label>
-                                    <select name="nmstatus" id="idstatus">
-                                        <option value="andamento">Em andamento</option>
-                                        <option value="finalizado">Finalizado</option>
-                                    </select>
-                                </div>
-                                <div class="generos">
-                                    <label for="generos">Gêneros</label>
+                        <!-- Quadrado para informações da obra -->
+                        <div class="info-box">
+                            <h2 class="text-color">Informações da obra</h2>
+                            <input type="text" placeholder="Título da obra">
+                            <textarea placeholder="Sinopse"></textarea>
+                            <!-- Select status -->
+                            <select name="nmstatus" id="idstatus">
+                                <option value="status" disabled selected>Status</option>
+                                <option value="andamento">Em andamento</option>
+                                <option value="finalizado">Finalizado</option>
+                            </select>
+                            <!-- Checkboxs generos -->
+                            <div class="gene">
+                                <p id="lbGene" class="text-color">Gêneros</p>
+                                <div class="generos-group">
                                     <input type="checkbox" name="nmacao" id="idacao">
-                                    <label for="acao">Ação</label>
+                                    <label for="acao" class="text-color">Ação</label>
                                     <input type="checkbox" name="nmaven" id="idaven">
-                                    <label for="aventura">Aventura</label>
+                                    <label for="aventura" class="text-color">Aventura</label>
                                     <input type="checkbox" name="nmcome" id="idcome">
-                                    <label for="comedia">Comédia</label>
+                                    <label for="comedia" class="text-color">Comédia</label>
                                     <input type="checkbox" name="nmdram" id="iddram">
-                                    <label for="drama">Drama</label>
+                                    <label for="drama" class="text-color">Drama</label>
                                     <input type="checkbox" name="nmesco" id="idesco">
-                                    <label for="escolar">Escolar</label>
+                                    <label for="escolar" class="text-color">Escolar</label>
                                     <input type="checkbox" name="nmespo" id="idespo">
-                                    <label for="esporte">Esporte</label>
+                                    <label for="esporte" class="text-color">Esporte</label>
                                     <input type="checkbox" name="nmfant" id="idfant">
-                                    <label for="fantasia">Fantasia</label>
+                                    <label for="fantasia" class="text-color">Fantasia</label>
                                     <input type="checkbox" name="nmficc" id="idficc">
-                                    <label for="ficacao-cientifica">Ficção Científica</label>
+                                    <label for="ficacao-cientifica" class="text-color">Ficção Científica</label>
                                     <input type="checkbox" name="nmhist" id="idhist">
-                                    <label for="historico">Histórico</label>
+                                    <label for="historico" class="text-color">Histórico</label><br>
                                     <input type="checkbox" name="nmisek" id="idisek">
-                                    <label for="isekai">Isekai</label>
+                                    <label for="isekai" class="text-color">Isekai</label>
                                     <input type="checkbox" name="nmlgbt" id="idlgbt">
-                                    <label for="lgbt">LGBT</label>
+                                    <label for="lgbt" class="text-color">LGBT</label>
                                     <input type="checkbox" name="nmmist" id="idmist">
-                                    <label for="misterio">Mistério</label>
+                                    <label for="misterio" class="text-color">Mistério</label>
                                     <input type="checkbox" name="nmroma" id="idroma">
-                                    <label for="romance">Romance</label>
+                                    <label for="romance" class="text-color">Romance</label>
                                     <input type="checkbox" name="nmslic" id="idslic">
-                                    <label for="slice-of-life">Slice of Life</label>
+                                    <label for="slice-of-life" class="text-color">Slice of Life</label>
                                     <input type="checkbox" name="nmsobr" id="idsobr">
-                                    <label for="sobrenatural">Sobrenatural</label>
+                                    <label for="sobrenatural" class="text-color">Sobrenatural</label>
                                     <input type="checkbox" name="nmterr" id="idterr">
-                                    <label for="terror">Terror</label>
-                                </div>
-                                <div class="capas">
-                                    <div class="capa1">
-                                        <button>Selecionar imagem</button>
-                                    </div>
-                                    <div class="capa2">
-                                        <button>Selecionar imagem</button>
-                                    </div>
-                                </div>
-                                <div class="afirmo">
-                                    <input type="checkbox" name="nmafir" id="idafir">
-                                    <label for="afirmacao">Afirmo que a obra em questão é autoral.</label>
-                                </div>
-                                <div class="concordo">
-                                    <input type="checkbox" name="nmconc" id="idconc">
-                                    <label for="concordancia">Concordo em sla oq</label>
+                                    <label for="terror" class="text-color">Terror</label>
                                 </div>
                             </div>
+                            <div class="capa">
+                                <p class="text-color" id="lbCapa">Imagem de Capa:</p>
+                                <div class="capa-upload">
+                                    <!-- Input para o upload da capa -->
+                                    <input type="file" id="imageInput" accept="image/*" onchange="loadImage(event)">
+                                    <!-- <div class="image-rect" id="imageRect"></div>
+                                    <div class="image-square" id="imageSquare"></div> -->
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" name="nmconc" id="idconc">
+                                    <label for="concordancia" class="text-color">Afirmo que a imagem de capa selecionada
+                                        é autoral.</label>
+                                </div>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="nmafir" id="idafir">
+                                <label for="afirmacao" class="text-color">Afirmo que a obra em questão é
+                                    autoral.</label>
+                            </div>
+                        </div>
+                        <!-- Botão de envio no final do formulário -->
+                        <div class="btn-enviar">
+                            <button type="submit" class="text-color">Enviar</button>
                         </div>
                     </div>
                 </div>
@@ -997,8 +983,8 @@
     <main id="section-obra2" class="home-section content-section">
         <a data-target="section-inicio"><i class='bx bxs-left-arrow-circle'></i></a>
         <div class="container">
-            <img src="https://acdn.mitiendanube.com/stores/973/807/products/0121-327f3d19f1163edf6f16258954305539-640-0.jpg" alt="Capa do Mangá"
-                class="manga-cover">
+            <img src="https://acdn.mitiendanube.com/stores/973/807/products/0121-327f3d19f1163edf6f16258954305539-640-0.jpg"
+                alt="Capa do Mangá" class="manga-cover">
             <div class="manga-info">
                 <h2 class="text-color">Fugiken</h2>
 
@@ -1099,8 +1085,8 @@
 
 
 
-   <!-- # PERFIR GIBI PÚBLICO -->
-   <main id="section-obra1" class="home-section content-section">
+    <!-- # PERFIR GIBI PÚBLICO -->
+    <main id="section-obra1" class="home-section content-section">
         <a data-target="section-inicio"><i class='bx bxs-left-arrow-circle'></i></a>
         <div class="container">
             <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="Capa do Mangá"
@@ -1155,7 +1141,7 @@
                 </div>
 
             </a>
-          
+
 
         </div>
 
@@ -1172,7 +1158,7 @@
             </form>
         </div>
     </main>
-    <!-- # FIM PERFIR GIBI PÚBLICO  -->              
+    <!-- # FIM PERFIR GIBI PÚBLICO  -->
 
 
 
