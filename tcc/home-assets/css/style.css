@@ -1184,12 +1184,12 @@ a {
 }
 
 /* Estilo das seções */
-#section-biblioteca .content {
+#section-biblioteca .content2 {
   display: none;
 }
 
 /* Mostrar apenas a seção ativa */
-#section-biblioteca .content.active {
+#section-biblioteca .content2.active {
   display: block;
 }
 

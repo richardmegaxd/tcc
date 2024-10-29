@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Editar Perfil</title>
-        <link rel="stylesheet" href="../assets/css/styleLogin.css">
+        <link rel="stylesheet" href="../assets/css/styleLog.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>  
     
@@ -45,41 +45,51 @@
             <h1>Editar Perfil</h1>
             <form id="form" action="validaEdit.php" method="POST" enctype="multipart/form-data">
                 <div class="input-container">
+                <label class="lala" for="nome">Nome:</label>
                     <input type="text" id="nome" name="nome" value="<?php echo htmlspecialchars($user['nm_user']); ?>"><br>
-                    <label for="nome">Nome:</label>
                 </div>
 
                 <div class="input-container">
+                <label class="lala" for="apelido">Apelido:</label>
                     <input type="text" id="apelido" name="apelido" value="<?php echo htmlspecialchars($user['nm_apelido']); ?>" ><br>
-                    <label for="apelido">Apelido:</label>
+                    
                 </div>
 
                 <div class="input-container">
+                <label class="lala" for="senha">Nova Senha:</label>
+                
                     <input type="password" id="new-password" name="senha" minlength="6"><br>
-                    <label for="senha">Nova Senha:</label>
-                    <p class="text-senha">A senha deve conter no mínimo 6 caracteres</p>
+                    <p class="lala">A senha deve conter no mínimo 6 caracteres</p>
+                    
                 </div>
 
                 <div class="input-container">
+                <label class="lala" for="senha">Confirme a Senha:</label>
                     <input type="password" id="confirm-new-password" minlength="6"  ><br>
-                    <label for="senha">Confirme a Senha:</label>
+                    
                     <p id="pass-error" class="error-message" style="display:none;">As senhas não coincidem</p>
                 </div>
 
                 <div class="input-container">
+                <label class="lala" for="email">Email:</label>
                     <input type="text" id="email" name="email" value="<?php echo htmlspecialchars($user['ds_email']); ?>" ><br>
-                    <label for="email">Email:</label>
+                    
                 </div>
 
                 <div class="input-container">
-                    <input type="file" name="foto_perfil" id="foto_perfil" accept="image/*"><br>
-                    <label for="foto_perfil">Escolha uma foto de perfil:</label>
+                <label class="lala" for="foto_perfil">Escolha uma foto de perfil:</label>
+                <input type="file" name="foto_perfil" id="foto_perfil" accept="image/*"><br>
+                    
                 </div>
 
-                <input type="submit" value="Atualizar">
+                <div class="input-container">
+                <input class="att" type="submit" value="Atualizar">
+                </div>
 
+            
             </form>
         </div>
+        
         <a href="home.php">Cancelar</a>
 
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

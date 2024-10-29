@@ -684,9 +684,9 @@
             <!-- Se o usuário fez login com o Google, a opção de editar perfil é desativada -->
         <?php else: ?>
             <!-- Se não fez login com o Google, a opção de editar perfil é ativada -->
-            <li href="edit.php" >Editar Perfil</li>
+            <li><a href="edit.php" >Editar Perfil</a></li>
         <?php endif; ?>
-        <li href="confirmadelete.php" > Deletar Perfil</li>
+        <li><a href="confirmadelete.php" > Deletar Perfil</a></li>
                             </ul>
                         </h1>
                 </button>
@@ -1088,16 +1088,16 @@
             
             <script>
                 const tabs2 = document.querySelectorAll('.tab2');
-const sections2 = document.querySelectorAll('.content');
+                const sections2 = document.querySelectorAll('.content');
 
 tabs2.forEach(tab2 => {
     tab2.addEventListener('click', () => {
         // Remover a classe 'active' da aba e da seção ativa
         document.querySelector('.tab2.active')?.classList.remove('active');
-        document.querySelector('.content.active')?.classList.remove('active');
+        document.querySelector('.content2.active')?.classList.remove('active');
 
         // Adicionar a classe 'active' à aba clicada
-        tab.classList.add('active');
+        tab2.classList.add('active');
 
         // Mostrar a seção correspondente
         const target = tab2.getAttribute('data-target');
@@ -1107,15 +1107,6 @@ tabs2.forEach(tab2 => {
         updateBarPosition(tab2);
     });
 });
-
-function updateBarPosition2(activeTab2) {
-    const bar2 = document.querySelector('.bicabeca::after'); // A barra está no ::after
-    const tab2Rect2 = activeTab2.getBoundingClientRect();
-    const headerRect2 = activeTab2.parentElement.getBoundingClientRect();
-
-    bar.style.width = `${tab2Rect2.width}px`;
-    bar.style.left = `${tab2Rect2.left - headerRect2.left}px`;
-}
 
 // Inicializa a barra na posição da aba ativa ao carregar a página
 updateBarPosition(document.querySelector('.tab2.active'));
