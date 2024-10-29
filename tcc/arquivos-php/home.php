@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
-    <link rel="stylesheet" href="../home-assets/css/style2.css">
+    <link rel="stylesheet" href="../home-assets/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- GOOGLE FONTS -->
@@ -21,7 +21,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- APP CSS -->
     <link rel="stylesheet" href="../home-assets/css/grid.css">
-    <link rel="stylesheet" href="../home-assets/css/app.css">
+    <link rel="stylesheet" href="../home-assets/css/app2.css">
 
 </head>
 
@@ -260,10 +260,9 @@
                 $nome = isset($_SESSION['nome']) ? htmlspecialchars($_SESSION['nome']) : '';
                 $apelido = isset($_SESSION['apelido']) ? htmlspecialchars($_SESSION['apelido']) : '';
                 ?>
-                <img src="<?php echo $resultado['ds_foto_perfil']; ?>" alt="Foto de Perfil" width="50px"
-                    style="border-radius: 50%;" />
+                <img class="sidebar__perfil" src="<?php echo $resultado['ds_foto_perfil']; ?>" alt="Foto de Perfil" />
                 <?php
-                echo "<p> $nome <br> $apelido</p>"
+                echo "<p class='sidebar__email'> $nome <br> $apelido</p>"
                     ?>
 
                 <a data-target="section-perfil">
