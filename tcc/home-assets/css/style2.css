@@ -408,11 +408,11 @@ a {
   cursor: pointer;
 }
 
-.star-rating i {
+#section-obra1 .star-rating i {
   transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
-.star-rating i.active {
+#section-obra1 .star-rating i.active {
   color: gold;
   transform: scale(1.2); 
 }

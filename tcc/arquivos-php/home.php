@@ -977,113 +977,6 @@
     </main>
     <!-- # FIM CONFIGURAÇÕES -->
 
-    l
-
-    <!-- # PERFIL MANGÁ -->
-    <main id="section-obra2" class="home-section content-section">
-        <a data-target="section-inicio"><i class='bx bxs-left-arrow-circle'></i></a>
-        <div class="container">
-            <img src="https://acdn.mitiendanube.com/stores/973/807/products/0121-327f3d19f1163edf6f16258954305539-640-0.jpg"
-                alt="Capa do Mangá" class="manga-cover">
-            <div class="manga-info">
-                <h2 class="text-color">Fugiken</h2>
-
-                <div class="info-item">
-                    <p class="info-label text-color">Gêneros:</p>
-                    <p class="info-value text-color">Ação, Aventura, Romance</p>
-                </div>
-                <div class="info-item">
-                    <p class="info-label text-color">Tipo:</p>
-                    <p class="info-value text-color">Colorido</p>
-                </div>
-                <div class="info-item">
-                    <p class="info-label text-color">Ano:</p>
-                    <p class="info-value text-color">2024</p>
-                </div>
-                <div class="info-item">
-                    <p class="info-label text-color">Status:</p>
-                    <p class="info-value text-color">Encerrado</p>
-                </div>
-                <div class="info-item">
-                    <p class="info-label text-color">Lançamento:</p>
-                    <p class="info-value text-color">08 de Outubro de 2015</p>
-                </div>
-
-                <div class="star-rating">
-                    <i class="fa fa-star" aria-hidden="true" onclick="rate(1)">★</i>
-                    <i class="fa fa-star" aria-hidden="true" onclick="rate(2)">★</i>
-                    <i class="fa fa-star" aria-hidden="true" onclick="rate(3)">★</i>
-                    <i class="fa fa-star" aria-hidden="true" onclick="rate(4)">★</i>
-                    <i class="fa fa-star" aria-hidden="true" onclick="rate(5)">★</i>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="chapters">
-            <div class="titulo-cap">
-                <img width="60" height="60" src="https://img.icons8.com/color/48/comics-magazine.png"
-                    alt="comics-magazine" />
-                <h2 class="text-color">CAPÍTULOS</h2>
-
-            </div>
-            <a class="chapter" data-target="section-leitura-manga">
-                <img src="https://cm.blazefast.co/25/b6/25b661d784cc6ac96e1726c5e45f9666.jpg" alt="Capa do Capítulo"
-                    class="chapter-cover">
-                <div>
-                    <span class="chapter-number">Capítulo 26</span>
-                </div>
-
-            </a>
-            <a href="./leitura.php" class="chapter" data-target="section-leitura-manga">
-                <img src="https://i.ebayimg.com/images/g/lVUAAOSwfZxguF6M/s-l1200.jpg" alt="Capa do Capítulo"
-                    class="chapter-cover">
-                <div>
-                    <span class="chapter-number">Capítulo 25</span>
-
-                </div>
-            </a>
-            <a class="chapter" data-target="section-leitura-manga">
-                <img src="https://i0.wp.com/www.otakupt.com/wp-content/uploads/2021/03/Fukigen-na-Mononokean-volume-17-cover.jpg?resize=696%2C990&ssl=1"
-                    alt="Capa do Capítulo" class="chapter-cover">
-                <div>
-                    <span class="chapter-number">Capítulo 24</span>
-                </div>
-            </a>
-
-        </div>
-
-        </div>
-
-        <div class="comments">
-            <ul>
-                <!-- Exibe os comentários aqui -->
-            </ul>
-            <form id="comment-form">
-                <label for="comment" class="text-color">Deixe seu comentário:</label>
-                <textarea id="comment" name="comment" rows="4" placeholder="Digite seu comentário"></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </main>
-    <!-- # FIM PERFIl MANGÁ -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- # PERFIR GIBI PÚBLICO -->
     <main id="section-obra1" class="home-section content-section">
@@ -1177,7 +1070,7 @@
     <main id="section-leitura-manga" class=" content-section">
 
         <div class="btn-troca">
-            <a data-target="section-obra"><i class='bx bxs-left-arrow-circle'></i></a>
+            <a data-target="section-obra1"><i class='bx bxs-left-arrow-circle'></i></a>
             <button class="toggle-mode" onclick="toggleMode()"><i class='bx bxs-binoculars'></i></button>
         </div>
 

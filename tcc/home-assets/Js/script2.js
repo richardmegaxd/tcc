@@ -46,6 +46,7 @@ document.querySelectorAll('a[data-target]').forEach(link => {
 // FIM ALTERAÇÃO DE TELAS
 
 
+
 // AVALIAÇÃO DO MANGÁ
 const starRating = document.querySelector('.star-rating');
 const stars = starRating.querySelectorAll('i');
