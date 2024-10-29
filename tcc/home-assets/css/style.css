@@ -730,25 +730,25 @@ a {
 \*-----------------------------------*/
 
 /* Estilo básico do header e tabs */
-.topo-perfil {
+#section-perfil .topo-perfil {
   display: flex;
   justify-content: space-evenly;
   position: relative;
 }
 
-.tab {
+#section-perfil .tab {
   cursor: pointer;
   padding: 10px;
   color: #333;
   transition: color 0.3s;
 }
 
-.tab.active {
+#section-perfil .tab.active {
   border-bottom: 5px solid #744199;
 }
 
 /* Barra dinâmica que acompanha a aba ativa */
-.topo-perfil::after {
+#section-perfil .topo-perfil::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -851,6 +851,10 @@ a {
   margin-left: 30px;
 }
 
+#section-perfil .ppp{
+  font-size: 70px;
+}
+
 #section-perfil .usuario-back {
   margin-top: 20px;
   padding-left: 80px;
@@ -860,6 +864,7 @@ a {
   gap: 7%;
   height: auto;
   width: auto;
+  justify-content: space-between;
 }
 
 #section-perfil .usuario-back2 {
@@ -917,6 +922,45 @@ a {
 }
 
 #section-perfil .dropup-content li:hover {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+#section-perfil .show {
+  display: block;
+}
+
+#section-perfil .dropb-button{
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+  background-color: transparent;
+  float: right;
+  
+}
+
+#section-perfil .obg{
+  float: right;
+}
+
+#section-perfil .dropb-content {
+  text-align: right;
+  display: none;
+  position: absolute;
+  background-color: #191919;
+  min-width: 150px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  border-radius: 7px;
+  right: 25px;
+}
+
+#section-perfil .dropb-content li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+#section-perfil .dropb-content li:hover {
   background-color: #f0f0f0;
   border-radius: 4px;
 }
@@ -1109,6 +1153,50 @@ a {
 /*-----------------------------------*\
  # BIBLIOTECA
 \*-----------------------------------*/
+
+
+#section-biblioteca .topo-biblioteca {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+#section-biblioteca .tab2 {
+  cursor: pointer;
+  padding: 10px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+#section-biblioteca .tab2.active {
+  border-bottom: 5px solid #744199;
+}
+
+/* Barra dinâmica que acompanha a aba ativa */
+#section-biblioteca .topo-biblioteca::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 0;
+  background-color: #ff6b6b;
+  transition: all 0.3s ease;
+}
+
+/* Estilo das seções */
+#section-biblioteca .content {
+  display: none;
+}
+
+/* Mostrar apenas a seção ativa */
+#section-biblioteca .content.active {
+  display: block;
+}
+
+#section-biblioteca .main-biblioteca{
+  display: flex;
+}
+
 
 #section-biblioteca .section-header-bli {
   margin-bottom: 30px;

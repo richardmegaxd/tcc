@@ -671,6 +671,35 @@
                 </div>
 
             </div>
+
+            <div class="obg">
+
+            <button class="dropb-button" onclick="toggleDropb()">
+                        <h1 class="text-color dropb">
+
+                        <i class='bx bx-dots-horizontal-rounded ppp'></i>
+
+                            <ul class="dropb-content" id="dropb">
+                            <?php if ($login_google == 1): ?>
+            <!-- Se o usuário fez login com o Google, a opção de editar perfil é desativada -->
+        <?php else: ?>
+            <!-- Se não fez login com o Google, a opção de editar perfil é ativada -->
+            <li href="edit.php" >Editar Perfil</li>
+        <?php endif; ?>
+        <li href="confirmadelete.php" > Deletar Perfil</li>
+                            </ul>
+                        </h1>
+                </button>
+
+                    <script>
+                        // Função para alternar a visibilidade do dropdown
+                        function toggleDropb() {
+                            document.getElementById("dropb").classList.toggle("show");
+                        }
+                    </script>
+
+            </div>
+            
         </header>
         
         
@@ -752,7 +781,7 @@
                                 <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
                             </ul>
                         </h2>
-                    </button>
+                </button>
 
                     <script>
                         // Função para alternar a visibilidade do dropdown
@@ -999,7 +1028,6 @@
         
 
         <script>
-
                         const tabs = document.querySelectorAll('.tab');
             const sections = document.querySelectorAll('.content');
 
@@ -1035,13 +1063,7 @@
 
         </script>
         
-        <?php if ($login_google == 1): ?>
-            <!-- Se o usuário fez login com o Google, a opção de editar perfil é desativada -->
-        <?php else: ?>
-            <!-- Se não fez login com o Google, a opção de editar perfil é ativada -->
-            <a href="edit.php" class="a1">Editar Perfil</a>
-        <?php endif; ?>
-        <a href="confirmadelete.php" class="a1"> Deletar Perfil</a>
+        
     </main>
     <!-- # FIM PERFIL -->
 
@@ -1052,145 +1074,58 @@
     ?>
     <main id="section-biblioteca" class="home-section content-section">
 
-        <!-- LATEST MOVIES SECTION -->
-        <div class="section">
-            <div class="container-gp">
-                <div class="section-header-bli text-color">
+            <br>
 
-                    <?php echo "$qt_favoritos" ?> Obras Favoritadas
+    <header class="header-bilioteca ">
+                    <div class="topo-biblioteca ">
+                        <h2 class="tab2 active text-color" data-target="favoritos"><i class='bx bxs-heart text-color'></i> Favoritos</h2>
+                        <h2 class="tab2 text-color" data-target="continuar-lendo"><i class='bx bxs-book text-color'></i> Continuar Lendo</h2>
+                        <h2 class="tab2 text-color" data-target="historico"><i class='bx bxs-time-five text-color'></i> Histórico</h2>
+                        <h2 class="tab2 text-color" data-target="minhas-obras"><i class='bx bxs-pencil text-color'></i> Minhas Obras</h2>
+                    </div>
+                    <hr>
+                </header>
+            
+            <script>
+                const tabs2 = document.querySelectorAll('.tab2');
+const sections2 = document.querySelectorAll('.content');
 
-                    <button class="dropdown-button" onclick="toggleDropdown()">
-                        <h2 class="text-color">
+tabs2.forEach(tab2 => {
+    tab2.addEventListener('click', () => {
+        // Remover a classe 'active' da aba e da seção ativa
+        document.querySelector('.tab2.active')?.classList.remove('active');
+        document.querySelector('.content.active')?.classList.remove('active');
 
-                            Organizar
-                            <i class='bx bxs-up-arrow-alt'></i>
-                            <i class='bx bxs-down-arrow-alt'></i>
+        // Adicionar a classe 'active' à aba clicada
+        tab.classList.add('active');
 
-                            <ul class="dropdown-content" id="dropdown">
-                                <li onclick="ordenar('az')">A - Z</li>
-                                <li onclick="ordenar('za')">Z - A</li>
-                                <li onclick="ordenar('ultimo')">Último Adicionado</li>
-                                <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
-                            </ul>
-                        </h2>
-                    </button>
+        // Mostrar a seção correspondente
+        const target = tab2.getAttribute('data-target');
+        document.getElementById(target).classList.add('active');
 
-                    <script>
-                        // Função para alternar a visibilidade do dropdown
-                        function toggleDropdown() {
-                            document.getElementById("dropdown").classList.toggle("show");
-                        }
-                    </script>
+        // Atualizar a posição da barra
+        updateBarPosition(tab2);
+    });
+});
 
-                </div>
+function updateBarPosition2(activeTab2) {
+    const bar2 = document.querySelector('.bicabeca::after'); // A barra está no ::after
+    const tab2Rect2 = activeTab2.getBoundingClientRect();
+    const headerRect2 = activeTab2.parentElement.getBoundingClientRect();
 
-                <div class="movies-slide carousel-nav-center owl-carousel">
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item" data-target="section-obra">
-                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420"
-                            alt="#" />
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Theatre of the dead
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://spawnbrasil.com.br/wp-content/uploads/2020/02/spawn-112-capa-editora-abril-por-guia-dos-quadrinhos.jpg"
-                            alt="#">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Transformer
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://f.i.uol.com.br/fotografia/2021/10/05/1633460103615c9f879caa1_1633460103_3x2_md.jpg"
-                            alt="#">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Resident Evil
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://img.olx.com.br/images/19/199402202691144.jpg" alt="#">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Captain Marvel
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://lh4.googleusercontent.com/proxy/E1BCT7J87lag4WhJ2aWJTPrsxNvkUF5tpVhJNSglh3TeSerfFZ-9yHWnmXTCF5hgkeWLJ8e9nEk9HfcBdnwc-TkeUpDFH11hV7AOUdDUIwwxWFYHOyw5Pw9lXIMEZ1fyxWso4i8OWy3m"
-                            alt="">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Hunter Killer
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/anime-manga-style-album-cover-1.0-design-template-0fc6d256e9ff17603475dfb129b132f0_screen.jpg?ts=1664026643"
-                            alt="#">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Bloodshot
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
+    bar.style.width = `${tab2Rect2.width}px`;
+    bar.style.left = `${tab2Rect2.left - headerRect2.left}px`;
+}
 
-                </div>
-            </div>
-        </div>
-        <!-- END LATEST MOVIES SECTION -->
+// Inicializa a barra na posição da aba ativa ao carregar a página
+updateBarPosition(document.querySelector('.tab2.active'));
+
+            </script>
+
+            <section id="favoritos" class="content2 active">Conteúdo dos Favoritos</section>
+            <section id="continuar-lendo" class="content2">Conteúdo de Continuar Lendo</section>
+            <section id="historico" class="content2">Conteúdo do Histórico</section>
+            <section id="minhas-obras" class="content2">Conteúdo de Minhas Obras</section>
 
     </main>
     <!-- # FIM BIBLIOTECA -->
