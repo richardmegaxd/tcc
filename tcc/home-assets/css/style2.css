@@ -925,7 +925,7 @@ a {
 }
 
 #section-publicacao-obras button[type="submit"] {
-  background-color: #d838f2;
+  background-color: rgb(121, 2, 196);
   padding: 10px 80px;
   border: none;
   border-radius: 5px;
