@@ -126,29 +126,34 @@
         });
     </script>
         <script>
-        function handleCredentialResponse(response) { // response = dado vem criptografado
-        const data = jwt_decode(response.credential); //jwt_decode decodifica os dados e armazena em data
-        const email = data.email; 
-        const photoUrl = data.picture;
-        const nome = data.given_name; //given_nema = Nome
-        const sobrenome = data.family_name; // family_name = Sobrenome
+        function handleCredentialResponse(response) {
+    const data = jwt_decode(response.credential);
+    const email = data.email;
+    const photoUrl = data.picture;
+    const nome = data.given_name;
+    const sobrenome = data.family_name;
 
-            fetch('valida_google_login.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body:  `email=${encodeURIComponent(email)}&photo_url=${encodeURIComponent(photoUrl)}&nome=${encodeURIComponent(nome)}&sobrenome=${encodeURIComponent(sobrenome)}`
-            })
-            .then(response => response.json())
-            .then(result => {
-                if (result.success) {
-                    window.location.href = "home.php"; // Redirecionar para a página inicial
-                } else {
-                    console.error("Erro ao salvar o e-mail:", result.message);
-                }
-            })
+    fetch('valida_google_login.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `email=${encodeURIComponent(email)}&photo_url=${encodeURIComponent(photoUrl)}&nome=${encodeURIComponent(nome)}&sobrenome=${encodeURIComponent(sobrenome)}`
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.success) {
+            window.location.href = result.redirect; // Redireciona para a URL retornada pelo PHP
+        } else {
+            console.error("Erro ao salvar o e-mail:", result.message);
+            alert("Ocorreu um erro ao fazer login. Por favor, tente novamente.");
         }
+    })
+    .catch(error => {
+        console.error("Erro na requisição:", error);
+        alert("Erro de rede. Por favor, tente novamente.");
+    });
+}
 
       window.onload = function () {
         

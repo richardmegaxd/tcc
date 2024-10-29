@@ -14,29 +14,37 @@ if (isset($_POST["login"]) && isset($_POST["senha"])) {
 
     // Sanitizar os dados
     $loginUsuario = mysqli_real_escape_string($conexao, $loginUsuario);
-    $senhaUsuario = mysqli_real_escape_string($conexao, $senhaUsuario);
 
     // Verifica se a conta está ativa
-    $queryAtivo = "SELECT * FROM tb_usuario WHERE ds_email = '$loginUsuario' AND ds_senha = '$senhaUsuario' AND conta_ativa = 1";
+    $queryAtivo = "SELECT * FROM tb_usuario WHERE ds_email = '$loginUsuario' AND conta_ativa = 1";
     $procuraAtivo = mysqli_query($conexao, $queryAtivo);
 
     if (mysqli_num_rows($procuraAtivo) > 0) {
         $usuario = mysqli_fetch_assoc($procuraAtivo);
-        $idUsuario = $usuario['cd_usuario'];
-        $nomeUsuario = $usuario['nm_user'];
-        $apelidoUsuario = $usuario['nm_apelido']; // Armazena o nome completo do usuário
+        
+        // Verifica a senha usando password_verify()
+        if (password_verify($senhaUsuario, $usuario['ds_senha'])) {
+            // Se a senha estiver correta
+            $idUsuario = $usuario['cd_usuario'];
+            $nomeUsuario = $usuario['nm_user'];
+            $apelidoUsuario = $usuario['nm_apelido']; // Armazena o nome completo do usuário
 
-        // Define as variáveis de sessão
-        $_SESSION['logado'] = true;
-        $_SESSION['usuario'] = $loginUsuario;
-        $_SESSION['cd_usuario'] = $idUsuario;
-        $_SESSION['nome'] = $nomeUsuario;
-        $_SESSION['apelido'] = $apelidoUsuario; // Define o nome na sessão
+            // Define as variáveis de sessão
+            $_SESSION['logado'] = true;
+            $_SESSION['usuario'] = $loginUsuario;
+            $_SESSION['cd_usuario'] = $idUsuario;
+            $_SESSION['nome'] = $nomeUsuario;
+            $_SESSION['apelido'] = $apelidoUsuario; // Define o nome na sessão
 
-        header("Location: home.php");
+            header("Location: home.php");
+        } else {
+            // Senha incorreta
+            $erro = "Login ou senha incorretos. Por favor, tente novamente.";
+            header("Location: login.php?erro=" . urlencode($erro));
+        }
     } else {
         // Verifica se a conta existe, mas está inativa
-        $queryInativo = "SELECT * FROM tb_usuario WHERE ds_email = '$loginUsuario' AND ds_senha = '$senhaUsuario' AND conta_ativa = 0";
+        $queryInativo = "SELECT * FROM tb_usuario WHERE ds_email = '$loginUsuario' AND conta_ativa = 0";
         $procuraInativo = mysqli_query($conexao, $queryInativo);
 
         if (mysqli_num_rows($procuraInativo) > 0) {

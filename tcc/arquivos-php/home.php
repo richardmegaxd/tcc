@@ -852,7 +852,7 @@
                                 ansiosos para conhecer suas histórias e ilustrações!</p>
                         </div>
                         <div class="Mroxo">
-                            <h2 class="text-color">Faça parte do nosso catálogo!</h2>
+                            <h2 class="Mroxo-text">Faça parte do nosso catálogo!</h2>
                         </div>
                     </div>
                 </div><!-- FINAL DA PRIMEIRA PARTE -->
