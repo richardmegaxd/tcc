@@ -656,23 +656,385 @@
         $login_google = $resultado['login_google'];
 
         ?>
-        <div class="usuario-back text-color">
+        <header class="usuario-back text-color">
             <img class="foto-perfil" src="<?php echo $resultado['ds_foto_perfil']; ?>" alt="Foto de Perfil" />
             <div class="info-usuario">
                 <h2 class="nome-perfil text-color"><?php echo "$resultado[3]" ?></h2>
                 <h2 class="nome-perfil text-color"><?php echo "$resultado[4]" ?></h2> <!-- Exibindo o nome -->
 
-                <div class="area-seguir">
-                    <div class="seguir">
-                        <h3>02 Seguidos</h3>
-                    </div>
-                    <div class="seguindo">
-                        <h3>02 Seguidores</h>
-                    </div>
+                <div class="area-seguidos ">
+                
+                    <h3>02 Seguidos</h3>
+                    
+                    <h3>02 Seguidores</h>
+                    
                 </div>
 
             </div>
+        </header>
+        
+        
+            <div class="usuario-back2 text-color">
+                <div class="area-seguir">
+                    <div class="seguir">
+                                
+                        <h3 class="icu">+</h3><h3>Seguir</h3>
+                    
+                    </div>
+
+                    <div class="seguir">
+                                
+                        <h2><i class='bx bxs-heart corazon'></i></h2><h3>12</h3>
+                                
+                    </div>
+                </div>
+
+                <div class="area-biografia">
+
+                    <h3>Biografia</h3>
+
+                    <p>
+                        Tenho 18 anos, gosto de escrever e gostaria de fazer novos amigos. Prazer em te conhecer!
+                    </p>
+
+                    <Button class="ler-mais text-color">
+                        Ler mais
+                    </Button>
+
+                </div>
+
+                <div class="area-tags">
+
+                    <div class="tags">
+                                
+                        <p>#Romance</p>
+                    
+                    </div>
+
+                    <div class="tags">
+                                
+                        <p>#Romance</p>
+                                
+                    </div>
+
+                    <div class="tags">
+                                
+                        <p>#Romance</p>
+                                
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="conteudo-perfil">
+                <header class="header-perfil">
+                    <div class="topo-perfil">
+                        <h2 class="tab active text-color" data-target="obras">Obras</h2>
+                        <h2 class="tab text-color" data-target="recomendados">Recomendados</h2>
+    <!-- <h2 class="tab text-color" data-target="comentarios">Comentários</h2> -->
+                    </div>
+                    <hr>
+                </header>
+
+                <br>
+                
+                <button class="dropup-button" onclick="toggleDropup()">
+                        <h2 class="text-color dropup-p">
+
+                            Organizar
+                            <i class='bx bxs-up-arrow-alt'></i>
+                            <i class='bx bxs-down-arrow-alt'></i>
+
+                            <ul class="dropup-content" id="dropup">
+                                <li onclick="ordenar('az')">A - Z</li>
+                                <li onclick="ordenar('za')">Z - A</li>
+                                <li onclick="ordenar('ultimo')">Último Adicionado</li>
+                                <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
+                            </ul>
+                        </h2>
+                    </button>
+
+                    <script>
+                        // Função para alternar a visibilidade do dropdown
+                        function toggleDropup() {
+                            document.getElementById("dropup").classList.toggle("show");
+                        }
+                    </script>
+                    
+                    <br><br>
+
+                <section id="obras" class="content active">
+
+                <div class="movies-slide carousel-nav-center owl-carousel">
+                    <!-- MOVIE ITEM -->
+                    <a href="#" class="movie-item" data-target="section-obra">
+                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420"
+                            alt="#" />
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Theatre of the dead
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END MOVIE ITEM -->
+                    <!-- MOVIE ITEM -->
+                    <a href="#" class="movie-item">
+                        <img src="https://spawnbrasil.com.br/wp-content/uploads/2020/02/spawn-112-capa-editora-abril-por-guia-dos-quadrinhos.jpg"
+                            alt="#">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Transformer
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END MOVIE ITEM -->
+                    <!-- MOVIE ITEM -->
+                    <a href="#" class="movie-item">
+                        <img src="https://f.i.uol.com.br/fotografia/2021/10/05/1633460103615c9f879caa1_1633460103_3x2_md.jpg"
+                            alt="#">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Resident Evil
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END MOVIE ITEM -->
+                    <!-- MOVIE ITEM -->
+                    <a href="#" class="movie-item">
+                        <img src="https://img.olx.com.br/images/19/199402202691144.jpg" alt="#">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Captain Marvel
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END MOVIE ITEM -->
+                    <!-- MOVIE ITEM -->
+                    <a href="#" class="movie-item">
+                        <img src="https://lh4.googleusercontent.com/proxy/E1BCT7J87lag4WhJ2aWJTPrsxNvkUF5tpVhJNSglh3TeSerfFZ-9yHWnmXTCF5hgkeWLJ8e9nEk9HfcBdnwc-TkeUpDFH11hV7AOUdDUIwwxWFYHOyw5Pw9lXIMEZ1fyxWso4i8OWy3m"
+                            alt="">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Hunter Killer
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END MOVIE ITEM -->
+                    <!-- MOVIE ITEM -->
+                    <a href="#" class="movie-item">
+                        <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/anime-manga-style-album-cover-1.0-design-template-0fc6d256e9ff17603475dfb129b132f0_screen.jpg?ts=1664026643"
+                            alt="#">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Bloodshot
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END MOVIE ITEM -->
+
+                </div>
+            </div>
         </div>
+        <!-- END LATEST MOVIES SECTION -->
+
+                </section>
+                
+                <section id="recomendados" class="content">
+
+                <div class="movies-slide carousel-nav-center owl-carousel">
+                    <!-- MOVIE ITEM -->
+                    <a href="#" class="movie-item" data-target="section-obra">
+                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420"
+                            alt="#" />
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Theatre of the dead
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END MOVIE ITEM -->
+                    <!-- MOVIE ITEM -->
+                    <a href="#" class="movie-item">
+                        <img src="https://spawnbrasil.com.br/wp-content/uploads/2020/02/spawn-112-capa-editora-abril-por-guia-dos-quadrinhos.jpg"
+                            alt="#">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Transformer
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END MOVIE ITEM -->
+                    <!-- MOVIE ITEM -->
+                    <a href="#" class="movie-item">
+                        <img src="https://f.i.uol.com.br/fotografia/2021/10/05/1633460103615c9f879caa1_1633460103_3x2_md.jpg"
+                            alt="#">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Resident Evil
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END MOVIE ITEM -->
+                    <!-- MOVIE ITEM -->
+                    <a href="#" class="movie-item">
+                        <img src="https://img.olx.com.br/images/19/199402202691144.jpg" alt="#">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Captain Marvel
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END MOVIE ITEM -->
+                    <!-- MOVIE ITEM -->
+                    <a href="#" class="movie-item">
+                        <img src="https://lh4.googleusercontent.com/proxy/E1BCT7J87lag4WhJ2aWJTPrsxNvkUF5tpVhJNSglh3TeSerfFZ-9yHWnmXTCF5hgkeWLJ8e9nEk9HfcBdnwc-TkeUpDFH11hV7AOUdDUIwwxWFYHOyw5Pw9lXIMEZ1fyxWso4i8OWy3m"
+                            alt="">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Hunter Killer
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END MOVIE ITEM -->
+                    <!-- MOVIE ITEM -->
+                    <a href="#" class="movie-item">
+                        <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/anime-manga-style-album-cover-1.0-design-template-0fc6d256e9ff17603475dfb129b132f0_screen.jpg?ts=1664026643"
+                            alt="#">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Bloodshot
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END MOVIE ITEM -->
+
+                </div>
+            </div>
+        </div>
+        <!-- END LATEST MOVIES SECTION -->
+
+                </section>
+
+                <section id="comentarios" class="content">
+
+                    Conteúdo comentarios
+
+                </section>
+
+            </div>
+        
+
+        
+
+        <script>
+
+                        const tabs = document.querySelectorAll('.tab');
+            const sections = document.querySelectorAll('.content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remover a classe 'active' da aba e da seção ativa
+                    document.querySelector('.tab.active')?.classList.remove('active');
+                    document.querySelector('.content.active')?.classList.remove('active');
+
+                    // Adicionar a classe 'active' à aba clicada
+                    tab.classList.add('active');
+
+                    // Mostrar a seção correspondente
+                    const target = tab.getAttribute('data-target');
+                    document.getElementById(target).classList.add('active');
+
+                    // Atualizar a posição da barra
+                    updateBarPosition(tab);
+                });
+            });
+
+            function updateBarPosition(activeTab) {
+                const bar = document.querySelector('.bicabeca::after'); // A barra está no ::after
+                const tabRect = activeTab.getBoundingClientRect();
+                const headerRect = activeTab.parentElement.getBoundingClientRect();
+
+                bar.style.width = `${tabRect.width}px`;
+                bar.style.left = `${tabRect.left - headerRect.left}px`;
+            }
+
+            // Inicializa a barra na posição da aba ativa ao carregar a página
+            updateBarPosition(document.querySelector('.tab.active'));
+
+        </script>
+        
         <?php if ($login_google == 1): ?>
             <!-- Se o usuário fez login com o Google, a opção de editar perfil é desativada -->
         <?php else: ?>
@@ -721,6 +1083,7 @@
                     </script>
 
                 </div>
+
                 <div class="movies-slide carousel-nav-center owl-carousel">
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item" data-target="section-obra">

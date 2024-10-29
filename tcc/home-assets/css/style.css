@@ -729,7 +729,86 @@ a {
  # PERFIL USUÁRIO
 \*-----------------------------------*/
 
-.area-seguir{
+/* Estilo básico do header e tabs */
+.topo-perfil {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.tab.active {
+  border-bottom: 5px solid #744199;
+}
+
+/* Barra dinâmica que acompanha a aba ativa */
+.topo-perfil::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 0;
+  background-color: #ff6b6b;
+  transition: all 0.3s ease;
+}
+
+/* Estilo das seções */
+#section-perfil .content {
+  display: none;
+}
+
+/* Mostrar apenas a seção ativa */
+#section-perfil .content.active {
+  display: block;
+}
+
+#section-perfil .main-perfil{
+  display: flex;
+}
+
+#section-perfil .ler-mais{
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+  cursor: pointer;
+  float: right;
+  }
+
+#section-perfil .area-seguir{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#section-perfil .icu{
+  font-size: 35px
+}
+
+#section-perfil .area-tags{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#section-perfil .tags{
+  width: 110px;
+  height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: #214372;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: black;
+  border-width: 1px;
+}
+
+#section-perfil .area-seguidos{
   width: 350px;
   height: 50px;
   display: flex;
@@ -744,12 +823,26 @@ a {
   border-width: 1px;
 }
 
-.info-usuario{
+#section-perfil .seguir{
+  width: 170px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 80px;
+  background-color: #214372;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: black;
+  border-width: 1px;
+}
+
+#section-perfil .info-usuario{
   position: relative;
   top: 65px;
 }
-
-.foto-perfil{
+#section-perfil .foto-perfil{
   width: 12vw;
   height: 12vw;
   border-radius: 5%;
@@ -767,7 +860,69 @@ a {
   gap: 7%;
   height: auto;
   width: auto;
+}
+
+#section-perfil .usuario-back2 {
+  background-color: #191919;
+  border-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7%;
+  height: 530px;
+  width: 400px;
   margin-bottom: 80px;
+  float: left;
+}
+
+#section-perfil .area-biografia{
+  padding: 20px;
+  background-color: #214372;
+}
+
+#section-perfil .bxs-up-arrow-alt{
+  position: relative;
+  right: 6px;
+}
+
+#section-perfil .bxs-down-arrow-alt{
+  position: relative;
+  right: 23px;
+  top: 9px;
+}
+
+#section-perfil .dropup-button{
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+  background-color: transparent;
+  float: right;
+}
+
+#section-perfil .dropup-content {
+  text-align: right;
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 150px;
+  border: 1px solid #ddd;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  border-radius: 7px;
+  right: 25px;
+}
+
+#section-perfil .dropup-content li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+#section-perfil .dropup-content li:hover {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+#section-perfil .show {
+  display: block;
 }
 
 /*-----------------------------------*\
@@ -955,7 +1110,7 @@ a {
  # BIBLIOTECA
 \*-----------------------------------*/
 
-.section-header-bli {
+#section-biblioteca .section-header-bli {
   margin-bottom: 30px;
   padding-left: 20px;
   text-transform: uppercase;
@@ -968,26 +1123,27 @@ a {
 }
 
 
-.bxs-up-arrow-alt{
+#section-biblioteca .bxs-up-arrow-alt{
   position: relative;
   right: 6px;
 }
 
-.bxs-down-arrow-alt{
+#section-biblioteca .bxs-down-arrow-alt{
   position: relative;
   right: 23px;
   top: 9px;
 }
 
-.dropdown-button{
-  margin: 30px 90px 0px 0px;
+#section-biblioteca .dropdown-button{
+  
   background-color: transparent;
   border: transparent;
   cursor: pointer;
   background-color: transparent;
+  
 }
 
-.dropdown-content {
+#section-biblioteca .dropdown-content {
   display: none;
   position: absolute;
   background-color: black;
@@ -999,23 +1155,20 @@ a {
   right: 110px;
 }
 
-.dropdown-content li {
+#section-biblioteca .dropdown-content li {
   padding: 10px;
   cursor: pointer;
 }
 
-.dropdown-content li:hover {
+#section-biblioteca .dropdown-content li:hover {
   background-color: #f0f0f0;
   border-radius: 4px;
 }
 
-.show {
+#section-biblioteca .show {
   display: block;
 }
 
 /*-----------------------------------*\
  # FIM BIBLIOTECA
 \*-----------------------------------*/
-
-
-
