@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
-    <link rel="stylesheet" href="../home-assets/css/style.css">
+    <link rel="stylesheet" href="../home-assets/css/style2.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- GOOGLE FONTS -->
@@ -267,7 +267,7 @@
                     ?>
 
                 <a data-target="section-perfil">
-                    <i class='bx bxs-chevron-right-circle' data-target="section-perfil"></i>
+                    <i class='bx bxs-chevron-right-circle text-color' data-target="section-perfil"></i>
                 </a>
             </div>
         </nav>
@@ -949,7 +949,7 @@
                         </div>
                         <!-- Botão de envio no final do formulário -->
                         <div class="btn-enviar">
-                            <button type="submit" class="text-color">Enviar</button>
+                            <button type="submit">Enviar</button>
                         </div>
                     </div>
                 </div>
