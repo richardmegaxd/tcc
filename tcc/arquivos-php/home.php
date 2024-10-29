@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
-    <link rel="stylesheet" href="../home-assets/css/style2.css">
+    <link rel="stylesheet" href="../home-assets/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- GOOGLE FONTS -->
@@ -293,7 +293,7 @@
                             <div class="movie-infos">
                                 <div class="movie-info">
                                     <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
+                                    <span>8.4</span>
                                 </div>
                             </div>
                         </div>
@@ -305,12 +305,12 @@
                             alt="#">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
-                                Transformer
+                                Spawn
                             </div>
                             <div class="movie-infos">
                                 <div class="movie-info">
                                     <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
+                                    <span>8.5</span>
                                 </div>
                             </div>
                         </div>
@@ -322,7 +322,7 @@
                             alt="#">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
-                                Resident Evil
+                                Fronteiras do Além
                             </div>
                             <div class="movie-infos">
                                 <div class="movie-info">
@@ -338,12 +338,12 @@
                         <img src="https://img.olx.com.br/images/19/199402202691144.jpg" alt="#">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
-                                Captain Marvel
+                                Death Metal
                             </div>
                             <div class="movie-infos">
                                 <div class="movie-info">
                                     <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
+                                    <span>7.9</span>
                                 </div>
                             </div>
                         </div>
@@ -354,12 +354,12 @@
                         <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420" alt="">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
-                                Hunter Killer
+                                Rocketeer
                             </div>
                             <div class="movie-infos">
                                 <div class="movie-info">
                                     <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
+                                    <span>7.8</span>
                                 </div>
                             </div>
                         </div>
@@ -371,12 +371,12 @@
                             alt="#">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
-                                Bloodshot
+                                Forgotten Feelinggs
                             </div>
                             <div class="movie-infos">
                                 <div class="movie-info">
                                     <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
+                                    <span>8.7</span>
                                 </div>
                             </div>
                         </div>
@@ -407,7 +407,7 @@
                             <div class="movie-infos">
                                 <div class="movie-info">
                                     <i class="bx bxs-star"></i>
-                                    <span>7.5</span>
+                                    <span>7.7</span>
                                 </div>
                             </div>
                         </div>
@@ -419,12 +419,12 @@
                             alt="#">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
-                                Star Trek
+                                O Regresso de Jaspion
                             </div>
                             <div class="movie-infos">
                                 <div class="movie-info">
                                     <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
+                                    <span>8.4</span>
                                 </div>
 
                             </div>
@@ -436,12 +436,12 @@
                         <img src="https://hyperioncomics.com.br/wp-content/uploads/2022/10/0-300x459.jpg" alt="">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
-                                Penthouses
+                                Eu Odeio Conto de Fadas
                             </div>
                             <div class="movie-infos">
                                 <div class="movie-info">
                                     <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
+                                    <span>7.9</span>
                                 </div>
 
                             </div>
@@ -450,16 +450,16 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://imgv2-1-f.scribdassets.com/img/word_document/605138375/original/99852f7170/1719936830?v=1"
+                        <img src="https://zinebrasil.wordpress.com/wp-content/uploads/2012/04/capa-contos.jpg"
                             alt="">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
-                                Mandalorian
+                                Contos do Absurdo
                             </div>
                             <div class="movie-infos">
                                 <div class="movie-info">
                                     <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
+                                    <span>8.5</span>
                                 </div>
 
                             </div>
@@ -471,12 +471,12 @@
                         <img src="https://i.pinimg.com/474x/08/a7/18/08a7185ecfd01971106503f9d4be3961.jpg" alt="">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
-                                The Falcon And The Winter Soldier
+                                Almanaque do Fantasma
                             </div>
                             <div class="movie-infos">
                                 <div class="movie-info">
                                     <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
+                                    <span>8.1</span>
                                 </div>
 
                             </div>
@@ -485,16 +485,16 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://cdn.kobo.com/book-images/9b82874e-df48-4981-a011-e4c3156ba65c/353/569/90/False/submechanophobia-an-afk-book-five-nights-at-freddy-s-tales-from-the-pizzaplex-4.jpg"
+                        <img src="https://assets.isu.pub/document-structure/240608035401-449011b4ba0981f4a6d247f252fe56ec/v1/8bfaa39e3bd05313a7ebf7e2d3952e13.jpeg"
                             alt="">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
-                                Wanda Vision
+                                Cartilha da Justiça
                             </div>
                             <div class="movie-infos">
                                 <div class="movie-info">
                                     <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
+                                    <span>6.5</span>
                                 </div>
 
                             </div>
@@ -519,12 +519,12 @@
                         <img src="https://m.media-amazon.com/images/I/91i217MtWbL._AC_UF1000,1000_QL80_.jpg" alt="">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
-                                Demon Slayer
+                                Five Ninghts at Freddy's
                             </div>
                             <div class="movie-infos">
                                 <div class="movie-info">
                                     <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
+                                    <span>6.8</span>
                                 </div>
 
                             </div>
@@ -537,12 +537,12 @@
                             alt="#">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
-                                Supergirl
+                                Calendar
                             </div>
                             <div class="movie-infos">
                                 <div class="movie-info">
                                     <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
+                                    <span>7.5</span>
                                 </div>
                             </div>
                         </div>
@@ -554,12 +554,12 @@
                             alt="">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
-                                Croods
+                                Divisão 5
                             </div>
                             <div class="movie-infos">
                                 <div class="movie-info">
                                     <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
+                                    <span>8.7</span>
                                 </div>
 
                             </div>
@@ -572,12 +572,12 @@
                             alt="">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
-                                Dragonball
+                                Capitão Brasil
                             </div>
                             <div class="movie-infos">
                                 <div class="movie-info">
                                     <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
+                                    <span>6.8</span>
                                 </div>
 
                             </div>
@@ -586,16 +586,16 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy1hqh9t4ovdhLbxh4cJiHgYgf6O-9cYvsug&s"
+                        <img src="https://www.jbchost.com.br/editorajbc/wp-content/uploads/2023/11/9horas-master-edition-capa.jpg"
                             alt="">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
-                                Over The Moon
+                                9 Horas
                             </div>
                             <div class="movie-infos">
                                 <div class="movie-info">
                                     <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
+                                    <span>8.5</span>
                                 </div>
 
                             </div>
@@ -608,12 +608,12 @@
                         <img src="https://i.pinimg.com/236x/3c/e4/7a/3ce47a75024ee3c4a6d2833a75bc1670.jpg" alt="">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
-                                Weathering With You
+                                Wonder Girl
                             </div>
                             <div class="movie-infos">
                                 <div class="movie-info">
                                     <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
+                                    <span>7.2</span>
                                 </div>
 
                             </div>

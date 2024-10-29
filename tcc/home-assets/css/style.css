@@ -276,6 +276,11 @@ a {
 /*-----------------------------------*\
  # PERFIL DO MANGÁ
 \*-----------------------------------*/
+
+#section-obra1{
+ margin-top: 20px;
+}
+
 #section-obra1 .container {
   display: flex;
   justify-content: center;
