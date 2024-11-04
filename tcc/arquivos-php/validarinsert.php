@@ -1,7 +1,6 @@
-    <?php
+<?php
 session_start();
 
-// Função para verificar se o e-mail já está cadastrado
 function isEmailExists($email, $conexao) {
     $query = "SELECT COUNT(*) FROM tb_usuario WHERE ds_email = ?";
     $stmt = mysqli_prepare($conexao, $query);
@@ -14,41 +13,42 @@ function isEmailExists($email, $conexao) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Exibir todos os dados recebidos
-    var_dump($_POST); // Para depuração
-
-    // Capturando os dados do formulário
     $nome = $_POST['nome'];
     $senha = $_POST['senha'];
     $email = $_POST['usuario'];
 
-    // Validar se as senhas coincidem
-    // (Adicione sua lógica de confirmação de senha aqui)
-
-    // Estabelecer conexão
     $conexao = mysqli_connect("localhost", "root", "", "bd_glark", "3306");
 
     if (!$conexao) {
         die("Conexão falhou: " . mysqli_connect_error());
     }
 
-    // Verificar se o e-mail já está cadastrado
     if (isEmailExists($email, $conexao)) {
         mysqli_close($conexao);
         header("Location: cadastro.php?erro=Este e-mail já está cadastrado");
         exit();
     }
 
-    // Hash da senha para segurança
     $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
 
-    // Inserir o novo usuário
-    $operacao = "INSERT INTO tb_usuario (ds_email, ds_senha, nm_user) VALUES (?, ?, ?)";
+    // Gerar um código de confirmação de 6 dígitos
+    $codigoConfirmacao = rand(100000, 999999);
+    $contaAtiva = 0;
+
+    // Inserir o novo usuário com o código de confirmação e conta_ativa
+    $operacao = "INSERT INTO tb_usuario (ds_email, ds_senha, nm_user, codigo_confirmacao, conta_ativa) VALUES (?, ?, ?, ?, ?)";
     $stmt = mysqli_prepare($conexao, $operacao);
-    mysqli_stmt_bind_param($stmt, "sss", $email, $senhaHash, $nome);
-    
+    mysqli_stmt_bind_param($stmt, "ssssi", $email, $senhaHash, $nome, $codigoConfirmacao, $contaAtiva);
+
     if (mysqli_stmt_execute($stmt)) {
-        header("Location: cadastro_sucesso.php");  
+        // Enviar email com o código de confirmação
+        $assunto = "Confirme seu Email";
+        $mensagem = "Olá, $nome!\n\nSeu código de confirmação é: $codigoConfirmacao\n\nDigite este código no site para ativar sua conta.";
+        $cabecalhos = "From: no-reply@seusite.com";
+
+        mail($email, $assunto, $mensagem, $cabecalhos);
+
+        header("Location: confirmar_email.php");  
         exit();
     } else {
         echo "Erro ao cadastrar: " . mysqli_stmt_error($stmt);
