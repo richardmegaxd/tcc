@@ -16,7 +16,7 @@
         <div class="logo">
             <img src="../assets/images/log5.png" width="50%" height="auto" loading="lazy" alt="Logotipo The Glarck" class="card-icon">
         </div>
-        <h1>Conta criada com sucesso!</h1>
+        <h1>Conta criada e validada com sucesso!</h1>
     </header>
 
     <a href="login.php" class="voltar">Retornar</a>
