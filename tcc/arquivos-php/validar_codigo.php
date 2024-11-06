@@ -1,7 +1,9 @@
 <?php
+session_start();
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $codigoInserido = $_POST['codigo'];
-    $email = $_POST['email'];
+    $codigoDigitado = $_POST['codigo'];
+    $email = $_POST['email']; // Email do usuário, pode ser salvo na sessão ao cadastrar
 
     $conexao = mysqli_connect("localhost", "root", "", "bd_glark", "3306");
 
@@ -9,29 +11,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         die("Conexão falhou: " . mysqli_connect_error());
     }
 
-    // Verificar se o código de confirmação corresponde ao email do usuário
-    $query = "SELECT codigo_confirmacao FROM tb_usuario WHERE ds_email = ? AND codigo_confirmacao = ?";
+    // Buscar o código de confirmação e o status da conta
+    $query = "SELECT codigo_confirmacao, conta_ativa FROM tb_usuario WHERE ds_email = ?";
     $stmt = mysqli_prepare($conexao, $query);
-    mysqli_stmt_bind_param($stmt, "ss", $email, $codigoInserido);
+    mysqli_stmt_bind_param($stmt, "s", $email);
     mysqli_stmt_execute($stmt);
-    mysqli_stmt_store_result($stmt);
+    mysqli_stmt_bind_result($stmt, $codigoBanco, $contaAtiva);
+    mysqli_stmt_fetch($stmt);
+    mysqli_stmt_close($stmt);
 
-    if (mysqli_stmt_num_rows($stmt) > 0) {
-        // Código correto - ativar a conta
-        $update = "UPDATE tb_usuario SET conta_ativa = 1, codigo_confirmacao = NULL WHERE ds_email = ?";
-        $stmtUpdate = mysqli_prepare($conexao, $update);
-        mysqli_stmt_bind_param($stmtUpdate, "s", $email);
-        mysqli_stmt_execute($stmtUpdate);
-        mysqli_stmt_close($stmtUpdate);
-
-        // Redirecionar para a página de login
-        header("Location: cadastro_sucesso.php");
-        exit();
+    if ($contaAtiva == 1) {
+        echo "Conta já está ativada.";
+    } elseif ($codigoBanco == $codigoDigitado) {
+        // Atualiza o status da conta para ativa
+        $query = "UPDATE tb_usuario SET conta_ativa = 1, codigo_confirmacao = NULL WHERE ds_email = ?";
+        $stmt = mysqli_prepare($conexao, $query);
+        mysqli_stmt_bind_param($stmt, "s", $email);
+        if (mysqli_stmt_execute($stmt)) {
+            header("Location: cadastro_sucesso.php");
+            exit();
+        } else {
+            echo "Erro ao ativar a conta.";
+        }
+        mysqli_stmt_close($stmt);
     } else {
-        echo "Código de confirmação inválido.";
+        echo "Código de confirmação incorreto.";
     }
 
-    mysqli_stmt_close($stmt);
     mysqli_close($conexao);
 }
 ?>
