@@ -41,15 +41,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     mysqli_stmt_bind_param($stmt, "ssssi", $email, $senhaHash, $nome, $codigoConfirmacao, $contaAtiva);
 
     if (mysqli_stmt_execute($stmt)) {
-        // Enviar email com o código de confirmação
+        // Assunto do email
         $assunto = "Confirme seu Email";
-        $mensagem = "Olá, $nome!\n\nSeu código de confirmação é: $codigoConfirmacao\n\nDigite este código no site para ativar sua conta.";
-        $cabecalhos = "From: no-reply@seusite.com";
+        
+        // Carregar a imagem e converter para Base64
+        $imagem = file_get_contents('../home-assets/images/logo.png'); // Substitua pelo caminho da sua imagem
+        $imagemBase64 = base64_encode($imagem);
 
-        mail($email, $assunto, $mensagem, $cabecalhos);
+        // Corpo do email em HTML
+        $mensagem = "
+        <html>
+        <head>
+            <title>Confirme seu Email</title>
+        </head>
+        <body>
+            <p>Olá, $nome!</p>
+            <p>Seu código de confirmação é: <strong>$codigoConfirmacao</strong></p>
+            <p>Digite este código no site para ativar sua conta.</p>
+            <br>
+            <p>Atenciosamente,</p>
+            <p>The Glark</p>
+            <br>
+             <img src='data:image/png;base64,$imagemBase64' alt='Logo The Glark'>
+        </body>
+        </html>";
 
-        header("Location: confirmar_email.php");  
-        exit();
+        // Cabeçalhos para email HTML
+        $cabecalhos = "MIME-Version: 1.0" . "\r\n";
+        $cabecalhos .= "Content-type: text/html; charset=UTF-8" . "\r\n";
+        $cabecalhos .= "From: equipe_theglark@gmail.com" . "\r\n";
+        
+        // Enviar o email
+        if (mail($email, $assunto, $mensagem, $cabecalhos)) {
+            header("Location: confirmar_email.php");  
+            exit();
+        } else {
+            echo "Erro ao enviar o email.";
+        }
+
     } else {
         echo "Erro ao cadastrar: " . mysqli_stmt_error($stmt);
     }
