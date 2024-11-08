@@ -972,6 +972,13 @@ a {
   display: block;
 }
 
+#section-perfil .user_top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #0f001d;
+}
 /*-----------------------------------*\
  # FIM PERFIL USUÁRIO
 \*-----------------------------------*/

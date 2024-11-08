@@ -16,6 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome = $_POST['nome'];
     $senha = $_POST['senha'];
     $email = $_POST['usuario'];
+    $fotoPerfil = '../home-assets/images/logo.png'; // Substitua pelo caminho da sua imagem
 
     $conexao = mysqli_connect("localhost", "root", "", "bd_glark", "3306");
 
@@ -36,9 +37,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $contaAtiva = 0;
 
     // Inserir o novo usuário com o código de confirmação e conta_ativa
-    $operacao = "INSERT INTO tb_usuario (ds_email, ds_senha, nm_user, codigo_confirmacao, conta_ativa) VALUES (?, ?, ?, ?, ?)";
+    $operacao = "INSERT INTO tb_usuario (ds_email, ds_senha, nm_user, codigo_confirmacao, conta_ativa, ds_foto_perfil) VALUES (?, ?, ?, ?, ?, ?)";
     $stmt = mysqli_prepare($conexao, $operacao);
-    mysqli_stmt_bind_param($stmt, "ssssi", $email, $senhaHash, $nome, $codigoConfirmacao, $contaAtiva);
+    mysqli_stmt_bind_param($stmt, "ssssis", $email, $senhaHash, $nome, $codigoConfirmacao, $contaAtiva, $fotoPerfil);
 
     if (mysqli_stmt_execute($stmt)) {
         // Assunto do email

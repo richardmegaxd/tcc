@@ -656,21 +656,22 @@
 
         ?>
         <header class="usuario-back text-color">
-            <img class="foto-perfil" src="<?php echo $resultado['ds_foto_perfil']; ?>" alt="Foto de Perfil" />
-            <div class="info-usuario">
-                <h2 class="nome-perfil text-color"><?php echo "$resultado[3]" ?></h2>
-                <h2 class="nome-perfil text-color"><?php echo "$resultado[4]" ?></h2> <!-- Exibindo o nome -->
+            <div class="user_top">
+                <img class="foto-perfil" src="<?php echo $resultado['ds_foto_perfil']; ?>" alt="Foto de Perfil" />
+                <div class="info-usuario">
+                    <h2 class="nome-perfil text-color"><?php echo "$resultado[3]" ?></h2>
+                    <h2 class="nome-perfil text-color"><?php echo "$resultado[4]" ?></h2> <!-- Exibindo o nome -->
 
-                <div class="area-seguidos ">
+                    <div class="area-seguidos ">
 
-                    <h3>02 Seguidos</h3>
+                        <h3>02 Seguidos</h3>
 
-                    <h3>02 Seguidores</h>
+                        <h3>02 Seguidores</h>
+
+                    </div>
 
                 </div>
-
             </div>
-
             <div class="obg">
 
                 <button class="dropb-button" onclick="toggleDropb()">
