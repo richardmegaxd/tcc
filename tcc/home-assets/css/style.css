@@ -974,10 +974,7 @@ a {
 
 #section-perfil .user_top{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
-  background-color: #0f001d;
+  gap: 15%;
 }
 /*-----------------------------------*\
  # FIM PERFIL USUÁRIO
