@@ -6,9 +6,9 @@ vai na opção chamada PHP (php.ini) 4 opção
 
 ctrl + F
 
-SMTP
+escreva SMTP de ENTER
 
-embaixo na 3 linha mais ou menos vai ter um smtp_port=25 muda para 1025
+embaixo na 3 linha mais ou menos vai ter um smtp_port=25 muda para smtp_port=1025
 
 quando terminar tudo fechar apache, mysql xampp e reabrir 
 
