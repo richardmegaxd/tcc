@@ -1,1 +1,15 @@
-leticia começo a mexer no codigo, fudeu
+abrir o arquivo Mailhog.exe no caminho tcc\Mailhog
+
+no xamp, abrir config do apache (fica ao lado do botao de iniciar)
+
+vai na opção chamada PHP (php.ini) 4 opção
+
+ctrl + F
+
+SMTP
+
+embaixo na 3 linha mais ou menos vai ter um smtp_port=25 muda para 1025
+
+quando terminar tudo fechar apache, mysql xampp e reabrir 
+
+para abrir o Mailhog no navegador é so dar, localhost:8025
