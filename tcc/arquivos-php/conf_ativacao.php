@@ -23,7 +23,6 @@ $idUsuario = $_SESSION['temp_usuario'];
 <body>
      <div id="section-delete" class="logo">
      <img src="../assets/images/log5.png" width="50%" height="auto" loading="lazy" alt="Logotipo The Glarck" class="card-icon">
-     <h1>The Glark</h1><br>
      </div> 
     <h1>Reativação de Conta</h1><br>
     <p>Sua conta está desativada. Deseja reativar?</p>

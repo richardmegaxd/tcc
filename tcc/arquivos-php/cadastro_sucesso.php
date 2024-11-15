@@ -19,7 +19,16 @@
         <h1>Conta criada e validada com sucesso!</h1>
     </header>
 
-    <a href="login.php" class="voltar">Retornar</a>
+    <form action="login.php">
+
+        <button type="submit">ENTRAR</button>
+
+        <p class="termos">
+            Você reconhece que leu e concorda com nossos
+            <a href="#">Termos de Serviço</a> e nossa
+            <a href="#">Política de Privacidade</a>.
+        </p>
+    </form>
 
 </body>
 

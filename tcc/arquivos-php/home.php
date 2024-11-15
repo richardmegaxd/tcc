@@ -241,7 +241,7 @@
                 </div>
             </div>
 
-            <div class="sidebar__account">
+            <div class="sidebar__account" data-target="section-perfil">
                 <?php
                 $conexao = mysqli_connect("localhost", "root", "", "bd_glark");
 
@@ -260,6 +260,7 @@
                 $nome = isset($_SESSION['nome']) ? htmlspecialchars($_SESSION['nome']) : '';
                 $apelido = isset($_SESSION['apelido']) ? htmlspecialchars($_SESSION['apelido']) : '';
                 ?>
+
                 <img class="sidebar__perfil" src="<?php echo $resultado['ds_foto_perfil']; ?>" alt="Foto de Perfil" />
                 <?php
                 echo "<p class='sidebar__email'> $nome <br> $apelido</p>"
