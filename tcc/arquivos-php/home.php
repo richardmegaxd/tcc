@@ -151,6 +151,17 @@
         $title = $_POST['pesquisar'];
         buscar_manga($title);
     }
+
+    if (isset($_SESSION['success_message'])) {
+        echo "<script>alert('" . $_SESSION['success_message'] . "');</script>";
+        unset($_SESSION['success_message']);
+    }
+    
+    // Exibe mensagem de erro, se houver
+    if (isset($_SESSION['error_message'])) {
+        echo "<script>alert('" . $_SESSION['error_message'] . "');</script>";
+        unset($_SESSION['error_message']);
+    }
     ?>
 
     <header class="header">
@@ -1687,7 +1698,8 @@
                     </div>
                 </div><!-- FINAL DA PRIMEIRA PARTE -->
             </div>
-            <form action=""><!-- INICIO DO FORMULARIO -->
+            <!-- INICIO DO FORMULÁRIO -->
+            <form action="valida_obras.php" method="post" enctype="multipart/form-data">
                 <div class="containerF">
                     <div class="containerF2">
                         <h1 class="text-color">Mande sua obra!</h1>
@@ -1695,15 +1707,15 @@
                         <div class="info-box">
                             <h2 class="text-color">Informações para contato</h2>
                             <div class="input-group">
-                                <input type="text" placeholder="Nome">
-                                <input type="text" placeholder="Sobrenome">
+                                <input type="text" placeholder="Nome" name="nome">
+                                <input type="text" placeholder="Sobrenome" name="sobrenome">
                             </div>
                             <div class="input-group">
-                                <input type="email" placeholder="Email">
-                                <input type="tel" placeholder="Telefone">
+                                <input type="email" placeholder="Email" name="email">
+                                <input type="tel" placeholder="Telefone" name="telefone">
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox" id="politica">
+                                <input type="checkbox" id="politica" name="checkbox_status">
                                 <label for="politica" class="text-color">Estou ciente e concordo com a Politica de
                                     Privacidade da plataforma The Glark.</label>
                             </div>
@@ -1711,8 +1723,8 @@
                         <!-- Quadrado para informações da obra -->
                         <div class="info-box">
                             <h2 class="text-color">Informações da obra</h2>
-                            <input type="text" placeholder="Título da obra">
-                            <textarea placeholder="Sinopse"></textarea>
+                            <input type="text" placeholder="Título da obra" name="nm_obra">
+                            <textarea placeholder="Sinopse" name="ds_sinopse"></textarea>
                             <!-- Select status -->
                             <select name="nmstatus" id="idstatus">
                                 <option value="status" disabled selected>Status</option>
@@ -1723,37 +1735,37 @@
                             <div class="gene">
                                 <p id="lbGene" class="text-color">Gêneros</p>
                                 <div class="generos-group">
-                                    <input type="checkbox" name="nmacao" id="idacao">
+                                    <input type="checkbox" name="obras[]" id="idacao" value="acao">
                                     <label for="acao" class="text-color">Ação</label>
-                                    <input type="checkbox" name="nmaven" id="idaven">
+                                    <input type="checkbox" name="obras[]" id="idaven" value="aventura">
                                     <label for="aventura" class="text-color">Aventura</label>
-                                    <input type="checkbox" name="nmcome" id="idcome">
+                                    <input type="checkbox" name="obras[]" id="idcome" value="comedia">
                                     <label for="comedia" class="text-color">Comédia</label>
-                                    <input type="checkbox" name="nmdram" id="iddram">
+                                    <input type="checkbox" name="obras[]" id="iddram" value="drama">
                                     <label for="drama" class="text-color">Drama</label>
-                                    <input type="checkbox" name="nmesco" id="idesco">
+                                    <input type="checkbox" name="obras[]" id="idesco" value="escolar">
                                     <label for="escolar" class="text-color">Escolar</label>
-                                    <input type="checkbox" name="nmespo" id="idespo">
+                                    <input type="checkbox" name="obras[]" id="idespo" value="esporte">
                                     <label for="esporte" class="text-color">Esporte</label>
-                                    <input type="checkbox" name="nmfant" id="idfant">
+                                    <input type="checkbox" name="obras[]" id="idfant" value="fantasia">
                                     <label for="fantasia" class="text-color">Fantasia</label>
-                                    <input type="checkbox" name="nmficc" id="idficc">
+                                    <input type="checkbox" name="obras[]" id="idficc" value="ficcient">
                                     <label for="ficacao-cientifica" class="text-color">Ficção Científica</label>
-                                    <input type="checkbox" name="nmhist" id="idhist">
+                                    <input type="checkbox" name="obras[]" id="idhist" value="historia">
                                     <label for="historico" class="text-color">Histórico</label><br>
-                                    <input type="checkbox" name="nmisek" id="idisek">
+                                    <input type="checkbox" name="obras[]" id="idisek" value="isekai">
                                     <label for="isekai" class="text-color">Isekai</label>
-                                    <input type="checkbox" name="nmlgbt" id="idlgbt">
+                                    <input type="checkbox" name="obras[]" id="idlgbt" value="lgbt">
                                     <label for="lgbt" class="text-color">LGBT</label>
-                                    <input type="checkbox" name="nmmist" id="idmist">
+                                    <input type="checkbox" name="obras[]" id="idmist" value="misterio">
                                     <label for="misterio" class="text-color">Mistério</label>
-                                    <input type="checkbox" name="nmroma" id="idroma">
+                                    <input type="checkbox" name="obras[]" id="idroma" value="romance">
                                     <label for="romance" class="text-color">Romance</label>
-                                    <input type="checkbox" name="nmslic" id="idslic">
+                                    <input type="checkbox" name="obras[]" id="idslic" value="slice">
                                     <label for="slice-of-life" class="text-color">Slice of Life</label>
-                                    <input type="checkbox" name="nmsobr" id="idsobr">
+                                    <input type="checkbox" name="obras[]" id="idsobr" value="sobrenat">
                                     <label for="sobrenatural" class="text-color">Sobrenatural</label>
-                                    <input type="checkbox" name="nmterr" id="idterr">
+                                    <input type="checkbox" name="obras[]" id="idterr" value="terror">
                                     <label for="terror" class="text-color">Terror</label>
                                 </div>
                             </div>
@@ -1761,20 +1773,20 @@
                                 <p class="text-color" id="lbCapa">Imagem de Capa:</p>
                                 <div class="capa-upload">
                                     <!-- Input para o upload da capa -->
-                                    <input type="file" id="imageInput" accept="image/*" onchange="loadImage(event)">
+                                    <input type="file" id="imageInput" accept="image/*" onchange="loadImage(event)" name="capa">
                                     <!-- <div class="image-rect" id="imageRect"></div>
                                     <div class="image-square" id="imageSquare"></div> -->
                                 </div>
                                 <div class="checkbox">
-                                    <input type="checkbox" name="nmconc" id="idconc">
-                                    <label for="concordancia" class="text-color">Afirmo que a imagem de capa selecionada
-                                        é autoral.</label>
+                                    <input type="checkbox" name="checkbox_image" id="idconc">
+                                    <label for="idconc" class="text-color">Afirmo que a imagem de capa selecionada
+                                    é autoral.</label>
                                 </div>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox" name="nmafir" id="idafir">
-                                <label for="afirmacao" class="text-color">Afirmo que a obra em questão é
-                                    autoral.</label>
+                                <input type="checkbox" name="checkbox_autoral" id="idafir">
+                                <label for="idafir" class="text-color">Afirmo que a obra em questão é
+                                autoral.</label>
                             </div>
                         </div>
                         <!-- Botão de envio no final do formulário -->
