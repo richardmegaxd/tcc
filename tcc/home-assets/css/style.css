@@ -1006,6 +1006,16 @@ a {
 /*-----------------------------------*\
  # MANDE SUA OBRA
 \*-----------------------------------*/
+#section-publicacao-obras {
+  overflow: hidden;
+}
+
+#section-publicacao-obras .containerM2 {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #section-publicacao-obras .tela11 {
   display: flex;
   justify-content: center;
@@ -1034,13 +1044,20 @@ a {
 }
 
 #section-publicacao-obras  .quer {
-  font-size: 35px;
+  font-size: 1.3rem;
   margin: 20px 0px 20px 0px;
 }
 
 #section-publicacao-obras  .Mtexto {
-  font-size: 20px;
+  width: 100%;
+}
+
+#section-publicacao-obras  .Mtexto p{
+  font-size: 1.2rem;
   margin: 20px 0px 20px 0px;
+  width: 60vw;
+  text-align: justify;
+  
 }
 
 /* ESTILIZAÇAO DO FORMULARIO */
@@ -1153,6 +1170,70 @@ a {
   color: white;
 }
 
+@media(max-width: 1000px) {
+  #section-publicacao-obras .Mtexto{
+    width: 100vw;
+    margin: 0;
+  }
+
+  #section-publicacao-obras .Mtexto p{
+    font-size: 18px;
+    width: 80%;
+  }
+
+  
+#section-publicacao-obras .quer {
+  font-size: 1rem;
+}
+}
+
+@media(max-width: 650px) {
+  #section-publicacao-obras  .containerF {
+    margin: 0;
+  }
+
+  #section-publicacao-obras .containerF2 {
+    width: 90%;
+  }
+
+
+}
+
+
+@media(max-width: 400px) {
+  #section-publicacao-obras .tela11 {
+    margin: 0;
+    padding: 20px;
+  }
+
+  #section-publicacao-obras .Mtexto{
+    width: 90vw;
+    padding: 10px;
+    margin: 0;
+  }
+
+  #section-publicacao-obras .Mtexto p{
+    font-size: 12px;
+    width: 90%;
+  }
+
+  
+#section-publicacao-obras .quer h1 {
+  font-size: 15px;
+  position: relative;
+  margin: auto;
+}
+
+#section-publicacao-obras .Mroxo {
+  font-size: 8px;
+  padding: 7px 15px;
+  margin: 20px 0px 40px 0px;
+}
+
+#section-publicacao-obras .capa-upload input{
+  width: 55%;
+}
+}
 
 /*-----------------------------------*\
  # FIM MANDE SUA OBRA
