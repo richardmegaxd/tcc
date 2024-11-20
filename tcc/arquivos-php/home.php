@@ -1688,8 +1688,7 @@
                         </div>
                         <div class="Mtexto">
                             <p class="text-color">Preencha nosso formulário de submissão e envie sua obra. Nossa equipe
-                                irá<br>
-                                revisar seu trabalho com atenção e fornecer feedback em até 7 dias úteis.<br>Estamos
+                                irá revisar seu trabalho com atenção e fornecer feedback em até 7 dias úteis. Estamos
                                 ansiosos para conhecer suas histórias e ilustrações!</p>
                         </div>
                         <div class="Mroxo">
