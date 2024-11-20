@@ -17,11 +17,12 @@
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
         crossorigin="anonymous" />
     <!-- BOX ICONS -->
-
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+        rel="stylesheet" />
     <!-- APP CSS -->
     <link rel="stylesheet" href="../home-assets/css/grid.css">
-    <link rel="stylesheet" href="../home-assets/css/app2.css">
+    <link rel="stylesheet" href="../home-assets/css/app.css">
 
 </head>
 
@@ -50,7 +51,7 @@
         $url = $base_url . "/manga?title=" . urlencode($title);
 
         echo "<p>URL da requisição: " . htmlspecialchars($url) . "</p>"; // Exibir a URL para depuração
-    
+
         // Inicializa o cURL
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -156,7 +157,7 @@
         echo "<script>alert('" . $_SESSION['success_message'] . "');</script>";
         unset($_SESSION['success_message']);
     }
-    
+
     // Exibe mensagem de erro, se houver
     if (isset($_SESSION['error_message'])) {
         echo "<script>alert('" . $_SESSION['error_message'] . "');</script>";
@@ -263,7 +264,7 @@
                 }
 
                 $seleciona_info = "SELECT * FROM tb_usuario WHERE ds_email='$user'"; //efetua a seleção no banco de dados e atribui a uma variável
-                
+
                 $busca = mysqli_query($conexao, $seleciona_info);
 
                 $resultado = mysqli_fetch_array($busca);
@@ -275,7 +276,7 @@
                 <img class="sidebar__perfil" src="<?php echo $resultado['ds_foto_perfil']; ?>" alt="Foto de Perfil" />
                 <?php
                 echo "<p class='sidebar__email'> $nome <br> $apelido</p>"
-                    ?>
+                ?>
 
                 <a data-target="section-perfil">
                     <i class='bx bxs-chevron-right-circle text-color' data-target="section-perfil"></i>
@@ -313,7 +314,8 @@
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://spawnbrasil.com.br/wp-content/uploads/2020/02/spawn-112-capa-editora-abril-por-guia-dos-quadrinhos.jpg"
-                            alt="#">
+                            alt="#" class="img-escura">
+                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Spawn
@@ -324,13 +326,15 @@
                                     <span>8.5</span>
                                 </div>
                             </div>
+
                         </div>
                     </a>
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://f.i.uol.com.br/fotografia/2021/10/05/1633460103615c9f879caa1_1633460103_3x2_md.jpg"
-                            alt="#">
+                            alt="#" class="img-escura">
+                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Fronteiras do Além
@@ -346,7 +350,8 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://img.olx.com.br/images/19/199402202691144.jpg" alt="#">
+                        <img src="https://img.olx.com.br/images/19/199402202691144.jpg" alt="#" class="img-escura">
+                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Death Metal
@@ -362,7 +367,8 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420" alt="">
+                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420" alt="#" class="img-escura">
+                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Rocketeer
@@ -379,7 +385,8 @@
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/anime-manga-style-album-cover-1.0-design-template-0fc6d256e9ff17603475dfb129b132f0_screen.jpg?ts=1664026643"
-                            alt="#">
+                            alt="#" class="img-escura">
+                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Forgotten Feelinggs
@@ -410,7 +417,8 @@
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item" data-target="section-obra">
                         <img src="https://acdn.mitiendanube.com/stores/973/807/products/0121-327f3d19f1163edf6f16258954305539-640-0.jpg"
-                            alt="#">
+                            alt="#" class="img-escura">
+                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Fugiken
@@ -427,7 +435,8 @@
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_-IT7E14qX1WECoLooV00Rdir53nicYluhC35KpDVX4FSThGm0zBjscrrVvbw8lCyvoCxpz9_3zYpGqZOWsqIU8x5uPNX33hrlZ6eIFS7UOw5fNCyglt2Q2m0PedWFcbMAmbr1n-mfWfH/s1600/Jaspion.jpg"
-                            alt="#">
+                            alt="#" class="img-escura">
+                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 O Regresso de Jaspion
@@ -444,7 +453,8 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://hyperioncomics.com.br/wp-content/uploads/2022/10/0-300x459.jpg" alt="">
+                        <img src="https://hyperioncomics.com.br/wp-content/uploads/2022/10/0-300x459.jpg" alt="#" class="img-escura">
+                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Eu Odeio Conto de Fadas
@@ -461,7 +471,8 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://zinebrasil.wordpress.com/wp-content/uploads/2012/04/capa-contos.jpg" alt="">
+                        <img src="https://zinebrasil.wordpress.com/wp-content/uploads/2012/04/capa-contos.jpg" alt="#" class="img-escura">
+                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Contos do Absurdo
@@ -478,7 +489,8 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://i.pinimg.com/474x/08/a7/18/08a7185ecfd01971106503f9d4be3961.jpg" alt="">
+                        <img src="https://i.pinimg.com/474x/08/a7/18/08a7185ecfd01971106503f9d4be3961.jpg" alt="#" class="img-escura">
+                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Almanaque do Fantasma
@@ -496,7 +508,8 @@
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://assets.isu.pub/document-structure/240608035401-449011b4ba0981f4a6d247f252fe56ec/v1/8bfaa39e3bd05313a7ebf7e2d3952e13.jpeg"
-                            alt="">
+                            alt="#" class="img-escura">
+                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Cartilha da Justiça
@@ -526,7 +539,8 @@
                 <div class="movies-slide carousel-nav-center owl-carousel">
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://m.media-amazon.com/images/I/91i217MtWbL._AC_UF1000,1000_QL80_.jpg" alt="">
+                        <img src="https://m.media-amazon.com/images/I/91i217MtWbL._AC_UF1000,1000_QL80_.jpg" alt="#" class="img-escura">
+                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Five Ninghts at Freddy's
@@ -544,7 +558,8 @@
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://loja.ligiazanella.com.br/wp-content/uploads/2023/08/calendar-capa-300x432-1.jpg"
-                            alt="#">
+                            alt="#" class="img-escura">
+                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Calendar
@@ -561,7 +576,8 @@
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://cupulatrovao.com.br/wp-content/uploads/2020/06/Divis%C3%A3o-5-mang%C3%A1.jpg"
-                            alt="">
+                            alt="#" class="img-escura">
+                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Divisão 5
@@ -579,7 +595,8 @@
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://zinebrasil.wordpress.com/wp-content/uploads/2015/04/capa-capitao-brasil1.jpg?w=584"
-                            alt="">
+                            alt="#" class="img-escura">
+                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Capitão Brasil
@@ -597,7 +614,8 @@
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://www.jbchost.com.br/editorajbc/wp-content/uploads/2023/11/9horas-master-edition-capa.jpg"
-                            alt="">
+                            alt="#" class="img-escura">
+                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 9 Horas
@@ -615,7 +633,8 @@
 
 
                     <a href="#" class="movie-item">
-                        <img src="https://i.pinimg.com/236x/3c/e4/7a/3ce47a75024ee3c4a6d2833a75bc1670.jpg" alt="">
+                        <img src="https://i.pinimg.com/236x/3c/e4/7a/3ce47a75024ee3c4a6d2833a75bc1670.jpg" alt="#" class="img-escura">
+                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Wonder Girl
@@ -656,7 +675,7 @@
         }
 
         $seleciona_info = "SELECT * FROM tb_usuario WHERE ds_email='$user'"; //efetua a seleção no banco de dados e atribui a uma variável
-        
+
         $busca = mysqli_query($conexao, $seleciona_info);
 
         $resultado = mysqli_fetch_array($busca);
@@ -1074,7 +1093,6 @@
 
             // Inicializa a barra na posição da aba ativa ao carregar a página
             updateBarPosition(document.querySelector('.tab.active'));
-
         </script>
 
 
@@ -1128,34 +1146,33 @@
 
             // Inicializa a barra na posição da aba ativa ao carregar a página
             updateBarPosition(document.querySelector('.tab2.active'));
-
-        </script>        
+        </script>
 
         <section id="favoritos" class="content2 active">
-            
+
             <div class="container-gp">
-            <button class="dropdown-button" onclick="toggleDropdown()">
-                <h2 class="text-color dropdown-p">
+                <button class="dropdown-button" onclick="toggleDropdown()">
+                    <h2 class="text-color dropdown-p">
 
-                    Organizar
-                    <i class='bx bxs-up-arrow-alt'></i>
-                    <i class='bx bxs-down-arrow-alt'></i>
+                        Organizar
+                        <i class='bx bxs-up-arrow-alt'></i>
+                        <i class='bx bxs-down-arrow-alt'></i>
 
-                    <ul class="dropdown-content" id="dropdown">
-                        <li onclick="ordenar('az')">A - Z</li>
-                        <li onclick="ordenar('za')">Z - A</li>
-                        <li onclick="ordenar('ultimo')">Último Adicionado</li>
-                        <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
-                    </ul>
-                </h2>
-            </button>
+                        <ul class="dropdown-content" id="dropdown">
+                            <li onclick="ordenar('az')">A - Z</li>
+                            <li onclick="ordenar('za')">Z - A</li>
+                            <li onclick="ordenar('ultimo')">Último Adicionado</li>
+                            <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
+                        </ul>
+                    </h2>
+                </button>
 
-            <script>
-                // Função para alternar a visibilidade do dropdown
-                function toggleDropdown() {
-                    document.getElementById("dropdown").classList.toggle("show");
-                }
-            </script>
+                <script>
+                    // Função para alternar a visibilidade do dropdown
+                    function toggleDropdown() {
+                        document.getElementById("dropdown").classList.toggle("show");
+                    }
+                </script>
 
                 <div class="section-header text-color">
                     Obras Favoritadas
@@ -1267,30 +1284,30 @@
         </section>
 
         <section id="continuar-lendo" class="content2">
-        <div class="container-gp">
+            <div class="container-gp">
 
-        <button class="dropdown-button" onclick="toggleDropdown2()">
-                <h2 class="text-color dropdown-p">
+                <button class="dropdown-button" onclick="toggleDropdown2()">
+                    <h2 class="text-color dropdown-p">
 
-                    Organizar
-                    <i class='bx bxs-up-arrow-alt'></i>
-                    <i class='bx bxs-down-arrow-alt'></i>
+                        Organizar
+                        <i class='bx bxs-up-arrow-alt'></i>
+                        <i class='bx bxs-down-arrow-alt'></i>
 
-                    <ul class="dropdown-content" id="dropdown2">
-                        <li onclick="ordenar('az')">A - Z</li>
-                        <li onclick="ordenar('za')">Z - A</li>
-                        <li onclick="ordenar('ultimo')">Último Adicionado</li>
-                        <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
-                    </ul>
-                </h2>
-            </button>
+                        <ul class="dropdown-content" id="dropdown2">
+                            <li onclick="ordenar('az')">A - Z</li>
+                            <li onclick="ordenar('za')">Z - A</li>
+                            <li onclick="ordenar('ultimo')">Último Adicionado</li>
+                            <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
+                        </ul>
+                    </h2>
+                </button>
 
-            <script>
-                // Função para alternar a visibilidade do dropdown
-                function toggleDropdown2() {
-                    document.getElementById("dropdown2").classList.toggle("show");
-                }
-            </script>
+                <script>
+                    // Função para alternar a visibilidade do dropdown
+                    function toggleDropdown2() {
+                        document.getElementById("dropdown2").classList.toggle("show");
+                    }
+                </script>
 
                 <div class="section-header text-color">
                     Obras para ler
@@ -1398,34 +1415,34 @@
 
                 </div>
             </div>
-        </div>
+            </div>
         </section>
 
         <section id="historico" class="content2">
-        <div class="container-gp">
+            <div class="container-gp">
 
-        <button class="dropdown-button" onclick="toggleDropdown3()">
-                <h2 class="text-color dropdown-p">
+                <button class="dropdown-button" onclick="toggleDropdown3()">
+                    <h2 class="text-color dropdown-p">
 
-                    Organizar
-                    <i class='bx bxs-up-arrow-alt'></i>
-                    <i class='bx bxs-down-arrow-alt'></i>
+                        Organizar
+                        <i class='bx bxs-up-arrow-alt'></i>
+                        <i class='bx bxs-down-arrow-alt'></i>
 
-                    <ul class="dropdown-content" id="dropdown3">
-                        <li onclick="ordenar('az')">A - Z</li>
-                        <li onclick="ordenar('za')">Z - A</li>
-                        <li onclick="ordenar('ultimo')">Último Adicionado</li>
-                        <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
-                    </ul>
-                </h2>
-            </button>
+                        <ul class="dropdown-content" id="dropdown3">
+                            <li onclick="ordenar('az')">A - Z</li>
+                            <li onclick="ordenar('za')">Z - A</li>
+                            <li onclick="ordenar('ultimo')">Último Adicionado</li>
+                            <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
+                        </ul>
+                    </h2>
+                </button>
 
-            <script>
-                // Função para alternar a visibilidade do dropdown
-                function toggleDropdown3() {
-                    document.getElementById("dropdown3").classList.toggle("show");
-                }
-            </script>
+                <script>
+                    // Função para alternar a visibilidade do dropdown
+                    function toggleDropdown3() {
+                        document.getElementById("dropdown3").classList.toggle("show");
+                    }
+                </script>
 
                 <div class="section-header text-color">
                     Obras acessadas
@@ -1533,35 +1550,35 @@
 
                 </div>
             </div>
-        </div>
+            </div>
         </section>
 
         <section id="minhas-obras" class="content2">
 
-        <div class="container-gp">
+            <div class="container-gp">
 
-        <button class="dropdown-button" onclick="toggleDropdown4()">
-                <h2 class="text-color dropdown-p">
+                <button class="dropdown-button" onclick="toggleDropdown4()">
+                    <h2 class="text-color dropdown-p">
 
-                    Organizar
-                    <i class='bx bxs-up-arrow-alt'></i>
-                    <i class='bx bxs-down-arrow-alt'></i>
+                        Organizar
+                        <i class='bx bxs-up-arrow-alt'></i>
+                        <i class='bx bxs-down-arrow-alt'></i>
 
-                    <ul class="dropdown-content" id="dropdown4">
-                        <li onclick="ordenar('az')">A - Z</li>
-                        <li onclick="ordenar('za')">Z - A</li>
-                        <li onclick="ordenar('ultimo')">Último Adicionado</li>
-                        <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
-                    </ul>
-                </h2>
-            </button>
+                        <ul class="dropdown-content" id="dropdown4">
+                            <li onclick="ordenar('az')">A - Z</li>
+                            <li onclick="ordenar('za')">Z - A</li>
+                            <li onclick="ordenar('ultimo')">Último Adicionado</li>
+                            <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
+                        </ul>
+                    </h2>
+                </button>
 
-            <script>
-                // Função para alternar a visibilidade do dropdown
-                function toggleDropdown4() {
-                    document.getElementById("dropdown4").classList.toggle("show");
-                }
-            </script>
+                <script>
+                    // Função para alternar a visibilidade do dropdown
+                    function toggleDropdown4() {
+                        document.getElementById("dropdown4").classList.toggle("show");
+                    }
+                </script>
 
                 <div class="section-header text-color">
                     Obras publicadas
@@ -1669,7 +1686,7 @@
 
                 </div>
             </div>
-        </div>
+            </div>
         </section>
 
     </main>
@@ -1780,18 +1797,18 @@
                                 <div class="checkbox">
                                     <input type="checkbox" name="checkbox_image" id="idconc">
                                     <label for="idconc" class="text-color">Afirmo que a imagem de capa selecionada
-                                    é autoral.</label>
+                                        é autoral.</label>
                                 </div>
                             </div>
                             <div class="checkbox">
                                 <input type="checkbox" name="checkbox_autoral" id="idafir">
                                 <label for="idafir" class="text-color">Afirmo que a obra em questão é
-                                autoral.</label>
+                                    autoral.</label>
                             </div>
                         </div>
                         <!-- Botão de envio no final do formulário -->
                         <div class="btn-enviar">
-                            <button type="submit">Enviar</button>
+                            <button type="submit" class="btn price__btn">Enviar</button>
                         </div>
                     </div>
                 </div>
@@ -1803,9 +1820,213 @@
 
     <!-- # PLANOS MENSAIS -->
     <main id="section-planos-mensais" class="home-section content-section">
-        <img src="https://www.protecaomaxima.com.br/imgs/em_desenvolvimento.jpg" alt="" class="manutenção">
+        <section class="section__container price__container">
+            <h2 class="section__header text-color">PLANOS DE ASSINATURA</h2>
+            <p class="section__subheader text-color">
+                Assine nossos planos mensais e tenha acesso ilimitado a uma coleção de quadrinhos autênticos e exclusivos!
+            </p>
+            <div class="price__grid">
+                <div class="price__card">
+                    <div class="price__card__content">
+                        <h4>Básico</h4>
+                        <h3>R$17.99</h3>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Catálogo Ilimitado
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Acesso em 24 horas
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Máximo 2 telas
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Sem Propagandas
+                        </p>
+
+
+                    </div>
+                    <a data-target="section-cartao" class="btn price__btn">Iniciar Assinatura!</a>
+                </div>
+                <div class="price__card">
+                    <div class="price__card__content">
+                        <h4>Premium</h4>
+                        <h3>R$ 34.99</h3>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Catálogo Ilimitado
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Acesso Antecipado
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Máximo 4 tela
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Sem Propagandas
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Sorteios Especiais
+                        </p>
+                    </div>
+                    <a data-target="section-cartao" class="btn price__btn">Iniciar Assinatura!</a>
+                </div>
+            </div>
+        </section>
+
     </main>
     <!-- # FIM PLANOS MENSAIS -->
+
+    <!-- # PAGAMENTO CARTÃO -->
+    <main id="section-cartao" class="home-section content-section">
+        <a data-target="section-planos-mensais"><i class='bx bxs-left-arrow-circle'></i></a>
+
+        <div class="container">
+
+            <div class="card-container">
+
+                <div class="front">
+                    <div class="image">
+                        <img src="../assets/images/chip.png" alt="#">
+                        <img src="../assets/images/visa.png" alt="#">
+                    </div>
+                    <div class="card-number-box">################</div>
+                    <div class="flexbox">
+                        <div class="box">
+                            <span>titular do cartão</span>
+                            <div class="card-holder-name">Nome Completo</div>
+                        </div>
+                        <div class="box">
+                            <span>Validade</span>
+                            <div class="expiration">
+                                <span class="exp-month">mês</span>
+                                <span class="exp-year">ano</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="back">
+                    <div class="stripe"></div>
+                    <div class="box">
+                        <span>cvv</span>
+                        <div class="cvv-box"></div>
+                        <img src="image/visa.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <form action="">
+                <div class="inputBox">
+                    <span>Número do Cartão</span>
+                    <input type="number" id="number" data-maxlength="16" class="card-number-input">
+                </div>
+                <div class="inputBox">
+                    <span>titular do cartão</span>
+                    <input type="text" maxlength="65" class="card-holder-input">
+                </div>
+                <div class="flexbox">
+                    <div class="inputBox">
+                        <span>Mês</span>
+                        <select name="" id="" class="month-input">
+                            <option value="month" selected disabled>mês</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div>
+                    <div class="inputBox">
+                        <span>Ano</span>
+                        <select name="" id="" class="year-input">
+                            <option value="year" selected disabled>ano</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
+                            <option value="2028">2031</option>
+                            <option value="2029">2032</option>
+                            <option value="2030">2033</option>
+                        </select>
+                    </div>
+                    <div class="inputBox">
+                        <span>cvv</span>
+                        <input type="number" id="number" data-maxlength="4" class="cvv-input">
+                    </div>
+                </div>
+                <input type="submit" value="Cadastrar" class="submit-btn">
+            </form>
+
+        </div>
+
+        <script>
+            // SCRIPT CARTAO DE CREDITO
+
+            // Seleciona todos os inputs com o atributo 'data-maxlength'
+            const inputs = document.querySelectorAll('input[type="number"][data-maxlength]');
+
+            inputs.forEach(input => {
+                input.addEventListener("input", () => {
+                    const maxLength = parseInt(input.getAttribute("data-maxlength"), 10); // Obtém o valor do atributo
+                    if (input.value.length > maxLength) {
+                        input.value = input.value.slice(0, maxLength); // Limita os caracteres
+                    }
+                });
+            });
+
+            document.querySelector('.card-number-input').oninput = () => {
+                document.querySelector('.card-number-box').innerText = document.querySelector('.card-number-input').value;
+            }
+
+            document.querySelector('.card-holder-input').oninput = () => {
+                document.querySelector('.card-holder-name').innerText = document.querySelector('.card-holder-input').value;
+            }
+
+            document.querySelector('.month-input').oninput = () => {
+                document.querySelector('.exp-month').innerText = document.querySelector('.month-input').value;
+            }
+
+            document.querySelector('.year-input').oninput = () => {
+                document.querySelector('.exp-year').innerText = document.querySelector('.year-input').value;
+            }
+
+            document.querySelector('.cvv-input').onmouseenter = () => {
+                document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(-180deg)';
+                document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(0deg)';
+            }
+
+            document.querySelector('.cvv-input').onmouseleave = () => {
+                document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(0deg)';
+                document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(180deg)';
+            }
+
+            document.querySelector('.cvv-input').oninput = () => {
+                document.querySelector('.cvv-box').innerText = document.querySelector('.cvv-input').value;
+            }
+
+            // FIM SCRIPT CARTAO DE CREDTOI
+        </script>
+    </main>
+    <!-- # FIM PAGAMENTO CARTÃO -->
 
     <!-- # SUPORTE -->
     <main id="section-suporte" class="home-section content-section">
@@ -1946,7 +2167,7 @@
 
     <!-- APP SCRIPT -->
     <script src="../home-assets/Js/app.js"></script>
-    <script src="../home-assets/Js/script2.js"></script>
+    <script src="../home-assets/Js/script.js"></script>
     <!--  FIM SCRIPT -->
 
 
