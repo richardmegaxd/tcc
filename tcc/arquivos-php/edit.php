@@ -44,9 +44,6 @@ if (!isset($_SESSION["logado"]) || $_SESSION["logado"] != true) {
     <a href="home.php"><ion-icon name="return-up-back-sharp"></ion-icon></a>
 
     <header>
-        <div class="logo">
-            <img src="../assets/images/log5.png" width="50%" height="auto" loading="lazy" alt="Logotipo The Glarck" class="card-icon">
-        </div>
         <h1>Editar Perfil</h1>
     </header>
 
@@ -54,9 +51,6 @@ if (!isset($_SESSION["logado"]) || $_SESSION["logado"] != true) {
 
         <label class="lala" for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" value="<?php echo htmlspecialchars($user['nm_user']); ?>">
-
-        <label class="lala" for="apelido">Apelido:</label>
-        <input type="text" id="apelido" name="apelido" value="<?php echo htmlspecialchars($user['nm_apelido']); ?>">
 
         <label class="lala" for="senha">Nova Senha:</label>
 

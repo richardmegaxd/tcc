@@ -698,6 +698,7 @@
                                 <!-- Se não fez login com o Google, a opção de editar perfil é ativada -->
                                 <li><a class="oof" href="edit.php">Editar Perfil</a></li>
                             <?php endif; ?>
+                            <li><a class="oof2" href="edit2.php">Editar Aparencia</a></li>
                             <li><a class="oof2" href="confirmadelete.php">Deletar Perfil</a></li>
                         </ul>
                     </h1>
