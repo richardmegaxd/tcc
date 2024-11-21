@@ -315,7 +315,6 @@
                     <a href="#" class="movie-item">
                         <img src="https://spawnbrasil.com.br/wp-content/uploads/2020/02/spawn-112-capa-editora-abril-por-guia-dos-quadrinhos.jpg"
                             alt="#" class="img-escura">
-                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Spawn
@@ -334,7 +333,6 @@
                     <a href="#" class="movie-item">
                         <img src="https://f.i.uol.com.br/fotografia/2021/10/05/1633460103615c9f879caa1_1633460103_3x2_md.jpg"
                             alt="#" class="img-escura">
-                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Fronteiras do Além
@@ -351,7 +349,6 @@
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://img.olx.com.br/images/19/199402202691144.jpg" alt="#" class="img-escura">
-                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Death Metal
@@ -368,7 +365,6 @@
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420" alt="#" class="img-escura">
-                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Rocketeer
@@ -386,7 +382,6 @@
                     <a href="#" class="movie-item">
                         <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/anime-manga-style-album-cover-1.0-design-template-0fc6d256e9ff17603475dfb129b132f0_screen.jpg?ts=1664026643"
                             alt="#" class="img-escura">
-                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Forgotten Feelinggs
@@ -418,7 +413,6 @@
                     <a href="#" class="movie-item" data-target="section-obra">
                         <img src="https://acdn.mitiendanube.com/stores/973/807/products/0121-327f3d19f1163edf6f16258954305539-640-0.jpg"
                             alt="#" class="img-escura">
-                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Fugiken
@@ -436,7 +430,6 @@
                     <a href="#" class="movie-item">
                         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_-IT7E14qX1WECoLooV00Rdir53nicYluhC35KpDVX4FSThGm0zBjscrrVvbw8lCyvoCxpz9_3zYpGqZOWsqIU8x5uPNX33hrlZ6eIFS7UOw5fNCyglt2Q2m0PedWFcbMAmbr1n-mfWfH/s1600/Jaspion.jpg"
                             alt="#" class="img-escura">
-                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 O Regresso de Jaspion
@@ -454,7 +447,6 @@
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://hyperioncomics.com.br/wp-content/uploads/2022/10/0-300x459.jpg" alt="#" class="img-escura">
-                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Eu Odeio Conto de Fadas
@@ -472,7 +464,6 @@
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://zinebrasil.wordpress.com/wp-content/uploads/2012/04/capa-contos.jpg" alt="#" class="img-escura">
-                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Contos do Absurdo
@@ -490,7 +481,6 @@
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://i.pinimg.com/474x/08/a7/18/08a7185ecfd01971106503f9d4be3961.jpg" alt="#" class="img-escura">
-                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Almanaque do Fantasma
@@ -509,7 +499,6 @@
                     <a href="#" class="movie-item">
                         <img src="https://assets.isu.pub/document-structure/240608035401-449011b4ba0981f4a6d247f252fe56ec/v1/8bfaa39e3bd05313a7ebf7e2d3952e13.jpeg"
                             alt="#" class="img-escura">
-                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Cartilha da Justiça
@@ -540,7 +529,6 @@
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://m.media-amazon.com/images/I/91i217MtWbL._AC_UF1000,1000_QL80_.jpg" alt="#" class="img-escura">
-                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Five Ninghts at Freddy's
@@ -559,7 +547,6 @@
                     <a href="#" class="movie-item">
                         <img src="https://loja.ligiazanella.com.br/wp-content/uploads/2023/08/calendar-capa-300x432-1.jpg"
                             alt="#" class="img-escura">
-                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Calendar
@@ -577,7 +564,6 @@
                     <a href="#" class="movie-item">
                         <img src="https://cupulatrovao.com.br/wp-content/uploads/2020/06/Divis%C3%A3o-5-mang%C3%A1.jpg"
                             alt="#" class="img-escura">
-                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Divisão 5
@@ -596,7 +582,6 @@
                     <a href="#" class="movie-item">
                         <img src="https://zinebrasil.wordpress.com/wp-content/uploads/2015/04/capa-capitao-brasil1.jpg?w=584"
                             alt="#" class="img-escura">
-                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Capitão Brasil
@@ -615,7 +600,6 @@
                     <a href="#" class="movie-item">
                         <img src="https://www.jbchost.com.br/editorajbc/wp-content/uploads/2023/11/9horas-master-edition-capa.jpg"
                             alt="#" class="img-escura">
-                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 9 Horas
@@ -634,7 +618,6 @@
 
                     <a href="#" class="movie-item">
                         <img src="https://i.pinimg.com/236x/3c/e4/7a/3ce47a75024ee3c4a6d2833a75bc1670.jpg" alt="#" class="img-escura">
-                        <div class="overlay">Indisponível</div>
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Wonder Girl
