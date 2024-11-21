@@ -209,8 +209,8 @@ function applyTheme(theme) {
         document.body.style.backgroundColor = '#fff'; // Cor de fundo sólida
         document.body.style.backgroundImage = ''; // Remove a imagem de fundo
         document.querySelectorAll('.text-color').forEach(el => el.style.color = 'rgb(67, 21, 96)'); // Cor do texto
-        document.querySelectorAll('.fundo-color').forEach(el => el.style.backgroundImage = "none" ); // remove imagem de fundo do sidebar   
-        document.querySelectorAll('.fundo-color').forEach(el => el.style.backgroundColor = "#fff" ); // remove imagem de fundo do sidebar   
+        document.querySelectorAll('.fundo-color').forEach(el => el.style.backgroundImage = "none"); // remove imagem de fundo do sidebar   
+        document.querySelectorAll('.fundo-color').forEach(el => el.style.backgroundColor = "#fff"); // remove imagem de fundo do sidebar   
         themeIcon.classList.remove('bx-sun');
         themeIcon.classList.add('bx-moon');
     } else {
@@ -267,17 +267,6 @@ function toggleBackToTopButton() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 // Seletor para o menu lateral e o botão de alternância
 const sidebar = document.querySelector(".sidebar");
 const toggleMenuButton = document.getElementById("toggleMenu");
@@ -293,3 +282,11 @@ function toggleSidebar() {
 
 // Adiciona o evento de clique ao botão
 toggleMenuButton.addEventListener("click", toggleSidebar);
+
+
+
+
+
+
+
+

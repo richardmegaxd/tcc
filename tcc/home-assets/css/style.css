@@ -646,8 +646,7 @@ a {
 }
 
 #section-leitura-manga #backToTopBtn:hover {
-  opacity: 1;
-  
+  opacity: 1; 
 }
 
 .toggle-menu {
@@ -1158,6 +1157,8 @@ a {
   color: white;
 }
 
+
+
 @media(max-width: 1000px) {
   #section-publicacao-obras .Mtexto{
     width: 100vw;
@@ -1452,7 +1453,7 @@ a {
   body {
     color: #333;
   }
-
+}
   .plan-card {
     background: rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -1482,7 +1483,7 @@ a {
   .subscribe-button {
     background: linear-gradient(145deg, #7706c1, #4b1bb0);
   }
-}
+
 /*-----------------------------------*\
  # FIM PLANOS MENSAIS
 \*-----------------------------------*/

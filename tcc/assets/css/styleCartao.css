@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#section-cartao .container{
+    min-height: 100vh;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 60px;
+}
+
+#section-cartao .container form{
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    padding: 20px;
+    width: 600px;
+    padding-top: 160px;
+}
+
+#section-cartao .container form .inputBox{
+    margin-top: 20px;
+}
+
+#section-cartao .container form .inputBox span{
+    display: block;
+    color:#999;
+    padding-bottom: 5px;
+}
+
+#section-cartao .container form .inputBox input,
+#section-cartao .container form .inputBox select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border:1px solid rgba(0,0,0,.3);
+    color:#444;
+}
+
+#section-cartao .container form .flexbox{
+    display: flex;
+    gap:15px;
+}
+
+#section-cartao .container form .flexbox .inputBox{
+    flex:1 1 150px;
+}
+
+#section-cartao .container form .submit-btn{
+    width: 100%;
+    background:linear-gradient(45deg, blueviolet, rgb(122, 20, 255));
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color:#fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+#section-cartao .container form .submit-btn:hover{
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+#section-cartao .container .card-container{
+    margin-bottom: -150px;
+    position: relative;
+    height: 250px;
+    width: 400px;
+}
+
+#section-cartao .container .card-container .front{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0; left: 0;
+    background:linear-gradient(45deg, rgb(71, 0, 138), rgb(149, 20, 255));
+    border-radius: 5px;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    padding:20px;
+    transform:perspective(1000px) rotateY(0deg);
+    transition:transform .4s ease-out;
+}
+
+#section-cartao .container .card-container .front .image{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+#section-cartao .container .card-container .front .image img{
+    height: 50px;
+}
+
+#section-cartao .container .card-container .front .card-number-box{
+    padding:30px 0;
+    font-size: 1.3rem;
+    color:#fff;
+}
+
+#section-cartao .container .card-container .front .flexbox{
+    display: flex;
+}
+
+#section-cartao .container .card-container .front .flexbox .box:nth-child(1){
+    margin-right: auto;
+}
+
+#section-cartao .container .card-container .front .flexbox .box{
+    font-size: 15px;
+    color:#fff;
+}
+
+#section-cartao .container .card-container .back{
+    position: absolute;
+    top:0; left: 0;
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(45deg, rgb(84, 1, 161), rgb(188, 20, 255));
+    border-radius: 5px;
+    padding: 20px 0;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    transform:perspective(1000px) rotateY(180deg);
+    transition:transform .4s ease-out;
+}
+
+#section-cartao .container .card-container .back .stripe{
+    background: #000;
+    width: 100%;
+    margin: 10px 0;
+    height: 50px;
+}
+
+#section-cartao .container .card-container .back .box{
+    padding: 0 20px;
+}
+
+#section-cartao .container .card-container .back .box span{
+    color:#fff;
+    font-size: 15px;
+}
+
+#section-cartao .container .card-container .back .box .cvv-box{
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    color:#333;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#section-cartao .container .card-container .back .box img{
+    margin-top: 30px;
+    height: 30px;
+}
+
+
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+
+@media (max-width: 620px) {
+    #section-cartao .container form {
+        width: 90vw;
+        font-size: 0.6rem;
+    }
+
+    #section-cartao .container .card-container {
+        width: 95vw;
+    }
+}
