@@ -32,7 +32,7 @@ if (isset($_POST['id_usuario'])) {
         unset($_SESSION['temp_usuario']);
 
         // Redireciona para a página inicial ou onde você preferir
-        header("Location: home.php");
+        header("Location: ../home.php");
     } else {
         echo "Erro ao recuperar os dados do usuário.";
     }

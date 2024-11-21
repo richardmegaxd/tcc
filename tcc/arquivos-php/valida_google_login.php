@@ -51,14 +51,14 @@ if ($checar_usuario > 0) {
         $_SESSION['apelido'] = $usuario['nm_apelido']; // Preserva o apelido
 
         // Responde com redirecionamento para home.php
-        echo json_encode(['success' => true, 'redirect' => 'home.php']);
+        echo json_encode(['success' => true, 'redirect' => '../home.php']);
     } else {
         // Conta inativa, redireciona para a página de ativação
         $_SESSION['temp_usuario'] = $cdUsuario; // Armazena o ID do usuário inativo
         $_SESSION['nome'] = $usuario['ds_email']; // Armazena o nome para exibir na confirmação
 
         // Responde com redirecionamento para conf_ativacao.php
-        echo json_encode(['success' => true, 'redirect' => 'conf_ativacao.php']);
+        echo json_encode(['success' => true, 'redirect' => 'login/conf_ativacao.php']);
     }
 } else {
     // O usuário não existe, insira um novo registro
@@ -82,7 +82,7 @@ if ($checar_usuario > 0) {
     $_SESSION['apelido'] = ''; // Defina como vazio ou conforme sua lógica
 
     // Responde com redirecionamento para home.php
-    echo json_encode(['success' => true, 'redirect' => 'home.php']);
+    echo json_encode(['success' => true, 'redirect' => '../home.php']);
 }
 
 mysqli_close($conexao);

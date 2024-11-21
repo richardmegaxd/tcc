@@ -3,7 +3,7 @@
 <head>
     <title>Confirme seu Email</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/styleLogin.css">
+    <link rel="stylesheet" href="../../assets/css/styleLogin.css">
 </head>
 <body>
     <h1>Confirmação de Email</h1>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Editar Perfil</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/styleLogin.css">
+    <link rel="stylesheet" href="../../assets/css/styleLogin.css">
 </head>
 
 <?php
@@ -41,7 +41,7 @@ if (!isset($_SESSION["logado"]) || $_SESSION["logado"] != true) {
 
 <body>
 
-    <a href="home.php"><ion-icon name="return-up-back-sharp"></ion-icon></a>
+    <a href="../home.php"><ion-icon name="return-up-back-sharp"></ion-icon></a>
 
     <header>
         <h1>Editar Perfil</h1>

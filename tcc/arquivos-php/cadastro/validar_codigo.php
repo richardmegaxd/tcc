@@ -1,3 +1,8 @@
+
+<div class="logo">
+            <img src="../../assets/images/log5.png" width="50%" height="auto" loading="lazy" alt="Logotipo The Glarck" class="card-icon">
+        </div>
+
 <?php
 session_start();
 
@@ -31,13 +36,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header("Location: cadastro_sucesso.php");
             exit();
         } else {
-            echo "Erro ao ativar a conta.";
+            echo "<h1>Erro ao ativar a conta.<h1>";
         }
         mysqli_stmt_close($stmt);
     } else {
-        echo "Código de confirmação incorreto.";
+        echo "<h1>Código de confirmação incorreto.<h1>";
     }
 
     mysqli_close($conexao);
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro The Glark</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/styleLogin.css">
+</head>
+
+<a href="confirmar_email.php" > <b>Voltar ao Menu!</b> </a>
