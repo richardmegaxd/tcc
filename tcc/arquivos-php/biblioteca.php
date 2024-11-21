@@ -205,7 +205,7 @@
                         <span class="sidebar__link-floating text-color">Biblioteca</span>
                     </a>
 
-                    <a href="mandeObra.php" class="sidebar__link" >
+                    <a href="publique.php" class="sidebar__link" >
                         <i class='bx bx-book-reader text-color'></i>
                         <span class="sidebar__link-name text-color">Publique Obras</span>
                         <span class="sidebar__link-floating text-color">Publique Obras</span>
