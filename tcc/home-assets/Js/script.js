@@ -82,8 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch('list_pages.php')
         .then(response => response.json())
         .then(data => {
-            // Filtrar imagens da pasta 'capitulo2'
-            imagePaths = data.filter(path => path.includes('capitulo2'));
+            imagePaths = data;  // Todas as imagens do diretório serão carregadas
             totalPages = imagePaths.length;
             createImageElements();  // Cria os elementos de imagem no contêiner
             restoreModeAndTheme();  // Restaura o modo de leitura e o tema
@@ -100,13 +99,14 @@ function createImageElements() {
 
     imagePaths.forEach((imagePath, index) => {
         const img = document.createElement('img');
-        img.src = imagePath;
+        img.src = imagePath; // A URL da imagem será o caminho retornado pelo PHP
         img.id = `page${index + 1}`;
         img.alt = `Página ${index + 1}`;
         img.style.display = 'none'; // Esconde as imagens inicialmente
         imageContainer.appendChild(img);
     });
 }
+
 
 // Função para restaurar o modo de leitura e o tema
 function restoreModeAndTheme() {
@@ -133,8 +133,8 @@ function applyReadingMode() {
 
     if (scrollMode) {
         document.querySelectorAll("img").forEach(img => {
-            if (img.src.includes('capitulo2')) {
-                img.style.display = "block"; // Exibe todas as imagens da pasta 'capitulo2'
+            if (img.src.includes('mangas')) {
+                img.style.display = "block"; 
             }
         });
         arrowNav.style.display = "none"; // Oculta a navegação por setas
@@ -145,7 +145,7 @@ function applyReadingMode() {
 
     } else {
         document.querySelectorAll("img").forEach(img => {
-            if (img.src.includes('capitulo2') && img.id.startsWith('page')) {
+            if (img.src.includes('mangas') && img.id.startsWith('page')) {
                 img.style.display = "none"; // Oculta todas as imagens da pasta 'capitulo2'
             }
         });
@@ -161,7 +161,7 @@ function applyReadingMode() {
 
 function displayPage(pageNumber) {
     document.querySelectorAll("img").forEach(img => {
-        if (img.src.includes('capitulo2') && img.id.startsWith('page')) {
+        if (img.src.includes('mangas') && img.id.startsWith('page')) {
             img.style.display = "none"; // Oculta todas as imagens
         }
     });
