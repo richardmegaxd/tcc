@@ -58,7 +58,7 @@ if ($checar_usuario > 0) {
         $_SESSION['nome'] = $usuario['ds_email']; // Armazena o nome para exibir na confirmação
 
         // Responde com redirecionamento para conf_ativacao.php
-        echo json_encode(['success' => true, 'redirect' => 'login/conf_ativacao.php']);
+        echo json_encode(['success' => true, 'redirect' => '../login/conf_ativacao.php']);
     }
 } else {
     // O usuário não existe, insira um novo registro
