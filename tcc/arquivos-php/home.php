@@ -2028,9 +2028,73 @@
     </main>
     <!-- # FIM PAGAMENTO CARTÃO -->
 
-    <!-- # SUPORTE -->
-    <main id="section-suporte" class="home-section content-section">
-        <img src="https://www.protecaomaxima.com.br/imgs/em_desenvolvimento.jpg" alt="" class="manutenção">
+   <!-- # SUPORTE -->
+   <main id="section-suporte" class="home-section content-section">
+        <div class="principal-support-container">
+        <div class="faq-section">
+        <h1 class="text-color tittle-support">Perguntas Frequentes</h1>
+        <div class="faq-item">
+            <div class="faq-question text-color">O que é o nosso serviço?</div>
+            <div class="faq-answer text-color">
+            Texto texto texto
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question text-color">Quanto custa?</div>
+            <div class="faq-answer text-color">
+            Texto texto texto
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question text-color">Onde posso acessar?</div>
+            <div class="faq-answer text-color">
+                Texto texto texto
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question text-color">?</div>
+            <div class="faq-answer text-color">
+                Texto texto texto
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question text-color">?</div>
+            <div class="faq-answer text-color">
+                Texto texto texto
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-section">
+        <h2 class="text-color tittle-support">Precisa de ajuda? Nos contate por:</h2>
+        <div class="contact-item text-color">Email: theglark@gmail.com</div>
+        <div class="contact-item text-color">Telefone: +55 13 94565-4235</div>
+    </div>
+
+    <footer class="social-footer">
+        <h3 class="text-color tittle-support">Siga-nos nas redes sociais:</h3>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+        </div>
     </main>
     <!-- # FIM SUPORTE -->
 
