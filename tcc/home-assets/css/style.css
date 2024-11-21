@@ -1017,7 +1017,7 @@ a {
 
 #section-publicacao-obras  .hey {
   font-size: 20px;
-  color: rgb(121, 2, 196);
+  color: #7706c1;
 }
 
 #section-publicacao-obras .Mroxo {
@@ -1061,13 +1061,11 @@ a {
 }
 
 #section-publicacao-obras .containerF2 {
-  background: rgba(67, 21, 96, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
   padding: 20px;
-  border-radius: 10px;
   width: 600px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 2px;
-  border: solid white 1px;
 }
 
 #section-publicacao-obras  .info-box h2{
@@ -1144,19 +1142,18 @@ a {
 }
 
 #section-publicacao-obras button[type="submit"] {
-  background-color: var(--color-white);
+  background: linear-gradient(90deg, #7706c1, #4b1bb0);
   padding: 10px 80px;
   border: none;
-  border-radius: 5px;
-  font-size: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  color: rgb(106, 14, 255);
-  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  border-radius: 25px;
+  font-size: 1rem;
 }
 
 #section-publicacao-obras button[type="submit"]:hover {
-  background-color: #7d19ff;
+  background: #4b1bb0;
   color: white;
 }
 
@@ -1341,7 +1338,6 @@ a {
 
 /*-----------------------------------*\
  # FIM BIBLIOTECA
-<<<<<<< HEAD
 \*-----------------------------------*/
 
 /*-----------------------------------*\
@@ -1606,6 +1602,4 @@ a {
         }
 /*-----------------------------------*\
  # INICIO SUPORTE
-=======
->>>>>>> parent of c23c565 (Update style.css)
 \*-----------------------------------*/
