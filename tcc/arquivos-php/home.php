@@ -22,9 +22,8 @@
         rel="stylesheet" />
     <!-- APP CSS -->
     <link rel="stylesheet" href="../home-assets/css/grid.css">
-    <link rel="stylesheet" href="../home-assets/css/app2.css">
-    <!-- ICON DE REDES SOCIAIS - ABA DE SUPPORT <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">-->
-    
+    <link rel="stylesheet" href="../home-assets/css/app.css">
+
 </head>
 
 <body id="main">
@@ -217,6 +216,8 @@
                         <span class="sidebar__link-name text-color">Planos Mensais</span>
                         <span class="sidebar__link-floating text-color">Planos Mensais</span>
                     </a>
+
+
                 </div>
 
                 <h3 class="sidebar__title">
@@ -1819,54 +1820,67 @@
 
     <!-- # PLANOS MENSAIS -->
     <main id="section-planos-mensais" class="home-section content-section">
-        <div class="princial-plans-container">
-            <div class="plans-container">
-            <!-- Plano Gratuito -->
-            <div class="plan-card">
-              <h2 class="text-color">Plano Gratuito</h2>
-              <p class="plan-price text-color">R$00.00</p>
-              <p class="plan-description text-color">Experimente nosso sistema gratuitamente!</p>
-              <ul class="benefits">
-                <li class="text-color"><i>✔</i> Catálogo limitado</li>
-                <li class="text-color"><i>✔</i> Acesso em 48 horas</li>
-                <li class="text-color"><i>✔</i> Máximo de 1 tela</li>
-                <li class="inactive text-color"><i>❌</i> Sem Propagandas</li>
-                <li class="inactive text-color"><i>❌</i> Sorteios Especiais</li>
-              </ul>
-              <a href="#" class="subscribe-button text-color">Assine agora!</a>
+        <section class="section__container price__container">
+            <h2 class="section__header text-color">PLANOS DE ASSINATURA</h2>
+            <p class="section__subheader text-color">
+                Assine nossos planos mensais e tenha acesso ilimitado a uma coleção de quadrinhos autênticos e exclusivos!
+            </p>
+            <div class="price__grid">
+                <div class="price__card">
+                    <div class="price__card__content">
+                        <h4>Básico</h4>
+                        <h3>R$17.99</h3>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Catálogo Ilimitado
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Acesso em 24 horas
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Máximo 2 telas
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Sem Propagandas
+                        </p>
+
+
+                    </div>
+                    <a data-target="section-cartao" class="btn price__btn">Iniciar Assinatura!</a>
+                </div>
+                <div class="price__card">
+                    <div class="price__card__content">
+                        <h4>Premium</h4>
+                        <h3>R$ 34.99</h3>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Catálogo Ilimitado
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Acesso Antecipado
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Máximo 4 tela
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Sem Propagandas
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Sorteios Especiais
+                        </p>
+                    </div>
+                    <a data-target="section-cartao" class="btn price__btn">Iniciar Assinatura!</a>
+                </div>
             </div>
-        
-            <!-- Plano Simples -->
-            <div class="plan-card">
-              <h2>Plano Simples</h2>
-              <p class="plan-price text-color">R$17.99</p>
-              <p class="plan-description text-color">Ideal para leitores tranquilos desfrutarem de nossas funções básicas!</p>
-              <ul class="benefits">
-                <li class="text-color"><i>✔</i> Catálogo ilimitado</li>
-                <li class="text-color"><i>✔</i> Acesso em 24 horas</li>
-                <li class="text-color"><i>✔</i> Máximo de 2 telas</li>
-                <li class="text-color"><i>✔</i> Sem Propagandas</li>
-                <li class="inactive text-color"><i>❌</i> Sorteios Especiais</li>
-              </ul>
-              <a href="#" class="subscribe-button text-color">Assine agora!</a>
-            </div>
-        
-            <!-- Plano Premium -->
-            <div class="plan-card">
-              <h2 class="text-color">Plano Premium</h2>
-              <p class="plan-price text-color">R$34.99</p>
-              <p class="plan-description text-color">Para que os leitores engajados aproveitem o máximo da sua aventura!</p>
-              <ul class="benefits">
-                <li class="text-color"><i>✔</i> Catálogo ilimitado</li>
-                <li class="text-color"><i>✔</i> Acesso antecipado</li>
-                <li class="text-color"><i>✔</i> Máximo de 4 telas</li>
-                <li class="text-color"><i>✔</i> Sem Propagandas</li>
-                <li class="text-color"><i>✔</i> Sorteios Especiais</li>
-              </ul>
-              <a href="#" class="subscribe-button text-color">Assine agora!</a>
-            </div>
-          </div>
-        </div>
+        </section>
+
     </main>
     <!-- # FIM PLANOS MENSAIS -->
 
@@ -2016,71 +2030,7 @@
 
     <!-- # SUPORTE -->
     <main id="section-suporte" class="home-section content-section">
-        <div class="principal-support-container">
-        <div class="faq-section">
-        <h1 class="text-color tittle-support">Perguntas Frequentes</h1>
-        <div class="faq-item">
-            <div class="faq-question text-color">O que é o nosso serviço?</div>
-            <div class="faq-answer text-color">
-            Texto texto texto
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question text-color">Quanto custa?</div>
-            <div class="faq-answer text-color">
-            Texto texto texto
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question text-color">Onde posso acessar?</div>
-            <div class="faq-answer text-color">
-                Texto texto texto
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question text-color">?</div>
-            <div class="faq-answer text-color">
-                Texto texto texto
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question text-color">?</div>
-            <div class="faq-answer text-color">
-                Texto texto texto
-            </div>
-        </div>
-    </div>
-
-    <div class="contact-section">
-        <h2 class="text-color tittle-support">Precisa de ajuda? Nos contate por:</h2>
-        <div class="contact-item text-color">Email: theglark@gmail.com</div>
-        <div class="contact-item text-color">Telefone: +55 13 94565-4235</div>
-    </div>
-
-    <footer class="social-footer">
-        <h3 class="text-color tittle-support">Siga-nos nas redes sociais:</h3>
-        <div class="social-icons">
-            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-        </div>
-    </footer>
-
-    <script>
-        document.querySelectorAll('.faq-question').forEach(item => {
-            item.addEventListener('click', () => {
-                const parent = item.parentElement;
-                parent.classList.toggle('active');
-            });
-        });
-    </script>
-        </div>
+        <img src="https://www.protecaomaxima.com.br/imgs/em_desenvolvimento.jpg" alt="" class="manutenção">
     </main>
     <!-- # FIM SUPORTE -->
 
@@ -2164,7 +2114,7 @@
             </form>
         </div>
     </main>
-    <!-- # FIM PERFIL GIBI PÚBLICO  -->
+    <!-- # FIM PERFIR GIBI PÚBLICO  -->
 
 
 
