@@ -29,7 +29,7 @@ if (!isset($_SESSION['logado'])) {
 
          <button type="submit"> Sim </button>
 
-         <a href="../home.php" > <b>Não! Voltar ao Menu!</b> </a>
+         <a href="../perfil.php" > <b>Não! Voltar ao Perfil!</b> </a>
 
       </form>
 

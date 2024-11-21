@@ -109,7 +109,7 @@
                     $_SESSION['foto_perfil'] = $caminhoFoto; // Atualiza a sessão com a nova foto
                 }
                 $_SESSION['message'] = "Perfil atualizado com sucesso!"; // Mensagem de sucesso
-                header("Location: ../home.php"); // Redireciona para a página inicial
+                header("Location: ../perfil.php"); // Redireciona para a página inicial
                 exit; // Para a execução do script
             } else {
                 // Adiciona mensagem de erro caso a atualização falhe

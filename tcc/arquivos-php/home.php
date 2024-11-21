@@ -193,25 +193,25 @@
 
             <div class="sidebar__content">
                 <div class="sidebar__list">
-                    <a href="#" class="sidebar__link active-link" data-target="section-inicio">
+                    <a href="#" class="sidebar__link active-link">
                         <i class="bx bx-grid-alt text-color"></i>
                         <span class="sidebar__link-name text-color">Início</span>
                         <span class="sidebar__link-floating text-color">Início</span>
                     </a>
 
-                    <a href="#" class="sidebar__link" data-target="section-biblioteca">
+                    <a href="biblioteca.php" class="sidebar__link" >
                         <i class='bx bxs-star text-color'></i>
                         <span class="sidebar__link-name text-color">Biblioteca</span>
                         <span class="sidebar__link-floating text-color">Biblioteca</span>
                     </a>
 
-                    <a href="#" class="sidebar__link" data-target="section-publicacao-obras">
+                    <a href="mandeObra.php" class="sidebar__link" >
                         <i class='bx bx-book-reader text-color'></i>
                         <span class="sidebar__link-name text-color">Publique Obras</span>
                         <span class="sidebar__link-floating text-color">Publique Obras</span>
                     </a>
 
-                    <a href="#" class="sidebar__link" data-target="section-planos-mensais">
+                    <a href="planos.php" class="sidebar__link" >
                         <i class='bx bx-money text-color'></i>
                         <span class="sidebar__link-name text-color">Planos Mensais</span>
                         <span class="sidebar__link-floating text-color">Planos Mensais</span>
@@ -233,13 +233,13 @@
                         <span class="sidebar__link-floating text-color">Alterar Tema</span>
                     </a>
 
-                    <a href="#" class="sidebar__link" data-target="section-suporte">
+                    <a href="suporte.php" class="sidebar__link" >
                         <i class='bx bxs-help-circle text-color'></i>
                         <span class="sidebar__link-name text-color">Suporte</span>
                         <span class="sidebar__link-floating text-color">Suporte</span>
                     </a>
 
-                    <a href="#" class="sidebar__link" data-target="section-config">
+                    <a href="config.php" class="sidebar__link" >
                         <i class="bx bx-cog text-color"></i>
                         <span class="sidebar__link-name text-color">Configurações</span>
                         <span class="sidebar__link-floating text-color">Configurações</span>
@@ -278,8 +278,8 @@
                 echo "<p class='sidebar__email'> $nome <br> $apelido</p>"
                 ?>
 
-                <a data-target="section-perfil">
-                    <i class='bx bxs-chevron-right-circle text-color' data-target="section-perfil"></i>
+                <a href="perfil.php" >
+                    <i class='bx bxs-chevron-right-circle text-color'></i>
                 </a>
             </div>
         </nav>

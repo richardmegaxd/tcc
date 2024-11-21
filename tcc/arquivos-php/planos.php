@@ -205,13 +205,13 @@
                         <span class="sidebar__link-floating text-color">Biblioteca</span>
                     </a>
 
-                    <a href="#" class="sidebar__link active-link"  >
+                    <a href="mandeObra.php" class="sidebar__link" >
                         <i class='bx bx-book-reader text-color'></i>
                         <span class="sidebar__link-name text-color">Publique Obras</span>
                         <span class="sidebar__link-floating text-color">Publique Obras</span>
                     </a>
 
-                    <a href="planos.php" class="sidebar__link" >
+                    <a href="#" class="sidebar__link active-link" >
                         <i class='bx bx-money text-color'></i>
                         <span class="sidebar__link-name text-color">Planos Mensais</span>
                         <span class="sidebar__link-floating text-color">Planos Mensais</span>
@@ -288,130 +288,216 @@
     <!--=============== MAIN ===============-->
 
 
-    <!-- # PUBLICAÇÃO DE OBRAS -->
-    <main id="section-publicacao-obras" class="home-section content-section active">
-        <div class="containerM"><!-- PEGA TUDO -->
-            <div class="containerM2"><!-- PEGA TUDO 2 -->
-                <div class="tela1">
-                    <div class="tela11"><!-- INICIO DA PRIMEIRA PARTE -->
-                        <div class="hey">
-                            <h3>Hey autor</h3>
-                        </div>
-                        <div class="quer">
-                            <h1 class="text-color">Quer publicar no The Glark?</h1>
-                        </div>
-                        <div class="Mtexto">
-                            <p class="text-color">Preencha nosso formulário de submissão e envie sua obra. Nossa equipe
-                                irá revisar seu trabalho com atenção e fornecer feedback em até 7 dias úteis. Estamos
-                                ansiosos para conhecer suas histórias e ilustrações!</p>
-                        </div>
-                        <div class="Mroxo">
-                            <h2 class="Mroxo-text">Faça parte do nosso catálogo!</h2>
-                        </div>
+    <!-- # PLANOS MENSAIS -->
+    <main id="section-planos-mensais" class="home-section content-section active">
+        <section class="section__container price__container">
+            <h2 class="section__header text-color">PLANOS DE ASSINATURA</h2>
+            <p class="section__subheader text-color">
+                Assine nossos planos mensais e tenha acesso ilimitado a uma coleção de quadrinhos autênticos e exclusivos!
+            </p>
+            <div class="price__grid">
+                <div class="price__card">
+                    <div class="price__card__content">
+                        <h4>Básico</h4>
+                        <h3>R$17.99</h3>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Catálogo Ilimitado
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Acesso em 24 horas
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Máximo 2 telas
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Sem Propagandas
+                        </p>
+
+
                     </div>
-                </div><!-- FINAL DA PRIMEIRA PARTE -->
+                    <a data-target="section-cartao" class="btn price__btn">Iniciar Assinatura!</a>
+                </div>
+                <div class="price__card">
+                    <div class="price__card__content">
+                        <h4>Premium</h4>
+                        <h3>R$ 34.99</h3>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Catálogo Ilimitado
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Acesso Antecipado
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Máximo 4 tela
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Sem Propagandas
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Sorteios Especiais
+                        </p>
+                    </div>
+                    <a data-target="section-cartao" class="btn price__btn">Iniciar Assinatura!</a>
+                </div>
             </div>
-            <!-- INICIO DO FORMULÁRIO -->
-            <form action="valida_obras.php" method="post" enctype="multipart/form-data">
-                <div class="containerF">
-                    <div class="containerF2">
-                        <h1 class="text-color">Mande sua obra!</h1>
-                        <!-- Quadrado para informações de contato -->
-                        <div class="info-box">
-                            <h2 class="text-color">Informações para contato</h2>
-                            <div class="input-group">
-                                <input type="text" placeholder="Nome" name="nome">
-                                <input type="text" placeholder="Sobrenome" name="sobrenome">
-                            </div>
-                            <div class="input-group">
-                                <input type="email" placeholder="Email" name="email">
-                                <input type="tel" placeholder="Telefone" name="telefone">
-                            </div>
-                            <div class="checkbox">
-                                <input type="checkbox" id="politica" name="checkbox_status">
-                                <label for="politica" class="text-color">Estou ciente e concordo com a Politica de
-                                    Privacidade da plataforma The Glark.</label>
-                            </div>
+        </section>
+
+    </main>
+    <!-- # FIM PLANOS MENSAIS -->
+
+    <!-- # PAGAMENTO CARTÃO -->
+    <main id="section-cartao" class="home-section content-section">
+        <a data-target="section-planos-mensais"><i class='bx bxs-left-arrow-circle'></i></a>
+
+        <div class="container">
+
+            <div class="card-container">
+
+                <div class="front">
+                    <div class="image">
+                        <img src="../assets/images/chip.png" alt="#">
+                        <img src="../assets/images/visa.png" alt="#">
+                    </div>
+                    <div class="card-number-box">################</div>
+                    <div class="flexbox">
+                        <div class="box">
+                            <span>titular do cartão</span>
+                            <div class="card-holder-name">Nome Completo</div>
                         </div>
-                        <!-- Quadrado para informações da obra -->
-                        <div class="info-box">
-                            <h2 class="text-color">Informações da obra</h2>
-                            <input type="text" placeholder="Título da obra" name="nm_obra">
-                            <textarea placeholder="Sinopse" name="ds_sinopse"></textarea>
-                            <!-- Select status -->
-                            <select name="nmstatus" id="idstatus">
-                                <option value="status" disabled selected>Status</option>
-                                <option value="andamento">Em andamento</option>
-                                <option value="finalizado">Finalizado</option>
-                            </select>
-                            <!-- Checkboxs generos -->
-                            <div class="gene">
-                                <p id="lbGene" class="text-color">Gêneros</p>
-                                <div class="generos-group">
-                                    <input type="checkbox" name="obras[]" id="idacao" value="acao">
-                                    <label for="acao" class="text-color">Ação</label>
-                                    <input type="checkbox" name="obras[]" id="idaven" value="aventura">
-                                    <label for="aventura" class="text-color">Aventura</label>
-                                    <input type="checkbox" name="obras[]" id="idcome" value="comedia">
-                                    <label for="comedia" class="text-color">Comédia</label>
-                                    <input type="checkbox" name="obras[]" id="iddram" value="drama">
-                                    <label for="drama" class="text-color">Drama</label>
-                                    <input type="checkbox" name="obras[]" id="idesco" value="escolar">
-                                    <label for="escolar" class="text-color">Escolar</label>
-                                    <input type="checkbox" name="obras[]" id="idespo" value="esporte">
-                                    <label for="esporte" class="text-color">Esporte</label>
-                                    <input type="checkbox" name="obras[]" id="idfant" value="fantasia">
-                                    <label for="fantasia" class="text-color">Fantasia</label>
-                                    <input type="checkbox" name="obras[]" id="idficc" value="ficcient">
-                                    <label for="ficacao-cientifica" class="text-color">Ficção Científica</label>
-                                    <input type="checkbox" name="obras[]" id="idhist" value="historia">
-                                    <label for="historico" class="text-color">Histórico</label><br>
-                                    <input type="checkbox" name="obras[]" id="idisek" value="isekai">
-                                    <label for="isekai" class="text-color">Isekai</label>
-                                    <input type="checkbox" name="obras[]" id="idlgbt" value="lgbt">
-                                    <label for="lgbt" class="text-color">LGBT</label>
-                                    <input type="checkbox" name="obras[]" id="idmist" value="misterio">
-                                    <label for="misterio" class="text-color">Mistério</label>
-                                    <input type="checkbox" name="obras[]" id="idroma" value="romance">
-                                    <label for="romance" class="text-color">Romance</label>
-                                    <input type="checkbox" name="obras[]" id="idslic" value="slice">
-                                    <label for="slice-of-life" class="text-color">Slice of Life</label>
-                                    <input type="checkbox" name="obras[]" id="idsobr" value="sobrenat">
-                                    <label for="sobrenatural" class="text-color">Sobrenatural</label>
-                                    <input type="checkbox" name="obras[]" id="idterr" value="terror">
-                                    <label for="terror" class="text-color">Terror</label>
-                                </div>
+                        <div class="box">
+                            <span>Validade</span>
+                            <div class="expiration">
+                                <span class="exp-month">mês</span>
+                                <span class="exp-year">ano</span>
                             </div>
-                            <div class="capa">
-                                <p class="text-color" id="lbCapa">Imagem de Capa:</p>
-                                <div class="capa-upload">
-                                    <!-- Input para o upload da capa -->
-                                    <input type="file" id="imageInput" accept="image/*" onchange="loadImage(event)" name="capa">
-                                    <!-- <div class="image-rect" id="imageRect"></div>
-                                    <div class="image-square" id="imageSquare"></div> -->
-                                </div>
-                                <div class="checkbox">
-                                    <input type="checkbox" name="checkbox_image" id="idconc">
-                                    <label for="idconc" class="text-color">Afirmo que a imagem de capa selecionada
-                                        é autoral.</label>
-                                </div>
-                            </div>
-                            <div class="checkbox">
-                                <input type="checkbox" name="checkbox_autoral" id="idafir">
-                                <label for="idafir" class="text-color">Afirmo que a obra em questão é
-                                    autoral.</label>
-                            </div>
-                        </div>
-                        <!-- Botão de envio no final do formulário -->
-                        <div class="btn-enviar">
-                            <button type="submit" class="btn price__btn">Enviar</button>
                         </div>
                     </div>
                 </div>
+
+                <div class="back">
+                    <div class="stripe"></div>
+                    <div class="box">
+                        <span>cvv</span>
+                        <div class="cvv-box"></div>
+                        <img src="image/visa.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <form action="">
+                <div class="inputBox">
+                    <span>Número do Cartão</span>
+                    <input type="number" id="number" data-maxlength="16" class="card-number-input">
+                </div>
+                <div class="inputBox">
+                    <span>titular do cartão</span>
+                    <input type="text" maxlength="65" class="card-holder-input">
+                </div>
+                <div class="flexbox">
+                    <div class="inputBox">
+                        <span>Mês</span>
+                        <select name="" id="" class="month-input">
+                            <option value="month" selected disabled>mês</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div>
+                    <div class="inputBox">
+                        <span>Ano</span>
+                        <select name="" id="" class="year-input">
+                            <option value="year" selected disabled>ano</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
+                            <option value="2028">2031</option>
+                            <option value="2029">2032</option>
+                            <option value="2030">2033</option>
+                        </select>
+                    </div>
+                    <div class="inputBox">
+                        <span>cvv</span>
+                        <input type="number" id="number" data-maxlength="4" class="cvv-input">
+                    </div>
+                </div>
+                <input type="submit" value="Cadastrar" class="submit-btn">
             </form>
+
         </div>
+
+        <script>
+            // SCRIPT CARTAO DE CREDITO
+
+            // Seleciona todos os inputs com o atributo 'data-maxlength'
+            const inputs = document.querySelectorAll('input[type="number"][data-maxlength]');
+
+            inputs.forEach(input => {
+                input.addEventListener("input", () => {
+                    const maxLength = parseInt(input.getAttribute("data-maxlength"), 10); // Obtém o valor do atributo
+                    if (input.value.length > maxLength) {
+                        input.value = input.value.slice(0, maxLength); // Limita os caracteres
+                    }
+                });
+            });
+
+            document.querySelector('.card-number-input').oninput = () => {
+                document.querySelector('.card-number-box').innerText = document.querySelector('.card-number-input').value;
+            }
+
+            document.querySelector('.card-holder-input').oninput = () => {
+                document.querySelector('.card-holder-name').innerText = document.querySelector('.card-holder-input').value;
+            }
+
+            document.querySelector('.month-input').oninput = () => {
+                document.querySelector('.exp-month').innerText = document.querySelector('.month-input').value;
+            }
+
+            document.querySelector('.year-input').oninput = () => {
+                document.querySelector('.exp-year').innerText = document.querySelector('.year-input').value;
+            }
+
+            document.querySelector('.cvv-input').onmouseenter = () => {
+                document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(-180deg)';
+                document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(0deg)';
+            }
+
+            document.querySelector('.cvv-input').onmouseleave = () => {
+                document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(0deg)';
+                document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(180deg)';
+            }
+
+            document.querySelector('.cvv-input').oninput = () => {
+                document.querySelector('.cvv-box').innerText = document.querySelector('.cvv-input').value;
+            }
+
+            // FIM SCRIPT CARTAO DE CREDTOI
+        </script>
     </main>
-    <!-- # FIM DA PUBLICAÇÃO DE OBRAS -->
+    <!-- # FIM PAGAMENTO CARTÃO -->
+
 
     <!-- # PERFIR GIBI PÚBLICO -->
     <main id="section-obra1" class="home-section content-section">

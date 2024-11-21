@@ -41,7 +41,7 @@ if (!isset($_SESSION["logado"]) || $_SESSION["logado"] != true) {
 
 <body>
 
-    <a href="../home.php"><ion-icon name="return-up-back-sharp"></ion-icon></a>
+    <a href="../perfil.php"><ion-icon name="return-up-back-sharp"></ion-icon></a>
 
     <header>
         <h1>Editar Perfil</h1>

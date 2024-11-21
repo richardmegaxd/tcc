@@ -205,7 +205,7 @@
                         <span class="sidebar__link-floating text-color">Biblioteca</span>
                     </a>
 
-                    <a href="#" class="sidebar__link active-link"  >
+                    <a href="mandeObra.php" class="sidebar__link" >
                         <i class='bx bx-book-reader text-color'></i>
                         <span class="sidebar__link-name text-color">Publique Obras</span>
                         <span class="sidebar__link-floating text-color">Publique Obras</span>
@@ -239,7 +239,7 @@
                         <span class="sidebar__link-floating text-color">Suporte</span>
                     </a>
 
-                    <a href="config.php" class="sidebar__link" >
+                    <a href="#" class="sidebar__link active-link" >
                         <i class="bx bx-cog text-color"></i>
                         <span class="sidebar__link-name text-color">Configurações</span>
                         <span class="sidebar__link-floating text-color">Configurações</span>
@@ -286,132 +286,14 @@
     </div>
 
     <!--=============== MAIN ===============-->
+    
 
-
-    <!-- # PUBLICAÇÃO DE OBRAS -->
-    <main id="section-publicacao-obras" class="home-section content-section active">
-        <div class="containerM"><!-- PEGA TUDO -->
-            <div class="containerM2"><!-- PEGA TUDO 2 -->
-                <div class="tela1">
-                    <div class="tela11"><!-- INICIO DA PRIMEIRA PARTE -->
-                        <div class="hey">
-                            <h3>Hey autor</h3>
-                        </div>
-                        <div class="quer">
-                            <h1 class="text-color">Quer publicar no The Glark?</h1>
-                        </div>
-                        <div class="Mtexto">
-                            <p class="text-color">Preencha nosso formulário de submissão e envie sua obra. Nossa equipe
-                                irá revisar seu trabalho com atenção e fornecer feedback em até 7 dias úteis. Estamos
-                                ansiosos para conhecer suas histórias e ilustrações!</p>
-                        </div>
-                        <div class="Mroxo">
-                            <h2 class="Mroxo-text">Faça parte do nosso catálogo!</h2>
-                        </div>
-                    </div>
-                </div><!-- FINAL DA PRIMEIRA PARTE -->
-            </div>
-            <!-- INICIO DO FORMULÁRIO -->
-            <form action="valida_obras.php" method="post" enctype="multipart/form-data">
-                <div class="containerF">
-                    <div class="containerF2">
-                        <h1 class="text-color">Mande sua obra!</h1>
-                        <!-- Quadrado para informações de contato -->
-                        <div class="info-box">
-                            <h2 class="text-color">Informações para contato</h2>
-                            <div class="input-group">
-                                <input type="text" placeholder="Nome" name="nome">
-                                <input type="text" placeholder="Sobrenome" name="sobrenome">
-                            </div>
-                            <div class="input-group">
-                                <input type="email" placeholder="Email" name="email">
-                                <input type="tel" placeholder="Telefone" name="telefone">
-                            </div>
-                            <div class="checkbox">
-                                <input type="checkbox" id="politica" name="checkbox_status">
-                                <label for="politica" class="text-color">Estou ciente e concordo com a Politica de
-                                    Privacidade da plataforma The Glark.</label>
-                            </div>
-                        </div>
-                        <!-- Quadrado para informações da obra -->
-                        <div class="info-box">
-                            <h2 class="text-color">Informações da obra</h2>
-                            <input type="text" placeholder="Título da obra" name="nm_obra">
-                            <textarea placeholder="Sinopse" name="ds_sinopse"></textarea>
-                            <!-- Select status -->
-                            <select name="nmstatus" id="idstatus">
-                                <option value="status" disabled selected>Status</option>
-                                <option value="andamento">Em andamento</option>
-                                <option value="finalizado">Finalizado</option>
-                            </select>
-                            <!-- Checkboxs generos -->
-                            <div class="gene">
-                                <p id="lbGene" class="text-color">Gêneros</p>
-                                <div class="generos-group">
-                                    <input type="checkbox" name="obras[]" id="idacao" value="acao">
-                                    <label for="acao" class="text-color">Ação</label>
-                                    <input type="checkbox" name="obras[]" id="idaven" value="aventura">
-                                    <label for="aventura" class="text-color">Aventura</label>
-                                    <input type="checkbox" name="obras[]" id="idcome" value="comedia">
-                                    <label for="comedia" class="text-color">Comédia</label>
-                                    <input type="checkbox" name="obras[]" id="iddram" value="drama">
-                                    <label for="drama" class="text-color">Drama</label>
-                                    <input type="checkbox" name="obras[]" id="idesco" value="escolar">
-                                    <label for="escolar" class="text-color">Escolar</label>
-                                    <input type="checkbox" name="obras[]" id="idespo" value="esporte">
-                                    <label for="esporte" class="text-color">Esporte</label>
-                                    <input type="checkbox" name="obras[]" id="idfant" value="fantasia">
-                                    <label for="fantasia" class="text-color">Fantasia</label>
-                                    <input type="checkbox" name="obras[]" id="idficc" value="ficcient">
-                                    <label for="ficacao-cientifica" class="text-color">Ficção Científica</label>
-                                    <input type="checkbox" name="obras[]" id="idhist" value="historia">
-                                    <label for="historico" class="text-color">Histórico</label><br>
-                                    <input type="checkbox" name="obras[]" id="idisek" value="isekai">
-                                    <label for="isekai" class="text-color">Isekai</label>
-                                    <input type="checkbox" name="obras[]" id="idlgbt" value="lgbt">
-                                    <label for="lgbt" class="text-color">LGBT</label>
-                                    <input type="checkbox" name="obras[]" id="idmist" value="misterio">
-                                    <label for="misterio" class="text-color">Mistério</label>
-                                    <input type="checkbox" name="obras[]" id="idroma" value="romance">
-                                    <label for="romance" class="text-color">Romance</label>
-                                    <input type="checkbox" name="obras[]" id="idslic" value="slice">
-                                    <label for="slice-of-life" class="text-color">Slice of Life</label>
-                                    <input type="checkbox" name="obras[]" id="idsobr" value="sobrenat">
-                                    <label for="sobrenatural" class="text-color">Sobrenatural</label>
-                                    <input type="checkbox" name="obras[]" id="idterr" value="terror">
-                                    <label for="terror" class="text-color">Terror</label>
-                                </div>
-                            </div>
-                            <div class="capa">
-                                <p class="text-color" id="lbCapa">Imagem de Capa:</p>
-                                <div class="capa-upload">
-                                    <!-- Input para o upload da capa -->
-                                    <input type="file" id="imageInput" accept="image/*" onchange="loadImage(event)" name="capa">
-                                    <!-- <div class="image-rect" id="imageRect"></div>
-                                    <div class="image-square" id="imageSquare"></div> -->
-                                </div>
-                                <div class="checkbox">
-                                    <input type="checkbox" name="checkbox_image" id="idconc">
-                                    <label for="idconc" class="text-color">Afirmo que a imagem de capa selecionada
-                                        é autoral.</label>
-                                </div>
-                            </div>
-                            <div class="checkbox">
-                                <input type="checkbox" name="checkbox_autoral" id="idafir">
-                                <label for="idafir" class="text-color">Afirmo que a obra em questão é
-                                    autoral.</label>
-                            </div>
-                        </div>
-                        <!-- Botão de envio no final do formulário -->
-                        <div class="btn-enviar">
-                            <button type="submit" class="btn price__btn">Enviar</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
+    <!-- # CONFIGURAÇÕES -->
+    <main id="section-config" class="home-section content-section active">
+        <img src="https://www.protecaomaxima.com.br/imgs/em_desenvolvimento.jpg" alt="" class="manutenção">
     </main>
-    <!-- # FIM DA PUBLICAÇÃO DE OBRAS -->
+    <!-- # FIM CONFIGURAÇÕES -->
+
 
     <!-- # PERFIR GIBI PÚBLICO -->
     <main id="section-obra1" class="home-section content-section">
