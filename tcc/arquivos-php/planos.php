@@ -295,7 +295,7 @@
             <p class="section__subheader text-color">
                 Assine nossos planos mensais e tenha acesso ilimitado a uma coleção de quadrinhos autênticos e exclusivos!
             </p>
-            <div class="price__grid">
+            <div class="price__grid ">
                 <div class="price__card troca-cor">
                     <div class="price__card__content">
                         <h4>Básico</h4>
@@ -364,8 +364,8 @@
 
                 <div class="front">
                     <div class="image">
-                        <img src="../assets/" alt="#">
-                        <img src="../assets/images/visa.png" alt="#">
+                        <img src="https://cdn-icons-png.flaticon.com/512/680/680284.png" alt="#">
+                        <img src="https://logosmarcas.net/wp-content/uploads/2020/09/Mastercard-Logo.png" alt="#">
                     </div>
                     <div class="card-number-box">################</div>
                     <div class="flexbox">

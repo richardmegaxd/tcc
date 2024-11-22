@@ -333,15 +333,18 @@
     <footer class="social-footer">
         <h3 class="text-color tittle-support">Siga-nos nas redes sociais:</h3>
         <div class="social-icons">
-            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
+
+        <a href="#" class="social-link" style="background-color: #3b5998">
+        <ion-icon name="logo-facebook"></ion-icon>
+
+            <a href="#" class="social-link"
+                  style="background-image: radial-gradient(circle at -20.71% 50%, #afde72 0, #bbd966 5.56%, #c6d259 11.11%, #cfc94e 16.67%, #d8c042 22.22%, #dfb537 27.78%, #e6a92e 33.33%, #eb9c26 38.89%, #f08c21 44.44%, #f37b1f 50%, #f56822 55.56%, #f85329 61.11%, #f93c32 66.67%, #fa193d 72.22%, #f90049 77.78%, #f80057 83.33%, #f40066 88.89%, #ef0076 94.44%, #e70087 100%);">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+
+            <a href="#" class="social-link" style="background-color: #1565c0">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
         </div>
     </footer>
 
@@ -446,6 +449,7 @@
     <!-- APP SCRIPT -->
     <script src="../home-assets/Js/app.js"></script>
     <script src="../home-assets/Js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <!--  FIM SCRIPT -->
 
 

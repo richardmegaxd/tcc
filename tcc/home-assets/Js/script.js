@@ -213,7 +213,8 @@ function applyTheme(theme) {
         document.querySelectorAll('.fundo-color').forEach(el => el.style.backgroundColor = "#fff"); // remove imagem de fundo do sidebar   
         themeIcon.classList.remove('bx-sun');
         themeIcon.classList.add('bx-moon');
-        document.querySelectorAll('.troca-cor').forEach(el => el.style.backgroundColor = "#672196"); // remove imagem do fundo do card de planos mensais 
+        document.querySelectorAll('.fundo-color').forEach(el => el.style.backgroundColor = "#"); // remove imagem de fundo do sidebar   
+        
     } else {
         document.body.style.backgroundImage = 'url("../assets/images/fundo3.jpg")'; // Imagem de fundo escura
         document.body.style.backgroundColor = ''; // Remove a cor de fundo sólida
@@ -221,6 +222,7 @@ function applyTheme(theme) {
         document.querySelectorAll('.fundo-color').forEach(el => el.style.backgroundImage = 'url("../assets/images/fundo3.jpg")');  // Cor do texto
         themeIcon.classList.remove('bx-moon');
         themeIcon.classList.add('bx-sun');
+        
     }
 }
 

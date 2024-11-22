@@ -1665,6 +1665,9 @@ a {
   color: var(--text-light);
 }
 
+#section-planos-mensais .ri-checkbox-circle-line{
+  color: green !important;
+}
 
 #section-planos-mensais .price__grid {
   margin-top: 4rem;
@@ -1677,14 +1680,15 @@ a {
   padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
-  background-color: rgba(67, 21, 96, 0.6);
+  /* background-color: rgba(67, 21, 96, 0.6); */
+  background-color: rgb(67, 21, 96);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   transition: 0.3s;
   text-align: center;
 }
 
-#section-planos-mensais .price__card:hover {
+#section-planos-mensais .price__card:hover, .troca-cor:hover {
   background-color: var(--primary-color-extra-light);
   border-color: var(--secondary-color);
 }
@@ -2092,6 +2096,9 @@ input[type=number] {
 #section-suporte .social-icons a:hover {
   color: #fff;
 }
+
+
+
 /*-----------------------------------*\
 # FIM SUPORTE
 \*-----------------------------------*/
