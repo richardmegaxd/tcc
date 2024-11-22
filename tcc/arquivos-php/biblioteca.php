@@ -337,8 +337,11 @@
 
         <section id="favoritos" class="content2 active">
 
+
+<div class="section">
             <div class="container-gp">
-                <button class="dropdown-button" onclick="toggleDropdown()">
+
+            <button class="dropdown-button" onclick="toggleDropdown()">
                     <h2 class="text-color dropdown-p">
 
                         Organizar
@@ -384,7 +387,7 @@
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://spawnbrasil.com.br/wp-content/uploads/2020/02/spawn-112-capa-editora-abril-por-guia-dos-quadrinhos.jpg"
-                            alt="#">
+                            alt="#" class="img-escura">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Spawn
@@ -395,13 +398,14 @@
                                     <span>8.5</span>
                                 </div>
                             </div>
+
                         </div>
                     </a>
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://f.i.uol.com.br/fotografia/2021/10/05/1633460103615c9f879caa1_1633460103_3x2_md.jpg"
-                            alt="#">
+                            alt="#" class="img-escura">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Fronteiras do Além
@@ -417,7 +421,7 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://img.olx.com.br/images/19/199402202691144.jpg" alt="#">
+                        <img src="https://img.olx.com.br/images/19/199402202691144.jpg" alt="#" class="img-escura">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Death Metal
@@ -433,7 +437,7 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420" alt="">
+                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420" alt="#" class="img-escura">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Rocketeer
@@ -450,7 +454,7 @@
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/anime-manga-style-album-cover-1.0-design-template-0fc6d256e9ff17603475dfb129b132f0_screen.jpg?ts=1664026643"
-                            alt="#">
+                            alt="#" class="img-escura">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Forgotten Feelinggs
@@ -467,20 +471,23 @@
 
                 </div>
             </div>
-            </div>
+        </div>
+           
         </section>
 
         <section id="continuar-lendo" class="content2">
+
+        <div class="section">
             <div class="container-gp">
 
-                <button class="dropdown-button" onclick="toggleDropdown2()">
+            <button class="dropdown-button" onclick="toggleDropdown()">
                     <h2 class="text-color dropdown-p">
 
                         Organizar
                         <i class='bx bxs-up-arrow-alt'></i>
                         <i class='bx bxs-down-arrow-alt'></i>
 
-                        <ul class="dropdown-content" id="dropdown2">
+                        <ul class="dropdown-content" id="dropdown">
                             <li onclick="ordenar('az')">A - Z</li>
                             <li onclick="ordenar('za')">Z - A</li>
                             <li onclick="ordenar('ultimo')">Último Adicionado</li>
@@ -491,8 +498,8 @@
 
                 <script>
                     // Função para alternar a visibilidade do dropdown
-                    function toggleDropdown2() {
-                        document.getElementById("dropdown2").classList.toggle("show");
+                    function toggleDropdown() {
+                        document.getElementById("dropdown").classList.toggle("show");
                     }
                 </script>
 
@@ -519,7 +526,7 @@
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://spawnbrasil.com.br/wp-content/uploads/2020/02/spawn-112-capa-editora-abril-por-guia-dos-quadrinhos.jpg"
-                            alt="#">
+                            alt="#" class="img-escura">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Spawn
@@ -530,13 +537,14 @@
                                     <span>8.5</span>
                                 </div>
                             </div>
+
                         </div>
                     </a>
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://f.i.uol.com.br/fotografia/2021/10/05/1633460103615c9f879caa1_1633460103_3x2_md.jpg"
-                            alt="#">
+                            alt="#" class="img-escura">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Fronteiras do Além
@@ -552,7 +560,7 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://img.olx.com.br/images/19/199402202691144.jpg" alt="#">
+                        <img src="https://img.olx.com.br/images/19/199402202691144.jpg" alt="#" class="img-escura">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Death Metal
@@ -568,7 +576,7 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420" alt="">
+                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420" alt="#" class="img-escura">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Rocketeer
@@ -585,7 +593,7 @@
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/anime-manga-style-album-cover-1.0-design-template-0fc6d256e9ff17603475dfb129b132f0_screen.jpg?ts=1664026643"
-                            alt="#">
+                            alt="#" class="img-escura">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Forgotten Feelinggs
@@ -602,20 +610,21 @@
 
                 </div>
             </div>
-            </div>
+        </div>
         </section>
 
         <section id="historico" class="content2">
+        <div class="section">
             <div class="container-gp">
 
-                <button class="dropdown-button" onclick="toggleDropdown3()">
+            <button class="dropdown-button" onclick="toggleDropdown()">
                     <h2 class="text-color dropdown-p">
 
                         Organizar
                         <i class='bx bxs-up-arrow-alt'></i>
                         <i class='bx bxs-down-arrow-alt'></i>
 
-                        <ul class="dropdown-content" id="dropdown3">
+                        <ul class="dropdown-content" id="dropdown">
                             <li onclick="ordenar('az')">A - Z</li>
                             <li onclick="ordenar('za')">Z - A</li>
                             <li onclick="ordenar('ultimo')">Último Adicionado</li>
@@ -626,13 +635,13 @@
 
                 <script>
                     // Função para alternar a visibilidade do dropdown
-                    function toggleDropdown3() {
-                        document.getElementById("dropdown3").classList.toggle("show");
+                    function toggleDropdown() {
+                        document.getElementById("dropdown").classList.toggle("show");
                     }
                 </script>
 
                 <div class="section-header text-color">
-                    Obras acessadas
+                    Obras Acessadas
                 </div>
                 <div class="movies-slide carousel-nav-center owl-carousel">
                     <!-- MOVIE ITEM -->
@@ -654,7 +663,7 @@
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://spawnbrasil.com.br/wp-content/uploads/2020/02/spawn-112-capa-editora-abril-por-guia-dos-quadrinhos.jpg"
-                            alt="#">
+                            alt="#" class="img-escura">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Spawn
@@ -665,13 +674,14 @@
                                     <span>8.5</span>
                                 </div>
                             </div>
+
                         </div>
                     </a>
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://f.i.uol.com.br/fotografia/2021/10/05/1633460103615c9f879caa1_1633460103_3x2_md.jpg"
-                            alt="#">
+                            alt="#" class="img-escura">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Fronteiras do Além
@@ -687,7 +697,7 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://img.olx.com.br/images/19/199402202691144.jpg" alt="#">
+                        <img src="https://img.olx.com.br/images/19/199402202691144.jpg" alt="#" class="img-escura">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Death Metal
@@ -703,7 +713,7 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420" alt="">
+                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420" alt="#" class="img-escura">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Rocketeer
@@ -720,7 +730,7 @@
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/anime-manga-style-album-cover-1.0-design-template-0fc6d256e9ff17603475dfb129b132f0_screen.jpg?ts=1664026643"
-                            alt="#">
+                            alt="#" class="img-escura">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Forgotten Feelinggs
@@ -737,21 +747,23 @@
 
                 </div>
             </div>
-            </div>
+        </div>
+
         </section>
 
         <section id="minhas-obras" class="content2">
 
+        <div class="section">
             <div class="container-gp">
 
-                <button class="dropdown-button" onclick="toggleDropdown4()">
+            <button class="dropdown-button" onclick="toggleDropdown()">
                     <h2 class="text-color dropdown-p">
 
                         Organizar
                         <i class='bx bxs-up-arrow-alt'></i>
                         <i class='bx bxs-down-arrow-alt'></i>
 
-                        <ul class="dropdown-content" id="dropdown4">
+                        <ul class="dropdown-content" id="dropdown">
                             <li onclick="ordenar('az')">A - Z</li>
                             <li onclick="ordenar('za')">Z - A</li>
                             <li onclick="ordenar('ultimo')">Último Adicionado</li>
@@ -762,13 +774,13 @@
 
                 <script>
                     // Função para alternar a visibilidade do dropdown
-                    function toggleDropdown4() {
-                        document.getElementById("dropdown4").classList.toggle("show");
+                    function toggleDropdown() {
+                        document.getElementById("dropdown").classList.toggle("show");
                     }
                 </script>
 
                 <div class="section-header text-color">
-                    Obras publicadas
+                    Obras Publicadas
                 </div>
                 <div class="movies-slide carousel-nav-center owl-carousel">
                     <!-- MOVIE ITEM -->
@@ -790,7 +802,7 @@
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://spawnbrasil.com.br/wp-content/uploads/2020/02/spawn-112-capa-editora-abril-por-guia-dos-quadrinhos.jpg"
-                            alt="#">
+                            alt="#" class="img-escura">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Spawn
@@ -801,13 +813,14 @@
                                     <span>8.5</span>
                                 </div>
                             </div>
+
                         </div>
                     </a>
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://f.i.uol.com.br/fotografia/2021/10/05/1633460103615c9f879caa1_1633460103_3x2_md.jpg"
-                            alt="#">
+                            alt="#" class="img-escura">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Fronteiras do Além
@@ -823,7 +836,7 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://img.olx.com.br/images/19/199402202691144.jpg" alt="#">
+                        <img src="https://img.olx.com.br/images/19/199402202691144.jpg" alt="#" class="img-escura">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Death Metal
@@ -839,7 +852,7 @@
                     <!-- END MOVIE ITEM -->
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
-                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420" alt="">
+                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420" alt="#" class="img-escura">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Rocketeer
@@ -856,7 +869,7 @@
                     <!-- MOVIE ITEM -->
                     <a href="#" class="movie-item">
                         <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/anime-manga-style-album-cover-1.0-design-template-0fc6d256e9ff17603475dfb129b132f0_screen.jpg?ts=1664026643"
-                            alt="#">
+                            alt="#" class="img-escura">
                         <div class="movie-item-content">
                             <div class="movie-item-title">
                                 Forgotten Feelinggs
@@ -873,7 +886,8 @@
 
                 </div>
             </div>
-            </div>
+        </div>    
+
         </section>
 
     </main>
@@ -1367,7 +1381,7 @@
                 </div>
                 <div class="movies-slide carousel-nav-center owl-carousel">
                     <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item-nemo" data-target="section-obra1">
+                    <a href="#" class="movie-item" data-target="section-obra1">
                         <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="#" />
                         <div class="movie-item-content">
                             <div class="movie-item-title">
@@ -1479,7 +1493,7 @@
 
     <!-- # PERFIR GIBI PÚBLICO -->
     <main id="section-obra1" class="home-section content-section">
-        <a href="biblioteca.php"><i class='bx bxs-left-arrow-circle'></i></a>
+        <a data-target="section-inicio"><i class='bx bxs-left-arrow-circle'></i></a>
         <div class="container">
             <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="Capa do Mangá"
                 class="manga-cover">
