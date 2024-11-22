@@ -1123,12 +1123,12 @@ a {
 
 #section-publicacao-obras button[type="submit"] {
   background: linear-gradient(90deg, #7706c1, #4b1bb0);
-  padding: 10px 80px;
+  padding: 10px 100px;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
   color: white;
-  border-radius: 25px;
+  border-radius: 10px;
   font-size: 1rem;
 }
 
@@ -1677,8 +1677,8 @@ a {
   padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
-  background-color: var(--primary-color-light);
-  border: 2px solid transparent;
+  background-color: rgba(67, 21, 96, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   transition: 0.3s;
   text-align: center;
@@ -2004,7 +2004,6 @@ input[type=number] {
 #section-suporte, .tittle-support{
   text-align: center;
   margin-bottom: 20px;
-  color: #7706c1 !important;
 }
 
 #section-suporte .faq-item {

@@ -296,7 +296,7 @@
                 Assine nossos planos mensais e tenha acesso ilimitado a uma coleção de quadrinhos autênticos e exclusivos!
             </p>
             <div class="price__grid">
-                <div class="price__card">
+                <div class="price__card troca-cor">
                     <div class="price__card__content">
                         <h4>Básico</h4>
                         <h3>R$17.99</h3>
@@ -321,7 +321,7 @@
                     </div>
                     <a data-target="section-cartao" class="btn price__btn">Iniciar Assinatura!</a>
                 </div>
-                <div class="price__card">
+                <div class="price__card troca-cor">
                     <div class="price__card__content">
                         <h4>Premium</h4>
                         <h3>R$ 34.99</h3>
@@ -364,7 +364,7 @@
 
                 <div class="front">
                     <div class="image">
-                        <img src="../assets/images/chip.png" alt="#">
+                        <img src="../assets/" alt="#">
                         <img src="../assets/images/visa.png" alt="#">
                     </div>
                     <div class="card-number-box">################</div>

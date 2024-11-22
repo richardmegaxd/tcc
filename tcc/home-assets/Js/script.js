@@ -213,6 +213,7 @@ function applyTheme(theme) {
         document.querySelectorAll('.fundo-color').forEach(el => el.style.backgroundColor = "#fff"); // remove imagem de fundo do sidebar   
         themeIcon.classList.remove('bx-sun');
         themeIcon.classList.add('bx-moon');
+        document.querySelectorAll('.troca-cor').forEach(el => el.style.backgroundColor = "#672196"); // remove imagem do fundo do card de planos mensais 
     } else {
         document.body.style.backgroundImage = 'url("../assets/images/fundo3.jpg")'; // Imagem de fundo escura
         document.body.style.backgroundColor = ''; // Remove a cor de fundo sólida

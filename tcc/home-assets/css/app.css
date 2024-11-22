@@ -705,11 +705,13 @@ img {
     width: 100%;
     height: 100%;
     transition: transform 0.3s linear;
+    /* background: rgba(0, 0, 0, 0.6); /* Escurece a imagem
+    filter: blur(5px) Aplica borragem e preto e branco */
 }
 
  .img-escura {
     background: rgba(0, 0, 0, 0.6); /* Escurece a imagem */
-    filter: blur(1px) grayscale(50%); /* Aplica borragem e preto e branco */
+    filter: blur(5px) /* Aplica borragem e preto e branco */
  }
 
  .overlay {
