@@ -47,7 +47,7 @@ if (!isset($_SESSION["logado"]) || $_SESSION["logado"] != true) {
         <h1>Editar Perfil</h1>
     </header>
 
-    <form id="formc" action="validaEdit.php" method="POST" enctype="multipart/form-data">
+    <form id="formc" action="../validaEdit.php" method="POST" enctype="multipart/form-data">
 
         <label class="lala" for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" value="<?php echo htmlspecialchars($user['nm_user']); ?>">

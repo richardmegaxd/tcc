@@ -109,12 +109,12 @@
                     $_SESSION['foto_perfil'] = $caminhoFoto; // Atualiza a sessão com a nova foto
                 }
                 $_SESSION['message'] = "Perfil atualizado com sucesso!"; // Mensagem de sucesso
-                header("Location: ../perfil.php"); // Redireciona para a página inicial
+                header("Location: perfil.php"); // Redireciona para a página inicial
                 exit; // Para a execução do script
             } else {
                 // Adiciona mensagem de erro caso a atualização falhe
                 $erros[] = "Erro ao atualizar o perfil: " . mysqli_error($conexao);
-                echo "<script>showAlertAndRedirect('" . implode("\\n", $erros) . "', 'edit.php');</script>"; // Exibe os erros e redireciona
+                echo "<script>showAlertAndRedirect('" . implode("\\n", $erros) . "', 'edit/edit.php');</script>"; // Exibe os erros e redireciona
             }
         }
 
@@ -122,7 +122,7 @@
         mysqli_close($conexao);
     } else {
         // Se não foi um POST, redireciona para a página de edição
-        header("Location: edit.php");
+        header("Location: edit/edit.php");
         exit;
     }
     ?>
