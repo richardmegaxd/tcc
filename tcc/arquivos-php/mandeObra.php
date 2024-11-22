@@ -1,3 +1,8 @@
+<head>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/styleLogin.css">
+</head>
+
 <form action="publicar_obra.php" method="POST" enctype="multipart/form-data">
     <label for="titulo">Título do Manga</label>
     <input type="text" id="titulo" name="titulo" required>
