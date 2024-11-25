@@ -730,7 +730,7 @@
 
     <!-- # PERFIR GIBI PÚBLICO -->
     <main id="section-obra1" class="home-section content-section">
-        <a data-target="section-inicio"><i class='bx bxs-left-arrow-circle'></i></a>
+        <a data-target="section-perfil"><i class='bx bxs-left-arrow-circle'></i></a>
         <div class="container">
             <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="Capa do Mangá"
                 class="manga-cover">
