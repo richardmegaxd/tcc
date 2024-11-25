@@ -508,6 +508,119 @@
             </div>
         </div>
         <!-- END LATEST CARTOONS SECTION -->
+
+        <!-- LATEST MOVIES SECTION -->
+        <div class="section">
+            <div class="container-gp">
+                <div class="section-header text-color">
+                    Mais Acessados
+                </div>
+                <div class="movies-slide carousel-nav-center owl-carousel">
+                    <!-- MOVIE ITEM -->
+                    <a href="#" class="movie-item" data-target="section-obra1">
+                        <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="#" />
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                O Menino Nemo
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>8.4</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END MOVIE ITEM -->
+                    <!-- MOVIE ITEM -->
+                    <a href="#" class="movie-item">
+                        <img src="https://spawnbrasil.com.br/wp-content/uploads/2020/02/spawn-112-capa-editora-abril-por-guia-dos-quadrinhos.jpg"
+                            alt="#" class="img-escura">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Spawn
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>8.5</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+                    <!-- END MOVIE ITEM -->
+                    <!-- MOVIE ITEM -->
+                    <a href="#" class="movie-item">
+                        <img src="https://f.i.uol.com.br/fotografia/2021/10/05/1633460103615c9f879caa1_1633460103_3x2_md.jpg"
+                            alt="#" class="img-escura">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Fronteiras do Além
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END MOVIE ITEM -->
+                    <!-- MOVIE ITEM -->
+                    <a href="#" class="movie-item">
+                        <img src="https://img.olx.com.br/images/19/199402202691144.jpg" alt="#" class="img-escura">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Death Metal
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>7.9</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END MOVIE ITEM -->
+                    <!-- MOVIE ITEM -->
+                    <a href="#" class="movie-item">
+                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420" alt="#" class="img-escura">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Rocketeer
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>7.8</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END MOVIE ITEM -->
+                    <!-- MOVIE ITEM -->
+                    <a href="#" class="movie-item">
+                        <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/anime-manga-style-album-cover-1.0-design-template-0fc6d256e9ff17603475dfb129b132f0_screen.jpg?ts=1664026643"
+                            alt="#" class="img-escura">
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                Forgotten Feelinggs
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>8.7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END MOVIE ITEM -->
+
+                </div>
+            </div>
+        </div>
+        <!-- END LATEST MOVIES SECTION -->
     </main>
     <!-- # FIM INÍCIO  -->
 
