@@ -825,7 +825,6 @@ a {
   justify-content: center;
   align-items: center;
   gap: 5px;
-  margin-top: 80px;
   border-style: solid;
   border-radius: 20px;
   border-width: 1px;
@@ -857,16 +856,17 @@ a {
   height: auto;
   width: auto;
   justify-content: space-between;
+  padding-bottom: 70px;
 }
 
 #section-perfil .usuario-back2 {
-  border-style: none;
   display: flex;
   flex-direction: column;
   gap: 7%;
   height: 510px;
   width: 400px;
   float: left;
+  border-right: 2px solid;
 }
 
 #section-perfil .area-biografia{

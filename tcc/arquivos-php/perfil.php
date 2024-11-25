@@ -360,7 +360,7 @@
             </div>
 
         </header>
-
+                    
 
         <div class="usuario-back2 text-color">
             <div class="area-seguir">
