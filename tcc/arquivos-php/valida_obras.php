@@ -59,14 +59,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                              '$checkbox2_status', '$checkbox3_status', '$autor_id')";
 
         if (mysqli_query($conexao, $sql_obra)) {
-        $_SESSION['success_message'] = "Obra registrada com sucesso!";
+            header("Location: publique2.php" );
         } else {
             $_SESSION['error_message'] = "Erro ao salvar obra: " . mysqli_error($conexao);
         }
     } else {
         $_SESSION['error_message'] = "Erro ao salvar autor: " . mysqli_error($conexao);
     }
-    header("Location: home.php" );
+    header("Location: publique2.php" );
     exit;
 }
 ?>
