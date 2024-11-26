@@ -55,7 +55,7 @@
     </header>
 
     <!--=============== SIDEBAR ===============-->
-    <div class="sidebar fundo-color" id="sidebar">
+    <div class="sidebar show-sidebar  fundo-color" id="sidebar">
         <nav class="sidebar__container text-color">
             <div class="sidebar__logo">
                 <img src="../assets/images/log5.png" alt="" class="sidebar__logo-img">
@@ -144,12 +144,12 @@
                 $apelido = isset($_SESSION['apelido']) ? htmlspecialchars($_SESSION['apelido']) : '';
                 ?>
 
-                <img class="sidebar__perfil" src="<?php echo $resultado['ds_foto_perfil']; ?>" alt="Foto de Perfil" />
+                <img onclick="location.href='perfil.php';"  class="sidebar__perfil" src="<?php echo $resultado['ds_foto_perfil']; ?>" alt="Foto de Perfil" />
                 <?php
                 echo "<p class='sidebar__email'> $nome <br> $apelido</p>"
                 ?>
 
-                <a href="perfil.php" >
+                <a href="perfil.php">
                     <i class='bx bxs-chevron-right-circle text-color'></i>
                 </a>
             </div>
@@ -157,7 +157,7 @@
     </div>
 
     <!--=============== MAIN ===============-->
-    <main class=" main content-section active" id="section-inicio">
+    <main class="main-pd main content-section active" id="section-inicio">
 
         <!-- LATEST MOVIES SECTION -->
         <div class="section">
