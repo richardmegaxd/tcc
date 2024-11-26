@@ -517,7 +517,7 @@
                 </div>
                 <div class="movies-slide carousel-nav-center owl-carousel">
                     <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item" data-target="section-obra1">
+                    <a href="obra.php" class="movie-item">
                         <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="#" />
                         <div class="movie-item-content">
                             <div class="movie-item-title">
