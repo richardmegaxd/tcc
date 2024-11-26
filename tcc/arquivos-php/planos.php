@@ -367,7 +367,7 @@
                         <img src="https://cdn-icons-png.flaticon.com/512/680/680284.png" alt="#">
                         <img src="https://logosmarcas.net/wp-content/uploads/2020/09/Mastercard-Logo.png" alt="#">
                     </div>
-                    <div class="card-number-box">################</div>
+                    <div class="card-number-box">#### #### #### ####</div>
                     <div class="flexbox">
                         <div class="box">
                             <span>titular do cartão</span>
@@ -440,7 +440,7 @@
                     </div>
                     <div class="inputBox">
                         <span>cvv</span>
-                        <input type="number" id="number" data-maxlength="4" class="cvv-input">
+                        <input type="number" id="number" data-maxlength="3" class="cvv-input">
                     </div>
                 </div>
                 <input type="submit" value="Cadastrar" class="submit-btn">
