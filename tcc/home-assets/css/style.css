@@ -733,6 +733,7 @@ a {
   display: flex;
   justify-content: space-evenly;
   position: relative;
+  border-bottom: 2px solid ;
 }
 
 #section-perfil .tab {
@@ -863,7 +864,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 7%;
-  height: 510px;
+  height: 460px;
   width: 400px;
   float: left;
   border-right: 2px solid;
@@ -892,11 +893,16 @@ a {
   float: right;
 }
 
+#section-perfil .obras{
+  display: flex;
+  justify-content: center;
+}
+
 #section-perfil .dropup-content {
   text-align: right;
   display: none;
   position: absolute;
-  background-color: black;
+  background-color: #191919;
   min-width: 150px;
   border: 1px solid #ddd;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -912,6 +918,7 @@ a {
 
 #section-perfil .dropup-content li:hover {
   background-color: #f0f0f0;
+  color: black;
   border-radius: 4px;
 }
 
@@ -956,6 +963,7 @@ a {
 
 #section-perfil .dropb-content li:hover {
   background-color: #f0f0f0;
+  color: black;
   border-radius: 4px;
 }
 
@@ -1292,7 +1300,7 @@ a {
 #section-biblioteca .dropdown-content {
   display: none;
   position: absolute;
-  background-color: black;
+  background-color: #191919;
   min-width: 150px;
   border: 1px solid #ddd;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -1302,6 +1310,8 @@ a {
 
 }
 
+
+
 #section-biblioteca .dropdown-content li {
   padding: 10px;
   cursor: pointer;
@@ -1310,6 +1320,7 @@ a {
 #section-biblioteca .dropdown-content li:hover {
   background-color: #f0f0f0;
   border-radius: 4px;
+  color: black;
 }
 
 #section-biblioteca .show {
