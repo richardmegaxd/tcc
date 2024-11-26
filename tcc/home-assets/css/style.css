@@ -1748,6 +1748,24 @@ a {
   border: none;
 }
 
+#section-planos-mensais .card-number-box {
+  font-size: 18px;
+  letter-spacing: 2px; /* Espaçamento entre números */
+  display: inline-block;
+}
+
+#section-planos-mensais .card-number-input {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.card-holder-name {
+  word-wrap: break-word;
+  text-align: left;
+  line-height: 1.2;
+  max-width: 500px; /* Ajuste conforme o design do cartão */
+  overflow: hidden;
+}
 
 
 

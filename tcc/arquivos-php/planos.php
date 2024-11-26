@@ -199,19 +199,19 @@
                         <span class="sidebar__link-floating text-color">Início</span>
                     </a>
 
-                    <a href="biblioteca.php" class="sidebar__link" >
+                    <a href="biblioteca.php" class="sidebar__link">
                         <i class='bx bxs-star text-color'></i>
                         <span class="sidebar__link-name text-color">Biblioteca</span>
                         <span class="sidebar__link-floating text-color">Biblioteca</span>
                     </a>
 
-                    <a href="publique.php" class="sidebar__link" >
+                    <a href="publique.php" class="sidebar__link">
                         <i class='bx bx-book-reader text-color'></i>
                         <span class="sidebar__link-name text-color">Publique Obras</span>
                         <span class="sidebar__link-floating text-color">Publique Obras</span>
                     </a>
 
-                    <a href="#" class="sidebar__link active-link" >
+                    <a href="#" class="sidebar__link active-link">
                         <i class='bx bx-money text-color'></i>
                         <span class="sidebar__link-name text-color">Planos Mensais</span>
                         <span class="sidebar__link-floating text-color">Planos Mensais</span>
@@ -233,13 +233,13 @@
                         <span class="sidebar__link-floating text-color">Alterar Tema</span>
                     </a>
 
-                    <a href="suporte.php" class="sidebar__link" >
+                    <a href="suporte.php" class="sidebar__link">
                         <i class='bx bxs-help-circle text-color'></i>
                         <span class="sidebar__link-name text-color">Suporte</span>
                         <span class="sidebar__link-floating text-color">Suporte</span>
                     </a>
 
-                    <a href="config.php" class="sidebar__link" >
+                    <a href="config.php" class="sidebar__link">
                         <i class="bx bx-cog text-color"></i>
                         <span class="sidebar__link-name text-color">Configurações</span>
                         <span class="sidebar__link-floating text-color">Configurações</span>
@@ -278,7 +278,7 @@
                 echo "<p class='sidebar__email'> $nome <br> $apelido</p>"
                 ?>
 
-                <a href="perfil.php" >
+                <a href="perfil.php">
                     <i class='bx bxs-chevron-right-circle text-color'></i>
                 </a>
             </div>
@@ -388,7 +388,7 @@
                     <div class="box">
                         <span>cvv</span>
                         <div class="cvv-box"></div>
-                        <img src="image/visa.png" alt="">
+                        <img src="https://logosmarcas.net/wp-content/uploads/2020/09/Mastercard-Logo.png" alt="">
                     </div>
                 </div>
 
@@ -397,7 +397,7 @@
             <form action="">
                 <div class="inputBox">
                     <span>Número do Cartão</span>
-                    <input type="number" id="number" data-maxlength="16" class="card-number-input">
+                    <input type="text" id="number" data-maxlength="19" class="card-number-input">
                 </div>
                 <div class="inputBox">
                     <span>titular do cartão</span>
@@ -420,6 +420,7 @@
                             <option value="10">10</option>
                             <option value="11">11</option>
                             <option value="12">12</option>
+                            <!-- rest of the months -->
                         </select>
                     </div>
                     <div class="inputBox">
@@ -433,14 +434,15 @@
                             <option value="2028">2028</option>
                             <option value="2029">2029</option>
                             <option value="2030">2030</option>
-                            <option value="2028">2031</option>
-                            <option value="2029">2032</option>
-                            <option value="2030">2033</option>
+                            <option value="2031">2031</option>
+                            <option value="2032">2032</option>
+                            <option value="2033">2033</option>
+                            <!-- rest of the years -->
                         </select>
                     </div>
                     <div class="inputBox">
                         <span>cvv</span>
-                        <input type="number" id="number" data-maxlength="3" class="cvv-input">
+                        <input type="text" id="cvv" data-maxlength="3" class="cvv-input">
                     </div>
                 </div>
                 <input type="submit" value="Cadastrar" class="submit-btn">
@@ -449,52 +451,54 @@
         </div>
 
         <script>
-            // SCRIPT CARTAO DE CREDITO
-
-            // Seleciona todos os inputs com o atributo 'data-maxlength'
-            const inputs = document.querySelectorAll('input[type="number"][data-maxlength]');
-
-            inputs.forEach(input => {
-                input.addEventListener("input", () => {
-                    const maxLength = parseInt(input.getAttribute("data-maxlength"), 10); // Obtém o valor do atributo
-                    if (input.value.length > maxLength) {
-                        input.value = input.value.slice(0, maxLength); // Limita os caracteres
-                    }
-                });
+            // Atualização do formato do número do cartão
+            const inputCartao = document.querySelector('.card-number-input');
+            inputCartao.addEventListener('input', (e) => {
+                let valor = e.target.value.replace(/\s+/g, '').replace(/[^0-9]/g, '').slice(0, 16);
+                e.target.value = valor.match(/.{1,4}/g)?.join(' ') || '';
+                document.querySelector('.card-number-box').innerText = e.target.value || '#### #### #### ####';
             });
 
-            document.querySelector('.card-number-input').oninput = () => {
-                document.querySelector('.card-number-box').innerText = document.querySelector('.card-number-input').value;
-            }
+            // Limitar CVV a 3 dígitos
+            const inputCvv = document.querySelector('.cvv-input');
+            inputCvv.addEventListener('input', (e) => {
+                e.target.value = e.target.value.replace(/[^0-9]/g, '').slice(0, 3);
+                document.querySelector('.cvv-box').innerText = e.target.value || '';
+            });
 
-            document.querySelector('.card-holder-input').oninput = () => {
-                document.querySelector('.card-holder-name').innerText = document.querySelector('.card-holder-input').value;
-            }
+            // Limitar nome do titular
+            const inputNome = document.querySelector('.card-holder-input');
+            inputNome.addEventListener('input', (e) => {
+                const maxLength = 40; // Limite máximo de caracteres
+                let nome = e.target.value.slice(0, maxLength);
+                e.target.value = nome;
 
+                // Adicionar quebra de linha para nomes longos
+                const nomeComQuebra = nome.replace(/(.{24})/g, '$1\n');
+                document.querySelector('.card-holder-name').innerText = nomeComQuebra;
+            });
+
+            // Atualizar validade
             document.querySelector('.month-input').oninput = () => {
                 document.querySelector('.exp-month').innerText = document.querySelector('.month-input').value;
-            }
+            };
 
             document.querySelector('.year-input').oninput = () => {
                 document.querySelector('.exp-year').innerText = document.querySelector('.year-input').value;
-            }
+            };
 
+            // Efeitos para o CVV
             document.querySelector('.cvv-input').onmouseenter = () => {
                 document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(-180deg)';
                 document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(0deg)';
-            }
+            };
 
             document.querySelector('.cvv-input').onmouseleave = () => {
                 document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(0deg)';
                 document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(180deg)';
-            }
-
-            document.querySelector('.cvv-input').oninput = () => {
-                document.querySelector('.cvv-box').innerText = document.querySelector('.cvv-input').value;
-            }
-
-            // FIM SCRIPT CARTAO DE CREDTOI
+            };
         </script>
+
     </main>
     <!-- # FIM PAGAMENTO CARTÃO -->
 
@@ -502,8 +506,8 @@
     <!-- # PERFIR GIBI PÚBLICO -->
     <main id="section-obra1" class="home-section content-section">
 
-                <div class="star-rating">     
-                </div>
+        <div class="star-rating">
+        </div>
 
     </main>
     <!-- # FIM PERFIR GIBI PÚBLICO  -->
