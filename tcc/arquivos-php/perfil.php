@@ -418,12 +418,12 @@
 
         <div class="conteudo-perfil">
             <header class="header-perfil">
-                <div class="topo-perfil">
+                <div class="topo-perfil text-color">
                     <h2 class="tab active text-color" data-target="obras">Obras</h2>
                     <h2 class="tab text-color" data-target="recomendados">Recomendados</h2>
                     <!-- <h2 class="tab text-color" data-target="comentarios">Comentários</h2> -->
                 </div>
-                <hr>
+                
             </header>
 
             <br>
@@ -455,115 +455,9 @@
 
             <section id="obras" class="content active">
 
-                <!-- LATEST MOVIES SECTION -->
-        
-            <div class="container-gp">
-                <div class="movies-slide carousel-nav-center owl-carousel">
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item" data-target="section-obra1">
-                        <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="#" />
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                O Menino Nemo
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>8.4</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://spawnbrasil.com.br/wp-content/uploads/2020/02/spawn-112-capa-editora-abril-por-guia-dos-quadrinhos.jpg"
-                            alt="#" class="img-escura">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Spawn
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>8.5</span>
-                                </div>
-                            </div>
-
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://f.i.uol.com.br/fotografia/2021/10/05/1633460103615c9f879caa1_1633460103_3x2_md.jpg"
-                            alt="#" class="img-escura">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Fronteiras do Além
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://img.olx.com.br/images/19/199402202691144.jpg" alt="#" class="img-escura">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Death Metal
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>7.9</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420" alt="#" class="img-escura">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Rocketeer
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>7.8</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/anime-manga-style-album-cover-1.0-design-template-0fc6d256e9ff17603475dfb129b132f0_screen.jpg?ts=1664026643"
-                            alt="#" class="img-escura">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Forgotten Feelinggs
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>8.7</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-
+                <div class="obras">
+                    <h1>Nenhuma obra publicada</h1>
                 </div>
-            </div>
-        
-        <!-- END LATEST MOVIES SECTION -->
 
         </section>
 
@@ -572,7 +466,7 @@
         <div class="container-gp">
                 <div class="movies-slide carousel-nav-center owl-carousel">
                     <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item" data-target="section-obra1">
+                    <a href="obra.php" class="movie-item">
                         <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="#" />
                         <div class="movie-item-content">
                             <div class="movie-item-title">
@@ -727,108 +621,10 @@
 
     </main>
     <!-- # FIM INÍCIO  -->
-
-    <!-- # PERFIR GIBI PÚBLICO -->
-    <main id="section-obra1" class="home-section content-section">
-        <a data-target="section-perfil"><i class='bx bxs-left-arrow-circle'></i></a>
-        <div class="container">
-            <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="Capa do Mangá"
-                class="manga-cover">
-            <div class="manga-info">
-                <h2 class="text-color">O Menino Nemo</h2>
-
-                <div class="info-item">
-                    <p class="info-label text-color">Gêneros:</p>
-                    <p class="info-value text-color">Ação, Aventura, Romance</p>
-                </div>
-                <div class="info-item">
-                    <p class="info-label text-color">Tipo:</p>
-                    <p class="info-value text-color">Colorido</p>
-                </div>
-                <div class="info-item">
-                    <p class="info-label text-color">Ano:</p>
-                    <p class="info-value text-color">1995</p>
-                </div>
-                <div class="info-item">
-                    <p class="info-label text-color">Status:</p>
-                    <p class="info-value text-color">Encerrado</p>
-                </div>
-                <div class="info-item">
-                    <p class="info-label text-color">Lançamento:</p>
-                    <p class="info-value text-color">08 de Outubro de 1995</p>
-                </div>
-
                 <div class="star-rating">
-                    <i class="fa fa-star" aria-hidden="true" onclick="rate(1)">★</i>
-                    <i class="fa fa-star" aria-hidden="true" onclick="rate(2)">★</i>
-                    <i class="fa fa-star" aria-hidden="true" onclick="rate(3)">★</i>
-                    <i class="fa fa-star" aria-hidden="true" onclick="rate(4)">★</i>
-                    <i class="fa fa-star" aria-hidden="true" onclick="rate(5)">★</i>
                 </div>
 
-            </div>
-        </div>
-
-        <div class="chapters">
-            <div class="titulo-cap">
-                <img width="60" height="60" src="https://img.icons8.com/color/48/comics-magazine.png"
-                    alt="comics-magazine" />
-                <h2 class="text-color">CAPÍTULOS</h2>
-
-            </div>
-            <a class="chapter" data-target="section-leitura-manga">
-                <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="Capa do Capítulo"
-                    class="chapter-cover">
-                <div>
-                    <span class="chapter-number">Capítulo 01</span>
-                </div>
-
-            </a>
-
-
-        </div>
-
-        </div>
-
-        <div class="comments">
-            <ul>
-                <!-- Exibe os comentários aqui -->
-            </ul>
-            <form id="comment-form">
-                <label for="comment" class="text-color">Deixe seu comentário:</label>
-                <textarea id="comment" name="comment" rows="4" placeholder="Digite seu comentário"></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </main>
-    <!-- # FIM PERFIR GIBI PÚBLICO  -->
-
-    <!-- # LEITURA DO MANGÁ -->
-    <main id="section-leitura-manga" class=" content-section">
-
-        <div class="btn-troca">
-            <a data-target="section-obra1"><i class='bx bxs-left-arrow-circle'></i></a>
-            <button class="toggle-mode" onclick="toggleMode()"><i class='bx bxs-binoculars'></i></button>
-        </div>
-
-        <div id="viewer" class="container">
-
-            <div id="image-container" class="lazy">
-                <!-- As imagens serão carregadas dinamicamente aqui -->
-            </div>
-
-            <div class="controls" id="arrow-navigation">
-                <button class="btn-page" id="prevButton" onclick="prevPage()">Página Anterior</button>
-                <button class="btn-page" id="nextButton" onclick="nextPage()">Próxima Página</button>
-            </div>
-        </div>
-
-        <!-- #BACK TO TOP -->
-        <button id="backToTopBtn" onclick="scrollToTop()"><i class='bx bxs-up-arrow-square'></i></button>
-
-    </main>
-    <!-- # FIM LEITURA DO MANGÁ -->
-
+  
     <!-- SCRIPTS -->
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"

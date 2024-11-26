@@ -369,7 +369,7 @@
                 </div>
                 <div class="movies-slide carousel-nav-center owl-carousel">
                     <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item" data-target="section-obra1">
+                    <a href="obra.php" class="movie-item" >
                         <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="#" />
                         <div class="movie-item-content">
                             <div class="movie-item-title">
@@ -480,14 +480,14 @@
         <div class="section">
             <div class="container-gp">
 
-            <button class="dropdown-button" onclick="toggleDropdown()">
+            <button class="dropdown-button" onclick="toggleDropdown2()">
                     <h2 class="text-color dropdown-p">
 
                         Organizar
                         <i class='bx bxs-up-arrow-alt'></i>
                         <i class='bx bxs-down-arrow-alt'></i>
 
-                        <ul class="dropdown-content" id="dropdown">
+                        <ul class="dropdown-content" id="dropdown2">
                             <li onclick="ordenar('az')">A - Z</li>
                             <li onclick="ordenar('za')">Z - A</li>
                             <li onclick="ordenar('ultimo')">Último Adicionado</li>
@@ -498,8 +498,8 @@
 
                 <script>
                     // Função para alternar a visibilidade do dropdown
-                    function toggleDropdown() {
-                        document.getElementById("dropdown").classList.toggle("show");
+                    function toggleDropdown2() {
+                        document.getElementById("dropdown2").classList.toggle("show");
                     }
                 </script>
 
@@ -508,7 +508,7 @@
                 </div>
                 <div class="movies-slide carousel-nav-center owl-carousel">
                     <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item" data-target="section-obra1">
+                    <a href="obra.php" class="movie-item" >
                         <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="#" />
                         <div class="movie-item-content">
                             <div class="movie-item-title">
@@ -617,14 +617,14 @@
         <div class="section">
             <div class="container-gp">
 
-            <button class="dropdown-button" onclick="toggleDropdown()">
+            <button class="dropdown-button" onclick="toggleDropdown3()">
                     <h2 class="text-color dropdown-p">
 
                         Organizar
                         <i class='bx bxs-up-arrow-alt'></i>
                         <i class='bx bxs-down-arrow-alt'></i>
 
-                        <ul class="dropdown-content" id="dropdown">
+                        <ul class="dropdown-content" id="dropdown3">
                             <li onclick="ordenar('az')">A - Z</li>
                             <li onclick="ordenar('za')">Z - A</li>
                             <li onclick="ordenar('ultimo')">Último Adicionado</li>
@@ -635,8 +635,8 @@
 
                 <script>
                     // Função para alternar a visibilidade do dropdown
-                    function toggleDropdown() {
-                        document.getElementById("dropdown").classList.toggle("show");
+                    function toggleDropdown3() {
+                        document.getElementById("dropdown3").classList.toggle("show");
                     }
                 </script>
 
@@ -645,7 +645,7 @@
                 </div>
                 <div class="movies-slide carousel-nav-center owl-carousel">
                     <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item" data-target="section-obra1">
+                    <a href="obra.php" class="movie-item" >
                         <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="#" />
                         <div class="movie-item-content">
                             <div class="movie-item-title">
@@ -756,14 +756,14 @@
         <div class="section">
             <div class="container-gp">
 
-            <button class="dropdown-button" onclick="toggleDropdown()">
+            <button class="dropdown-button" onclick="toggleDropdown4()">
                     <h2 class="text-color dropdown-p">
 
                         Organizar
                         <i class='bx bxs-up-arrow-alt'></i>
                         <i class='bx bxs-down-arrow-alt'></i>
 
-                        <ul class="dropdown-content" id="dropdown">
+                        <ul class="dropdown-content" id="dropdown4">
                             <li onclick="ordenar('az')">A - Z</li>
                             <li onclick="ordenar('za')">Z - A</li>
                             <li onclick="ordenar('ultimo')">Último Adicionado</li>
@@ -774,8 +774,8 @@
 
                 <script>
                     // Função para alternar a visibilidade do dropdown
-                    function toggleDropdown() {
-                        document.getElementById("dropdown").classList.toggle("show");
+                    function toggleDropdown4() {
+                        document.getElementById("dropdown4").classList.toggle("show");
                     }
                 </script>
 
@@ -784,7 +784,7 @@
                 </div>
                 <div class="movies-slide carousel-nav-center owl-carousel">
                     <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item" data-target="section-obra1">
+                    <a href="obra.php" class="movie-item" >
                         <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="#" />
                         <div class="movie-item-content">
                             <div class="movie-item-title">
@@ -893,717 +893,9 @@
     </main>
     <!-- # FIM INÍCIO  -->
 
-    <!-- # BIBLIOTECA -->
-    
-    <main id="section-biblioteca" class="home-section content-section">
-
-    <?php
-    //"SELECT COUNT(*) FROM tb_favoritos WHERE id_usuario = $resultado[0]"
-    $qt_favoritos = 8;
-    ?>
-
-        <br>
-
-        <header class="header-bilioteca ">
-            <div class="topo-biblioteca ">
-                <h2 class="tab2 active text-color" data-target="favoritos"><i class='bx bxs-heart text-color'></i>
-                    Favoritos</h2>
-                <h2 class="tab2 text-color" data-target="continuar-lendo"><i class='bx bxs-book text-color'></i>
-                    Continuar Lendo</h2>
-                <h2 class="tab2 text-color" data-target="historico"><i class='bx bxs-time-five text-color'></i>
-                    Histórico</h2>
-                <h2 class="tab2 text-color" data-target="minhas-obras"><i class='bx bxs-pencil text-color'></i> Minhas
-                    Obras</h2>
-            </div>
-            <hr>
-        </header>
-
-        <script>
-            const tabs2 = document.querySelectorAll('.tab2');
-            const sections2 = document.querySelectorAll('.content');
-
-            tabs2.forEach(tab2 => {
-                tab2.addEventListener('click', () => {
-                    // Remover a classe 'active' da aba e da seção ativa
-                    document.querySelector('.tab2.active')?.classList.remove('active');
-                    document.querySelector('.content2.active')?.classList.remove('active');
-
-                    // Adicionar a classe 'active' à aba clicada
-                    tab2.classList.add('active');
-
-                    // Mostrar a seção correspondente
-                    const target = tab2.getAttribute('data-target');
-                    document.getElementById(target).classList.add('active');
-
-                    // Atualizar a posição da barra
-                    updateBarPosition(tab2);
-                });
-            });
-
-            // Inicializa a barra na posição da aba ativa ao carregar a página
-            updateBarPosition(document.querySelector('.tab2.active'));
-        </script>
-
-        <section id="favoritos" class="content2 active">
-
-            <div class="container-gp">
-                <button class="dropdown-button" onclick="toggleDropdown()">
-                    <h2 class="text-color dropdown-p">
-
-                        Organizar
-                        <i class='bx bxs-up-arrow-alt'></i>
-                        <i class='bx bxs-down-arrow-alt'></i>
-
-                        <ul class="dropdown-content" id="dropdown">
-                            <li onclick="ordenar('az')">A - Z</li>
-                            <li onclick="ordenar('za')">Z - A</li>
-                            <li onclick="ordenar('ultimo')">Último Adicionado</li>
-                            <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
-                        </ul>
-                    </h2>
-                </button>
-
-                <script>
-                    // Função para alternar a visibilidade do dropdown
-                    function toggleDropdown() {
-                        document.getElementById("dropdown").classList.toggle("show");
-                    }
-                </script>
-
-                <div class="section-header text-color">
-                    Obras Favoritadas
-                </div>
-                <div class="movies-slide carousel-nav-center owl-carousel">
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item" data-target="section-obra1">
-                        <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="#" />
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                O Menino Nemo
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>8.4</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://spawnbrasil.com.br/wp-content/uploads/2020/02/spawn-112-capa-editora-abril-por-guia-dos-quadrinhos.jpg"
-                            alt="#">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Spawn
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>8.5</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://f.i.uol.com.br/fotografia/2021/10/05/1633460103615c9f879caa1_1633460103_3x2_md.jpg"
-                            alt="#">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Fronteiras do Além
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://img.olx.com.br/images/19/199402202691144.jpg" alt="#">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Death Metal
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>7.9</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420" alt="">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Rocketeer
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>7.8</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/anime-manga-style-album-cover-1.0-design-template-0fc6d256e9ff17603475dfb129b132f0_screen.jpg?ts=1664026643"
-                            alt="#">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Forgotten Feelinggs
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>8.7</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-
-                </div>
-            </div>
-            </div>
-        </section>
-
-        <section id="continuar-lendo" class="content2">
-            <div class="container-gp">
-
-                <button class="dropdown-button" onclick="toggleDropdown2()">
-                    <h2 class="text-color dropdown-p">
-
-                        Organizar
-                        <i class='bx bxs-up-arrow-alt'></i>
-                        <i class='bx bxs-down-arrow-alt'></i>
-
-                        <ul class="dropdown-content" id="dropdown2">
-                            <li onclick="ordenar('az')">A - Z</li>
-                            <li onclick="ordenar('za')">Z - A</li>
-                            <li onclick="ordenar('ultimo')">Último Adicionado</li>
-                            <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
-                        </ul>
-                    </h2>
-                </button>
-
-                <script>
-                    // Função para alternar a visibilidade do dropdown
-                    function toggleDropdown2() {
-                        document.getElementById("dropdown2").classList.toggle("show");
-                    }
-                </script>
-
-                <div class="section-header text-color">
-                    Obras para ler
-                </div>
-                <div class="movies-slide carousel-nav-center owl-carousel">
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item" data-target="section-obra1">
-                        <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="#" />
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                O Menino Nemo
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>8.4</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://spawnbrasil.com.br/wp-content/uploads/2020/02/spawn-112-capa-editora-abril-por-guia-dos-quadrinhos.jpg"
-                            alt="#">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Spawn
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>8.5</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://f.i.uol.com.br/fotografia/2021/10/05/1633460103615c9f879caa1_1633460103_3x2_md.jpg"
-                            alt="#">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Fronteiras do Além
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://img.olx.com.br/images/19/199402202691144.jpg" alt="#">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Death Metal
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>7.9</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420" alt="">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Rocketeer
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>7.8</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/anime-manga-style-album-cover-1.0-design-template-0fc6d256e9ff17603475dfb129b132f0_screen.jpg?ts=1664026643"
-                            alt="#">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Forgotten Feelinggs
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>8.7</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-
-                </div>
-            </div>
-            </div>
-        </section>
-
-        <section id="historico" class="content2">
-            <div class="container-gp">
-
-                <button class="dropdown-button" onclick="toggleDropdown3()">
-                    <h2 class="text-color dropdown-p">
-
-                        Organizar
-                        <i class='bx bxs-up-arrow-alt'></i>
-                        <i class='bx bxs-down-arrow-alt'></i>
-
-                        <ul class="dropdown-content" id="dropdown3">
-                            <li onclick="ordenar('az')">A - Z</li>
-                            <li onclick="ordenar('za')">Z - A</li>
-                            <li onclick="ordenar('ultimo')">Último Adicionado</li>
-                            <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
-                        </ul>
-                    </h2>
-                </button>
-
-                <script>
-                    // Função para alternar a visibilidade do dropdown
-                    function toggleDropdown3() {
-                        document.getElementById("dropdown3").classList.toggle("show");
-                    }
-                </script>
-
-                <div class="section-header text-color">
-                    Obras acessadas
-                </div>
-                <div class="movies-slide carousel-nav-center owl-carousel">
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item" data-target="section-obra1">
-                        <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="#" />
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                O Menino Nemo
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>8.4</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://spawnbrasil.com.br/wp-content/uploads/2020/02/spawn-112-capa-editora-abril-por-guia-dos-quadrinhos.jpg"
-                            alt="#">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Spawn
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>8.5</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://f.i.uol.com.br/fotografia/2021/10/05/1633460103615c9f879caa1_1633460103_3x2_md.jpg"
-                            alt="#">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Fronteiras do Além
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://img.olx.com.br/images/19/199402202691144.jpg" alt="#">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Death Metal
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>7.9</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420" alt="">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Rocketeer
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>7.8</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/anime-manga-style-album-cover-1.0-design-template-0fc6d256e9ff17603475dfb129b132f0_screen.jpg?ts=1664026643"
-                            alt="#">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Forgotten Feelinggs
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>8.7</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-
-                </div>
-            </div>
-            </div>
-        </section>
-
-        <section id="minhas-obras" class="content2">
-
-            <div class="container-gp">
-
-                <button class="dropdown-button" onclick="toggleDropdown4()">
-                    <h2 class="text-color dropdown-p">
-
-                        Organizar
-                        <i class='bx bxs-up-arrow-alt'></i>
-                        <i class='bx bxs-down-arrow-alt'></i>
-
-                        <ul class="dropdown-content" id="dropdown4">
-                            <li onclick="ordenar('az')">A - Z</li>
-                            <li onclick="ordenar('za')">Z - A</li>
-                            <li onclick="ordenar('ultimo')">Último Adicionado</li>
-                            <li onclick="ordenar('primeiro')">Primeiro Adicionado</li>
-                        </ul>
-                    </h2>
-                </button>
-
-                <script>
-                    // Função para alternar a visibilidade do dropdown
-                    function toggleDropdown4() {
-                        document.getElementById("dropdown4").classList.toggle("show");
-                    }
-                </script>
-
-                <div class="section-header text-color">
-                    Obras publicadas
-                </div>
-                <div class="movies-slide carousel-nav-center owl-carousel">
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item" data-target="section-obra1">
-                        <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="#" />
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                O Menino Nemo
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>8.4</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://spawnbrasil.com.br/wp-content/uploads/2020/02/spawn-112-capa-editora-abril-por-guia-dos-quadrinhos.jpg"
-                            alt="#">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Spawn
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>8.5</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://f.i.uol.com.br/fotografia/2021/10/05/1633460103615c9f879caa1_1633460103_3x2_md.jpg"
-                            alt="#">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Fronteiras do Além
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>9.5</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://img.olx.com.br/images/19/199402202691144.jpg" alt="#">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Death Metal
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>7.9</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://www.europanet.com.br/image_gen/resizeimg.php?cod_produto=130008&h=420" alt="">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Rocketeer
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>7.8</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-                    <!-- MOVIE ITEM -->
-                    <a href="#" class="movie-item">
-                        <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/anime-manga-style-album-cover-1.0-design-template-0fc6d256e9ff17603475dfb129b132f0_screen.jpg?ts=1664026643"
-                            alt="#">
-                        <div class="movie-item-content">
-                            <div class="movie-item-title">
-                                Forgotten Feelinggs
-                            </div>
-                            <div class="movie-infos">
-                                <div class="movie-info">
-                                    <i class="bx bxs-star"></i>
-                                    <span>8.7</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- END MOVIE ITEM -->
-
-                </div>
-            </div>
-            </div>
-        </section>
-
-    </main>
-    <!-- # FIM BIBLIOTECA -->
-
-
-
-
-    <!-- # PERFIR GIBI PÚBLICO -->
-    <main id="section-obra1" class="home-section content-section">
-        <a data-target="section-biblioteca"><i class='bx bxs-left-arrow-circle'></i></a>
-        <div class="container">
-            <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="Capa do Mangá"
-                class="manga-cover">
-            <div class="manga-info">
-                <h2 class="text-color">O Menino Nemo</h2>
-
-                <div class="info-item">
-                    <p class="info-label text-color">Gêneros:</p>
-                    <p class="info-value text-color">Ação, Aventura, Romance</p>
-                </div>
-                <div class="info-item">
-                    <p class="info-label text-color">Tipo:</p>
-                    <p class="info-value text-color">Colorido</p>
-                </div>
-                <div class="info-item">
-                    <p class="info-label text-color">Ano:</p>
-                    <p class="info-value text-color">1995</p>
-                </div>
-                <div class="info-item">
-                    <p class="info-label text-color">Status:</p>
-                    <p class="info-value text-color">Encerrado</p>
-                </div>
-                <div class="info-item">
-                    <p class="info-label text-color">Lançamento:</p>
-                    <p class="info-value text-color">08 de Outubro de 1995</p>
-                </div>
 
                 <div class="star-rating">
-                    <i class="fa fa-star" aria-hidden="true" onclick="rate(1)">★</i>
-                    <i class="fa fa-star" aria-hidden="true" onclick="rate(2)">★</i>
-                    <i class="fa fa-star" aria-hidden="true" onclick="rate(3)">★</i>
-                    <i class="fa fa-star" aria-hidden="true" onclick="rate(4)">★</i>
-                    <i class="fa fa-star" aria-hidden="true" onclick="rate(5)">★</i>
                 </div>
-
-            </div>
-        </div>
-
-        <div class="chapters">
-            <div class="titulo-cap">
-                <img width="60" height="60" src="https://img.icons8.com/color/48/comics-magazine.png"
-                    alt="comics-magazine" />
-                <h2 class="text-color">CAPÍTULOS</h2>
-
-            </div>
-            <a class="chapter" data-target="section-leitura-manga">
-                <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="Capa do Capítulo"
-                    class="chapter-cover">
-                <div>
-                    <span class="chapter-number">Capítulo 01</span>
-                </div>
-
-            </a>
-
-
-        </div>
-
-        </div>
-
-        <div class="comments">
-            <ul>
-                <!-- Exibe os comentários aqui -->
-            </ul>
-            <form id="comment-form">
-                <label for="comment" class="text-color">Deixe seu comentário:</label>
-                <textarea id="comment" name="comment" rows="4" placeholder="Digite seu comentário"></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </main>
-    <!-- # FIM PERFIR GIBI PÚBLICO  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- # LEITURA DO MANGÁ -->
-    <main id="section-leitura-manga" class=" content-section">
-
-        <div class="btn-troca">
-            <a data-target="section-obra1"><i class='bx bxs-left-arrow-circle'></i></a>
-            <button class="toggle-mode" onclick="toggleMode()"><i class='bx bxs-binoculars'></i></button>
-        </div>
-
-        <div id="viewer" class="container">
-
-            <div id="image-container" class="lazy">
-                <!-- As imagens serão carregadas dinamicamente aqui -->
-            </div>
-
-            <div class="controls" id="arrow-navigation">
-                <button class="btn-page" id="prevButton" onclick="prevPage()">Página Anterior</button>
-                <button class="btn-page" id="nextButton" onclick="nextPage()">Próxima Página</button>
-            </div>
-        </div>
-
-        <!-- #BACK TO TOP -->
-        <button id="backToTopBtn" onclick="scrollToTop()"><i class='bx bxs-up-arrow-square'></i></button>
-
-    </main>
-    <!-- # FIM LEITURA DO MANGÁ -->
 
     <!-- SCRIPTS -->
     <!-- JQUERY -->

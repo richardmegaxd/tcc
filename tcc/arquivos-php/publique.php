@@ -413,80 +413,9 @@
     </main>
     <!-- # FIM DA PUBLICAÇÃO DE OBRAS -->
 
-    <!-- # PERFIR GIBI PÚBLICO -->
-    <main id="section-obra1" class="home-section content-section">
-        <a data-target="section-inicio"><i class='bx bxs-left-arrow-circle'></i></a>
-        <div class="container">
-            <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="Capa do Mangá"
-                class="manga-cover">
-            <div class="manga-info">
-                <h2 class="text-color">O Menino Nemo</h2>
-
-                <div class="info-item">
-                    <p class="info-label text-color">Gêneros:</p>
-                    <p class="info-value text-color">Ação, Aventura, Romance</p>
-                </div>
-                <div class="info-item">
-                    <p class="info-label text-color">Tipo:</p>
-                    <p class="info-value text-color">Colorido</p>
-                </div>
-                <div class="info-item">
-                    <p class="info-label text-color">Ano:</p>
-                    <p class="info-value text-color">1995</p>
-                </div>
-                <div class="info-item">
-                    <p class="info-label text-color">Status:</p>
-                    <p class="info-value text-color">Encerrado</p>
-                </div>
-                <div class="info-item">
-                    <p class="info-label text-color">Lançamento:</p>
-                    <p class="info-value text-color">08 de Outubro de 1995</p>
-                </div>
 
                 <div class="star-rating">
-                    <i class="fa fa-star" aria-hidden="true" onclick="rate(1)">★</i>
-                    <i class="fa fa-star" aria-hidden="true" onclick="rate(2)">★</i>
-                    <i class="fa fa-star" aria-hidden="true" onclick="rate(3)">★</i>
-                    <i class="fa fa-star" aria-hidden="true" onclick="rate(4)">★</i>
-                    <i class="fa fa-star" aria-hidden="true" onclick="rate(5)">★</i>
                 </div>
-
-            </div>
-        </div>
-
-        <div class="chapters">
-            <div class="titulo-cap">
-                <img width="60" height="60" src="https://img.icons8.com/color/48/comics-magazine.png"
-                    alt="comics-magazine" />
-                <h2 class="text-color">CAPÍTULOS</h2>
-
-            </div>
-            <a class="chapter" data-target="section-leitura-manga">
-                <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="Capa do Capítulo"
-                    class="chapter-cover">
-                <div>
-                    <span class="chapter-number">Capítulo 01</span>
-                </div>
-
-            </a>
-
-
-        </div>
-
-        </div>
-
-        <div class="comments">
-            <ul>
-                <!-- Exibe os comentários aqui -->
-            </ul>
-            <form id="comment-form">
-                <label for="comment" class="text-color">Deixe seu comentário:</label>
-                <textarea id="comment" name="comment" rows="4" placeholder="Digite seu comentário"></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </main>
-    <!-- # FIM PERFIR GIBI PÚBLICO  -->
 
 
     <!-- SCRIPTS -->
