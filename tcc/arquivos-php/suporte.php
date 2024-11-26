@@ -293,60 +293,59 @@
         <div class="faq-section">
         <h1 class="text-color tittle-support">Perguntas Frequentes</h1>
         <div class="faq-item">
-            <div class="faq-question text-color">O que é o nosso serviço?</div>
-            <div class="faq-answer text-color">
-            Texto texto texto
+            <div class="faq-question">Como funciona a assinatura mensal?</div>
+            <div class="faq-answer">
+            Com a assinatura mensal, você terá acesso ilimitado ao nosso catálogo de quadrinhos, incluindo obras brasileiras e estrangeiras, com novos títulos adicionados regularmente. A assinatura é renovada automaticamente todos os meses, e você pode cancelá-la a qualquer momento diretamente nas configurações da sua conta. Assim que você cancela, mantém acesso até o final do período pago.  
             </div>
         </div>
         <div class="faq-item">
-            <div class="faq-question text-color">Quanto custa?</div>
-            <div class="faq-answer text-color">
-            Texto texto texto
+            <div class="faq-question">Quais métodos de pagamento são aceitos?</div>
+            <div class="faq-answer">
+            Aceitamos os seguintes métodos de pagamento: - Cartões de crédito e débito das principais bandeiras; - Pix (pagamento único para renovação automática); - PayPal (em breve).  
             </div>
         </div>
         <div class="faq-item">
-            <div class="faq-question text-color">Onde posso acessar?</div>
-            <div class="faq-answer text-color">
-                Texto texto texto
+            <div class="faq-question">Posso acessar os quadrinhos offline?</div>
+            <div class="faq-answer">
+            Atualmente, não é possível acessar os quadrinhos offline, pois nosso sistema é baseado na web e requer uma conexão com a internet para carregar o catálogo. Esse recurso está em nossos planos futuros para um aplicativo dedicado, onde será possível fazer downloads para leitura offline. Enquanto isso, você pode acessar todos os títulos a qualquer momento com uma conexão estável.
             </div>
         </div>
         <div class="faq-item">
-            <div class="faq-question text-color">?</div>
-            <div class="faq-answer text-color">
-                Texto texto texto
+            <div class="faq-question">Como envio minha obra para avaliação?</div>
+            <div class="faq-answer">
+            Estamos sempre em busca de novos talentos! Para enviar sua obra, acesse a aba “Publicar sua Obra”, preencha o formulário com as informações requeridas e confirme o envio. Após, nossa equipe avaliará a obra em até 15 dias úteis. Você será notificado por e-mail sobre o resultado. Importante: Somente serão aceitos materiais que respeitem nossos critérios editoriais e de qualidade.  
             </div>
         </div>
-        <div class="faq-item">
-            <div class="faq-question text-color">?</div>
-            <div class="faq-answer text-color">
-                Texto texto texto
+        <div class="faq-item ">
+            <div class="faq-question">O que fazer se encontrar problemas técnicos no site?</div>
+            <div class="faq-answer">
+            Caso enfrente problemas como erros ao carregar quadrinhos, dificuldade de acesso à conta ou falhas no pagamento, verifique primeiro sua conexão com a internet, limpe o cache do navegador ou atualize o aplicativo para a última versão. Se o problema persistir, envie uma mensagem detalhada para nosso suporte através do e-mail ou telefone abaixo. Nossa equipe de suporte técnico responderá em até 48 horas úteis.
             </div>
         </div>
     </div>
 
     <div class="contact-section">
-        <h2 class="text-color tittle-support">Precisa de ajuda? Nos contate por:</h2>
-        <div class="contact-item text-color">Email: theglark@gmail.com</div>
-        <div class="contact-item text-color">Telefone: +55 13 94565-4235</div>
-    </div>
-
-    <footer class="social-footer">
-        <h3 class="text-color tittle-support">Siga-nos nas redes sociais:</h3>
+        <h2 class="tittle-support">Precisa de ajuda? Nos contate por:</h2>
+        <div class="contact-item">Email: theglark@gmail.com</div>
+        <div class="contact-item">Telefone: +55 13 94565-4235</div>
+    
+        
+        <h3 class="tittle-support">Siga-nos nas redes sociais:</h3>
         <div class="social-icons">
 
-        <a href="#" class="social-link" style="background-color: #3b5998">
-        <ion-icon name="logo-facebook"></ion-icon>
+            <a href="#" class="social-link" style="background-color: #3b5998">
+            <ion-icon name="logo-facebook"></ion-icon>
 
             <a href="#" class="social-link"
                   style="background-image: radial-gradient(circle at -20.71% 50%, #afde72 0, #bbd966 5.56%, #c6d259 11.11%, #cfc94e 16.67%, #d8c042 22.22%, #dfb537 27.78%, #e6a92e 33.33%, #eb9c26 38.89%, #f08c21 44.44%, #f37b1f 50%, #f56822 55.56%, #f85329 61.11%, #f93c32 66.67%, #fa193d 72.22%, #f90049 77.78%, #f80057 83.33%, #f40066 88.89%, #ef0076 94.44%, #e70087 100%);">
                   <ion-icon name="logo-instagram"></ion-icon>
-                </a>
+            </a>
 
             <a href="#" class="social-link" style="background-color: #1565c0">
                   <ion-icon name="logo-linkedin"></ion-icon>
-                </a>
+            </a>
         </div>
-    </footer>
+        </div>
 
     <script>
         document.querySelectorAll('.faq-question').forEach(item => {
