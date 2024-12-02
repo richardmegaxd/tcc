@@ -285,11 +285,3 @@ function toggleSidebar() {
 
 // Adiciona o evento de clique ao botão
 toggleMenuButton.addEventListener("click", toggleSidebar);
-
-
-
-
-
-
-
-

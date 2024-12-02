@@ -177,21 +177,15 @@ img {
 .input-wrapper input {
     background-color: transparent;
     border: none;
-    color: var(--color-white);
-    font-size: 18px;
-    text-align: center;
-    padding-left: 0;
+    color: #fff;
+    
 }
 
 .input-wrapper input:focus-visible {
     outline: none;
 }
 
-.pesquisa::placeholder {
-    color: aquamarine;
-    position: relative;
-    right: 20px;
-}
+
 
 @media (max-width:850px) {
     .header {
@@ -199,26 +193,9 @@ img {
         padding: 15px;
     }
 
-    .input-wrapper {
-        width: 280px;
-        height: 30px;
-        border-radius: 16px;
-    }
 }
 
-@media (max-width:400px) {
-   
-    .input-wrapper {
-        width: 200px;
-        height: 30px;
-        border-radius: 16px;
-    }
 
-    .input-wrapper input {
-        text-align: justify;
-        padding-left: 20px;
-    }
-}
 
 
 

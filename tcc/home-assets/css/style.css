@@ -38,6 +38,24 @@ a {
   text-decoration: none;
 }
 
+/* Centraliza o placeholder no centro do input */
+#search {
+  width: 100%;
+  font-size: 16px;
+  text-align: center; /* Centraliza o texto dentro do input */
+  border-radius: 4px;
+  box-sizing: border-box; /* Inclui padding e border no cálculo do width */
+}
+
+#search::placeholder {
+  text-align: center; /* Garante que o placeholder também ficará centralizado */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #888; /* Cor do placeholder */
+}
+
+
 
 /*-----------------------------------*\
  # ESTILO SCROLL
@@ -562,7 +580,7 @@ a {
   justify-content: center;
   align-items: center;
   gap: 90%;
-  margin-top: 2%;
+  margin-top: 3%;
 }
 
 #section-leitura-manga .toggle-mode {
@@ -683,6 +701,7 @@ a {
 @media (max-width: 1000px) {
   #section-leitura-manga .btn-troca {
     gap: 80%;
+    margin-top: 5%;
   }
 }
 
@@ -694,6 +713,7 @@ a {
 
   #section-leitura-manga .btn-troca {
     gap: 70%;
+    margin-top: 8%;
   }
 
   
@@ -706,6 +726,14 @@ a {
    padding: 10px;
   }
 }
+
+
+
+
+
+
+
+
 
 
 /*-----------------------------------*\

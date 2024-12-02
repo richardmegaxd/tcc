@@ -1,0 +1,182 @@
+body{
+  margin: 0;
+  font-size: 5em;
+  background-image: url(img/fundo6.jpg);
+  background-position: center;
+  background-size: cover;
+
+}
+
+.logo {
+  width: 30vw;
+}
+
+@media (max-width:1000px) {
+  .logo {
+    width: 60vw;
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.banner {
+  height: 100vh;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  
+  background-size: cover;
+  background-position: center;
+  animation: bgZoomIn 6s ease-in-out 1 forwards;
+  z-index: -1;
+  pointer-events: none;
+  width: 40vw;
+}
+.banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('img/after.png');
+  background-size: cover;
+  background-position: top;
+  transform: scale(2);
+  animation: bgZoomOut 6s ease-in-out 1 forwards;
+  z-index: -1;
+  pointer-events: none;
+}
+@keyframes bgZoomIn {
+  from {
+    transform: scale(1.2);
+  } to {
+    transform: scale(1);
+  }
+}
+@keyframes bgZoomOut {
+  from {
+    transform: scale(1);
+  } to {
+    transform: scale(2);
+  }
+}
+
+svg path {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 0.1;
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  animation: textAnimation 4s ease-in-out 1 forwards;
+}
+@keyframes textAnimation {
+  0% {
+    stroke-dashoffset: 50;
+  }
+  80% {
+    fill: transparent;
+  }
+  100% {
+    fill: #fff;
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.imagem {
+  width: 500px;
+  height: 500px;
+  background: url("https://i.imgur.com/XhYIPUs.png") repeat left top;
+  -webkit-animation: 40s linear infinite LoadingBarProgress, .5s ease-out LoadingBarEnter;
+  animation: 40s linear infinite LoadingBarProgress, .5s ease-out LoadingBarEnter;
+  -webkit-transform-origin: left;
+  transform-origin: left;
+}
+.cor-de-fundo {
+  width: 500px;
+  height: 500px;
+  background: #a8a8a8 linear-gradient(to right, #a8a8a8, #3d3d3d, #ffafa9, #3d3d3d, #a8a8a8);
+  background-size: 500%;
+  -webkit-animation: 40s linear infinite LoadingBarProgress, .5s ease-out LoadingBarEnter;
+  animation: 40s linear infinite LoadingBarProgress, .5s ease-out LoadingBarEnter;
+  -webkit-transform-origin: left;
+  transform-origin: left;
+}
+
+@-webkit-keyframes LoadingBarProgress {
+  0% {
+      background-position: 0% 0
+  }
+  to {
+      background-position: 125% 0
+  }
+}
+
+@keyframes LoadingBarProgress {
+  0% {
+      background-position: 0% 0
+  }
+  to {
+      background-position: 125% 0
+  }
+}
+
+@-webkit-keyframes LoadingBarEnter {
+  0% {
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0)
+  }
+  to {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1)
+  }
+}
+
+@keyframes LoadingBarEnter {
+  0% {
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0)
+  }
+  to {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1)
+  }
+}

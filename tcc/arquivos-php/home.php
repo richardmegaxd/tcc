@@ -45,7 +45,7 @@
             <div class="container-wrapper">
 
                 <div class="input-wrapper">
-                    <input type="text" placeholder="Pesquisar..." class="pesquisa" name="pesquisar">
+                    <input type="text" placeholder="Pesquisar..." class="pesquisa" name="pesquisar" id="search">
                     <i class='bx bx-search'></i>
                 </div>
             </div>
