@@ -1795,6 +1795,15 @@ a {
   overflow: hidden;
 }
 
+@media(max-width: 450px) {
+  #section-planos-mensais .price__grid {
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+}
 
 
 /*-----------------------------------*\
@@ -1831,7 +1840,7 @@ a {
   justify-content: center;
   flex-flow: column;
   padding-bottom: 60px;
- margin-top: 5%;
+  margin-top: 5%;
 }
 
 #section-cartao .container form{
