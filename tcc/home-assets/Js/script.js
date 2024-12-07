@@ -270,18 +270,11 @@ function toggleBackToTopButton() {
 
 
 
-// Seletor para o menu lateral e o botão de alternância
-const sidebar = document.querySelector(".sidebar");
-const toggleMenuButton = document.getElementById("toggleMenu");
 
-// Função para alternar a exibição do menu lateral
-function toggleSidebar() {
-    if (sidebar.style.display === "none" || sidebar.style.display === "") {
-        sidebar.style.display = "block"; // Mostra o menu lateral
-    } else {
-        sidebar.style.display = "none"; // Esconde o menu lateral
-    }
-}
 
-// Adiciona o evento de clique ao botão
-toggleMenuButton.addEventListener("click", toggleSidebar);
+
+
+
+
+
+

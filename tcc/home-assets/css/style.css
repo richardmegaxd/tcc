@@ -541,6 +541,8 @@ a {
   }
 }
 
+
+
 /*-----------------------------------*\
   # FIM PERFIL DO GIBI
 \*-----------------------------------*/
@@ -552,17 +554,18 @@ a {
  # LEITURA DO MANGÁ
 \*-----------------------------------*/
 #section-leitura-manga #viewer {
-  max-width: 600px;
+  max-width: 550px;
   margin: auto;
   padding: 10px;
   background-color: transparent;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  top: 0;
 }
 
 #section-leitura-manga img {
   max-width: 100%;
-  height: 70%;
+  height: 100%;
   object-fit: contain;
   display: none;
   position: relative;
@@ -726,6 +729,59 @@ a {
    padding: 10px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo para o botão "Voltar para o topo" */
+#backToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  display: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#backToTopBtn:hover {
+  background-color: rgba(255, 254, 254, 0.7);
+}
+
+
+
+
+#arrow-navigation button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#arrow-navigation .prev-btn {
+  margin-right: 10px;
+}
+
+#arrow-navigation .next-btn {
+  margin-left: 10px;
+}
+
+
+
+
 
 
 
@@ -1819,9 +1875,9 @@ a {
 
 
 #section-cartao  .bxs-left-arrow-circle {
-  position: absolute; /* Fixa o botão em um local na tela */
-  top: 20px;
-  margin-left: 20px;
+  position: fixed; /* Fixa o botão em um local na tela */
+  top: 100px;
+  margin-left: 150px;
   border: none; /* Remove bordas */
   border-radius: 5px; /* Bordas arredondadas */
   cursor: pointer; /* Muda o cursor para pointer */
@@ -2017,7 +2073,15 @@ input[type=number] {
 
   #section-cartao  .bxs-left-arrow-circle {
     top: 0px;
-    margin-top: 0;
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 1050px) {
+  #section-cartao  .bxs-left-arrow-circle {
+    top: 0px;
+    margin-top: 100px;
+    margin-left: 30px;
   }
 }
 

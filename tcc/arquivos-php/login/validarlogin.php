@@ -36,7 +36,7 @@ if (isset($_POST["login"]) && isset($_POST["senha"])) {
             $_SESSION['nome'] = $nomeUsuario;
             $_SESSION['apelido'] = $apelidoUsuario; // Define o nome na sessão
 
-            header("Location: ../animacao/animacao.php");
+            header("Location: ../home.php");
         } else {
             // Senha incorreta
             $erro = "Login ou senha incorretos. Por favor, tente novamente.";

@@ -158,6 +158,7 @@
 
     <!-- # PERFIR GIBI PÚBLICO -->
     <main id="section-obra1" class="home-section content-section active">
+    <a href="./home.php"><i class='bx bxs-left-arrow-circle'></i></a>
         <div class="container">
             <img src="../capitulo2/o-menino-nemo-na-terra-dos-sonhos-1_page-0001.jpg" alt="Capa do Mangá"
                 class="manga-cover">
@@ -237,7 +238,7 @@
             <a data-target="section-obra1"><i class='bx bxs-left-arrow-circle'></i></a>
             <button class="toggle-mode" onclick="toggleMode()"><i class='bx bxs-binoculars'></i></button>
         </div>
-
+        
         <div id="viewer" class="container">
 
             <div id="image-container" class="lazy">
@@ -249,7 +250,8 @@
                 <button class="btn-page" id="nextButton" onclick="nextPage()">Próxima Página</button>
             </div>
         </div>
-
+        
+        
         <!-- #BACK TO TOP -->
         <button id="backToTopBtn" onclick="scrollToTop()"><i class='bx bxs-up-arrow-square'></i></button>
 

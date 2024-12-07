@@ -357,7 +357,6 @@
     <!-- # PAGAMENTO CARTÃO -->
     <main id="section-cartao" class="home-section content-section">
         <a data-target="section-planos-mensais"><i class='bx bxs-left-arrow-circle'></i></a>
-
         <div class="container">
 
             <div class="card-container">
