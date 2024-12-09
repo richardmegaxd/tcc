@@ -239,11 +239,7 @@
                         <span class="sidebar__link-floating text-color">Suporte</span>
                     </a>
 
-                    <a href="config.php" class="sidebar__link" >
-                        <i class="bx bx-cog text-color"></i>
-                        <span class="sidebar__link-name text-color">Configurações</span>
-                        <span class="sidebar__link-floating text-color">Configurações</span>
-                    </a>
+                   
 
                     <a href="./logout.php" class="sidebar__link">
                         <i class="bx bx-log-out text-color"></i>

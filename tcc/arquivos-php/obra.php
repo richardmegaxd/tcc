@@ -55,7 +55,7 @@
     </header>
 
     <!--=============== SIDEBAR ===============-->
-    <div class="sidebar fundo-color" id="sidebar">
+    <div class="sidebar show-sidebar fundo-color" id="sidebar">
         <nav class="sidebar__container text-color">
             <div class="sidebar__logo">
                 <img src="../assets/images/log5.png" alt="" class="sidebar__logo-img">
@@ -110,11 +110,7 @@
                         <span class="sidebar__link-floating text-color">Suporte</span>
                     </a>
 
-                    <a href="config.php" class="sidebar__link" >
-                        <i class="bx bx-cog text-color"></i>
-                        <span class="sidebar__link-name text-color">Configurações</span>
-                        <span class="sidebar__link-floating text-color">Configurações</span>
-                    </a>
+                    
 
                     <a href="./logout.php" class="sidebar__link">
                         <i class="bx bx-log-out text-color"></i>
