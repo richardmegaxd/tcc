@@ -1304,6 +1304,57 @@ a {
  # BIBLIOTECA
 \*-----------------------------------*/
 
+@media (max-width: 768px) {
+  #section-biblioteca .topo-biblioteca {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #section-biblioteca .tab2 {
+    padding: 8px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  #section-biblioteca .main-biblioteca {
+    flex-direction: column;
+  }
+
+  #section-biblioteca .section-header-bli {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.2rem;
+  }
+
+  #section-biblioteca .dropdown-content {
+    position: static;
+    box-shadow: none;
+    border: none;
+    width: 100%;
+  }
+
+  #section-biblioteca .dropdown-content li {
+    padding: 12px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  #section-biblioteca .tab2 {
+    font-size: 0.9rem;
+  }
+
+  #section-biblioteca .section-header-bli {
+    font-size: 1rem;
+  }
+
+  #section-biblioteca .dropdown-content li {
+    font-size: 0.9rem;
+  }
+}
+
 
 #section-biblioteca .topo-biblioteca {
   display: flex;
