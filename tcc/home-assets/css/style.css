@@ -812,6 +812,19 @@ a {
  # PERFIL USUÁRIO
 \*-----------------------------------*/
 
+/* Estilos gerais continuam os mesmos */
+
+/* Responsividade para telas menores que 768px (tablets) */
+@media (max-width: 768px) {
+  
+}
+
+/* Responsividade para telas menores que 480px (smartphones) */
+@media (max-width: 480px) {
+  
+}
+
+
 /* Estilo básico do header e tabs */
 #section-perfil .topo-perfil {
   display: flex;
@@ -1314,8 +1327,6 @@ a {
     padding: 8px;
     text-align: center;
     width: 100%;
-    display: flex;
-    align-items: center;
   }
 
   #section-biblioteca .main-biblioteca {
@@ -1328,12 +1339,7 @@ a {
     font-size: 1.2rem;
   }
 
-  #section-biblioteca .dropdown-content {
-    position: static;
-    box-shadow: none;
-    border: none;
-    width: 100%;
-  }
+  
 
   #section-biblioteca .dropdown-content li {
     padding: 12px;
@@ -1352,6 +1358,11 @@ a {
 
   #section-biblioteca .dropdown-content li {
     font-size: 0.9rem;
+  }
+
+  #section-biblioteca .dropdown-button{
+    right: -30px;
+    position: relative;
   }
 }
 
