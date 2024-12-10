@@ -814,15 +814,6 @@ a {
 
 /* Estilos gerais continuam os mesmos */
 
-/* Responsividade para telas menores que 768px (tablets) */
-@media (max-width: 768px) {
-  
-}
-
-/* Responsividade para telas menores que 480px (smartphones) */
-@media (max-width: 480px) {
-  
-}
 
 
 /* Estilo básico do header e tabs */
@@ -1042,10 +1033,12 @@ a {
   position: absolute;
   background-color: #191919;
   min-width: 150px;
+  border: 1px solid #ddd;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   z-index: 2;
   border-radius: 7px;
-  right: 25px;
+  right: 5px;
+  top: 50px
 }
 
 #section-perfil .oof2 {
@@ -1072,6 +1065,86 @@ a {
   display: flex;
   gap: 15%;
 }
+
+/* Responsividade para telas menores que 768px (tablets) */
+@media (max-width: 768px) {
+  
+}
+
+/* Responsividade para telas menores que 480px (smartphones) */
+@media (max-width: 480px) {
+  #section-perfil .usuario-back {
+     padding-left: 0px;
+     padding-bottom: 80px;
+  }
+
+  #section-perfil .area-seguidos{
+    height: auto;
+    width: 180px;
+    font-size: 9px;
+  }
+
+  #section-perfil .area-seguidos{
+    display: flex;
+    justify-content: center;
+  }
+
+  #section-perfil .area-seguidos h3 {
+    padding: 5px 7px 5px 7px;
+  }
+
+  #section-perfil .dropb-button{
+   position: relative;
+   left: -20px;
+  }
+
+  #section-perfil .seguir{
+    width: 120px;
+    height: 40px;
+  }
+
+  #section-perfil .usuario-back2 {
+    float: none;
+    height: auto;
+    width: auto;
+  }
+
+  #section-perfil .area-biografia{
+    padding: 20px 10px 20px 10px;
+  }
+
+  #section-perfil .foto-perfil{
+    width: 30vw;
+    height: 30vw;
+    margin-left: 5px;
+  }
+
+  #section-perfil .conteudo-perfil{
+    height: 400px;
+  }
+
+  #section-perfil .topo-perfil{
+    padding-top: 10px;
+  }
+
+  #section-perfil .oof{
+    font-size: 17px;
+  }
+
+  #section-perfil .oof2{
+    font-size: 17px;
+  }
+
+  #section-perfil .tags{
+    width: 90px;
+  }
+
+  #section-perfil .ler-mais{
+    position: relative;
+    left: -20px;
+  }
+}
+
 /*-----------------------------------*\
  # FIM PERFIL USUÁRIO
 \*-----------------------------------*/
@@ -1444,6 +1517,7 @@ a {
 }
 
 #section-biblioteca .dropdown-content {
+  text-align: right;
   display: none;
   position: absolute;
   background-color: #191919;

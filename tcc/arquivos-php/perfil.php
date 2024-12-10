@@ -321,7 +321,7 @@
 
                         <h3>02 Seguidos</h3>
 
-                        <h3>02 Seguidores</h>
+                        <h3>02 Seguidores</h3>
 
                     </div>
 
@@ -380,7 +380,8 @@
                 <h3>Biografia</h3>
 
                 <p>
-                    Tenho 18 anos, gosto de escrever e gostaria de fazer novos amigos. Prazer em te conhecer!
+                    Tenho 18 anos, gosto de escrever e gostaria <br>
+                    de fazer novos amigos. Prazer em te conhecer!
                 </p>
 
                 <Button class="ler-mais text-color">
