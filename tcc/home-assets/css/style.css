@@ -1099,8 +1099,12 @@ a {
   }
 
   #section-perfil .seguir{
-    width: 120px;
-    height: 40px;
+    width: 95px;
+    height: 37px;
+  }
+
+  #section-perfil .seguir h3{
+    font-size: 15px;
   }
 
   #section-perfil .usuario-back2 {
